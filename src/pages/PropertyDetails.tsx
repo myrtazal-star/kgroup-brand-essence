@@ -193,7 +193,7 @@ const PropertyDetails = () => {
 
       <div className="container mx-auto px-6 py-8">
         {/* Back Button */}
-        <Button variant="ghost" onClick={() => navigate(-1)} className="mb-6 flex items-center gap-2">
+        <Button variant="outline" onClick={() => navigate(-1)} className="mb-6 flex items-center gap-2 hover:bg-accent">
           <ArrowLeft className="w-4 h-4" />
           Regresar
         </Button>
