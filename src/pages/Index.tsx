@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import heroProperty from "@/assets/hero-property.jpg";
-import property1 from "@/assets/property-1.jpg";
+import property1 from "@/assets/mitikah-residencial.jpg";
 import property2 from "@/assets/property-2.jpg";
 import property3 from "@/assets/property-3.jpg";
 
@@ -18,12 +18,12 @@ const Index = () => {
   const featuredProperties = [
     {
       id: "1",
-      title: "Residencias Meridian",
-      location: "Polanco, Ciudad de México",
-      price: "$4.2M",
-      area: "223 m²",
+      title: "Mitikah Residencial",
+      location: "Cto Interior Avenida Río Churubusco 601, Xoco, Benito Juárez, 03330 Ciudad de México, CDMX",
+      price: "Desde 12.6 MDP",
+      area: "195 m²",
       bedrooms: 3,
-      bathrooms: 2,
+      bathrooms: 3,
       imageUrl: property1,
       featured: true
     },
