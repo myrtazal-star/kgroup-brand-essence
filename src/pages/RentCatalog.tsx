@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 import blockRenta from "@/assets/block-renta.jpg";
-import property2 from "@/assets/property-2.jpg";
+import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
 import property3 from "@/assets/property-3.jpg";
 
 const RentCatalog = () => {
@@ -28,13 +28,13 @@ const RentCatalog = () => {
     },
     {
       id: "r2",
-      title: "Oficina Ejecutiva Santa Fe",
-      location: "Santa Fe, Ciudad de México",
-      price: "$18,000/mes",
-      area: "85 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: property2
+      title: "Oficina PH de 2 niveles en Roma Norte",
+      location: "Homero, Polanco",
+      price: "$100,000/mes",
+      area: "200 m²",
+      bedrooms: 6,
+      bathrooms: 3,
+      imageUrl: oficinaPH
     },
     {
       id: "r3",
@@ -55,7 +55,7 @@ const RentCatalog = () => {
       area: "95 m²",
       bedrooms: 1,
       bathrooms: 1,
-      imageUrl: property2
+      imageUrl: blockRenta
     },
     {
       id: "r5",
@@ -65,7 +65,7 @@ const RentCatalog = () => {
       area: "180 m²",
       bedrooms: 3,
       bathrooms: 2,
-      imageUrl: property2
+      imageUrl: oficinaPH
     },
     {
       id: "r6",
