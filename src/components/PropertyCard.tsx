@@ -1,6 +1,7 @@
 import { MapPin, Square, BedDouble, Bath, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useWhatsApp } from "@/hooks/useWhatsApp";
 
 interface PropertyCardProps {
   id: string;
@@ -26,23 +27,24 @@ export const PropertyCard = ({
   featured = false 
 }: PropertyCardProps) => {
   const navigate = useNavigate();
+  const { sendPropertyInquiry, isLoading } = useWhatsApp();
 
   const handleClick = () => {
     navigate(`/property/${id}`);
   };
 
-  const whatsappNumber = "5256808129";
-  const handleWhatsAppClick = (e: React.MouseEvent) => {
+  const handleWhatsAppClick = async (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent navigation to property details
-    const message = `Hola! Me interesa la propiedad: *${title}*\n\n` +
-                   `📍 ${location}\n` +
-                   `💰 ${price}\n` +
-                   `📐 ${area}\n` +
-                   `🛏️ ${bedrooms} recámaras\n` +
-                   `🚿 ${bathrooms} baños\n\n` +
-                   `¿Podrían proporcionarme más información?`;
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    
+    await sendPropertyInquiry({
+      id,
+      title,
+      location,
+      price,
+      area,
+      bedrooms,
+      bathrooms
+    });
   };
 
   return (
@@ -97,9 +99,10 @@ export const PropertyCard = ({
           <div className="pt-4 border-t border-border">
             <Button 
               onClick={handleWhatsAppClick}
+              disabled={isLoading}
               variant="outline"
               size="sm"
-              className="w-full border-green-500 text-green-600 hover:bg-green-50 hover:text-green-700 hover:border-green-600"
+              className="w-full border-green-500 text-green-600 hover:bg-green-50 hover:text-green-700 hover:border-green-600 disabled:opacity-50"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp

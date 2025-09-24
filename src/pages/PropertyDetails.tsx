@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { KGroupLogo } from "@/components/KGroupLogo";
+import { useWhatsApp } from "@/hooks/useWhatsApp";
 import { useState } from "react";
 
 // Property data - en una app real esto vendría de una base de datos
@@ -159,25 +160,19 @@ const PropertyDetails = () => {
   const [selectedImage, setSelectedImage] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
+  const { sendPropertyInquiry, isLoading } = useWhatsApp();
 
-  // WhatsApp integration
-  const whatsappNumber = "5256808129"; // K Group phone number
-  const createWhatsAppMessage = (property: any) => {
-    const message = `Hola! Me interesa la propiedad: *${property.title}*\n\n` +
-                   `📍 Ubicación: ${property.location}\n` +
-                   `💰 Precio: ${property.price}\n` +
-                   `📐 Área: ${property.area}\n` +
-                   `🛏️ Recámaras: ${property.bedrooms}\n` +
-                   `🚿 Baños: ${property.bathrooms}\n\n` +
-                   `¿Podrían proporcionarme más información?`;
-    return encodeURIComponent(message);
-  };
-
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppClick = async () => {
     if (property) {
-      const message = createWhatsAppMessage(property);
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-      window.open(whatsappUrl, '_blank');
+      await sendPropertyInquiry({
+        id: property.id,
+        title: property.title,
+        location: property.location,
+        price: property.price,
+        area: property.area,
+        bedrooms: property.bedrooms,
+        bathrooms: property.bathrooms
+      });
     }
   };
   
@@ -324,9 +319,14 @@ const PropertyDetails = () => {
                 <Separator />
 
                 <div className="space-y-4">
-                  <Button className="w-full" size="lg" onClick={handleWhatsAppClick}>
+                  <Button 
+                    className="w-full" 
+                    size="lg" 
+                    onClick={handleWhatsAppClick}
+                    disabled={isLoading}
+                  >
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp
+                    {isLoading ? 'Enviando...' : 'WhatsApp'}
                   </Button>
                   
                   <Button variant="outline" className="w-full" size="lg">
