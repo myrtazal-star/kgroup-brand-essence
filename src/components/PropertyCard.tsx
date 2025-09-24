@@ -97,8 +97,9 @@ export const PropertyCard = ({
           <div className="pt-4 border-t border-border">
             <Button 
               onClick={handleWhatsAppClick}
-              className="w-full bg-green-500 hover:bg-green-600 text-white"
+              variant="luxury"
               size="sm"
+              className="w-full"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
