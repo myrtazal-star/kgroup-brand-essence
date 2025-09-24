@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import blockRenta from "@/assets/block-renta.jpg";
 import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
+import rentaMitikah from "@/assets/renta-mitikah.jpg";
 import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
 
 const RentCatalog = () => {
@@ -44,7 +45,7 @@ const RentCatalog = () => {
       area: "100 m²",
       bedrooms: 3,
       bathrooms: 3,
-      imageUrl: oficinaPH,
+      imageUrl: rentaMitikah,
       featured: true
     },
     {
