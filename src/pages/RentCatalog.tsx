@@ -68,16 +68,6 @@ const RentCatalog = () => {
       bathrooms: 1,
       imageUrl: deptoArquimedes
     },
-    {
-      id: "r6",
-      title: "Estudio Amueblado Del Valle",
-      location: "Del Valle, Ciudad de México",
-      price: "$15,000/mes",
-      area: "60 m²",
-      bedrooms: 1,
-      bathrooms: 1,
-      imageUrl: deptoArquimedes
-    }
   ];
 
   return (
