@@ -1,5 +1,6 @@
-import { MapPin, Square, BedDouble, Bath } from "lucide-react";
+import { MapPin, Square, BedDouble, Bath, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 interface PropertyCardProps {
   id: string;
@@ -28,6 +29,20 @@ export const PropertyCard = ({
 
   const handleClick = () => {
     navigate(`/property/${id}`);
+  };
+
+  const whatsappNumber = "5256808129";
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent navigation to property details
+    const message = `Hola! Me interesa la propiedad: *${title}*\n\n` +
+                   `📍 ${location}\n` +
+                   `💰 ${price}\n` +
+                   `📐 ${area}\n` +
+                   `🛏️ ${bedrooms} recámaras\n` +
+                   `🚿 ${bathrooms} baños\n\n` +
+                   `¿Podrían proporcionarme más información?`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -76,6 +91,18 @@ export const PropertyCard = ({
               <Bath className="w-3 h-3" />
               {bathrooms} bath
             </div>
+          </div>
+
+          {/* WhatsApp Button */}
+          <div className="pt-4 border-t border-border">
+            <Button 
+              onClick={handleWhatsAppClick}
+              className="w-full bg-green-500 hover:bg-green-600 text-white"
+              size="sm"
+            >
+              <MessageCircle className="w-4 h-4 mr-2" />
+              WhatsApp
+            </Button>
           </div>
         </div>
       </div>

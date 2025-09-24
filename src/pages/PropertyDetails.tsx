@@ -1,5 +1,5 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, MapPin, Square, BedDouble, Bath, Car, Wifi, Phone, Mail, Calendar, Share2, Heart, X } from "lucide-react";
+import { ArrowLeft, MapPin, Square, BedDouble, Bath, Car, Wifi, Phone, Mail, Calendar, Share2, Heart, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -159,6 +159,28 @@ const PropertyDetails = () => {
   const [selectedImage, setSelectedImage] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
+
+  // WhatsApp integration
+  const whatsappNumber = "5256808129"; // K Group phone number
+  const createWhatsAppMessage = (property: any) => {
+    const message = `Hola! Me interesa la propiedad: *${property.title}*\n\n` +
+                   `📍 Ubicación: ${property.location}\n` +
+                   `💰 Precio: ${property.price}\n` +
+                   `📐 Área: ${property.area}\n` +
+                   `🛏️ Recámaras: ${property.bedrooms}\n` +
+                   `🚿 Baños: ${property.bathrooms}\n\n` +
+                   `¿Podrían proporcionarme más información?`;
+    return encodeURIComponent(message);
+  };
+
+  const handleWhatsAppClick = () => {
+    if (property) {
+      const message = createWhatsAppMessage(property);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  };
+  
   if (!property) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -302,7 +324,12 @@ const PropertyDetails = () => {
                 <Separator />
 
                 <div className="space-y-4">
-                  <Button className="w-full" size="lg">
+                  <Button className="w-full" size="lg" onClick={handleWhatsAppClick}>
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    WhatsApp
+                  </Button>
+                  
+                  <Button variant="outline" className="w-full" size="lg">
                     <Phone className="w-4 h-4 mr-2" />
                     Llamar Ahora
                   </Button>
@@ -327,6 +354,9 @@ const PropertyDetails = () => {
                   </div>
                   <div className="text-xs text-muted-foreground">
                     📞 (55) 6080-8129
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    💬 WhatsApp disponible 24/7
                   </div>
                 </div>
               </CardContent>
