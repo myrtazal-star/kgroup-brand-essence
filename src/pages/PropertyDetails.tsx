@@ -188,11 +188,11 @@ const PropertyDetails = () => {
           Regresar
         </Button>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left Column - Images & Details */}
-          <div className="lg:col-span-2 space-y-8">
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Left Column - Images */}
+          <div className="space-y-6">
             {/* Main Image */}
-            <div className="aspect-[16/10] overflow-hidden bg-muted">
+            <div className="aspect-[4/3] overflow-hidden bg-muted">
               <img 
                 src={property.imageUrl} 
                 alt={property.title}
@@ -200,137 +200,111 @@ const PropertyDetails = () => {
               />
             </div>
 
-            {/* Gallery */}
-            <div className="grid grid-cols-3 gap-4">
-              {property.gallery.slice(1).map((image, index) => (
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-4 gap-2">
+              {property.gallery.map((image, index) => (
                 <div key={index} className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer hover:opacity-80 transition-opacity">
                   <img 
                     src={image} 
-                    alt={`${property.title} - imagen ${index + 2}`}
+                    alt={`${property.title} - imagen ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
               ))}
             </div>
+          </div>
 
+          {/* Right Column - Details */}
+          <div className="space-y-8">
             {/* Property Info */}
-            <div className="space-y-6">
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h1 className="text-3xl font-light">{property.title}</h1>
-                  {property.featured && (
-                    <Badge variant="secondary">DESTACADA</Badge>
-                  )}
-                </div>
-                <div className="flex items-center gap-1 text-muted-foreground">
-                  <MapPin className="w-4 h-4" />
-                  {property.location}
-                </div>
-              </div>
-
-              {/* Property Stats */}
-              <div className="flex items-center gap-8 py-4 border-y border-border">
-                <div className="flex items-center gap-2">
-                  <Square className="w-5 h-5 text-muted-foreground" />
-                  <span className="font-medium">{property.area}</span>
-                </div>
-                {property.bedrooms > 0 && (
-                  <div className="flex items-center gap-2">
-                    <BedDouble className="w-5 h-5 text-muted-foreground" />
-                    <span>{property.bedrooms} recámaras</span>
-                  </div>
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <h1 className="text-4xl font-light">{property.title}</h1>
+                {property.featured && (
+                  <Badge variant="secondary">DESTACADA</Badge>
                 )}
-                <div className="flex items-center gap-2">
-                  <Bath className="w-5 h-5 text-muted-foreground" />
-                  <span>{property.bathrooms} baños</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Car className="w-5 h-5 text-muted-foreground" />
-                  <span>{property.parking} estacionamientos</span>
-                </div>
               </div>
+              <div className="flex items-center gap-1 text-muted-foreground mb-6">
+                <MapPin className="w-4 h-4" />
+                {property.location}
+              </div>
+            </div>
 
-              {/* Description */}
-              <div>
-                <h2 className="text-xl font-medium mb-4">Descripción</h2>
+            {/* Description Section */}
+            <div>
+              <h2 className="text-2xl font-medium mb-6">Descripción</h2>
+              
+              <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
                   {property.description}
                 </p>
-              </div>
 
-              {/* Features */}
-              <div>
-                <h2 className="text-xl font-medium mb-4">Características</h2>
-                <div className="grid grid-cols-2 gap-3">
+                {/* Property Details List */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                    <span>Totalmente amueblado y equipado</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                    <span>{property.bedrooms} recámaras completas / {property.bathrooms} baños</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                    <span>{property.area}</span>
+                  </div>
                   {property.features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-sm">{feature}</span>
+                      <div className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                    <span>{property.parking} estacionamientos</span>
+                  </div>
+                  {property.amenities.slice(0, 3).map((amenity, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-foreground rounded-full" />
+                      <span>{amenity}</span>
                     </div>
                   ))}
                 </div>
-              </div>
 
-              {/* Amenities */}
-              <div>
-                <h2 className="text-xl font-medium mb-4">Amenidades</h2>
-                <div className="grid grid-cols-2 gap-3">
-                  {property.amenities.map((amenity, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-accent rounded-full" />
-                      <span className="text-sm">{amenity}</span>
-                    </div>
-                  ))}
+                {/* Price */}
+                <div className="pt-4 border-t">
+                  <div className="text-sm text-muted-foreground mb-1">
+                    {property.priceType.toUpperCase()}:
+                  </div>
+                  <div className="text-3xl font-medium text-foreground">
+                    {property.price}
+                  </div>
+                </div>
+
+                {/* Contact Info */}
+                <div className="bg-muted/50 p-6 space-y-4">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Phone className="w-4 h-4" />
+                    <span className="font-medium">Schedule your visit today</span>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-sm">Solo WhatsApp: <span className="font-medium">8181 868788</span></div>
+                    <div className="text-sm text-primary">🌐 gubond.mx</div>
+                  </div>
+                  
+                  <div className="flex gap-3 pt-2">
+                    <Button className="flex-1" size="lg">
+                      <Phone className="w-4 h-4 mr-2" />
+                      WhatsApp
+                    </Button>
+                    <Button variant="outline" className="flex-1" size="lg">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Email
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right Column - Contact Card */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-8">
-              <CardContent className="p-6 space-y-6">
-                <div className="text-center">
-                  <div className="text-3xl font-light text-primary mb-1">
-                    {property.price}
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    {property.priceType}
-                  </div>
-                </div>
-
-                <Separator />
-
-                <div className="space-y-4">
-                  <Button className="w-full" size="lg">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Llamar Ahora
-                  </Button>
-                  
-                  <Button variant="outline" className="w-full" size="lg">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Enviar Email
-                  </Button>
-                  
-                  <Button variant="outline" className="w-full" size="lg">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Agendar Cita
-                  </Button>
-                </div>
-
-                <Separator />
-
-                <div className="text-center space-y-2">
-                  <div className="text-sm font-medium">K Group</div>
-                  <div className="text-xs text-muted-foreground">
-                    Bienes Raíces de Lujo
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    📞 (55) 1234-5678
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
