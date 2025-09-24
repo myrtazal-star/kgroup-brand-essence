@@ -17,7 +17,7 @@ const RentCatalog = () => {
   const rentalProperties = [
     {
       id: "r1",
-      title: "Block renta",
+      title: "Departamento en renta Roma Norte",
       location: "Durango 262, Roma Norte",
       price: "$92,000/mes",
       area: "120 m²",
