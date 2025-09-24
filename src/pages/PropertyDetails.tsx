@@ -43,8 +43,8 @@ const propertiesData = {
     imageUrl: "/src/assets/oficina-ph-roma-norte.jpg",
     featured: false,
     description: "Moderna oficina en penthouse de dos niveles ubicada en Polanco. Ideal para empresas creativas que buscan un espacio único y bien ubicado con excelente conectividad.",
-    features: ["Doble altura", "Terraza privada", "Iluminación natural", "Área de reuniones", "Kitchenette", "6 espacios de trabajo"],
-    amenities: ["Internet de alta velocidad", "Seguridad", "Elevador", "Estacionamiento", "Recepción"],
+    features: ["2 niveles", "Iluminación natural", "6 espacios de trabajo", "Cocina", "2.5 baños", "Consierge y seguridad 24/7", "Piso 7 PH"],
+    amenities: ["Seguridad", "Elevador", "Estacionamiento", "Recepción"],
     gallery: [
       "/src/assets/oficina-ph-roma-norte.jpg",
       "/src/assets/property-1.jpg",
