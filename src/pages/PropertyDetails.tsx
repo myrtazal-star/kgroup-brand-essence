@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { useState } from "react";
 
@@ -338,6 +338,8 @@ const PropertyDetails = () => {
       {/* Image Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+          <DialogTitle className="sr-only">Vista completa de la imagen</DialogTitle>
+          <DialogDescription className="sr-only">Imagen ampliada de la propiedad</DialogDescription>
           <div className="relative">
             <Button
               variant="ghost"
