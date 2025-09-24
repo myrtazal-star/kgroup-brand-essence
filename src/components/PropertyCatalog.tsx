@@ -1,6 +1,8 @@
 import { PropertyCard } from "@/components/PropertyCard";
+import PropertyMap from "@/components/PropertyMap";
 import { Button } from "@/components/ui/button";
 import { Search, Filter, MapPin, Home, Building } from "lucide-react";
+import { useState } from "react";
 
 interface Property {
   id: string;
@@ -22,6 +24,9 @@ interface PropertyCatalogProps {
 }
 
 export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyCatalogProps) => {
+  const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
+  const [mapboxToken, setMapboxToken] = useState("");
+
   return (
     <div className="space-y-2xl">
       {/* Header Section */}
@@ -72,43 +77,87 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
 
       {/* Properties Grid */}
       <div className="space-y-8">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="text-muted-foreground">{properties.length} propiedades encontradas</span>
-            <div className="flex items-center gap-2">
-              <Button variant="minimal" size="sm" className="flex items-center gap-2">
-                <Home className="w-4 h-4" />
-                Vista Grid
-              </Button>
-              <Button variant="outline" size="sm" className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                Vista Mapa
-              </Button>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span className="text-muted-foreground">{properties.length} propiedades encontradas</span>
+              <div className="flex items-center gap-2">
+                <Button 
+                  variant={viewMode === "grid" ? "minimal" : "outline"} 
+                  size="sm" 
+                  className="flex items-center gap-2"
+                  onClick={() => setViewMode("grid")}
+                >
+                  <Home className="w-4 h-4" />
+                  Vista Grid
+                </Button>
+                <Button 
+                  variant={viewMode === "map" ? "minimal" : "outline"} 
+                  size="sm" 
+                  className="flex items-center gap-2"
+                  onClick={() => setViewMode("map")}
+                >
+                  <MapPin className="w-4 h-4" />
+                  Vista Mapa
+                </Button>
+              </div>
             </div>
+            
+            <select className="px-4 py-2 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring">
+              <option value="newest">Más Recientes</option>
+              <option value="price-low">Precio: Menor a Mayor</option>
+              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="area">Área</option>
+            </select>
           </div>
-          
-          <select className="px-4 py-2 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring">
-            <option value="newest">Más Recientes</option>
-            <option value="price-low">Precio: Menor a Mayor</option>
-            <option value="price-high">Precio: Mayor a Menor</option>
-            <option value="area">Área</option>
-          </select>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {properties.map((property) => (
-            <PropertyCard key={property.id} {...property} />
-          ))}
-        </div>
+          {/* Mapbox Token Input (only show when map view is selected and no token) */}
+          {viewMode === "map" && !mapboxToken && (
+            <div className="bg-card border border-border p-6 space-y-4">
+              <div>
+                <h3 className="text-heading mb-2">Configurar Vista de Mapa</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Para ver las propiedades en el mapa, necesitas un token público de Mapbox. 
+                  <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
+                    Obtén tu token aquí
+                  </a>
+                </p>
+                <div className="flex gap-4">
+                  <input
+                    type="text"
+                    placeholder="Ingresa tu token público de Mapbox..."
+                    value={mapboxToken}
+                    onChange={(e) => setMapboxToken(e.target.value)}
+                    className="flex-1 px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                  />
+                  <Button variant="outline" onClick={() => setMapboxToken(mapboxToken)}>
+                    Aplicar
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
 
-        {/* Pagination */}
-        <div className="flex justify-center space-x-2">
-          <Button variant="outline" disabled>Anterior</Button>
-          <Button variant="luxury">1</Button>
-          <Button variant="outline">2</Button>
-          <Button variant="outline">3</Button>
-          <Button variant="outline">Siguiente</Button>
-        </div>
+          {/* Content based on view mode */}
+          {viewMode === "grid" ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {properties.map((property) => (
+                <PropertyCard key={property.id} {...property} />
+              ))}
+            </div>
+          ) : (
+            <PropertyMap properties={properties} mapboxToken={mapboxToken} />
+          )}
+
+        {/* Pagination - only show in grid view */}
+        {viewMode === "grid" && (
+          <div className="flex justify-center space-x-2">
+            <Button variant="outline" disabled>Anterior</Button>
+            <Button variant="luxury">1</Button>
+            <Button variant="outline">2</Button>
+            <Button variant="outline">3</Button>
+            <Button variant="outline">Siguiente</Button>
+          </div>
+        )}
       </div>
 
       {/* CTA Section */}
