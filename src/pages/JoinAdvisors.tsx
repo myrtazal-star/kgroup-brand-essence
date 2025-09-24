@@ -1,6 +1,12 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Users, TrendingUp, Briefcase, Star, Phone, Mail, CheckCircle } from "lucide-react";
+import { ArrowLeft, Users, TrendingUp, Briefcase, Star, Phone, Mail, CheckCircle, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 
 const JoinAdvisors = () => {

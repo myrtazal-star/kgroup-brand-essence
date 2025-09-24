@@ -76,7 +76,7 @@ const Index = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
+              <Link to="/services" className="hover:text-muted-foreground transition-colors">Services</Link>
               <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
               <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
               <a href="#contact" className="hover:text-muted-foreground transition-colors">Contact</a>
