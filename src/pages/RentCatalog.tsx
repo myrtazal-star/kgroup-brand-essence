@@ -1,7 +1,13 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCatalog } from "@/components/PropertyCatalog";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 import property1 from "@/assets/property-1.jpg";
 import property2 from "@/assets/property-2.jpg";
@@ -86,8 +92,20 @@ const RentCatalog = () => {
             
             <nav className="hidden md:flex items-center gap-8 text-caption">
               <Link to="/" className="hover:text-muted-foreground transition-colors">Home</Link>
-              <Link to="/rent-catalog" className="text-foreground font-medium">Renta</Link>
-              <Link to="/sale-catalog" className="hover:text-muted-foreground transition-colors">Venta</Link>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-foreground font-medium">
+                  Properties
+                  <ChevronDown className="w-3 h-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                    <Link to="/rent-catalog" className="text-foreground font-medium">Renta</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/sale-catalog">Venta</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
             </nav>
 

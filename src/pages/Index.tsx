@@ -2,7 +2,13 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin } from "lucide-react";
+import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import heroProperty from "@/assets/hero-property.jpg";
 import property1 from "@/assets/property-1.jpg";
 import property2 from "@/assets/property-2.jpg";
@@ -56,9 +62,20 @@ const Index = () => {
             <KGroupLogo variant="full" size="md" />
             
             <nav className="hidden md:flex items-center gap-8 text-caption">
-              <a href="#properties" className="hover:text-muted-foreground transition-colors">Properties</a>
-              <Link to="/rent-catalog" className="hover:text-muted-foreground transition-colors">Renta</Link>
-              <Link to="/sale-catalog" className="hover:text-muted-foreground transition-colors">Venta</Link>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 hover:text-muted-foreground transition-colors">
+                  Properties
+                  <ChevronDown className="w-3 h-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                    <Link to="/rent-catalog">Renta</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/sale-catalog">Venta</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
               <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
               <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
