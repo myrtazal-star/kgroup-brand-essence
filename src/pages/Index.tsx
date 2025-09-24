@@ -29,9 +29,9 @@ const Index = () => {
     },
     {
       id: "2", 
-      title: "Oficina Ejecutiva",
-      location: "Santa Fe, Ciudad de México",
-      price: "$850K",
+      title: "BeGrand",
+      location: "Be grand, Reforma",
+      price: "14 MDP",
       area: "111 m²",
       bedrooms: 0,
       bathrooms: 1,
