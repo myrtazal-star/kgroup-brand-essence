@@ -94,7 +94,7 @@ const propertiesData = {
     description: "Acogedor departamento de 1 nivel en renta ubicado en Arquímedes, Polanco. Completamente amueblado con acabados modernos y en una ubicación privilegiada cerca de restaurantes y centros comerciales. El frente del departamento está ubicado frente a un kinder.",
     features: ["Completamente amueblado", "1 nivel", "Balcón", "Cocina integral", "Closets equipados", "Frente a kinder"],
     amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Área de juegos infantiles", "Jacuzzi", "Alberca"],
-    gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-1.jpg", "/src/assets/property-2.jpg"]
+    gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-r5-1.jpg", "/src/assets/property-r5-2.jpg", "/src/assets/property-r5-3.jpg", "/src/assets/property-r5-4.jpg", "/src/assets/property-r5-5.jpg", "/src/assets/property-r5-6.jpg", "/src/assets/property-r5-7.jpg"]
   },
   // Propiedades en Venta
   "s1": {
