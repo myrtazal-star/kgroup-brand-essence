@@ -39,7 +39,7 @@ const Index = () => {
     },
     {
       id: "3",
-      title: "PentHouse Aristotiles",
+      title: "Penthouse Polanco",
       location: "Aristotiles, Polanco",
       price: "28 MDP", 
       area: "523.80 m²",
