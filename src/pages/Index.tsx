@@ -248,7 +248,7 @@ const Index = () => {
               <div>
                 <h3 className="text-heading mb-4">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
+                  <a href="https://www.instagram.com/kellargroup/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a href="#" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
