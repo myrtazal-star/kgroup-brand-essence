@@ -55,15 +55,15 @@ const Index = () => {
             <KGroupLogo variant="full" size="md" />
             
             <nav className="hidden md:flex items-center gap-8 text-caption">
-              <a href="#properties" className="hover:text-muted-foreground transition-colors">Propiedades</a>
-              <a href="#services" className="hover:text-muted-foreground transition-colors">Servicios</a>
-              <a href="#about" className="hover:text-muted-foreground transition-colors">Nosotros</a>
-              <a href="#contact" className="hover:text-muted-foreground transition-colors">Contacto</a>
+              <a href="#properties" className="hover:text-muted-foreground transition-colors">Properties</a>
+              <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
+              <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
+              <a href="#contact" className="hover:text-muted-foreground transition-colors">Contact</a>
             </nav>
 
             <div className="flex items-center gap-4">
-              <Button variant="minimal" size="sm">Iniciar Sesión</Button>
-              <Button variant="luxury" size="sm">Comenzar</Button>
+              <Button variant="minimal" size="sm">Sign In</Button>
+              <Button variant="luxury" size="sm">Get Started</Button>
             </div>
           </div>
         </div>
@@ -84,21 +84,21 @@ const Index = () => {
           <div className="max-w-3xl space-y-8">
             <div className="space-y-4">
               <h1 className="text-hero font-light text-foreground">
-                Donde el Lujo Encuentra 
-                <span className="block">la Innovación</span>
+                Where Luxury Meets 
+                <span className="block">Innovation</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Descubre propiedades exclusivas a través de nuestra plataforma sofisticada, 
-                diseñada para clientes exigentes que valoran tanto la elegancia como la tecnología.
+                Discover exclusive properties through our sophisticated platform, 
+                designed for discerning clients who value both elegance and technology.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="luxury" className="group">
-                Explorar Propiedades
+                Explore Properties
                 <Search className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="minimal">Conoce Más</Button>
+              <Button variant="minimal">Learn More</Button>
             </div>
           </div>
         </div>
@@ -108,9 +108,9 @@ const Index = () => {
       <section id="properties" className="relative py-3xl">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Propiedades Destacadas</h2>
+            <h2 className="text-display font-light">Featured Properties</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Colección curada de oportunidades inmobiliarias premium
+              Curated collection of premium real estate opportunities in Mexico
             </p>
           </div>
 
@@ -122,7 +122,7 @@ const Index = () => {
 
           <div className="text-center mt-xl">
             <Button variant="outline" className="px-8">
-              Ver Todas las Propiedades
+              View All Properties
             </Button>
           </div>
         </div>
@@ -132,9 +132,9 @@ const Index = () => {
       <section id="services" className="relative py-3xl bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Nuestros Servicios</h2>
+            <h2 className="text-display font-light">Our Services</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Soluciones inmobiliarias integrales con experiencia inigualable
+              Comprehensive real estate solutions with unmatched expertise
             </p>
           </div>
 
@@ -143,9 +143,9 @@ const Index = () => {
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
                 <MapPin className="w-6 h-6" />
               </div>
-              <h3 className="text-heading">Descubrimiento de Propiedades</h3>
+              <h3 className="text-heading">Property Discovery</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Acceso a listados exclusivos y oportunidades fuera del mercado a través de nuestra extensa red.
+                Access exclusive listings and off-market opportunities through our extensive network.
               </p>
             </div>
 
@@ -153,9 +153,9 @@ const Index = () => {
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
                 <TrendingUp className="w-6 h-6" />
               </div>
-              <h3 className="text-heading">Análisis de Mercado</h3>
+              <h3 className="text-heading">Market Analysis</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Insights basados en datos e inteligencia de mercado para informar tus decisiones de inversión.
+                Data-driven insights and market intelligence to inform your investment decisions.
               </p>
             </div>
 
@@ -163,9 +163,9 @@ const Index = () => {
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
                 <Shield className="w-6 h-6" />
               </div>
-              <h3 className="text-heading">Servicio Concierge</h3>
+              <h3 className="text-heading">Concierge Service</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Servicio de guante blanco desde la consulta inicial hasta el cierre y más allá.
+                White-glove service from initial consultation through closing and beyond.
               </p>
             </div>
           </div>
@@ -177,31 +177,31 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-2xl items-center">
             <div className="space-y-6">
-              <h2 className="text-display font-light">Redefiniendo la Excelencia Inmobiliaria</h2>
+              <h2 className="text-display font-light">Redefining Real Estate Excellence</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  KGroup representa la intersección entre lujo e innovación en bienes raíces. 
-                  Aprovechamos tecnología de vanguardia y experiencia profunda del mercado para entregar 
-                  servicio incomparable a nuestra distinguida clientela.
+                  KGroup represents the intersection of luxury and innovation in real estate. 
+                  We leverage cutting-edge technology and deep market expertise to deliver 
+                  unparalleled service to our distinguished clientele in Mexico.
                 </p>
                 <p>
-                  Nuestra plataforma combina algoritmos sofisticados con perspicacia humana, 
-                  asegurando que cada transacción cumpla con los más altos estándares de excelencia.
+                  Our platform combines sophisticated algorithms with human insight, 
+                  ensuring every transaction meets the highest standards of excellence.
                 </p>
               </div>
               
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
                 <div className="text-center">
                   <div className="text-2xl font-light mb-1">$2.4B+</div>
-                  <div className="text-caption text-muted-foreground">TRANSACCIONES</div>
+                  <div className="text-caption text-muted-foreground">TRANSACTIONS</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-light mb-1">500+</div>
-                  <div className="text-caption text-muted-foreground">CLIENTES</div>
+                  <div className="text-caption text-muted-foreground">CLIENTS</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-light mb-1">15+</div>
-                  <div className="text-caption text-muted-foreground">AÑOS</div>
+                  <div className="text-caption text-muted-foreground">YEARS</div>
                 </div>
               </div>
             </div>
@@ -219,16 +219,16 @@ const Index = () => {
       <section id="contact" className="relative py-3xl bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Ponte en Contacto</h2>
+            <h2 className="text-display font-light">Get In Touch</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Comienza tu viaje inmobiliario con una consulta
+              Begin your real estate journey with a consultation
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-2xl">
             <div className="space-y-8">
               <div>
-                <h3 className="text-heading mb-4">Información de Contacto</h3>
+                <h3 className="text-heading mb-4">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-muted-foreground" />
@@ -246,7 +246,7 @@ const Index = () => {
               </div>
 
               <div>
-                <h3 className="text-heading mb-4">Síguenos</h3>
+                <h3 className="text-heading mb-4">Follow Us</h3>
                 <div className="flex gap-4">
                   <a href="#" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
                     <Instagram className="w-4 h-4" />
@@ -259,29 +259,29 @@ const Index = () => {
             </div>
 
             <div className="bg-card p-8 border border-border">
-              <h3 className="text-heading mb-6">Agendar Consulta</h3>
+              <h3 className="text-heading mb-6">Schedule Consultation</h3>
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <input 
                     className="px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Nombre"
+                    placeholder="First Name"
                   />
                   <input 
                     className="px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Apellido"
+                    placeholder="Last Name"
                   />
                 </div>
                 <input 
                   className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="Correo Electrónico"
+                  placeholder="Email Address"
                 />
                 <textarea 
                   className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
                   rows={4}
-                  placeholder="Cuéntanos sobre tus necesidades inmobiliarias..."
+                  placeholder="Tell us about your real estate needs..."
                 />
                 <Button variant="luxury" className="w-full">
-                  Agendar Consulta
+                  Schedule Consultation
                 </Button>
               </div>
             </div>
@@ -295,7 +295,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
             <div className="text-caption text-muted-foreground">
-              © 2024 KGroup. Todos los derechos reservados.
+              © 2024 KGroup. All rights reserved.
             </div>
           </div>
         </div>
