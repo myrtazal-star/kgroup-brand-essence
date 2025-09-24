@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
-import property1 from "@/assets/property-1.jpg";
+import blockRenta from "@/assets/block-renta.jpg";
 import property2 from "@/assets/property-2.jpg";
 import property3 from "@/assets/property-3.jpg";
 
@@ -17,13 +17,13 @@ const RentCatalog = () => {
   const rentalProperties = [
     {
       id: "r1",
-      title: "Departamento Moderno Polanco",
-      location: "Polanco, Ciudad de México",
-      price: "$25,000/mes",
+      title: "Block renta",
+      location: "Durango 262, Roma Norte",
+      price: "$92,000/mes",
       area: "120 m²",
       bedrooms: 2,
       bathrooms: 2,
-      imageUrl: property1,
+      imageUrl: blockRenta,
       featured: true
     },
     {
@@ -55,7 +55,7 @@ const RentCatalog = () => {
       area: "95 m²",
       bedrooms: 1,
       bathrooms: 1,
-      imageUrl: property1
+      imageUrl: property2
     },
     {
       id: "r5",
