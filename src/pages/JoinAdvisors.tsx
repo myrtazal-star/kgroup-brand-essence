@@ -7,33 +7,33 @@ const JoinAdvisors = () => {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "High Commission Structure",
-      description: "Competitive commission rates with performance bonuses and growth incentives"
+      title: "Plataforma con IA",
+      description: "Acceso a herramientas de inteligencia artificial para análisis de mercado, valoración automática y gestión de leads"
     },
     {
       icon: Briefcase,
-      title: "Premium Portfolio Access",
-      description: "Exclusive access to luxury properties and high-value investment opportunities"
+      title: "Tecnología Avanzada",
+      description: "CRM integrado, automatización de procesos, marketing digital y aplicaciones móviles de última generación"
     },
     {
       icon: Users,
-      title: "Professional Support",
-      description: "Comprehensive training, marketing support, and dedicated team collaboration"
+      title: "Respaldo Profesional",
+      description: "Capacitación continua, soporte técnico 24/7, y mentoría especializada para tu crecimiento profesional"
     },
     {
       icon: Star,
-      title: "Brand Excellence",
-      description: "Associate with a prestigious brand known for innovation and luxury in real estate"
+      title: "Red Tecnológica",
+      description: "Forma parte de la única red inmobiliaria 100% tecnológica que revoluciona el sector en México"
     }
   ];
 
   const requirements = [
-    "Licensed real estate professional in Mexico",
-    "Minimum 2 years of experience in luxury real estate",
-    "Proven track record of high-value transactions",
-    "Excellent communication skills in Spanish and English",
-    "Strong network of high-net-worth individuals",
-    "Commitment to KGroup's standards of excellence"
+    "Cédula profesional en bienes raíces o áreas afines",
+    "Mínimo 1 año de experiencia en ventas inmobiliarias",
+    "Orientación hacia la innovación y adopción tecnológica",
+    "Excelentes habilidades de comunicación y servicio al cliente",
+    "Conocimiento del mercado inmobiliario mexicano",
+    "Compromiso con la excelencia y el crecimiento profesional continuo"
   ];
 
   return (
@@ -66,8 +66,9 @@ const JoinAdvisors = () => {
                 Unite al KGroup
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Partner with KGroup and elevate your career in luxury real estate. 
-                We're seeking exceptional advisors to join our prestigious network.
+                Somos la primera red inmobiliaria tecnológica de México. Brindamos el respaldo integral 
+                que los asesores necesitan para transformar y potenciar su negocio inmobiliario con 
+                inteligencia artificial y herramientas de vanguardia.
               </p>
             </div>
             
@@ -89,9 +90,9 @@ const JoinAdvisors = () => {
       <section className="relative py-3xl bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Why Choose KGroup?</h2>
+            <h2 className="text-display font-light">¿Por qué Elegir KGroup?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Exceptional benefits and opportunities for elite real estate professionals
+              Tecnología de vanguardia y respaldo integral para profesionales inmobiliarios
             </p>
           </div>
 
@@ -116,9 +117,9 @@ const JoinAdvisors = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-2xl space-y-4">
-              <h2 className="text-display font-light">Requirements & Qualifications</h2>
+              <h2 className="text-display font-light">Requisitos & Perfil Profesional</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                We seek experienced professionals who share our commitment to excellence
+                Buscamos profesionales comprometidos con la innovación y el servicio de excelencia
               </p>
             </div>
 
@@ -135,28 +136,28 @@ const JoinAdvisors = () => {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-heading">What We Offer</h3>
+                <h3 className="text-heading">Lo que Ofrecemos</h3>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Join a select group of real estate professionals who represent the pinnacle 
-                    of luxury property services in Mexico. Our advisors enjoy unparalleled 
-                    support, resources, and commission structures.
+                    Únete a la primera red inmobiliaria tecnológica de México. Nuestros asesores disfrutan 
+                    de herramientas de inteligencia artificial, automatización de procesos, y una plataforma 
+                    integral que multiplica su productividad y resultados.
                   </p>
                   <p>
-                    We provide comprehensive training on our cutting-edge technology platform, 
-                    marketing support, and access to an exclusive network of high-net-worth clients 
-                    seeking premium real estate opportunities.
+                    Proporcionamos capacitación especializada en tecnología inmobiliaria, marketing digital, 
+                    CRM avanzado, y acceso a una red exclusiva de clientes gestionada por algoritmos 
+                    inteligentes que optimizan cada oportunidad de negocio.
                   </p>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-6 pt-6 border-t border-border">
                   <div className="text-center">
-                    <div className="text-2xl font-light mb-1">5-7%</div>
-                    <div className="text-caption text-muted-foreground">COMMISSION RATE</div>
+                    <div className="text-2xl font-light mb-1">4-6%</div>
+                    <div className="text-caption text-muted-foreground">COMISIÓN</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-light mb-1">24/7</div>
-                    <div className="text-caption text-muted-foreground">SUPPORT</div>
+                    <div className="text-2xl font-light mb-1">IA</div>
+                    <div className="text-caption text-muted-foreground">HERRAMIENTAS</div>
                   </div>
                 </div>
               </div>
@@ -170,16 +171,16 @@ const JoinAdvisors = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-2xl space-y-4">
-              <h2 className="text-display font-light">Ready to Join Us?</h2>
+              <h2 className="text-display font-light">¿Listo para Unirte?</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Submit your application and start your journey with KGroup
+                Envía tu aplicación y comienza tu transformación profesional con KGroup
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-2xl">
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-heading mb-4">Contact Our Recruitment Team</h3>
+                  <h3 className="text-heading mb-4">Contacta a Nuestro Equipo</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Phone className="w-4 h-4 text-muted-foreground" />
@@ -193,64 +194,64 @@ const JoinAdvisors = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-heading mb-4">Application Process</h3>
+                  <h3 className="text-heading mb-4">Proceso de Aplicación</h3>
                   <div className="space-y-3 text-muted-foreground text-sm">
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center mt-0.5">1</div>
-                      <span>Submit application form with required documents</span>
+                      <span>Envía tu aplicación con documentos requeridos</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center mt-0.5">2</div>
-                      <span>Initial phone screening with recruitment team</span>
+                      <span>Entrevista inicial con nuestro equipo de reclutamiento</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center mt-0.5">3</div>
-                      <span>In-person interview and portfolio review</span>
+                      <span>Evaluación de perfil y demostración de plataforma</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center mt-0.5">4</div>
-                      <span>Onboarding and training program</span>
+                      <span>Onboarding y capacitación en herramientas tecnológicas</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-card p-8 border border-border">
-                <h3 className="text-heading mb-6">Apply to Join KGroup</h3>
+                <h3 className="text-heading mb-6">Solicita Unirte a KGroup</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <input 
                       className="px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                      placeholder="First Name"
+                      placeholder="Nombre"
                     />
                     <input 
                       className="px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                      placeholder="Last Name"
+                      placeholder="Apellido"
                     />
                   </div>
                   <input 
                     className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Email Address"
+                    placeholder="Correo Electrónico"
                   />
                   <input 
                     className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Phone Number"
+                    placeholder="Número de Teléfono"
                   />
                   <input 
                     className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Real Estate License Number"
+                    placeholder="Número de Cédula Profesional"
                   />
                   <input 
                     className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Years of Experience"
+                    placeholder="Años de Experiencia"
                   />
                   <textarea 
                     className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
                     rows={4}
-                    placeholder="Tell us about your experience and why you want to join KGroup..."
+                    placeholder="Cuéntanos sobre tu experiencia y por qué quieres unirte a KGroup..."
                   />
                   <Button variant="luxury" className="w-full">
-                    Submit Application
+                    Enviar Solicitud
                   </Button>
                 </div>
               </div>
