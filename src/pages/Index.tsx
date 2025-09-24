@@ -1,69 +1,104 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
-import { PropertyCard } from "@/components/PropertyCard";
+import { PropertyCard } from "@/components/PropertyCardMexico";
+import { InvestmentCard } from "@/components/InvestmentCard";
 import { Button } from "@/components/ui/button";
-import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin } from "lucide-react";
-import heroProperty from "@/assets/hero-property.jpg";
-import property1 from "@/assets/property-1.jpg";
-import property2 from "@/assets/property-2.jpg";
-import property3 from "@/assets/property-3.jpg";
+import { 
+  Search, 
+  MapPin, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  Phone, 
+  Mail, 
+  Instagram, 
+  Linkedin,
+  Building2,
+  Landmark,
+  ChartBar,
+  Award,
+  Target,
+  Globe
+} from "lucide-react";
+import heroMexico from "@/assets/hero-mexico.jpg";
+import propertyCdmx1 from "@/assets/property-cdmx-1.jpg";
+import propertyCdmx2 from "@/assets/property-cdmx-2.jpg";
+import meridaInvestment from "@/assets/merida-investment.jpg";
+import meridaDevelopment from "@/assets/merida-development.jpg";
 
 const Index = () => {
-  const featuredProperties = [
+  const mexicoCityProperties = [
     {
       id: "1",
-      title: "Meridian Residences",
-      location: "Tribeca, Manhattan",
-      price: "$4.2M",
-      area: "2,400 sqft",
+      title: "Residencial Polanco Elite",
+      location: "Polanco, Ciudad de México",
+      price: "$8.5M MXN",
+      area: "180 m²",
       bedrooms: 3,
       bathrooms: 2,
-      imageUrl: property1,
-      featured: true
+      imageUrl: propertyCdmx1,
+      featured: true,
+      type: "apartment" as const
     },
     {
       id: "2", 
-      title: "Executive Office Suite",
-      location: "Financial District",
-      price: "$850K",
-      area: "1,200 sqft",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: property2
-    },
-    {
-      id: "3",
-      title: "Skyline Penthouse",
-      location: "Upper East Side",
-      price: "$12.5M", 
-      area: "4,800 sqft",
+      title: "Casa Contemporánea Roma Norte",
+      location: "Roma Norte, CDMX",
+      price: "$12.2M MXN",
+      area: "250 m²",
       bedrooms: 4,
       bathrooms: 3,
-      imageUrl: property3,
-      featured: true
+      imageUrl: propertyCdmx2,
+      type: "house" as const
+    }
+  ];
+
+  const meridaInvestments = [
+    {
+      id: "1",
+      title: "Proyecto Residencial Mérida Norte",
+      location: "Norte de Mérida, Yucatán",
+      investment: "$2.5M MXN",
+      roi: "35-40%",
+      timeline: "24 meses",
+      area: "5,000 m²",
+      imageUrl: meridaInvestment,
+      status: "available" as const
+    },
+    {
+      id: "2",
+      title: "Desarrollo Mixto Centenario",
+      location: "Centro Histórico, Mérida",
+      investment: "$4.8M MXN", 
+      roi: "45-50%",
+      timeline: "30 meses",
+      area: "8,200 m²",
+      imageUrl: meridaDevelopment,
+      status: "developing" as const
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Grid Background Pattern */}
-      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none" />
+      <div className="fixed inset-0 grid-pattern opacity-30 pointer-events-none" />
       
       {/* Header */}
       <header className="relative z-10 border-b border-border bg-background/95 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <KGroupLogo variant="full" size="md" />
             
-            <nav className="hidden md:flex items-center gap-8 text-caption">
-              <a href="#properties" className="hover:text-muted-foreground transition-colors">Properties</a>
-              <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
-              <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
-              <a href="#contact" className="hover:text-muted-foreground transition-colors">Contact</a>
+            <nav className="hidden md:flex items-center gap-10 text-caption font-medium">
+              <a href="#propiedades" className="hover:text-muted-foreground transition-colors tracking-wide">Propiedades</a>
+              <a href="#inversiones" className="hover:text-muted-foreground transition-colors tracking-wide">Inversiones</a>
+              <a href="#patrimonio" className="hover:text-muted-foreground transition-colors tracking-wide">Patrimonio</a>
+              <a href="#nosotros" className="hover:text-muted-foreground transition-colors tracking-wide">Nosotros</a>
+              <a href="#contacto" className="hover:text-muted-foreground transition-colors tracking-wide">Contacto</a>
             </nav>
 
             <div className="flex items-center gap-4">
-              <Button variant="minimal" size="sm">Sign In</Button>
-              <Button variant="luxury" size="sm">Get Started</Button>
+              <Button variant="minimal" size="sm">Acceder</Button>
+              <Button variant="luxury" size="sm">Consultoría</Button>
             </div>
           </div>
         </div>
@@ -73,142 +108,206 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <img 
-            src={heroProperty} 
-            alt="Luxury property interior"
+            src={heroMexico} 
+            alt="Luxury property Mexico City"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/60" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
         
         <div className="relative z-10 container mx-auto px-6">
-          <div className="max-w-3xl space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-hero font-light text-foreground">
-                Where Luxury Meets 
-                <span className="block">Innovation</span>
+          <div className="max-w-4xl space-y-12">
+            <div className="space-y-8">
+              <h1 className="text-hero font-serif text-foreground leading-tight">
+                Donde el Lujo
+                <span className="block">Encuentra la Innovación</span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Discover exclusive properties through our sophisticated platform, 
-                designed for discerning clients who value both elegance and technology.
+              <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed font-sans">
+                Descubra oportunidades exclusivas de inversión inmobiliaria en México. 
+                Combinamos elegancia tradicional con estrategias de vanguardia para hacer crecer su patrimonio.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6">
               <Button variant="luxury" className="group">
-                Explore Properties
+                Explorar Propiedades
                 <Search className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="minimal">Learn More</Button>
+              <Button variant="minimal">Agendar Consulta</Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Properties */}
-      <section id="properties" className="relative py-3xl">
+      {/* Properties Section */}
+      <section id="propiedades" className="relative py-3xl">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Featured Properties</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Curated collection of premium real estate opportunities
+          <div className="text-center mb-2xl space-y-6">
+            <h2 className="text-display font-serif">Propiedades Exclusivas</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+              Selección curada de residencias de lujo en las zonas más prestigiosas de la Ciudad de México
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProperties.map((property) => (
+          <div className="grid md:grid-cols-2 gap-12 mb-xl">
+            {mexicoCityProperties.map((property) => (
               <PropertyCard key={property.id} {...property} />
             ))}
           </div>
 
-          <div className="text-center mt-xl">
-            <Button variant="outline" className="px-8">
-              View All Properties
+          <div className="text-center">
+            <Button variant="outline" className="px-10 py-3">
+              Ver Todas las Propiedades
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="relative py-3xl bg-muted/30">
+      {/* Investments Section */}
+      <section id="inversiones" className="relative py-3xl bg-muted/20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Our Services</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive real estate solutions with unmatched expertise
+          <div className="text-center mb-2xl space-y-6">
+            <h2 className="text-display font-serif">Inversiones en Mérida</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+              Oportunidades de desarrollo e inversión en terrenos con el mayor potencial de crecimiento en Yucatán
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4 p-8 bg-card border border-border hover:shadow-elegant transition-all duration-300">
-              <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
-                <MapPin className="w-6 h-6" />
+          <div className="grid md:grid-cols-2 gap-12 mb-xl">
+            {meridaInvestments.map((investment) => (
+              <InvestmentCard key={investment.id} {...investment} />
+            ))}
+          </div>
+
+          <div className="text-center space-y-6">
+            <Button variant="luxury">
+              Solicitar Información de Inversiones
+            </Button>
+            <p className="text-caption text-muted-foreground">
+              ROI proyectado basado en análisis de mercado y tendencias históricas
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Patrimony Growth Section */}
+      <section id="patrimonio" className="relative py-3xl">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-2xl space-y-6">
+            <h2 className="text-display font-serif">Crecimiento Patrimonial</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+              Estrategias integrales para multiplicar su patrimonio a través de inversiones inmobiliarias inteligentes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 mb-2xl">
+            <div className="text-center space-y-6 p-8 bg-card border border-border hover-elegant">
+              <div className="w-16 h-16 mx-auto flex items-center justify-center border border-border">
+                <ChartBar className="w-8 h-8" />
               </div>
-              <h3 className="text-heading">Property Discovery</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Access exclusive listings and off-market opportunities through our extensive network.
+              <h3 className="text-heading font-serif">Análisis de Mercado</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Estudios profundos de tendencias, valorización y potencial de crecimiento 
+                en cada zona de inversión.
               </p>
             </div>
 
-            <div className="text-center space-y-4 p-8 bg-card border border-border hover:shadow-elegant transition-all duration-300">
-              <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
-                <TrendingUp className="w-6 h-6" />
+            <div className="text-center space-y-6 p-8 bg-card border border-border hover-elegant">
+              <div className="w-16 h-16 mx-auto flex items-center justify-center border border-border">
+                <Target className="w-8 h-8" />
               </div>
-              <h3 className="text-heading">Market Analysis</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Data-driven insights and market intelligence to inform your investment decisions.
+              <h3 className="text-heading font-serif">Estrategia Personalizada</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Planes de inversión diseñados específicamente para sus objetivos 
+                financieros y perfil de riesgo.
               </p>
             </div>
 
-            <div className="text-center space-y-4 p-8 bg-card border border-border hover:shadow-elegant transition-all duration-300">
-              <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
-                <Shield className="w-6 h-6" />
+            <div className="text-center space-y-6 p-8 bg-card border border-border hover-elegant">
+              <div className="w-16 h-16 mx-auto flex items-center justify-center border border-border">
+                <Award className="w-8 h-8" />
               </div>
-              <h3 className="text-heading">Concierge Service</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                White-glove service from initial consultation through closing and beyond.
+              <h3 className="text-heading font-serif">Gestión Integral</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Acompañamiento completo desde la adquisición hasta la 
+                optimización de rendimientos.
               </p>
+            </div>
+          </div>
+
+          <div className="bg-card border border-border p-12 text-center space-y-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                <div className="text-3xl font-serif mb-2">$850M+</div>
+                <div className="text-caption text-muted-foreground uppercase tracking-wide">Patrimonio Gestionado</div>
+              </div>
+              <div>
+                <div className="text-3xl font-serif mb-2">42%</div>
+                <div className="text-caption text-muted-foreground uppercase tracking-wide">ROI Promedio</div>
+              </div>
+              <div>
+                <div className="text-3xl font-serif mb-2">150+</div>
+                <div className="text-caption text-muted-foreground uppercase tracking-wide">Inversores</div>
+              </div>
+              <div>
+                <div className="text-3xl font-serif mb-2">12</div>
+                <div className="text-caption text-muted-foreground uppercase tracking-wide">Años Experiencia</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-3xl">
+      <section id="nosotros" className="relative py-3xl bg-muted/20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-2xl items-center">
-            <div className="space-y-6">
-              <h2 className="text-display font-light">Redefining Real Estate Excellence</h2>
-              <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-8">
+              <h2 className="text-display font-serif">Excelencia en Bienes Raíces</h2>
+              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  KGroup represents the intersection of luxury and innovation in real estate. 
-                  We leverage cutting-edge technology and deep market expertise to deliver 
-                  unparalleled service to our distinguished clientele.
+                  KGroup representa la intersección entre la tradición inmobiliaria mexicana 
+                  y la innovación financiera global. Durante más de una década, hemos 
+                  establecido el estándar de excelencia en inversiones de alto valor.
                 </p>
                 <p>
-                  Our platform combines sophisticated algorithms with human insight, 
-                  ensuring every transaction meets the highest standards of excellence.
+                  Nuestra metodología combina análisis cuantitativos rigurosos con 
+                  conocimiento profundo del mercado local, garantizando decisiones 
+                  de inversión fundamentadas y rentables.
+                </p>
+                <p>
+                  Trabajamos exclusivamente con clientes que valoran tanto la discreción 
+                  como los resultados excepcionales, construyendo relaciones duraderas 
+                  basadas en la confianza y el éxito mutuo.
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
+              <div className="flex gap-8 pt-8 border-t border-border">
                 <div className="text-center">
-                  <div className="text-2xl font-light mb-1">$2.4B+</div>
-                  <div className="text-caption text-muted-foreground">TRANSACTIONS</div>
+                  <Building2 className="w-8 h-8 mx-auto mb-3 text-primary" />
+                  <div className="text-caption text-muted-foreground">Exclusividad</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-light mb-1">500+</div>
-                  <div className="text-caption text-muted-foreground">CLIENTS</div>
+                  <Landmark className="w-8 h-8 mx-auto mb-3 text-primary" />
+                  <div className="text-caption text-muted-foreground">Elegancia</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-light mb-1">15+</div>
-                  <div className="text-caption text-muted-foreground">YEARS</div>
+                  <Shield className="w-8 h-8 mx-auto mb-3 text-primary" />
+                  <div className="text-caption text-muted-foreground">Confianza</div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square bg-muted border border-border flex items-center justify-center">
-                <Users className="w-16 h-16 text-muted-foreground" />
+            <div className="relative space-y-6">
+              <div className="aspect-[4/3] bg-muted border border-border flex items-center justify-center">
+                <Globe className="w-24 h-24 text-muted-foreground" />
+              </div>
+              <div className="text-center space-y-3">
+                <h3 className="text-heading font-serif">Presencia Nacional</h3>
+                <p className="text-muted-foreground">
+                  Con oficinas en Ciudad de México y Mérida, servimos a inversionistas 
+                  en todo el territorio nacional.
+                </p>
               </div>
             </div>
           </div>
@@ -216,72 +315,96 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-3xl bg-muted/30">
+      <section id="contacto" className="relative py-3xl">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Get In Touch</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Begin your real estate journey with a consultation
+          <div className="text-center mb-2xl space-y-6">
+            <h2 className="text-display font-serif">Inicie su Consultoría</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+              Comience su viaje hacia el crecimiento patrimonial con una consulta personalizada
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-2xl">
-            <div className="space-y-8">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-2xl">
+            <div className="space-y-10">
               <div>
-                <h3 className="text-heading mb-4">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-4 h-4 text-muted-foreground" />
-                    <span>+1 (555) 123-4567</span>
+                <h3 className="text-heading font-serif mb-6">Información de Contacto</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <Phone className="w-5 h-5 text-muted-foreground" />
+                    <div>
+                      <div className="font-medium">Ciudad de México</div>
+                      <div className="text-muted-foreground">+52 55 1234 5678</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-4 h-4 text-muted-foreground" />
-                    <span>contact@kgroup.com</span>
+                  <div className="flex items-center gap-4">
+                    <Phone className="w-5 h-5 text-muted-foreground" />
+                    <div>
+                      <div className="font-medium">Mérida</div>
+                      <div className="text-muted-foreground">+52 999 123 4567</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <MapPin className="w-4 h-4 text-muted-foreground" />
-                    <span>432 Park Avenue, New York, NY 10016</span>
+                  <div className="flex items-center gap-4">
+                    <Mail className="w-5 h-5 text-muted-foreground" />
+                    <span>contacto@kgroup.mx</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-5 h-5 text-muted-foreground mt-1" />
+                    <div>
+                      <div>Av. Presidente Masaryk 111</div>
+                      <div className="text-muted-foreground">Polanco, Ciudad de México</div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-heading mb-4">Follow Us</h3>
+                <h3 className="text-heading font-serif mb-6">Síguenos</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
-                    <Instagram className="w-4 h-4" />
+                  <a href="#" className="w-12 h-12 border border-border flex items-center justify-center hover:bg-muted transition-colors">
+                    <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
-                    <Linkedin className="w-4 h-4" />
+                  <a href="#" className="w-12 h-12 border border-border flex items-center justify-center hover:bg-muted transition-colors">
+                    <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-card p-8 border border-border">
-              <h3 className="text-heading mb-6">Schedule Consultation</h3>
-              <div className="space-y-4">
+            <div className="bg-card p-10 border border-border">
+              <h3 className="text-heading font-serif mb-8">Solicitar Consultoría</h3>
+              <div className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <input 
-                    className="px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="First Name"
+                    className="px-4 py-4 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
+                    placeholder="Nombre"
                   />
                   <input 
-                    className="px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                    placeholder="Last Name"
+                    className="px-4 py-4 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
+                    placeholder="Apellido"
                   />
                 </div>
                 <input 
-                  className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                  placeholder="Email Address"
+                  className="w-full px-4 py-4 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
+                  placeholder="Correo Electrónico"
                 />
+                <input 
+                  className="w-full px-4 py-4 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
+                  placeholder="Teléfono"
+                />
+                <select className="w-full px-4 py-4 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm">
+                  <option>Tipo de Inversión</option>
+                  <option>Propiedades Residenciales</option>
+                  <option>Inversión en Terrenos</option>
+                  <option>Desarrollo Inmobiliario</option>
+                  <option>Consultoría Patrimonial</option>
+                </select>
                 <textarea 
-                  className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none"
+                  className="w-full px-4 py-4 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring resize-none text-sm"
                   rows={4}
-                  placeholder="Tell us about your real estate needs..."
+                  placeholder="Cuéntenos sobre sus objetivos de inversión..."
                 />
                 <Button variant="luxury" className="w-full">
-                  Schedule Consultation
+                  Solicitar Consultoría Privada
                 </Button>
               </div>
             </div>
@@ -295,7 +418,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
             <div className="text-caption text-muted-foreground">
-              © 2024 KGroup. All rights reserved.
+              © 2024 KGroup México. Todos los derechos reservados.
             </div>
           </div>
         </div>

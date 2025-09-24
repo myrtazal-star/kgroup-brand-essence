@@ -72,10 +72,16 @@ export default {
         'hero': ['var(--text-hero)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
         'display': ['var(--text-display)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
         'heading': ['var(--text-heading)', { lineHeight: '1.3', letterSpacing: '-0.005em' }],
+        'subheading': ['var(--text-subheading)', { lineHeight: '1.4', letterSpacing: '-0.005em' }],
+      },
+      fontFamily: {
+        'serif': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         'elegant': '0 1px 3px 0 hsl(var(--shadow-elegant)), 0 1px 2px 0 hsl(var(--shadow-elegant))',
         'refined': '0 4px 6px -1px hsl(var(--shadow-refined)), 0 2px 4px -1px hsl(var(--shadow-refined))',
+        'luxury': '0 10px 25px -5px hsl(var(--shadow-luxury)), 0 4px 6px -2px hsl(var(--shadow-refined))',
       },
       borderRadius: {
         lg: "var(--radius)",
