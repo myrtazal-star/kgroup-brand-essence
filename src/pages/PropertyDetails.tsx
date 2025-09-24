@@ -32,7 +32,7 @@ const propertiesData = {
   },
   "r2": {
     id: "r2",
-    title: "Oficina PH de 2 niveles en Roma Norte",
+    title: "Oficina PH de 2 niveles en Polanco",
     location: "Homero, Polanco",
     price: "$100,000",
     priceType: "Renta mensual",
@@ -42,7 +42,7 @@ const propertiesData = {
     parking: 2,
     imageUrl: "/src/assets/oficina-ph-roma-norte.jpg",
     featured: false,
-    description: "Moderna oficina en penthouse de dos niveles ubicada en el corazón de Roma Norte. Ideal para empresas creativas que buscan un espacio único y bien ubicado con excelente conectividad.",
+    description: "Moderna oficina en penthouse de dos niveles ubicada en Polanco. Ideal para empresas creativas que buscan un espacio único y bien ubicado con excelente conectividad.",
     features: ["Doble altura", "Terraza privada", "Iluminación natural", "Área de reuniones", "Kitchenette", "6 espacios de trabajo"],
     amenities: ["Internet de alta velocidad", "Seguridad", "Elevador", "Estacionamiento", "Recepción"],
     gallery: [
