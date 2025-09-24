@@ -87,7 +87,7 @@ const propertiesData = {
     priceType: "Renta mensual",
     area: "75 m²",
     bedrooms: 2,
-    bathrooms: 1,
+    bathrooms: 1.5,
     parking: 1,
     imageUrl: "/src/assets/depto-arquimedes-polanco.jpg",
     featured: false,
