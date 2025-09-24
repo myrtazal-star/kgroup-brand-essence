@@ -232,15 +232,15 @@ const Index = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-muted-foreground" />
-                    <span>+52 (55) 123-4567</span>
+                    <span>+52 55 6080 8129</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-muted-foreground" />
-                    <span>contacto@kgroup.mx</span>
+                    <span>groupkellar@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-4 h-4 text-muted-foreground" />
-                    <span>Av. Paseo de la Reforma 404, Ciudad de México</span>
+                    <span>Av. Paseo de Reforma 180, Ciudad de México</span>
                   </div>
                 </div>
               </div>
