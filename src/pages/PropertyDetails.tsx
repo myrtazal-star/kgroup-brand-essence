@@ -369,7 +369,7 @@ const PropertyDetails = () => {
                     Bienes Raíces de Lujo
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    📞 (55) 1234-5678
+                    📞 (55) 6080-8129
                   </div>
                 </div>
               </CardContent>
