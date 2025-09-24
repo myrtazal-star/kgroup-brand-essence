@@ -109,8 +109,8 @@ const Index = () => {
                 <span className="block">Innovation</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Discover exclusive properties through our sophisticated platform, 
-                designed for discerning clients who value both elegance and technology.
+                Descubre propiedades exclusivas a través de nuestra plataforma sofisticada, 
+                diseñada para clientes exigentes que valoran tanto la elegancia como la tecnología.
               </p>
             </div>
             
