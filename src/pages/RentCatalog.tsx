@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import blockRenta from "@/assets/block-renta.jpg";
 import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
-import property3 from "@/assets/property-3.jpg";
+import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -44,7 +44,7 @@ const RentCatalog = () => {
       area: "200 m²",
       bedrooms: 3,
       bathrooms: 3,
-      imageUrl: property3,
+      imageUrl: oficinaPH,
       featured: true
     },
     {
@@ -59,13 +59,13 @@ const RentCatalog = () => {
     },
     {
       id: "r5",
-      title: "Casa Familiar Condesa",
-      location: "Condesa, Ciudad de México",
-      price: "$35,000/mes",
-      area: "180 m²",
-      bedrooms: 3,
-      bathrooms: 2,
-      imageUrl: oficinaPH
+      title: "Departamento en renta Arquimedes, Polanco",
+      location: "Arquimedes, Polanco",
+      price: "$39,000/mes",
+      area: "75 m²",
+      bedrooms: 2,
+      bathrooms: 1,
+      imageUrl: deptoArquimedes
     },
     {
       id: "r6",
@@ -75,7 +75,7 @@ const RentCatalog = () => {
       area: "60 m²",
       bedrooms: 1,
       bathrooms: 1,
-      imageUrl: property3
+      imageUrl: deptoArquimedes
     }
   ];
 
