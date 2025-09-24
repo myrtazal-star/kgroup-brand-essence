@@ -38,12 +38,12 @@ const RentCatalog = () => {
     },
     {
       id: "r3",
-      title: "Penthouse de Lujo Zona Rosa",
-      location: "Zona Rosa, Ciudad de México",
+      title: "Renta Oficina",
+      location: "Polanco, Homero",
       price: "$45,000/mes",
-      area: "200 m²",
-      bedrooms: 3,
-      bathrooms: 3,
+      area: "100 m²",
+      bedrooms: 0,
+      bathrooms: 1,
       imageUrl: oficinaPH,
       featured: true
     },
