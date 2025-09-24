@@ -63,8 +63,8 @@ const JoinAdvisors = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-hero font-light text-foreground">
-                Join Our Elite Team of 
-                <span className="block">Real Estate Advisors</span>
+                Unite al Equipo Elite de 
+                <span className="block">Asesores de KGroup</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Partner with KGroup and elevate your career in luxury real estate. 

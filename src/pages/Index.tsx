@@ -59,7 +59,7 @@ const Index = () => {
               <a href="#properties" className="hover:text-muted-foreground transition-colors">Properties</a>
               <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
               <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
-              <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Join as Advisor</Link>
+              <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
               <a href="#contact" className="hover:text-muted-foreground transition-colors">Contact</a>
             </nav>
 
