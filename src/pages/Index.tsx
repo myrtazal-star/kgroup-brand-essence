@@ -17,35 +17,36 @@ import property3 from "@/assets/penthouse-aristotiles.jpg";
 const Index = () => {
   const featuredProperties = [
     {
-      id: "1",
+      id: "s1",
+      title: "Penthouse Aristóteles",
+      location: "Polanco, CDMX",
+      price: "$8,500,000",
+      area: "450 m²",
+      bedrooms: 4,
+      bathrooms: 4,
+      imageUrl: property3,
+      featured: true
+    },
+    {
+      id: "s2", 
       title: "Mitikah Residencial",
-      location: "Cto Interior Avenida Río Churubusco 601, Xoco, Benito Juárez, 03330 Ciudad de México, CDMX",
-      price: "Desde 12.6 MDP",
-      area: "195 m²",
-      bedrooms: 3,
-      bathrooms: 3,
+      location: "Mitikah, CDMX",
+      price: "$6,200,000",
+      area: "110 m²",
+      bedrooms: 2,
+      bathrooms: 2,
       imageUrl: property1,
       featured: true
     },
     {
-      id: "2", 
-      title: "Oficina en venta Be grand",
-      location: "Lafragua 13, Tabacalera, Cuauhtémoc, 06030 Ciudad de México, CDMX",
-      price: "14 MDP",
-      area: "111 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: property2
-    },
-    {
-      id: "3",
-      title: "Penthouse Polanco",
-      location: "Aristotiles, Polanco",
-      price: "28 MDP", 
-      area: "523.80 m²",
-      bedrooms: 4,
-      bathrooms: 3,
-      imageUrl: property3,
+      id: "r1",
+      title: "Departamento Arquímedes",
+      location: "Polanco, CDMX",
+      price: "$45,000/mes", 
+      area: "180 m²",
+      bedrooms: 3,
+      bathrooms: 2,
+      imageUrl: property2,
       featured: true
     }
   ];

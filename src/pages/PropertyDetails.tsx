@@ -8,8 +8,92 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
-  "1": {
-    id: "1",
+  // Propiedades en Renta
+  "r1": {
+    id: "r1",
+    title: "Departamento Arquímedes",
+    location: "Polanco, CDMX",
+    price: "$45,000",
+    priceType: "Renta",
+    area: "180 m²",
+    bedrooms: 3,
+    bathrooms: 2,
+    parking: 2,
+    imageUrl: "/src/assets/depto-arquimedes-polanco.jpg",
+    featured: false,
+    description: "Hermoso departamento en renta ubicado en Arquímedes, Polanco. Completamente amueblado con acabados modernos y en una ubicación privilegiada.",
+    features: ["Completamente amueblado", "Balcón", "Cocina integral", "Closets empotrados", "Aire acondicionado"],
+    amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Área de juegos infantiles"],
+    gallery: [
+      "/src/assets/depto-arquimedes-polanco.jpg",
+      "/src/assets/property-1.jpg",
+      "/src/assets/property-2.jpg"
+    ]
+  },
+  "r2": {
+    id: "r2",
+    title: "Oficina PH Roma Norte",
+    location: "Roma Norte, CDMX",
+    price: "$25,000",
+    priceType: "Renta",
+    area: "120 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 1,
+    imageUrl: "/src/assets/oficina-ph-roma-norte.jpg",
+    featured: false,
+    description: "Moderna oficina en penthouse ubicada en el corazón de Roma Norte. Ideal para empresas creativas que buscan un espacio único y bien ubicado.",
+    features: ["Terraza privada", "Doble altura", "Iluminación natural", "Área de reuniones", "Kitchenette"],
+    amenities: ["Internet de alta velocidad", "Seguridad", "Elevador", "Estacionamiento"],
+    gallery: [
+      "/src/assets/oficina-ph-roma-norte.jpg",
+      "/src/assets/property-1.jpg"
+    ]
+  },
+  "r3": {
+    id: "r3",
+    title: "Renta Mitikah",
+    location: "Mitikah, CDMX",
+    price: "$35,000",
+    priceType: "Renta",
+    area: "95 m²",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 1,
+    imageUrl: "/src/assets/renta-mitikah.jpg",
+    featured: false,
+    description: "Departamento nuevo en renta en el exclusivo desarrollo Mitikah. Con amenidades de lujo y ubicación estratégica.",
+    features: ["Completamente nuevo", "Balcón", "Cocina moderna", "Walk-in closet", "Lavandería"],
+    amenities: ["Gimnasio", "Alberca", "Sky lounge", "Seguridad 24/7", "Elevadores de alta velocidad"],
+    gallery: [
+      "/src/assets/renta-mitikah.jpg",
+      "/src/assets/property-2.jpg",
+      "/src/assets/property-3.jpg"
+    ]
+  },
+  "r4": {
+    id: "r4",
+    title: "Block Renta",
+    location: "Roma Norte, CDMX",
+    price: "$28,000",
+    priceType: "Renta",
+    area: "85 m²",
+    bedrooms: 2,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: "/src/assets/block-renta.jpg",
+    featured: false,
+    description: "Departamento moderno en renta en Roma Norte. Diseño contemporáneo con acabados de calidad en una zona vibrante.",
+    features: ["Diseño moderno", "Iluminación LED", "Cocina integral", "Área de lavado", "Balcón"],
+    amenities: ["Rooftop", "Gimnasio", "Seguridad", "Elevador", "Bike parking"],
+    gallery: [
+      "/src/assets/block-renta.jpg",
+      "/src/assets/property-2.jpg"
+    ]
+  },
+  // Propiedades en Venta
+  "s1": {
+    id: "s1",
     title: "Penthouse Aristóteles",
     location: "Polanco, CDMX",
     price: "$8,500,000",
@@ -30,70 +114,8 @@ const propertiesData = {
       "/src/assets/property-3.jpg"
     ]
   },
-  "2": {
-    id: "2",
-    title: "Departamento Arquímedes",
-    location: "Polanco, CDMX",
-    price: "$45,000",
-    priceType: "Renta",
-    area: "180 m²",
-    bedrooms: 3,
-    bathrooms: 2,
-    parking: 2,
-    imageUrl: "/src/assets/depto-arquimedes-polanco.jpg",
-    featured: false,
-    description: "Hermoso departamento en renta ubicado en Arquímedes, Polanco. Completamente amueblado con acabados modernos y en una ubicación privilegiada.",
-    features: ["Completamente amueblado", "Balcón", "Cocina integral", "Closets empotrados", "Aire acondicionado"],
-    amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Área de juegos infantiles"],
-    gallery: [
-      "/src/assets/depto-arquimedes-polanco.jpg",
-      "/src/assets/property-1.jpg",
-      "/src/assets/property-2.jpg"
-    ]
-  },
-  "3": {
-    id: "3",
-    title: "Oficina PH Roma Norte",
-    location: "Roma Norte, CDMX",
-    price: "$25,000",
-    priceType: "Renta",
-    area: "120 m²",
-    bedrooms: 0,
-    bathrooms: 2,
-    parking: 1,
-    imageUrl: "/src/assets/oficina-ph-roma-norte.jpg",
-    featured: false,
-    description: "Moderna oficina en penthouse ubicada en el corazón de Roma Norte. Ideal para empresas creativas que buscan un espacio único y bien ubicado.",
-    features: ["Terraza privada", "Doble altura", "Iluminación natural", "Área de reuniones", "Kitchenette"],
-    amenities: ["Internet de alta velocidad", "Seguridad", "Elevador", "Estacionamiento"],
-    gallery: [
-      "/src/assets/oficina-ph-roma-norte.jpg",
-      "/src/assets/property-1.jpg"
-    ]
-  },
-  "4": {
-    id: "4",
-    title: "Renta Mitikah",
-    location: "Mitikah, CDMX",
-    price: "$35,000",
-    priceType: "Renta",
-    area: "95 m²",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    imageUrl: "/src/assets/renta-mitikah.jpg",
-    featured: false,
-    description: "Departamento nuevo en renta en el exclusivo desarrollo Mitikah. Con amenidades de lujo y ubicación estratégica.",
-    features: ["Completamente nuevo", "Balcón", "Cocina moderna", "Walk-in closet", "Lavandería"],
-    amenities: ["Gimnasio", "Alberca", "Sky lounge", "Seguridad 24/7", "Elevadores de alta velocidad"],
-    gallery: [
-      "/src/assets/renta-mitikah.jpg",
-      "/src/assets/property-2.jpg",
-      "/src/assets/property-3.jpg"
-    ]
-  },
-  "5": {
-    id: "5",
+  "s2": {
+    id: "s2",
     title: "Mitikah Residencial",
     location: "Mitikah, CDMX",
     price: "$6,200,000",
@@ -111,26 +133,6 @@ const propertiesData = {
       "/src/assets/mitikah-residencial.jpg",
       "/src/assets/property-1.jpg",
       "/src/assets/property-3.jpg"
-    ]
-  },
-  "6": {
-    id: "6",
-    title: "Block Renta",
-    location: "Roma Norte, CDMX",
-    price: "$28,000",
-    priceType: "Renta",
-    area: "85 m²",
-    bedrooms: 2,
-    bathrooms: 1,
-    parking: 1,
-    imageUrl: "/src/assets/block-renta.jpg",
-    featured: false,
-    description: "Departamento moderno en renta en Roma Norte. Diseño contemporáneo con acabados de calidad en una zona vibrante.",
-    features: ["Diseño moderno", "Iluminación LED", "Cocina integral", "Área de lavado", "Balcón"],
-    amenities: ["Rooftop", "Gimnasio", "Seguridad", "Elevador", "Bike parking"],
-    gallery: [
-      "/src/assets/block-renta.jpg",
-      "/src/assets/property-2.jpg"
     ]
   }
 };
