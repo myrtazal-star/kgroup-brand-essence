@@ -38,12 +38,12 @@ const RentCatalog = () => {
     },
     {
       id: "r3",
-      title: "Renta Oficina",
+      title: "Renta en Mitikah",
       location: "Polanco, Homero",
-      price: "$45,000/mes",
+      price: "$70,000/mes",
       area: "100 m²",
-      bedrooms: 0,
-      bathrooms: 1,
+      bedrooms: 3,
+      bathrooms: 3,
       imageUrl: oficinaPH,
       featured: true
     },
