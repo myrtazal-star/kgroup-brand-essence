@@ -63,8 +63,7 @@ const JoinAdvisors = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-hero font-light text-foreground">
-                Unite al 
-                <span className="block">KGroup</span>
+                Unite al KGroup
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Partner with KGroup and elevate your career in luxury real estate. 
