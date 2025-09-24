@@ -1,6 +1,7 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin } from "lucide-react";
 import heroProperty from "@/assets/hero-property.jpg";
 import property1 from "@/assets/property-1.jpg";
@@ -58,6 +59,7 @@ const Index = () => {
               <a href="#properties" className="hover:text-muted-foreground transition-colors">Properties</a>
               <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
               <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
+              <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Join as Advisor</Link>
               <a href="#contact" className="hover:text-muted-foreground transition-colors">Contact</a>
             </nav>
 
