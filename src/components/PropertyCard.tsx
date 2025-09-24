@@ -1,4 +1,5 @@
 import { MapPin, Square, BedDouble, Bath } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface PropertyCardProps {
   id: string;
@@ -13,6 +14,7 @@ interface PropertyCardProps {
 }
 
 export const PropertyCard = ({ 
+  id,
   title, 
   location, 
   price, 
@@ -22,8 +24,14 @@ export const PropertyCard = ({
   imageUrl, 
   featured = false 
 }: PropertyCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/property/${id}`);
+  };
+
   return (
-    <div className="group cursor-pointer">
+    <div className="group cursor-pointer" onClick={handleClick}>
       <div className="relative overflow-hidden border border-border bg-card hover:shadow-refined transition-all duration-300">
         {/* Property Image */}
         <div className="aspect-[4/3] overflow-hidden bg-muted">
