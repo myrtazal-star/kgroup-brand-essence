@@ -34,7 +34,7 @@ const RentCatalog = () => {
       price: "$100,000/mes",
       area: "200 m²",
       bedrooms: 6,
-      bathrooms: 3,
+      bathrooms: 1.5,
       imageUrl: oficinaPH
     },
     {

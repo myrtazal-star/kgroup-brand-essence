@@ -38,7 +38,7 @@ const propertiesData = {
     priceType: "Renta mensual",
     area: "200 m²",
     bedrooms: 6,
-    bathrooms: 3,
+    bathrooms: 1.5,
     parking: 2,
     imageUrl: "/src/assets/oficina-ph-roma-norte.jpg",
     featured: false,
