@@ -57,6 +57,8 @@ const Index = () => {
             
             <nav className="hidden md:flex items-center gap-8 text-caption">
               <a href="#properties" className="hover:text-muted-foreground transition-colors">Properties</a>
+              <Link to="/rent-catalog" className="hover:text-muted-foreground transition-colors">Renta</Link>
+              <Link to="/sale-catalog" className="hover:text-muted-foreground transition-colors">Venta</Link>
               <a href="#services" className="hover:text-muted-foreground transition-colors">Services</a>
               <a href="#about" className="hover:text-muted-foreground transition-colors">About</a>
               <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
@@ -122,10 +124,17 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-xl">
-            <Button variant="outline" className="px-8">
-              View All Properties
-            </Button>
+          <div className="text-center mt-xl space-x-4">
+            <Link to="/rent-catalog">
+              <Button variant="outline" className="px-8">
+                Ver Propiedades en Renta
+              </Button>
+            </Link>
+            <Link to="/sale-catalog">
+              <Button variant="outline" className="px-8">
+                Ver Propiedades en Venta
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
