@@ -47,8 +47,11 @@ const propertiesData = {
     amenities: ["Seguridad", "Elevador", "Estacionamiento", "Recepción"],
     gallery: [
       "/src/assets/oficina-ph-roma-norte.jpg",
-      "/src/assets/property-1.jpg",
-      "/src/assets/property-2.jpg"
+      "/src/assets/oficina-ph-1.jpg",
+      "/src/assets/oficina-ph-2.jpg",
+      "/src/assets/oficina-ph-3.jpg",
+      "/src/assets/oficina-ph-4.jpg",
+      "/src/assets/oficina-ph-5.jpg"
     ]
   },
   "r3": {
