@@ -215,7 +215,7 @@ const PropertyDetails = () => {
             <div className="space-y-6">
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <h1 className="text-3xl font-light">{property.title}</h1>
+                  <h1 className="text-3xl font-light">Departamento en Roma Norte con RoofGarden privado</h1>
                   {property.featured && <Badge variant="secondary">DESTACADA</Badge>}
                 </div>
                 <div className="flex items-center gap-1 text-muted-foreground">
