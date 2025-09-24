@@ -247,7 +247,7 @@ const Index = () => {
       <section id="contact" className="relative py-3xl bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Ponte en Contacto</h2>
+            <h2 className="text-display font-light">Contact Us</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Comienza tu viaje inmobiliario con una consulta personalizada
             </p>
