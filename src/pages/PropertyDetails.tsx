@@ -1,10 +1,12 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, MapPin, Square, BedDouble, Bath, Car, Wifi, Phone, Mail, Calendar, Share2, Heart } from "lucide-react";
+import { ArrowLeft, MapPin, Square, BedDouble, Bath, Car, Wifi, Phone, Mail, Calendar, Share2, Heart, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { KGroupLogo } from "@/components/KGroupLogo";
+import { useState } from "react";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -154,6 +156,8 @@ const PropertyDetails = () => {
     id: string;
   }>();
   const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState<string>("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
   if (!property) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -198,15 +202,21 @@ const PropertyDetails = () => {
           {/* Left Column - Images & Details */}
           <div className="lg:col-span-2 space-y-8">
             {/* Main Image */}
-            <div className="aspect-[16/10] overflow-hidden bg-muted">
-              <img src={property.imageUrl} alt={property.title} className="w-full h-full object-cover" />
+            <div className="aspect-[16/10] overflow-hidden bg-muted cursor-pointer" onClick={() => {
+              setSelectedImage(property.imageUrl);
+              setIsModalOpen(true);
+            }}>
+              <img src={property.imageUrl} alt={property.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
 
             {/* Gallery */}
             <div className="grid grid-cols-3 gap-4">
               {property.gallery.slice(1).map((image, index) => (
-                <div key={index} className="aspect-[4/3] overflow-hidden bg-muted">
-                  <img src={image} alt={`${property.title} - imagen ${index + 2}`} className="w-full h-full object-cover" />
+                <div key={index} className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer" onClick={() => {
+                  setSelectedImage(image);
+                  setIsModalOpen(true);
+                }}>
+                  <img src={image} alt={`${property.title} - imagen ${index + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                 </div>
               ))}
             </div>
@@ -324,6 +334,27 @@ const PropertyDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-none">
+          <div className="relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute top-4 right-4 z-10 bg-black/50 text-white hover:bg-black/70"
+              onClick={() => setIsModalOpen(false)}
+            >
+              <X className="h-4 w-4" />
+            </Button>
+            <img
+              src={selectedImage}
+              alt="Imagen completa"
+              className="w-full h-auto max-h-[90vh] object-contain"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>;
 };
 export default PropertyDetails;
