@@ -160,9 +160,9 @@ const Index = () => {
       <section id="services" className="relative py-3xl bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Our Services</h2>
+            <h2 className="text-display font-light">Nuestros Servicios</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive real estate solutions with unmatched expertise
+              Soluciones inmobiliarias integrales con experiencia inigualable
             </p>
           </div>
 
@@ -171,9 +171,9 @@ const Index = () => {
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
                 <MapPin className="w-6 h-6" />
               </div>
-              <h3 className="text-heading">Property Discovery</h3>
+              <h3 className="text-heading">Descubrimiento de Propiedades</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Access exclusive listings and off-market opportunities through our extensive network.
+                Acceso a listados exclusivos y oportunidades fuera del mercado a través de nuestra extensa red.
               </p>
             </div>
 
@@ -181,9 +181,9 @@ const Index = () => {
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
                 <TrendingUp className="w-6 h-6" />
               </div>
-              <h3 className="text-heading">Market Analysis</h3>
+              <h3 className="text-heading">Análisis de Mercado</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Data-driven insights and market intelligence to inform your investment decisions.
+                Insights basados en datos e inteligencia de mercado para informar tus decisiones de inversión.
               </p>
             </div>
 
@@ -191,9 +191,9 @@ const Index = () => {
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
                 <Shield className="w-6 h-6" />
               </div>
-              <h3 className="text-heading">Concierge Service</h3>
+              <h3 className="text-heading">Servicio Concierge</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                White-glove service from initial consultation through closing and beyond.
+                Servicio de guante blanco desde la consulta inicial hasta el cierre y más allá.
               </p>
             </div>
           </div>
@@ -205,16 +205,16 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-2xl items-center">
             <div className="space-y-6">
-              <h2 className="text-display font-light">Redefining Real Estate Excellence</h2>
+              <h2 className="text-display font-light">Redefiniendo la Excelencia Inmobiliaria</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  KGroup represents the intersection of luxury and innovation in real estate. 
-                  We leverage cutting-edge technology and deep market expertise to deliver 
-                  unparalleled service to our distinguished clientele in Mexico.
+                  KGroup representa la intersección entre lujo e innovación en bienes raíces. 
+                  Aprovechamos tecnología de vanguardia y experiencia profunda del mercado para entregar 
+                  servicio incomparable a nuestra distinguida clientela en México.
                 </p>
                 <p>
-                  Our platform combines sophisticated algorithms with human insight, 
-                  ensuring every transaction meets the highest standards of excellence.
+                  Nuestra plataforma combina algoritmos sofisticados con perspicacia humana, 
+                  asegurando que cada transacción cumpla con los más altos estándares de excelencia.
                 </p>
               </div>
               
@@ -247,9 +247,9 @@ const Index = () => {
       <section id="contact" className="relative py-3xl bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Get In Touch</h2>
+            <h2 className="text-display font-light">Ponte en Contacto</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Begin your real estate journey with a consultation
+              Comienza tu viaje inmobiliario con una consulta personalizada
             </p>
           </div>
 
