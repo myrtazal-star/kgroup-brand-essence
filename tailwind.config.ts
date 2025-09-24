@@ -57,6 +57,25 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "grid-subtle": "hsl(var(--grid-subtle))",
+      },
+      spacing: {
+        'xs': 'var(--space-xs)',
+        'sm': 'var(--space-sm)',
+        'md': 'var(--space-md)',
+        'lg': 'var(--space-lg)',
+        'xl': 'var(--space-xl)',
+        '2xl': 'var(--space-2xl)',
+        '3xl': 'var(--space-3xl)',
+      },
+      fontSize: {
+        'hero': ['var(--text-hero)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display': ['var(--text-display)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'heading': ['var(--text-heading)', { lineHeight: '1.3', letterSpacing: '-0.005em' }],
+      },
+      boxShadow: {
+        'elegant': '0 1px 3px 0 hsl(var(--shadow-elegant)), 0 1px 2px 0 hsl(var(--shadow-elegant))',
+        'refined': '0 4px 6px -1px hsl(var(--shadow-refined)), 0 2px 4px -1px hsl(var(--shadow-refined))',
       },
       borderRadius: {
         lg: "var(--radius)",
