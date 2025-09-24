@@ -287,7 +287,7 @@ const Index = () => {
             </div>
 
             <div className="bg-card p-8 border border-border">
-              <h3 className="text-heading mb-6">Schedule Consultation</h3>
+              <h3 className="text-heading mb-6">Agendar Consulta</h3>
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <input 
@@ -309,7 +309,7 @@ const Index = () => {
                   placeholder="Tell us about your real estate needs..."
                 />
                 <Button variant="luxury" className="w-full">
-                  Schedule Consultation
+                  Agendar Consulta
                 </Button>
               </div>
             </div>
