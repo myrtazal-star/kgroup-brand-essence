@@ -12,7 +12,7 @@ import {
 import heroProperty from "@/assets/hero-property.jpg";
 import property1 from "@/assets/mitikah-residencial.jpg";
 import property2 from "@/assets/property-2.jpg";
-import property3 from "@/assets/property-3.jpg";
+import property3 from "@/assets/penthouse-aristotiles.jpg";
 
 const Index = () => {
   const featuredProperties = [
@@ -39,10 +39,10 @@ const Index = () => {
     },
     {
       id: "3",
-      title: "Penthouse Skyline",
-      location: "Zona Rosa, Ciudad de México",
-      price: "$12.5M", 
-      area: "446 m²",
+      title: "PentHouse Aristotiles",
+      location: "Aristotiles, Polanco",
+      price: "28 MDP", 
+      area: "523.80 m²",
       bedrooms: 4,
       bathrooms: 3,
       imageUrl: property3,
