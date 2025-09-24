@@ -18,13 +18,13 @@ const propertiesData = {
     area: "120 m²",
     bedrooms: 2,
     bathrooms: 2,
-    parking: 1,
+    parking: 0,
     imageUrl: "/src/assets/block-renta.jpg",
     featured: true,
     description: "Hermoso departamento en renta ubicado en Roma Norte. Este espacio cuenta con acabados modernos, amplios espacios y una ubicación privilegiada en una de las colonias más vibrantes de la ciudad.",
-    features: ["Completamente amueblado", "Balcón privado", "Cocina integral", "Closets empotrados", "Aire acondicionado", "Pisos de madera"],
-    amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Terraza común", "Área de coworking"],
-    gallery: ["/src/assets/block-renta.jpg", "/src/assets/property-1.jpg", "/src/assets/property-2.jpg"]
+    features: ["Completamente amueblado", "Balcón privado", "Cocina equipada", "Closets empotrados", "Pisos de madera", "PH", "Roof Garden Privado"],
+    amenities: ["Seguridad 24/7", "Elevador", "Terraza común", "Área de coworking"],
+    gallery: ["/src/assets/block-renta.jpg", "/src/assets/property-r1-1.jpg", "/src/assets/property-r1-2.jpg", "/src/assets/property-r1-3.jpg", "/src/assets/property-r1-4.jpg", "/src/assets/property-r1-5.jpg", "/src/assets/property-r1-6.jpg", "/src/assets/property-r1-7.jpg"]
   },
   "r2": {
     id: "r2",
@@ -204,7 +204,11 @@ const PropertyDetails = () => {
 
             {/* Gallery */}
             <div className="grid grid-cols-3 gap-4">
-              {property.gallery.slice(1).map((image, index) => {})}
+              {property.gallery.slice(1).map((image, index) => (
+                <div key={index} className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={image} alt={`${property.title} - imagen ${index + 2}`} className="w-full h-full object-cover" />
+                </div>
+              ))}
             </div>
 
             {/* Property Info */}
