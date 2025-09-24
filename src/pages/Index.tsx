@@ -29,8 +29,8 @@ const Index = () => {
     },
     {
       id: "2", 
-      title: "BeGrand",
-      location: "Be grand, Reforma",
+      title: "Oficina en venta Be grand",
+      location: "Lafragua 13, Tabacalera, Cuauhtémoc, 06030 Ciudad de México, CDMX",
       price: "14 MDP",
       area: "111 m²",
       bedrooms: 0,
