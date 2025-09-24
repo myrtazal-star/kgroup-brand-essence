@@ -129,9 +129,9 @@ const Index = () => {
       <section id="properties" className="relative py-3xl">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Featured Properties</h2>
+            <h2 className="text-display font-light">Propiedades Destacadas</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Curated collection of premium real estate opportunities in Mexico
+              Colección curada de oportunidades inmobiliarias premium en México
             </p>
           </div>
 
