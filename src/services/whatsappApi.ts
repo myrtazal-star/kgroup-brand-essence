@@ -20,7 +20,7 @@ interface WhatsAppApiResponse {
 
 class WhatsAppApiService {
   private baseUrl = '/api/whatsapp'; // Your backend API endpoint
-  private apiKey = process.env.VITE_WHATSAPP_API_KEY || '';
+  private apiKey = import.meta.env.VITE_WHATSAPP_API_KEY || '';
 
   async sendMessage(data: WhatsAppMessage): Promise<WhatsAppApiResponse> {
     try {
