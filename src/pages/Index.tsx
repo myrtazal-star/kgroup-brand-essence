@@ -2,7 +2,7 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin, ChevronDown } from "lucide-react";
+import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin, ChevronDown, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -115,10 +115,12 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="luxury" className="group">
-                Explore Properties
-                <Search className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/consultation">
+                <Button variant="luxury" className="group">
+                  Pedir Asesoría
+                  <User className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button variant="minimal">Learn More</Button>
             </div>
           </div>
