@@ -30,15 +30,15 @@ export const useWhatsApp = ({ fallbackToWeb = true }: UseWhatsAppOptions = {}) =
       
       if (fallbackToWeb && propertyData) {
         // Fallback to web WhatsApp
-        const message = `Hola! Me interesa la propiedad: *${propertyData.title}*\n\n` +
+        const message = `Hola Kira, quiero info de: *${propertyData.title}*\n\n` +
                        `📍 ${propertyData.location}\n` +
                        `💰 ${propertyData.price}\n` +
                        `📐 ${propertyData.area}\n` +
                        `🛏️ ${propertyData.bedrooms} recámaras\n` +
                        `🚿 ${propertyData.bathrooms} baños\n\n` +
-                       `¿Podrían proporcionarme más información?`;
+                       `¿Podrían darme más detalles?`;
         
-        whatsappApi.openWhatsAppWeb('5256808129', message);
+        whatsappApi.openWhatsAppWeb('525512345678', message);
         
         toast({
           title: "Redirigiendo a WhatsApp",
@@ -78,8 +78,8 @@ export const useWhatsApp = ({ fallbackToWeb = true }: UseWhatsAppOptions = {}) =
       
       if (fallbackToWeb) {
         // Fallback to web WhatsApp
-        const message = "Hola! Me interesa obtener más información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
-        whatsappApi.openWhatsAppWeb('5256808129', message);
+        const message = "Hola Kira, quiero información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
+        whatsappApi.openWhatsAppWeb('525512345678', message);
         
         toast({
           title: "Redirigiendo a WhatsApp",

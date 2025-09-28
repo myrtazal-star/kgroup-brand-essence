@@ -55,32 +55,32 @@ class WhatsAppApiService {
   async sendPropertyInquiry(propertyData: WhatsAppMessage['propertyData']): Promise<WhatsAppApiResponse> {
     const message = this.formatPropertyMessage(propertyData);
     return this.sendMessage({
-      to: '5256808129', // K Group phone number
+      to: '525512345678', // Updated phone number
       message,
       propertyData
     });
   }
 
   async sendGeneralInquiry(): Promise<WhatsAppApiResponse> {
-    const message = "Hola! Me interesa obtener más información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
+    const message = "Hola Kira, quiero información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
     return this.sendMessage({
-      to: '5256808129',
+      to: '525512345678',
       message
     });
   }
 
   private formatPropertyMessage(propertyData?: WhatsAppMessage['propertyData']): string {
     if (!propertyData) {
-      return "Hola! Me interesa obtener más información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
+      return "Hola Kira, quiero información sobre sus propiedades disponibles.";
     }
 
-    return `Hola! Me interesa la propiedad: *${propertyData.title}*\n\n` +
-           `📍 Ubicación: ${propertyData.location}\n` +
-           `💰 Precio: ${propertyData.price}\n` +
-           `📐 Área: ${propertyData.area}\n` +
-           `🛏️ Recámaras: ${propertyData.bedrooms}\n` +
-           `🚿 Baños: ${propertyData.bathrooms}\n\n` +
-           `¿Podrían proporcionarme más información?`;
+    return `Hola Kira, quiero info de: *${propertyData.title}*\n\n` +
+           `📍 ${propertyData.location}\n` +
+           `💰 ${propertyData.price}\n` +
+           `📐 ${propertyData.area}\n` +
+           `🛏️ ${propertyData.bedrooms} recámaras\n` +
+           `🚿 ${propertyData.bathrooms} baños\n\n` +
+           `¿Podrían darme más detalles?`;
   }
 
   // Fallback method for cases where API is not available
