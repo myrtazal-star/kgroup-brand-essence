@@ -117,7 +117,7 @@ const Index = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/consultation">
-                <Button variant="luxury" className="group">
+                <Button variant="default" size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
                   Pedir Asesoría
                   <User className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
