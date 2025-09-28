@@ -19,16 +19,17 @@ interface WhatsAppApiResponse {
 }
 
 class WhatsAppApiService {
-  private baseUrl = '/api/whatsapp'; // Your backend API endpoint
-  private apiKey = import.meta.env.VITE_WHATSAPP_API_KEY || '';
+  private baseUrl = 'https://nlgdpabuqiiqmarelntq.supabase.co/functions/v1/whatsapp-send';
+  private apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5sZ2RwYWJ1cWlpcW1hcmVsbnRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3NTEyNTMsImV4cCI6MjA3NDMyNzI1M30.3TleLzP2NN8dmxU24qZS6AEut39AzYXVUkYWyU6xeSQ';
 
   async sendMessage(data: WhatsAppMessage): Promise<WhatsAppApiResponse> {
     try {
-      const response = await fetch(`${this.baseUrl}/send`, {
+      const response = await fetch(this.baseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`
+          'Authorization': `Bearer ${this.apiKey}`,
+          'apikey': this.apiKey
         },
         body: JSON.stringify({
           phone: data.to,
