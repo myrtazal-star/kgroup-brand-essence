@@ -38,7 +38,7 @@ export const useWhatsApp = ({ fallbackToWeb = true }: UseWhatsAppOptions = {}) =
                        `🚿 ${propertyData.bathrooms} baños\n\n` +
                        `¿Podrían darme más detalles?`;
         
-        whatsappApi.openWhatsAppWeb('+525512345678', message);
+        whatsappApi.openWhatsAppWeb('+525560808129', message);
         
         toast({
           title: "Redirigiendo a WhatsApp",
@@ -79,7 +79,7 @@ export const useWhatsApp = ({ fallbackToWeb = true }: UseWhatsAppOptions = {}) =
       if (fallbackToWeb) {
         // Fallback to web WhatsApp
         const message = "Hola Kira, quiero información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
-        whatsappApi.openWhatsAppWeb('+525512345678', message);
+        whatsappApi.openWhatsAppWeb('+525560808129', message);
         
         toast({
           title: "Redirigiendo a WhatsApp",

@@ -56,7 +56,7 @@ class WhatsAppApiService {
   async sendPropertyInquiry(propertyData: WhatsAppMessage['propertyData']): Promise<WhatsAppApiResponse> {
     const message = this.formatPropertyMessage(propertyData);
     return this.sendMessage({
-      to: '+525512345678', // Updated phone number with + prefix
+      to: '+525560808129', // Updated phone number
       message,
       propertyData
     });
@@ -65,7 +65,7 @@ class WhatsAppApiService {
   async sendGeneralInquiry(): Promise<WhatsAppApiResponse> {
     const message = "Hola Kira, quiero información sobre sus propiedades disponibles. ¿Podrían ayudarme?";
     return this.sendMessage({
-      to: '+525512345678',
+      to: '+525560808129',
       message
     });
   }
