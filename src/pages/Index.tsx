@@ -85,7 +85,6 @@ const Index = () => {
 
             <div className="flex items-center gap-4">
               <Button variant="minimal" size="sm">Sign In</Button>
-              <Button variant="luxury" size="sm">Get Started</Button>
             </div>
           </div>
         </div>
