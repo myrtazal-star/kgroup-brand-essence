@@ -13,6 +13,7 @@ import heroProperty from "@/assets/hero-property.jpg";
 import property1 from "@/assets/mitikah-residencial.jpg";
 import property2 from "@/assets/property-2.jpg";
 import property3 from "@/assets/penthouse-aristotiles.jpg";
+import kgroupLogo from "@/assets/kgroup-logo.jpg";
 
 const Index = () => {
   const featuredProperties = [
@@ -237,8 +238,12 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-muted border border-border flex items-center justify-center">
-                <Users className="w-16 h-16 text-muted-foreground" />
+              <div className="aspect-square bg-muted border border-border overflow-hidden">
+                <img 
+                  src={kgroupLogo} 
+                  alt="KGroup Logo" 
+                  className="w-full h-full object-contain p-8"
+                />
               </div>
             </div>
           </div>
