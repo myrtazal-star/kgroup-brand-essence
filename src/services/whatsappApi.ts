@@ -86,7 +86,10 @@ class WhatsAppApiService {
 
   // Fallback method for cases where API is not available
   openWhatsAppWeb(phone: string, message: string): void {
-    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    // Remove + from phone number and ensure correct format
+    const cleanPhone = phone.replace(/^\+/, '');
+    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
+    console.log('Opening WhatsApp Web:', whatsappUrl);
     window.open(whatsappUrl, '_blank');
   }
 }
