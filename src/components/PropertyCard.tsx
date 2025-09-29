@@ -1,7 +1,5 @@
-import { MapPin, Square, BedDouble, Bath, MessageCircle } from "lucide-react";
+import { MapPin, Square, BedDouble, Bath } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { useWhatsApp } from "@/hooks/useWhatsApp";
 
 interface PropertyCardProps {
   id: string;
@@ -27,24 +25,9 @@ export const PropertyCard = ({
   featured = false 
 }: PropertyCardProps) => {
   const navigate = useNavigate();
-  const { sendPropertyInquiry, isLoading } = useWhatsApp();
 
   const handleClick = () => {
     navigate(`/property/${id}`);
-  };
-
-  const handleWhatsAppClick = async (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent navigation to property details
-    
-    await sendPropertyInquiry({
-      id,
-      title,
-      location,
-      price,
-      area,
-      bedrooms,
-      bathrooms
-    });
   };
 
   return (
@@ -95,19 +78,6 @@ export const PropertyCard = ({
             </div>
           </div>
 
-          {/* WhatsApp Button */}
-          <div className="pt-4 border-t border-border">
-            <Button 
-              onClick={handleWhatsAppClick}
-              disabled={isLoading}
-              variant="outline"
-              size="sm"
-              className="w-full border-green-500 text-green-600 hover:bg-green-50 hover:text-green-700 hover:border-green-600 disabled:opacity-50"
-            >
-              <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp
-            </Button>
-          </div>
         </div>
       </div>
     </div>

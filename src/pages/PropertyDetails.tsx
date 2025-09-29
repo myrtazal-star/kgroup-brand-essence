@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { KGroupLogo } from "@/components/KGroupLogo";
-import { useWhatsApp } from "@/hooks/useWhatsApp";
+
 import { useState } from "react";
 
 // Property data - en una app real esto vendría de una base de datos
@@ -160,21 +160,6 @@ const PropertyDetails = () => {
   const [selectedImage, setSelectedImage] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
-  const { sendPropertyInquiry, isLoading } = useWhatsApp();
-
-  const handleWhatsAppClick = async () => {
-    if (property) {
-      await sendPropertyInquiry({
-        id: property.id,
-        title: property.title,
-        location: property.location,
-        price: property.price,
-        area: property.area,
-        bedrooms: property.bedrooms,
-        bathrooms: property.bathrooms
-      });
-    }
-  };
   
   if (!property) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -319,15 +304,6 @@ const PropertyDetails = () => {
                 <Separator />
 
                 <div className="space-y-4">
-                  <Button 
-                    className="w-full" 
-                    size="lg" 
-                    onClick={handleWhatsAppClick}
-                    disabled={isLoading}
-                  >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    {isLoading ? 'Enviando...' : 'WhatsApp'}
-                  </Button>
                   
                   <Button variant="outline" className="w-full" size="lg">
                     <Phone className="w-4 h-4 mr-2" />
