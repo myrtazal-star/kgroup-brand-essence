@@ -32,7 +32,7 @@ const RentCatalog = () => {
       title: "Oficina frente de Bosque de Chapultepec",
       location: "Homero, Polanco",
       price: "$89,000/mes",
-      area: "200 m²",
+      area: "103 m²",
       bedrooms: 6,
       bathrooms: 1.5,
       imageUrl: oficinaPH
