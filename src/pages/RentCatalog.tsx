@@ -51,7 +51,7 @@ const RentCatalog = () => {
     {
       id: "r4",
       title: "Oficina en Prado Norte",
-      location: "Roma Norte, Ciudad de México",
+      location: "Lomas de Chapultepec, Prado Norte",
       price: "$60,000/mes",
       area: "95 m²",
       bedrooms: 1,
