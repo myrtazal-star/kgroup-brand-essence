@@ -13,6 +13,7 @@ import blockRenta from "@/assets/block-renta.jpg";
 import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
 import rentaMitikah from "@/assets/renta-mitikah.jpg";
 import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
+import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -52,11 +53,11 @@ const RentCatalog = () => {
       id: "r4",
       title: "Oficina en Prado Norte",
       location: "Lomas de Chapultepec, Prado Norte",
-      price: "$37,000/mes",
-      area: "95 m²",
-      bedrooms: 1,
+      price: "$60,000/mes",
+      area: "103 m²",
+      bedrooms: 0,
       bathrooms: 1,
-      imageUrl: blockRenta
+      imageUrl: oficinaPn1
     },
     {
       id: "r5",

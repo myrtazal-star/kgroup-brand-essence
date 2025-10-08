@@ -8,6 +8,12 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { KGroupLogo } from "@/components/KGroupLogo";
 
 import { useState } from "react";
+import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
+import oficinaPn2 from "@/assets/oficina-pn-2.jpg";
+import oficinaPn3 from "@/assets/oficina-pn-3.jpg";
+import oficinaPn4 from "@/assets/oficina-pn-4.jpg";
+import oficinaPn5 from "@/assets/oficina-pn-5.jpg";
+import oficinaPn6 from "@/assets/oficina-pn-6.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -65,20 +71,20 @@ const propertiesData = {
   },
   "r4": {
     id: "r4",
-    title: "Loft Industrial Roma Norte",
-    location: "Roma Norte, Ciudad de México",
-    price: "$22,000",
+    title: "Oficina en Prado Norte",
+    location: "Lomas de Chapultepec, Prado Norte",
+    price: "$60,000",
     priceType: "Renta mensual",
-    area: "95 m²",
-    bedrooms: 1,
+    area: "103 m²",
+    bedrooms: 0,
     bathrooms: 1,
-    parking: 1,
-    imageUrl: "/src/assets/block-renta.jpg",
+    parking: 2,
+    imageUrl: oficinaPn1,
     featured: false,
-    description: "Loft de estilo industrial en Roma Norte con diseño contemporáneo y acabados de calidad. Perfecto para personas que buscan un espacio moderno en una zona vibrante y cultural.",
-    features: ["Diseño industrial", "Techos altos", "Iluminación LED", "Cocina integral", "Área de lavado", "Balcón"],
-    amenities: ["Rooftop", "Gimnasio", "Seguridad", "Elevador", "Bike parking", "Área común"],
-    gallery: ["/src/assets/block-renta.jpg", "/src/assets/property-2.jpg"]
+    description: "Oficina nueva en renta. 103 m2, 2 cajones de estacionamiento, vigilancia 24/7. Puedes hacer las adecuaciones que desees, seguridad y cámaras 24 hrs. Ubicación privelegiada en Prado Norte a 5 min del Auditorio Nacional, rodeado de restaurantes de lujo y negocios de alto nivel.",
+    features: ["Oficina nueva", "2 cajones de estacionamiento", "Vigilancia 24/7", "Seguridad y cámaras 24 hrs", "Adecuaciones personalizadas", "Piso 2"],
+    amenities: ["Seguridad 24 horas", "Oficina"],
+    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6]
   },
   "r5": {
     id: "r5",
