@@ -383,19 +383,25 @@ const PropertyDetails = () => {
 
                 <div className="space-y-3 sm:space-y-4">
                   
-                  <Button variant="outline" className="w-full" size="lg">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Llamar Ahora
+                  <Button variant="outline" className="w-full" size="lg" asChild>
+                    <a href="tel:+525560808129">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Llamar Ahora
+                    </a>
                   </Button>
                   
-                  <Button variant="outline" className="w-full" size="lg">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Enviar Email
+                  <Button variant="outline" className="w-full" size="lg" asChild>
+                    <a href="https://wa.me/525560808129" target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Contactar al WhatsApp
+                    </a>
                   </Button>
                   
-                  <Button variant="outline" className="w-full" size="lg">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Agendar Cita
+                  <Button variant="outline" className="w-full" size="lg" asChild>
+                    <Link to="/consultation">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Agendar Cita
+                    </Link>
                   </Button>
                 </div>
 
