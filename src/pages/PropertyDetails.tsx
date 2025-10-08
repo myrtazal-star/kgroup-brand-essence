@@ -190,7 +190,13 @@ const PropertyDetails = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
+
+  // Get rental properties for navigation
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6"];
+  const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
+  const isRentalProperty = currentPropertyIndex !== -1;
   
   if (!property) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
@@ -237,16 +243,55 @@ const PropertyDetails = () => {
             {/* Main Image */}
             <div className="aspect-[16/10] overflow-hidden bg-muted cursor-pointer" onClick={() => {
               setSelectedImage(property.imageUrl);
+              setCurrentImageIndex(0);
               setIsModalOpen(true);
             }}>
               <img src={property.imageUrl} alt={property.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
+
+            {/* Property Navigation - Only for rental properties */}
+            {isRentalProperty && (
+              <div className="flex items-center justify-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    const prevIndex = currentPropertyIndex > 0 ? currentPropertyIndex - 1 : rentalPropertyIds.length - 1;
+                    navigate(`/property/${rentalPropertyIds[prevIndex]}`);
+                  }}
+                >
+                  Anterior
+                </Button>
+                {rentalPropertyIds.map((propId, index) => (
+                  <Button
+                    key={propId}
+                    variant={propId === id ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => navigate(`/property/${propId}`)}
+                    className="w-10"
+                  >
+                    {index + 1}
+                  </Button>
+                ))}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    const nextIndex = currentPropertyIndex < rentalPropertyIds.length - 1 ? currentPropertyIndex + 1 : 0;
+                    navigate(`/property/${rentalPropertyIds[nextIndex]}`);
+                  }}
+                >
+                  Siguiente
+                </Button>
+              </div>
+            )}
 
             {/* Gallery */}
             <div className="grid grid-cols-3 gap-4">
               {property.gallery.slice(1).map((image, index) => (
                 <div key={index} className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer" onClick={() => {
                   setSelectedImage(image);
+                  setCurrentImageIndex(index + 1);
                   setIsModalOpen(true);
                 }}>
                   <img src={image} alt={`${property.title} - imagen ${index + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
