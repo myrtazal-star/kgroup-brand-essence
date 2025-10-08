@@ -390,11 +390,19 @@ const PropertyDetails = () => {
                     </a>
                   </Button>
                   
-                  <Button variant="outline" className="w-full" size="lg" asChild>
-                    <a href="https://wa.me/525560808129?text=Hola,%20me%20interesa%20la%20propiedad%20que%20vi%20en%20su%20sitio%20web" target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Contactar al WhatsApp
-                    </a>
+                  <Button 
+                    variant="outline" 
+                    className="w-full" 
+                    size="lg"
+                    onClick={() => {
+                      const message = "Hola, me interesa la propiedad que vi en su sitio web";
+                      const phone = "525560808129";
+                      const whatsappUrl = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(message)}`;
+                      window.location.href = whatsappUrl;
+                    }}
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Contactar al WhatsApp
                   </Button>
                   
                   <Button variant="outline" className="w-full" size="lg" asChild>
