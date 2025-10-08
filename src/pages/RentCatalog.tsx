@@ -69,6 +69,16 @@ const RentCatalog = () => {
       bathrooms: 1,
       imageUrl: deptoArquimedes
     },
+    {
+      id: "r6",
+      title: "Oficina frente de Parque de Chapultepec",
+      location: "Cl. 13 de Septiembre, San Miguel Chapultepec",
+      price: "$37,000/mes",
+      area: "100 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPH
+    },
   ];
 
   return (
