@@ -31,11 +31,11 @@ const RentCatalog = () => {
     },
     {
       id: "r2",
-      title: "Oficina frente de Bosque de Chapultepec",
+      title: "Oficina en Polanco PH 2 niveles",
       location: "Homero, Polanco",
-      price: "$89,000/mes",
+      price: "$100,000/mes",
       area: "200 m²",
-      bedrooms: 1,
+      bedrooms: 6,
       bathrooms: 1.5,
       imageUrl: oficinaPH
     },
