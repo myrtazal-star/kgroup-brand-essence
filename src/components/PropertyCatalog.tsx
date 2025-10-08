@@ -117,99 +117,100 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
       </div>
 
       {/* Filters Section */}
-      <div className="bg-card border border-border p-6 space-y-4">
+      <div className="bg-card border border-border p-4 sm:p-6 space-y-4">
         <div className="flex flex-col lg:flex-row gap-4">
            <div className="flex-1">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input
-                className="w-full pl-10 pr-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-                placeholder="Buscar por ubicación, colonia o tipo de propiedad..."
+                className="w-full pl-10 pr-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm sm:text-base"
+                placeholder="Buscar ubicación..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2 sm:gap-4">
             <select 
-              className="px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+              className="px-3 sm:px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
               value={propertyType}
               onChange={(e) => setPropertyType(e.target.value)}
             >
-              <option value="">Tipo de Propiedad</option>
-              <option value="apartment">Departamento</option>
+              <option value="">Tipo</option>
+              <option value="apartment">Depto</option>
               <option value="house">Casa</option>
               <option value="office">Oficina</option>
-              <option value="penthouse">Penthouse</option>
+              <option value="penthouse">PH</option>
             </select>
             
             <select 
-              className="px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+              className="px-3 sm:px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
             >
-              <option value="">Rango de Precio</option>
+              <option value="">Precio</option>
               {type === "rent" ? (
                 <>
-                  <option value="0-30k">$0 - $30,000</option>
-                  <option value="30k-60k">$30,000 - $60,000</option>
-                  <option value="60k-100k">$60,000 - $100,000</option>
-                  <option value="100k+">$100,000+</option>
+                  <option value="0-30k">$0-30K</option>
+                  <option value="30k-60k">$30-60K</option>
+                  <option value="60k-100k">$60-100K</option>
+                  <option value="100k+">$100K+</option>
                 </>
               ) : (
                 <>
-                  <option value="0-500k">$0 - $500K</option>
-                  <option value="500k-1m">$500K - $1M</option>
-                  <option value="1m-5m">$1M - $5M</option>
+                  <option value="0-500k">$0-500K</option>
+                  <option value="500k-1m">$500K-1M</option>
+                  <option value="1m-5m">$1M-5M</option>
                   <option value="5m+">$5M+</option>
                 </>
               )}
             </select>
             
-            <Button variant="outline" className="flex items-center gap-2">
+            <Button variant="outline" size="sm" className="col-span-2 sm:col-span-1 flex items-center justify-center gap-2">
               <Filter className="w-4 h-4" />
-              Más Filtros
+              <span className="hidden sm:inline">Más Filtros</span>
+              <span className="sm:hidden">Filtros</span>
             </Button>
           </div>
         </div>
       </div>
 
       {/* Properties Grid */}
-      <div className="space-y-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <span className="text-muted-foreground">{filteredProperties.length} propiedades encontradas</span>
+      <div className="space-y-6 sm:space-y-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 w-full sm:w-auto">
+              <span className="text-sm sm:text-base text-muted-foreground">{filteredProperties.length} propiedades</span>
               <div className="flex items-center gap-2">
                 <Button 
                   variant={viewMode === "grid" ? "minimal" : "outline"} 
                   size="sm" 
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-1 sm:gap-2"
                   onClick={() => setViewMode("grid")}
                 >
                   <Home className="w-4 h-4" />
-                  Vista Grid
+                  <span className="text-xs sm:text-sm">Grid</span>
                 </Button>
                 <Button 
                   variant={viewMode === "map" ? "minimal" : "outline"} 
                   size="sm" 
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-1 sm:gap-2"
                   onClick={() => setViewMode("map")}
                 >
                   <MapPin className="w-4 h-4" />
-                  Vista Mapa
+                  <span className="text-xs sm:text-sm">Mapa</span>
                 </Button>
               </div>
             </div>
             
             <select 
-              className="px-4 py-2 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+              className="w-full sm:w-auto px-3 sm:px-4 py-2 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-ring text-sm"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
             >
               <option value="newest">Más Recientes</option>
-              <option value="price-low">Precio: Menor a Mayor</option>
-              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="price-low">Precio: ↑</option>
+              <option value="price-high">Precio: ↓</option>
               <option value="area">Área</option>
             </select>
           </div>
@@ -254,28 +255,28 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
 
         {/* Pagination - only show in grid view */}
         {viewMode === "grid" && (
-          <div className="flex justify-center space-x-2">
-            <Button variant="outline" disabled>Anterior</Button>
-            <Button variant="luxury">1</Button>
-            <Button variant="outline">2</Button>
-            <Button variant="outline">3</Button>
-            <Button variant="outline">Siguiente</Button>
+          <div className="flex justify-center flex-wrap gap-2">
+            <Button variant="outline" size="sm" disabled>Anterior</Button>
+            <Button variant="luxury" size="sm">1</Button>
+            <Button variant="outline" size="sm">2</Button>
+            <Button variant="outline" size="sm">3</Button>
+            <Button variant="outline" size="sm">Siguiente</Button>
           </div>
         )}
       </div>
 
       {/* CTA Section */}
-      <div className="bg-muted/30 p-2xl text-center space-y-6">
-        <h2 className="text-display font-light">¿No encuentras lo que buscas?</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+      <div className="bg-muted/30 p-6 sm:p-2xl text-center space-y-4 sm:space-y-6">
+        <h2 className="text-2xl sm:text-display font-light">¿No encuentras lo que buscas?</h2>
+        <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
           Nuestro equipo de asesores especializados puede ayudarte a encontrar la propiedad perfecta
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="luxury" className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <Button variant="luxury" size="lg" className="w-full sm:w-auto flex items-center justify-center gap-2">
             <Building className="w-4 h-4" />
             Asesoría Personalizada
           </Button>
-          <Button variant="minimal">Crear Alerta de Búsqueda</Button>
+          <Button variant="minimal" size="lg" className="w-full sm:w-auto">Crear Alerta</Button>
         </div>
       </div>
     </div>

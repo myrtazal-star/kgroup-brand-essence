@@ -100,7 +100,7 @@ const RentCatalog = () => {
                   Properties
                   <ChevronDown className="w-3 h-3" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="bg-background border-border z-50">
                   <DropdownMenuItem asChild>
                     <Link to="/rent-catalog" className="text-foreground font-medium">Renta</Link>
                   </DropdownMenuItem>
@@ -112,10 +112,11 @@ const RentCatalog = () => {
               <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
             </nav>
 
+            {/* Mobile & Desktop Back Button */}
             <Link to="/">
-              <Button variant="minimal" className="group">
-                <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-                Volver
+              <Button variant="minimal" size="sm" className="group">
+                <ArrowLeft className="w-4 h-4 mr-1 sm:mr-2 group-hover:-translate-x-1 transition-transform" />
+                <span className="hidden sm:inline">Volver</span>
               </Button>
             </Link>
           </div>

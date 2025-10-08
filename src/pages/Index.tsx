@@ -69,7 +69,7 @@ const Index = () => {
                   Properties
                   <ChevronDown className="w-3 h-3" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="bg-background border-border z-50">
                   <DropdownMenuItem asChild>
                     <Link to="/rent-catalog">Renta</Link>
                   </DropdownMenuItem>
@@ -84,7 +84,36 @@ const Index = () => {
               <a href="#contact" className="hover:text-muted-foreground transition-colors">Contact</a>
             </nav>
 
-            <div className="flex items-center gap-4">
+            {/* Mobile Menu */}
+            <div className="md:hidden">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm">Menu</Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-background border-border z-50 w-48">
+                  <DropdownMenuItem asChild>
+                    <Link to="/rent-catalog" className="w-full">Renta</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/sale-catalog" className="w-full">Venta</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/services" className="w-full">Services</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#about" className="w-full">About</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/join-advisors" className="w-full">Unite al KGroup</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#contact" className="w-full">Contact</a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+
+            <div className="hidden md:flex items-center gap-4">
               <Button variant="minimal" size="sm">Sign In</Button>
             </div>
           </div>
@@ -116,13 +145,13 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/consultation">
-                <Button variant="default" size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
+              <Link to="/consultation" className="w-full sm:w-auto">
+                <Button variant="default" size="lg" className="w-full group bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
                   Pedir Asesoría
-                  <User className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <User className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button variant="minimal">Learn More</Button>
+              <Button variant="minimal" size="lg" className="w-full sm:w-auto">Learn More</Button>
             </div>
           </div>
         </div>
@@ -144,14 +173,14 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-xl space-x-4">
-            <Link to="/rent-catalog">
-              <Button variant="outline" className="px-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-xl">
+            <Link to="/rent-catalog" className="w-full sm:w-auto">
+              <Button variant="outline" className="w-full px-8">
                 Ver Propiedades en Renta
               </Button>
             </Link>
-            <Link to="/sale-catalog">
-              <Button variant="outline" className="px-8">
+            <Link to="/sale-catalog" className="w-full sm:w-auto">
+              <Button variant="outline" className="w-full px-8">
                 Ver Propiedades en Venta
               </Button>
             </Link>
@@ -221,18 +250,18 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
+              <div className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 border-t border-border">
                 <div className="text-center">
-                  <div className="text-2xl font-light mb-1">$2.4B+</div>
-                  <div className="text-caption text-muted-foreground">TRANSACTIONS</div>
+                  <div className="text-xl sm:text-2xl font-light mb-1">$2.4B+</div>
+                  <div className="text-xs sm:text-caption text-muted-foreground">TRANSACTIONS</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-light mb-1">500+</div>
-                  <div className="text-caption text-muted-foreground">CLIENTS</div>
+                  <div className="text-xl sm:text-2xl font-light mb-1">500+</div>
+                  <div className="text-xs sm:text-caption text-muted-foreground">CLIENTS</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-light mb-1">15+</div>
-                  <div className="text-caption text-muted-foreground">YEARS</div>
+                  <div className="text-xl sm:text-2xl font-light mb-1">15+</div>
+                  <div className="text-xs sm:text-caption text-muted-foreground">YEARS</div>
                 </div>
               </div>
             </div>
@@ -315,7 +344,7 @@ const Index = () => {
                   rows={4}
                   placeholder="Tell us about your real estate needs..."
                 />
-                <Button variant="luxury" className="w-full">
+                <Button variant="luxury" size="lg" className="w-full">
                   Agendar Consulta
                 </Button>
               </div>

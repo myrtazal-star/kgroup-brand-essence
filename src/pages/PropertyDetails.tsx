@@ -211,28 +211,28 @@ const PropertyDetails = () => {
   return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-3">
               <KGroupLogo />
             </Link>
-            <div className="flex items-center gap-4">
-              <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" className="flex items-center gap-1 sm:gap-2">
                 <Share2 className="w-4 h-4" />
-                Compartir
+                <span className="hidden sm:inline">Compartir</span>
               </Button>
-              <Button variant="outline" size="sm" className="flex items-center gap-2">
+              <Button variant="outline" size="sm" className="flex items-center gap-1 sm:gap-2">
                 <Heart className="w-4 h-4" />
-                Favorito
+                <span className="hidden sm:inline">Favorito</span>
               </Button>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* Back Button */}
-        <Button variant="outline" onClick={() => navigate(-1)} className="mb-6 flex items-center gap-2 hover:bg-accent">
+        <Button variant="outline" size="sm" onClick={() => navigate(-1)} className="mb-4 sm:mb-6 flex items-center gap-2 hover:bg-accent">
           <ArrowLeft className="w-4 h-4" />
           Regresar
         </Button>
@@ -251,7 +251,7 @@ const PropertyDetails = () => {
 
             {/* Property Navigation - Only for rental properties */}
             {isRentalProperty && (
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-1 sm:gap-2 flex-wrap">
                 <Button
                   variant="outline"
                   size="sm"
@@ -259,6 +259,7 @@ const PropertyDetails = () => {
                     const prevIndex = currentPropertyIndex > 0 ? currentPropertyIndex - 1 : rentalPropertyIds.length - 1;
                     navigate(`/property/${rentalPropertyIds[prevIndex]}`);
                   }}
+                  className="text-xs sm:text-sm"
                 >
                   Anterior
                 </Button>
@@ -268,7 +269,7 @@ const PropertyDetails = () => {
                     variant={propId === id ? "default" : "outline"}
                     size="sm"
                     onClick={() => navigate(`/property/${propId}`)}
-                    className="w-10"
+                    className="w-8 sm:w-10 h-8 sm:h-10 text-xs sm:text-sm"
                   >
                     {index + 1}
                   </Button>
@@ -280,6 +281,7 @@ const PropertyDetails = () => {
                     const nextIndex = currentPropertyIndex < rentalPropertyIds.length - 1 ? currentPropertyIndex + 1 : 0;
                     navigate(`/property/${rentalPropertyIds[nextIndex]}`);
                   }}
+                  className="text-xs sm:text-sm"
                 >
                   Siguiente
                 </Button>
@@ -287,7 +289,7 @@ const PropertyDetails = () => {
             )}
 
             {/* Gallery */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
               {property.gallery.slice(1).map((image, index) => (
                 <div key={index} className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer" onClick={() => {
                   setSelectedImage(image);
@@ -300,64 +302,64 @@ const PropertyDetails = () => {
             </div>
 
             {/* Property Info */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h1 className="text-3xl font-light">{property.title}</h1>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                  <h1 className="text-2xl sm:text-3xl font-light">{property.title}</h1>
                   {property.featured && <Badge variant="secondary">DESTACADA</Badge>}
                 </div>
-                <div className="flex items-center gap-1 text-muted-foreground">
+                <div className="flex items-center gap-1 text-sm sm:text-base text-muted-foreground">
                   <MapPin className="w-4 h-4" />
                   {property.location}
                 </div>
               </div>
 
               {/* Property Stats */}
-              <div className="flex items-center gap-8 py-4 border-y border-border">
+              <div className="grid grid-cols-2 sm:flex sm:items-center gap-4 sm:gap-8 py-4 border-y border-border">
                 <div className="flex items-center gap-2">
-                  <Square className="w-5 h-5 text-muted-foreground" />
-                  <span className="font-medium">{property.area}</span>
+                  <Square className="w-4 sm:w-5 h-4 sm:h-5 text-muted-foreground" />
+                  <span className="text-sm sm:text-base font-medium">{property.area}</span>
                 </div>
                 {property.bedrooms > 0 && <div className="flex items-center gap-2">
-                    <BedDouble className="w-5 h-5 text-muted-foreground" />
-                    <span>{property.bedrooms} recámaras</span>
+                    <BedDouble className="w-4 sm:w-5 h-4 sm:h-5 text-muted-foreground" />
+                    <span className="text-sm sm:text-base">{property.bedrooms} recámaras</span>
                   </div>}
                 <div className="flex items-center gap-2">
-                  <Bath className="w-5 h-5 text-muted-foreground" />
-                  <span>{property.bathrooms} baños</span>
+                  <Bath className="w-4 sm:w-5 h-4 sm:h-5 text-muted-foreground" />
+                  <span className="text-sm sm:text-base">{property.bathrooms} baños</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Car className="w-5 h-5 text-muted-foreground" />
-                  <span>{property.parking} estacionamientos</span>
+                  <Car className="w-4 sm:w-5 h-4 sm:h-5 text-muted-foreground" />
+                  <span className="text-sm sm:text-base">{property.parking} estacionamientos</span>
                 </div>
               </div>
 
               {/* Description */}
               <div>
-                <h2 className="text-xl font-medium mb-4">Descripción</h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <h2 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">Descripción</h2>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {property.description}
                 </p>
               </div>
 
               {/* Features */}
               <div>
-                <h2 className="text-xl font-medium mb-4">Características</h2>
-                <div className="grid grid-cols-2 gap-3">
+                <h2 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">Características</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                   {property.features.map((feature, index) => <div key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-sm">{feature}</span>
+                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{feature}</span>
                     </div>)}
                 </div>
               </div>
 
               {/* Amenities */}
               <div>
-                <h2 className="text-xl font-medium mb-4">Amenidades</h2>
-                <div className="grid grid-cols-2 gap-3">
+                <h2 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">Amenidades</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                   {property.amenities.map((amenity, index) => <div key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-accent rounded-full" />
-                      <span className="text-sm">{amenity}</span>
+                      <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{amenity}</span>
                     </div>)}
                 </div>
               </div>
@@ -366,20 +368,20 @@ const PropertyDetails = () => {
 
           {/* Right Column - Contact Card */}
           <div className="lg:col-span-1">
-            <Card className="sticky top-8">
-              <CardContent className="p-6 space-y-6">
+            <Card className="lg:sticky lg:top-8">
+              <CardContent className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 <div className="text-center">
-                  <div className="text-3xl font-light text-primary mb-1">
+                  <div className="text-2xl sm:text-3xl font-light text-primary mb-1">
                     {property.price}
                   </div>
-                  <div className="text-muted-foreground text-sm">
+                  <div className="text-muted-foreground text-xs sm:text-sm">
                     {property.priceType}
                   </div>
                 </div>
 
                 <Separator />
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   
                   <Button variant="outline" className="w-full" size="lg">
                     <Phone className="w-4 h-4 mr-2" />
@@ -399,7 +401,7 @@ const PropertyDetails = () => {
 
                 <Separator />
 
-                <div className="text-center space-y-2">
+                <div className="text-center space-y-1 sm:space-y-2">
                   <div className="text-sm font-medium">K Group</div>
                   <div className="text-xs text-muted-foreground">
                     Bienes Raíces de Lujo
