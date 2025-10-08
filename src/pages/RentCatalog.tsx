@@ -52,7 +52,7 @@ const RentCatalog = () => {
       id: "r4",
       title: "Oficina en Prado Norte",
       location: "Roma Norte, Ciudad de México",
-      price: "$22,000/mes",
+      price: "$60,000/mes",
       area: "95 m²",
       bedrooms: 1,
       bathrooms: 1,
