@@ -14,6 +14,7 @@ import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
 import rentaMitikah from "@/assets/renta-mitikah.jpg";
 import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
+import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -77,7 +78,7 @@ const RentCatalog = () => {
       area: "100 m²",
       bedrooms: 0,
       bathrooms: 1,
-      imageUrl: oficinaPH
+      imageUrl: oficinaCh1
     },
   ];
 

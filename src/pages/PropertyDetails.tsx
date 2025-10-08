@@ -14,6 +14,14 @@ import oficinaPn3 from "@/assets/oficina-pn-3.jpg";
 import oficinaPn4 from "@/assets/oficina-pn-4.jpg";
 import oficinaPn5 from "@/assets/oficina-pn-5.jpg";
 import oficinaPn6 from "@/assets/oficina-pn-6.jpg";
+import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
+import oficinaCh2 from "@/assets/oficina-chapultepec-2.jpg";
+import oficinaCh3 from "@/assets/oficina-chapultepec-3.jpg";
+import oficinaCh4 from "@/assets/oficina-chapultepec-4.jpg";
+import oficinaCh5 from "@/assets/oficina-chapultepec-5.jpg";
+import oficinaCh6 from "@/assets/oficina-chapultepec-6.jpg";
+import oficinaCh7 from "@/assets/oficina-chapultepec-7.jpg";
+import oficinaCh8 from "@/assets/oficina-chapultepec-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -102,6 +110,23 @@ const propertiesData = {
     features: ["Completamente amueblado", "1 nivel", "Balcón", "Cocina integral", "Closets equipados", "Frente a kinder"],
     amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Área de juegos infantiles", "Jacuzzi", "Alberca"],
     gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-r5-1.jpg", "/src/assets/property-r5-2.jpg", "/src/assets/property-r5-3.jpg", "/src/assets/property-r5-4.jpg", "/src/assets/property-r5-5.jpg", "/src/assets/property-r5-6.jpg", "/src/assets/property-r5-7.jpg"]
+  },
+  "r6": {
+    id: "r6",
+    title: "Oficina o Local con historia en San Miguel Chapultepec, frente al Bosque",
+    location: "Cl. 13 de Septiembre, San Miguel Chapultepec",
+    price: "$37,000",
+    priceType: "Renta mensual",
+    area: "100 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 0,
+    imageUrl: oficinaCh1,
+    featured: false,
+    description: "Trabaja donde la inspiración fluye y la elegancia se respira. Una oficina de 100 m² ubicada en planta baja de una casa antigua catalogada por el INAH, a solo pasos del Bosque de Chapultepec. Un espacio único que eleva marcas y conecta con lo auténtico.",
+    features: ["Casa de época catalogada por el INAH", "100 m² en planta baja", "Recepción con gran presencia", "4 espacios para oficinas privadas", "Iluminación natural abundante", "Pisos de madera", "Techos altos con molduras", "Área de cocina", "Espacio para almacenamiento", "Perfecto estado de conservación"],
+    amenities: ["A pasos del Bosque de Chapultepec", "San Miguel Chapultepec", "Ideal para despachos creativos", "Agencias y estudios de diseño"],
+    gallery: [oficinaCh1, oficinaCh2, oficinaCh3, oficinaCh4, oficinaCh5, oficinaCh6, oficinaCh7, oficinaCh8]
   },
   // Propiedades en Venta
   "s1": {
