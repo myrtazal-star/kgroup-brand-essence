@@ -72,10 +72,6 @@ export const PropertyCard = ({
               <BedDouble className="w-3 h-3" />
               {bedrooms} {bedrooms === 1 ? 'estacionamiento' : 'bed'}
             </div>
-            <div className="flex items-center gap-1">
-              <Bath className="w-3 h-3" />
-              {bathrooms} bath
-            </div>
           </div>
 
         </div>
