@@ -251,11 +251,11 @@ const ConsultationForm = () => {
 
                 <Button 
                   type="submit" 
-                  variant="luxury" 
-                  className="w-full"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 text-base"
+                  size="lg"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Enviando..." : "Solicitar Asesoría"}
+                  {isSubmitting ? "Enviando..." : "Enviar Solicitud"}
                 </Button>
               </form>
             </div>
