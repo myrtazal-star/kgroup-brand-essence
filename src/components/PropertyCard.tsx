@@ -70,7 +70,7 @@ export const PropertyCard = ({
             </div>
             <div className="flex items-center gap-1">
               <BedDouble className="w-3 h-3" />
-              {bedrooms} bed
+              {bedrooms} {bedrooms === 1 ? 'estacionamiento' : 'bed'}
             </div>
             <div className="flex items-center gap-1">
               <Bath className="w-3 h-3" />

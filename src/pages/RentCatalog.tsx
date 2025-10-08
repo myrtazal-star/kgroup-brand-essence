@@ -33,7 +33,7 @@ const RentCatalog = () => {
       location: "Homero, Polanco",
       price: "$89,000/mes",
       area: "103 m²",
-      bedrooms: 6,
+      bedrooms: 1,
       bathrooms: 1.5,
       imageUrl: oficinaPH
     },
