@@ -31,7 +31,7 @@ const RentCatalog = () => {
       id: "r2",
       title: "Oficina PH de 2 niveles en Polanco",
       location: "Homero, Polanco",
-      price: "$60,000/mes",
+      price: "$89,000/mes",
       area: "200 m²",
       bedrooms: 6,
       bathrooms: 1.5,
