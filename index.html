@@ -30,7 +30,13 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '779734834915742');
+      
+      // Инициализация пикселя с тестовым кодом
+      fbq('init', '779734834915742', {
+        'test_event_code': 'TEST2B540'
+      });
+
+      // Отслеживание посещений страниц
       fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
