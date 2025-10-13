@@ -40,17 +40,6 @@ const RentCatalog = () => {
       imageUrl: oficinaPH
     },
     {
-      id: "r3",
-      title: "Renta en Mitikah",
-      location: "Polanco, Homero",
-      price: "$70,000/mes",
-      area: "100 m²",
-      bedrooms: 3,
-      bathrooms: 3,
-      imageUrl: rentaMitikah,
-      featured: true
-    },
-    {
       id: "r4",
       title: "Oficina en Prado Norte",
       location: "Lomas de Chapultepec, Prado Norte",
