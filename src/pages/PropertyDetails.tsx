@@ -96,7 +96,7 @@ const propertiesData = {
     features: ["Oficina nueva", "2 cajones de estacionamiento", "Vigilancia 24/7", "Seguridad y cámaras 24 hrs", "Adecuaciones personalizadas", "Piso 2"],
     amenities: ["Seguridad 24 horas", "Oficina"],
     gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6],
-    youtubeVideoId: undefined
+    youtubeVideoId: "Qb3MgfN1kgQ"
   },
   "r5": {
     id: "r5",
