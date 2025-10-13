@@ -2,6 +2,7 @@ import { PropertyCard } from "@/components/PropertyCard";
 import PropertyMap from "@/components/PropertyMap";
 import { Button } from "@/components/ui/button";
 import { Search, Filter, MapPin, Home, Building } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
 
 interface Property {
@@ -272,10 +273,12 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           Nuestro equipo de asesores especializados puede ayudarte a encontrar la propiedad perfecta
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <Button variant="luxury" size="lg" className="w-full sm:w-auto flex items-center justify-center gap-2">
-            <Building className="w-4 h-4" />
-            Asesoría Personalizada
-          </Button>
+          <Link to="/consultation" className="w-full sm:w-auto">
+            <Button variant="default" size="lg" className="w-full flex items-center justify-center gap-2">
+              <Building className="w-4 h-4" />
+              Asesoría Personalizada
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
