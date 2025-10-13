@@ -15,6 +15,7 @@ import rentaMitikah from "@/assets/renta-mitikah.jpg";
 import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
+import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -48,6 +49,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaPn1
+    },
+    {
+      id: "r7",
+      title: "Oficina en Polanco, Ejercito Nacional",
+      location: "Ejercito Nacional, Polanco",
+      price: "$75,000/mes",
+      area: "215 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaEn1
     },
     {
       id: "r6",
