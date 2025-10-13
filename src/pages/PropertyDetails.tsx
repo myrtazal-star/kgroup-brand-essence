@@ -41,7 +41,8 @@ const propertiesData = {
     description: "Hermoso departamento en renta ubicado en Roma Norte. Este espacio cuenta con acabados modernos, amplios espacios y una ubicación privilegiada en una de las colonias más vibrantes de la ciudad.",
     features: ["Completamente amueblado", "Balcón privado", "Cocina equipada", "Closets empotrados", "Pisos de madera", "PH", "Roof Garden Privado"],
     amenities: ["Seguridad 24/7", "Elevador", "Terraza común", "Área de coworking"],
-    gallery: ["/src/assets/block-renta.jpg", "/src/assets/property-r1-1.jpg", "/src/assets/property-r1-2.jpg", "/src/assets/property-r1-3.jpg", "/src/assets/property-r1-4.jpg", "/src/assets/property-r1-5.jpg", "/src/assets/property-r1-6.jpg", "/src/assets/property-r1-7.jpg"]
+    gallery: ["/src/assets/block-renta.jpg", "/src/assets/property-r1-1.jpg", "/src/assets/property-r1-2.jpg", "/src/assets/property-r1-3.jpg", "/src/assets/property-r1-4.jpg", "/src/assets/property-r1-5.jpg", "/src/assets/property-r1-6.jpg", "/src/assets/property-r1-7.jpg"],
+    youtubeVideoId: undefined
   },
   "r2": {
     id: "r2",
@@ -58,7 +59,8 @@ const propertiesData = {
     description: "Moderna oficina en penthouse de dos niveles ubicada en Polanco. Ideal para empresas creativas que buscan un espacio único y bien ubicado con excelente conectividad.",
     features: ["2 niveles", "Iluminación natural", "6 espacios de trabajo", "Cocina", "2.5 baños", "Consierge y seguridad 24/7", "Piso 7 PH", "Acepta mascotas"],
     amenities: ["Seguridad", "Elevador", "Estacionamiento", "Recepción"],
-    gallery: ["/src/assets/oficina-ph-roma-norte.jpg", "/src/assets/oficina-ph-1.jpg", "/src/assets/oficina-ph-2.jpg", "/src/assets/oficina-ph-3.jpg", "/src/assets/oficina-ph-4.jpg", "/src/assets/oficina-ph-5.jpg"]
+    gallery: ["/src/assets/oficina-ph-roma-norte.jpg", "/src/assets/oficina-ph-1.jpg", "/src/assets/oficina-ph-2.jpg", "/src/assets/oficina-ph-3.jpg", "/src/assets/oficina-ph-4.jpg", "/src/assets/oficina-ph-5.jpg"],
+    youtubeVideoId: undefined
   },
   "r3": {
     id: "r3",
@@ -75,7 +77,8 @@ const propertiesData = {
     description: "Departamento nuevo en renta en el exclusivo desarrollo Mitikah. Con amenidades de lujo y ubicación estratégica con fácil acceso a las principales vialidades de la ciudad.",
     features: ["Completamente nuevo", "Balcón con vista", "Cocina moderna", "Walk-in closet", "Lavandería", "Smart home"],
     amenities: ["Gimnasio", "Alberca", "Sky lounge", "Seguridad 24/7", "Elevadores de alta velocidad", "Concierge"],
-    gallery: ["/src/assets/renta-mitikah.jpg", "/src/assets/property-r3-1.jpg", "/src/assets/property-r3-2.jpg", "/src/assets/property-r3-3.jpg", "/src/assets/property-r3-4.jpg"]
+    gallery: ["/src/assets/renta-mitikah.jpg", "/src/assets/property-r3-1.jpg", "/src/assets/property-r3-2.jpg", "/src/assets/property-r3-3.jpg", "/src/assets/property-r3-4.jpg"],
+    youtubeVideoId: undefined
   },
   "r4": {
     id: "r4",
@@ -92,7 +95,8 @@ const propertiesData = {
     description: "Oficina nueva en renta. 103 m2, 2 cajones de estacionamiento, vigilancia 24/7. Puedes hacer las adecuaciones que desees, seguridad y cámaras 24 hrs. Ubicación privelegiada en Prado Norte a 5 min del Auditorio Nacional, rodeado de restaurantes de lujo y negocios de alto nivel.",
     features: ["Oficina nueva", "2 cajones de estacionamiento", "Vigilancia 24/7", "Seguridad y cámaras 24 hrs", "Adecuaciones personalizadas", "Piso 2"],
     amenities: ["Seguridad 24 horas", "Oficina"],
-    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6]
+    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6],
+    youtubeVideoId: undefined
   },
   "r5": {
     id: "r5",
@@ -109,7 +113,8 @@ const propertiesData = {
     description: "Acogedor departamento de 1 nivel en renta ubicado en Arquímedes, Polanco. Completamente amueblado con acabados modernos y en una ubicación privilegiada cerca de restaurantes y centros comerciales. El frente del departamento está ubicado frente a un kinder.",
     features: ["Completamente amueblado", "1 nivel", "Balcón", "Cocina integral", "Closets equipados", "Frente a kinder"],
     amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Área de juegos infantiles", "Jacuzzi", "Alberca"],
-    gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-r5-1.jpg", "/src/assets/property-r5-2.jpg", "/src/assets/property-r5-3.jpg", "/src/assets/property-r5-4.jpg", "/src/assets/property-r5-5.jpg", "/src/assets/property-r5-6.jpg", "/src/assets/property-r5-7.jpg"]
+    gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-r5-1.jpg", "/src/assets/property-r5-2.jpg", "/src/assets/property-r5-3.jpg", "/src/assets/property-r5-4.jpg", "/src/assets/property-r5-5.jpg", "/src/assets/property-r5-6.jpg", "/src/assets/property-r5-7.jpg"],
+    youtubeVideoId: undefined
   },
   "r6": {
     id: "r6",
@@ -126,7 +131,26 @@ const propertiesData = {
     description: "Trabaja donde la inspiración fluye y la elegancia se respira. Una oficina de 100 m² ubicada en planta baja de una casa antigua catalogada por el INAH, a solo pasos del Bosque de Chapultepec. Un espacio único que eleva marcas y conecta con lo auténtico.",
     features: ["Casa de época catalogada por el INAH", "100 m² en planta baja", "Recepción con gran presencia", "4 espacios para oficinas privadas", "Iluminación natural abundante", "Pisos de madera", "Techos altos con molduras", "Área de cocina", "Espacio para almacenamiento", "Perfecto estado de conservación"],
     amenities: ["A pasos del Bosque de Chapultepec", "San Miguel Chapultepec", "Ideal para despachos creativos", "Agencias y estudios de diseño"],
-    gallery: [oficinaCh1, oficinaCh2, oficinaCh3, oficinaCh4, oficinaCh5, oficinaCh6, oficinaCh7, oficinaCh8]
+    gallery: [oficinaCh1, oficinaCh2, oficinaCh3, oficinaCh4, oficinaCh5, oficinaCh6, oficinaCh7, oficinaCh8],
+    youtubeVideoId: undefined
+  },
+  "r7": {
+    id: "r7",
+    title: "Oficina en Polanco, Ejercito Nacional",
+    location: "Ejercito Nacional, Polanco",
+    price: "$75,000",
+    priceType: "Renta mensual",
+    area: "215 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 2,
+    imageUrl: "/src/assets/oficina-en-1.jpg",
+    featured: false,
+    description: "Moderna oficina en el corazón de Polanco, ubicada en Ejercito Nacional. Espacio amplio ideal para empresas que buscan una ubicación privilegiada con excelente conectividad.",
+    features: ["Oficina amplia", "Iluminación natural", "2 cajones de estacionamiento", "Ubicación privilegiada", "Fácil acceso"],
+    amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento"],
+    gallery: ["/src/assets/oficina-en-1.jpg", "/src/assets/oficina-en-2.jpg", "/src/assets/oficina-en-3.jpg", "/src/assets/oficina-en-4.jpg", "/src/assets/oficina-en-5.jpg", "/src/assets/oficina-en-6.jpg"],
+    youtubeVideoId: "" // Agrega aquí el ID del video de YouTube
   },
   // Propiedades en Venta
   "s1": {
@@ -144,7 +168,8 @@ const propertiesData = {
     description: "Exclusiva residencia ubicada en Polanco con acabados de lujo y amenidades de primer nivel. Esta propiedad ofrece espacios amplios, diseño moderno y una ubicación privilegiada.",
     features: ["Acabados de lujo", "Terraza privada", "Cocina gourmet", "Closets vestidores", "Sala de TV", "Sistema domótico"],
     amenities: ["Gimnasio", "Alberca", "Seguridad 24/7", "Elevador", "Estacionamiento techado", "Salón de eventos"],
-    gallery: ["/src/assets/property-1.jpg", "/src/assets/property-2.jpg", "/src/assets/property-3.jpg"]
+    gallery: ["/src/assets/property-1.jpg", "/src/assets/property-2.jpg", "/src/assets/property-3.jpg"],
+    youtubeVideoId: undefined
   },
   "s2": {
     id: "s2",
@@ -161,7 +186,8 @@ const propertiesData = {
     description: "Moderna oficina ejecutiva en Torre Santa Fe, ideal para profesionales e inversionistas. Ubicada en el distrito financiero más importante de la ciudad con excelente conectividad.",
     features: ["Oficina ejecutiva", "Vista panorámica", "Acabados premium", "Aire acondicionado central", "Cableado estructurado"],
     amenities: ["Business center", "Seguridad 24/7", "Elevadores de alta velocidad", "Estacionamiento", "Helipuerto"],
-    gallery: ["/src/assets/property-2.jpg", "/src/assets/property-1.jpg"]
+    gallery: ["/src/assets/property-2.jpg", "/src/assets/property-1.jpg"],
+    youtubeVideoId: undefined
   },
   "s3": {
     id: "s3",
@@ -178,7 +204,8 @@ const propertiesData = {
     description: "Espectacular penthouse con vista panorámica a la ciudad ubicado en Zona Rosa. Este increíble espacio cuenta con acabados de lujo, terrazas amplias y amenidades exclusivas.",
     features: ["Vista 360°", "Terraza panorámica", "Jacuzzi privado", "Cocina gourmet", "Cava de vinos", "Home theater"],
     amenities: ["Concierge", "Spa privado", "Gimnasio", "Alberca infinity", "Helipuerto", "Seguridad VIP"],
-    gallery: ["/src/assets/property-3.jpg", "/src/assets/property-1.jpg", "/src/assets/property-2.jpg"]
+    gallery: ["/src/assets/property-3.jpg", "/src/assets/property-1.jpg", "/src/assets/property-2.jpg"],
+    youtubeVideoId: undefined
   }
 };
 const PropertyDetails = () => {
@@ -194,7 +221,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6", "r7"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
@@ -363,6 +390,25 @@ const PropertyDetails = () => {
                     </div>)}
                 </div>
               </div>
+
+              {/* YouTube Video */}
+              {property.youtubeVideoId && (
+                <div>
+                  <h2 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">Video Tour</h2>
+                  <div className="aspect-video overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${property.youtubeVideoId}`}
+                      title="Video de la propiedad"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
