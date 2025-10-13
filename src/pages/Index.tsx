@@ -10,44 +10,44 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import heroProperty from "@/assets/hero-property.jpg";
-import property1 from "@/assets/mitikah-residencial.jpg";
-import property2 from "@/assets/property-2.jpg";
-import property3 from "@/assets/penthouse-aristotiles.jpg";
+import blockRenta from "@/assets/block-renta.jpg";
+import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
+import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 import kgroupLogo from "@/assets/kgroup-logo.jpg";
 
 const Index = () => {
   const featuredProperties = [
     {
-      id: "s1",
-      title: "Penthouse Aristóteles",
-      location: "Polanco, CDMX",
-      price: "$8,500,000",
-      area: "450 m²",
-      bedrooms: 4,
-      bathrooms: 4,
-      imageUrl: property3,
-      featured: true
-    },
-    {
-      id: "s2", 
-      title: "Mitikah Residencial",
-      location: "Mitikah, CDMX",
-      price: "$6,200,000",
-      area: "110 m²",
+      id: "r1",
+      title: "Departamento en renta Roma Norte",
+      location: "Durango 262, Roma Norte",
+      price: "$92,000/mes",
+      area: "120 m²",
       bedrooms: 2,
       bathrooms: 2,
-      imageUrl: property1,
+      imageUrl: blockRenta,
       featured: true
     },
     {
-      id: "r1",
-      title: "Departamento Arquímedes",
-      location: "Polanco, CDMX",
-      price: "$45,000/mes", 
-      area: "180 m²",
-      bedrooms: 3,
-      bathrooms: 2,
-      imageUrl: property2,
+      id: "r2",
+      title: "Oficina en Polanco PH 2 niveles",
+      location: "Homero, Polanco",
+      price: "$100,000/mes",
+      area: "200 m²",
+      bedrooms: 6,
+      bathrooms: 1.5,
+      imageUrl: oficinaPH,
+      featured: true
+    },
+    {
+      id: "r4",
+      title: "Oficina en Prado Norte",
+      location: "Lomas de Chapultepec, Prado Norte",
+      price: "$60,000/mes",
+      area: "103 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPn1,
       featured: true
     }
   ];
