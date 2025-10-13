@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { KGroupLogo } from "@/components/KGroupLogo";
 
 import { useState } from "react";
@@ -267,13 +268,51 @@ const PropertyDetails = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Left Column - Images & Details */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Main Image */}
-            <div className="aspect-[16/10] overflow-hidden bg-muted cursor-pointer" onClick={() => {
-              setSelectedImage(property.imageUrl);
-              setCurrentImageIndex(0);
-              setIsModalOpen(true);
-            }}>
-              <img src={property.imageUrl} alt={property.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+            {/* Image Gallery Carousel */}
+            <Carousel className="w-full" opts={{ loop: true }}>
+              <CarouselContent>
+                {property.gallery.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div 
+                      className="aspect-[16/10] overflow-hidden bg-muted cursor-pointer rounded-lg"
+                      onClick={() => {
+                        setSelectedImage(image);
+                        setCurrentImageIndex(index);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`${property.title} - imagen ${index + 1}`} 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
+
+            {/* Thumbnail Gallery */}
+            <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
+              {property.gallery.map((image, index) => (
+                <div 
+                  key={index} 
+                  className="aspect-square overflow-hidden bg-muted cursor-pointer rounded border-2 border-transparent hover:border-primary transition-colors"
+                  onClick={() => {
+                    setSelectedImage(image);
+                    setCurrentImageIndex(index);
+                    setIsModalOpen(true);
+                  }}
+                >
+                  <img 
+                    src={image} 
+                    alt={`${property.title} - miniatura ${index + 1}`} 
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Property Navigation - Only for rental properties */}
@@ -314,19 +353,6 @@ const PropertyDetails = () => {
                 </Button>
               </div>
             )}
-
-            {/* Gallery */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
-              {property.gallery.slice(1).map((image, index) => (
-                <div key={index} className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer" onClick={() => {
-                  setSelectedImage(image);
-                  setCurrentImageIndex(index + 1);
-                  setIsModalOpen(true);
-                }}>
-                  <img src={image} alt={`${property.title} - imagen ${index + 2}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                </div>
-              ))}
-            </div>
 
             {/* Property Info */}
             <div className="space-y-4 sm:space-y-6">
