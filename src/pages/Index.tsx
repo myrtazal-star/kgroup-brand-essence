@@ -353,7 +353,7 @@ const Index = () => {
                   rows={4}
                   placeholder="Tell us about your real estate needs..."
                 />
-                <Button variant="luxury" size="lg" className="w-full">
+                <Button variant="default" size="lg" className="w-full">
                   Agendar Consulta
                 </Button>
               </div>
