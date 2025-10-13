@@ -2,7 +2,7 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Linkedin, ChevronDown, User } from "lucide-react";
+import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Youtube, ChevronDown, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -314,8 +314,8 @@ const Index = () => {
                   <a href="https://www.instagram.com/kellargroup/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
                     <Instagram className="w-4 h-4" />
                   </a>
-                  <a href="#" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
-                    <Linkedin className="w-4 h-4" />
+                  <a href="https://www.youtube.com/@kgroup_real" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-border flex items-center justify-center hover:bg-muted transition-colors">
+                    <Youtube className="w-4 h-4" />
                   </a>
                 </div>
               </div>
