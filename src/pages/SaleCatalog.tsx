@@ -14,70 +14,7 @@ import property2 from "@/assets/property-2.jpg";
 import property3 from "@/assets/property-3.jpg";
 
 const SaleCatalog = () => {
-  const saleProperties = [
-    {
-      id: "s1",
-      title: "Residencias Meridian",
-      location: "Polanco, Ciudad de México",
-      price: "$4.2M",
-      area: "223 m²",
-      bedrooms: 3,
-      bathrooms: 2,
-      imageUrl: property1,
-      featured: true
-    },
-    {
-      id: "s2",
-      title: "Torre Ejecutiva Santa Fe",
-      location: "Santa Fe, Ciudad de México",
-      price: "$850K",
-      area: "111 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: property2
-    },
-    {
-      id: "s3",
-      title: "Penthouse Skyline",
-      location: "Zona Rosa, Ciudad de México",
-      price: "$12.5M",
-      area: "446 m²",
-      bedrooms: 4,
-      bathrooms: 3,
-      imageUrl: property3,
-      featured: true
-    },
-    {
-      id: "s4",
-      title: "Casa Colonial Coyoacán",
-      location: "Coyoacán, Ciudad de México",
-      price: "$2.8M",
-      area: "350 m²",
-      bedrooms: 4,
-      bathrooms: 3,
-      imageUrl: property1
-    },
-    {
-      id: "s5",
-      title: "Departamento de Inversión Roma",
-      location: "Roma Norte, Ciudad de México",
-      price: "$1.2M",
-      area: "95 m²",
-      bedrooms: 2,
-      bathrooms: 2,
-      imageUrl: property2
-    },
-    {
-      id: "s6",
-      title: "Villa Moderna Satelite",
-      location: "Ciudad Satélite, Estado de México",
-      price: "$3.5M",
-      area: "280 m²",
-      bedrooms: 3,
-      bathrooms: 3,
-      imageUrl: property3
-    }
-  ];
+  const saleProperties: any[] = [];
 
   return (
     <div className="min-h-screen bg-background">
