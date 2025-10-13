@@ -276,7 +276,6 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
             <Building className="w-4 h-4" />
             Asesoría Personalizada
           </Button>
-          <Button variant="minimal" size="lg" className="w-full sm:w-auto">Crear Alerta</Button>
         </div>
       </div>
     </div>
