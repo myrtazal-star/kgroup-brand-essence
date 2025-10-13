@@ -1,5 +1,5 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, MapPin, Square, BedDouble, Bath, Car, Wifi, Phone, Mail, Calendar, Share2, Heart, X, MessageCircle } from "lucide-react";
+import { ArrowLeft, MapPin, Square, BedDouble, Bath, Car, Wifi, Phone, Mail, Calendar, Share2, Heart, X, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -150,7 +150,7 @@ const propertiesData = {
     features: ["Oficina amplia", "Iluminación natural", "2 cajones de estacionamiento", "Ubicación privilegiada", "Fácil acceso"],
     amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento"],
     gallery: ["/src/assets/oficina-en-1.jpg", "/src/assets/oficina-en-2.jpg", "/src/assets/oficina-en-3.jpg", "/src/assets/oficina-en-4.jpg", "/src/assets/oficina-en-5.jpg", "/src/assets/oficina-en-6.jpg"],
-    youtubeVideoId: "" // Agrega aquí el ID del video de YouTube
+    youtubeVideoId: "r0mBmjqVKko"
   },
   // Propiedades en Venta
   "s1": {
@@ -493,11 +493,45 @@ const PropertyDetails = () => {
             >
               <X className="h-4 w-4" />
             </Button>
+            
+            {/* Previous Image Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white hover:bg-black/70"
+              onClick={() => {
+                const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : property.gallery.length - 1;
+                setCurrentImageIndex(newIndex);
+                setSelectedImage(property.gallery[newIndex]);
+              }}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            
+            {/* Next Image Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white hover:bg-black/70"
+              onClick={() => {
+                const newIndex = currentImageIndex < property.gallery.length - 1 ? currentImageIndex + 1 : 0;
+                setCurrentImageIndex(newIndex);
+                setSelectedImage(property.gallery[newIndex]);
+              }}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+            
             <img
               src={selectedImage}
               alt="Imagen completa"
               className="w-full h-auto max-h-[90vh] object-contain"
             />
+            
+            {/* Image Counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+              {currentImageIndex + 1} / {property.gallery.length}
+            </div>
           </div>
         </DialogContent>
       </Dialog>
