@@ -60,7 +60,7 @@ const propertiesData = {
     features: ["2 niveles", "Iluminación natural", "6 espacios de trabajo", "Cocina", "2.5 baños", "Consierge y seguridad 24/7", "Piso 7 PH", "Acepta mascotas"],
     amenities: ["Seguridad", "Elevador", "Estacionamiento", "Recepción"],
     gallery: ["/src/assets/oficina-ph-roma-norte.jpg", "/src/assets/oficina-ph-1.jpg", "/src/assets/oficina-ph-2.jpg", "/src/assets/oficina-ph-3.jpg", "/src/assets/oficina-ph-4.jpg", "/src/assets/oficina-ph-5.jpg"],
-    youtubeVideoId: undefined
+    youtubeVideoId: "z43UebPM2B4"
   },
   "r3": {
     id: "r3",
