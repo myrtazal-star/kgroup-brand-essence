@@ -132,7 +132,7 @@ const propertiesData = {
     features: ["Casa de época catalogada por el INAH", "100 m² en planta baja", "Recepción con gran presencia", "4 espacios para oficinas privadas", "Iluminación natural abundante", "Pisos de madera", "Techos altos con molduras", "Área de cocina", "Espacio para almacenamiento", "Perfecto estado de conservación"],
     amenities: ["A pasos del Bosque de Chapultepec", "San Miguel Chapultepec", "Ideal para despachos creativos", "Agencias y estudios de diseño"],
     gallery: [oficinaCh1, oficinaCh2, oficinaCh3, oficinaCh4, oficinaCh5, oficinaCh6, oficinaCh7, oficinaCh8],
-    youtubeVideoId: undefined
+    youtubeVideoId: "K982d-pMPMg"
   },
   "r7": {
     id: "r7",
