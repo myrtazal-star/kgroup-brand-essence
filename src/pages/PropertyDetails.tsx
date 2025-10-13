@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { KGroupLogo } from "@/components/KGroupLogo";
 
 import { useState } from "react";
@@ -219,6 +218,7 @@ const PropertyDetails = () => {
   const [selectedImage, setSelectedImage] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
@@ -268,42 +268,64 @@ const PropertyDetails = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Left Column - Images & Details */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Image Gallery Carousel */}
-            <Carousel className="w-full" opts={{ loop: true }}>
-              <CarouselContent>
-                {property.gallery.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div 
-                      className="aspect-[16/10] overflow-hidden bg-muted cursor-pointer rounded-lg"
-                      onClick={() => {
-                        setSelectedImage(image);
-                        setCurrentImageIndex(index);
-                        setIsModalOpen(true);
-                      }}
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${property.title} - imagen ${index + 1}`} 
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-4" />
-              <CarouselNext className="right-4" />
-            </Carousel>
+            {/* Main Image Gallery with Navigation */}
+            <div className="relative">
+              <div 
+                className="aspect-[16/10] overflow-hidden bg-muted cursor-pointer rounded-lg"
+                onClick={() => {
+                  setSelectedImage(property.gallery[currentGalleryIndex]);
+                  setCurrentImageIndex(currentGalleryIndex);
+                  setIsModalOpen(true);
+                }}
+              >
+                <img 
+                  src={property.gallery[currentGalleryIndex]} 
+                  alt={`${property.title} - imagen ${currentGalleryIndex + 1}`} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                />
+              </div>
+              
+              {/* Navigation Buttons */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70 h-12 w-12"
+                onClick={() => {
+                  const newIndex = currentGalleryIndex > 0 ? currentGalleryIndex - 1 : property.gallery.length - 1;
+                  setCurrentGalleryIndex(newIndex);
+                }}
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </Button>
+              
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white hover:bg-black/70 h-12 w-12"
+                onClick={() => {
+                  const newIndex = currentGalleryIndex < property.gallery.length - 1 ? currentGalleryIndex + 1 : 0;
+                  setCurrentGalleryIndex(newIndex);
+                }}
+              >
+                <ChevronRight className="h-6 w-6" />
+              </Button>
+              
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                {currentGalleryIndex + 1} / {property.gallery.length}
+              </div>
+            </div>
 
             {/* Thumbnail Gallery */}
             <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
               {property.gallery.map((image, index) => (
                 <div 
                   key={index} 
-                  className="aspect-square overflow-hidden bg-muted cursor-pointer rounded border-2 border-transparent hover:border-primary transition-colors"
+                  className={`aspect-square overflow-hidden bg-muted cursor-pointer rounded border-2 transition-colors ${
+                    index === currentGalleryIndex ? 'border-primary' : 'border-transparent hover:border-primary/50'
+                  }`}
                   onClick={() => {
-                    setSelectedImage(image);
-                    setCurrentImageIndex(index);
-                    setIsModalOpen(true);
+                    setCurrentGalleryIndex(index);
                   }}
                 >
                   <img 
