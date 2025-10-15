@@ -33,7 +33,7 @@ const RentCatalog = () => {
     },
     {
       id: "r2",
-      title: "Oficina PH en Polanco – Vista Panorámica y Terraza",
+      title: "Oficina en Polanco PH 2 niveles",
       location: "Homero, Polanco",
       price: "$100,000/mes",
       area: "200 m²",
