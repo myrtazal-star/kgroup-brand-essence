@@ -32,7 +32,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
   const [priceRange, setPriceRange] = useState("");
   const [sortBy, setSortBy] = useState("newest");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 8;
 
   // Filter and sort properties based on search criteria
   const filteredProperties = useMemo(() => {
