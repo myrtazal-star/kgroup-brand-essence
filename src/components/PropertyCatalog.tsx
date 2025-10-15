@@ -31,6 +31,8 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
   const [propertyType, setPropertyType] = useState("");
   const [priceRange, setPriceRange] = useState("");
   const [sortBy, setSortBy] = useState("newest");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
   // Filter and sort properties based on search criteria
   const filteredProperties = useMemo(() => {
@@ -106,6 +108,17 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
         return filtered;
     }
   }, [properties, searchTerm, propertyType, priceRange, sortBy, type]);
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredProperties.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProperties = filteredProperties.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filters change
+  useMemo(() => {
+    setCurrentPage(1);
+  }, [searchTerm, propertyType, priceRange, sortBy]);
 
   return (
     <div className="space-y-2xl">
@@ -246,7 +259,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           {/* Content based on view mode */}
           {viewMode === "grid" ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProperties.map((property) => (
+              {currentProperties.map((property) => (
                 <PropertyCard key={property.id} {...property} />
               ))}
             </div>
@@ -255,13 +268,37 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           )}
 
         {/* Pagination - only show in grid view */}
-        {viewMode === "grid" && (
+        {viewMode === "grid" && totalPages > 1 && (
           <div className="flex justify-center flex-wrap gap-2">
-            <Button variant="outline" size="sm" disabled>Anterior</Button>
-            <Button variant="luxury" size="sm">1</Button>
-            <Button variant="outline" size="sm">2</Button>
-            <Button variant="outline" size="sm">3</Button>
-            <Button variant="outline" size="sm">Siguiente</Button>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage(currentPage - 1)}
+              className="font-medium"
+            >
+              Anterior
+            </Button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <Button
+                key={page}
+                variant={currentPage === page ? "default" : "outline"}
+                size="sm"
+                onClick={() => setCurrentPage(page)}
+                className="min-w-[40px] font-medium"
+              >
+                {page}
+              </Button>
+            ))}
+            <Button 
+              variant="outline" 
+              size="sm" 
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage(currentPage + 1)}
+              className="font-medium"
+            >
+              Siguiente
+            </Button>
           </div>
         )}
       </div>
