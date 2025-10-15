@@ -22,6 +22,11 @@ import oficinaCh5 from "@/assets/oficina-chapultepec-5.jpg";
 import oficinaCh6 from "@/assets/oficina-chapultepec-6.jpg";
 import oficinaCh7 from "@/assets/oficina-chapultepec-7.jpg";
 import oficinaCh8 from "@/assets/oficina-chapultepec-8.jpg";
+import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
+import oficinaRd2 from "@/assets/oficina-rd-2.jpg";
+import oficinaRd3 from "@/assets/oficina-rd-3.jpg";
+import oficinaRd4 from "@/assets/oficina-rd-4.jpg";
+import oficinaRd5 from "@/assets/oficina-rd-5.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -152,6 +157,24 @@ const propertiesData = {
     gallery: ["/src/assets/oficina-en-1.jpg", "/src/assets/oficina-en-2.jpg", "/src/assets/oficina-en-3.jpg", "/src/assets/oficina-en-4.jpg", "/src/assets/oficina-en-5.jpg", "/src/assets/oficina-en-6.jpg"],
     youtubeVideoId: "r0mBmjqVKko"
   },
+  "r8": {
+    id: "r8",
+    title: "Oficina Piso 9 Rubén Darío, Polanco",
+    location: "Rubén Darío, Polanco",
+    price: "$46,000",
+    priceType: "Renta mensual + IVA",
+    area: "215 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 1,
+    imageUrl: oficinaRd1,
+    featured: false,
+    description: "Oficina ubicada en el piso 9 sobre Rubén Darío, Polanco, a solo 5 minutos de Masaryk, una de las zonas más exclusivas y céntricas de la CDMX. Ubicación privilegiada con excelente conectividad, cerca de Masaryk, Campos Elíseos y principales avenidas de Polanco.",
+    features: ["Amplia terraza con vista espectacular a la ciudad", "Cocina equipada", "Espacio muy iluminado con grandes ventanales", "Piso 9", "Vista a la ciudad"],
+    amenities: ["Seguridad 24/7", "Ideal para oficinas corporativas", "Despachos", "Estudios", "Espacios de bienestar o uso comercial"],
+    gallery: [oficinaRd1, oficinaRd2, oficinaRd3, oficinaRd4, oficinaRd5],
+    youtubeVideoId: undefined
+  },
   // Propiedades en Venta
   "s1": {
     id: "s1",
@@ -222,7 +245,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6", "r7"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
