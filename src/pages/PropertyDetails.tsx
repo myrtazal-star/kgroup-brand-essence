@@ -159,7 +159,7 @@ const propertiesData = {
   },
   "r8": {
     id: "r8",
-    title: "Oficina Piso 9 Rubén Darío, Polanco",
+    title: "🏢 Oficina PH en Polanco – Vista Panorámica y Terraza",
     location: "Rubén Darío, Polanco",
     price: "$46,000",
     priceType: "Renta mensual + IVA",
