@@ -17,6 +17,7 @@ import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
+import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -80,6 +81,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 2,
       imageUrl: oficinaRd1
+    },
+    {
+      id: "r9",
+      title: "Local Comercial en Renta – Av. Presidente Masaryk, Polanco",
+      location: "Av. Presidente Masaryk, Polanco",
+      price: "$235,000/mes + IVA",
+      area: "250 m²",
+      bedrooms: 0,
+      bathrooms: 4,
+      imageUrl: localMasaryk1
     },
   ];
 
