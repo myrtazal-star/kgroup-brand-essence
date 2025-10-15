@@ -16,6 +16,7 @@ import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
+import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -69,6 +70,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaCh1
+    },
+    {
+      id: "r8",
+      title: "Oficina Piso 9 Rubén Darío, Polanco",
+      location: "Rubén Darío, Polanco",
+      price: "$46,000/mes + IVA",
+      area: "215 m²",
+      bedrooms: 0,
+      bathrooms: 2,
+      imageUrl: oficinaRd1
     },
   ];
 
