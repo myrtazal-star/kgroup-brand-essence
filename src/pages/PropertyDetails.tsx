@@ -27,6 +27,14 @@ import oficinaRd2 from "@/assets/oficina-rd-2.jpg";
 import oficinaRd3 from "@/assets/oficina-rd-3.jpg";
 import oficinaRd4 from "@/assets/oficina-rd-4.jpg";
 import oficinaRd5 from "@/assets/oficina-rd-5.jpg";
+import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
+import localMasaryk2 from "@/assets/local-masaryk-2.jpg";
+import localMasaryk3 from "@/assets/local-masaryk-3.jpg";
+import localMasaryk4 from "@/assets/local-masaryk-4.jpg";
+import localMasaryk5 from "@/assets/local-masaryk-5.jpg";
+import localMasaryk6 from "@/assets/local-masaryk-6.jpg";
+import localMasaryk7 from "@/assets/local-masaryk-7.jpg";
+import localMasaryk8 from "@/assets/local-masaryk-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -175,6 +183,45 @@ const propertiesData = {
     gallery: [oficinaRd1, oficinaRd2, oficinaRd3, oficinaRd4, oficinaRd5],
     youtubeVideoId: undefined
   },
+  "r9": {
+    id: "r9",
+    title: "Local Comercial en Renta – Av. Presidente Masaryk, Polanco",
+    location: "Av. Presidente Masaryk, Polanco",
+    price: "$235,000",
+    priceType: "Renta mensual + IVA",
+    area: "250 m²",
+    bedrooms: 0,
+    bathrooms: 4,
+    parking: 0,
+    imageUrl: localMasaryk1,
+    featured: false,
+    description: "Local comercial ubicado en una de las avenidas más prestigiosas de la colonia Polanco. Cuenta con instalaciones y adaptaciones ideales para restaurante o showroom, pero puede adaptarse para cualquier otro giro comercial. Zona con alto flujo vehicular y peatonal, ideal para posicionar tu marca o negocio.",
+    features: [
+      "Planta baja",
+      "Baños de hombres y mujeres",
+      "Bodega",
+      "Área de cocina",
+      "Amplio salón de 200 m²",
+      "Total construido: 250 m²",
+      "Superficie cubierta: 250 m²",
+      "Fondo: 25 m",
+      "Frente: 10 m",
+      "5 ambientes",
+      "Zonificación: 500 metros",
+      "Expensas: $23,500 MXN"
+    ],
+    amenities: [
+      "Mantenimiento incluido en la renta",
+      "Disponibilidad inmediata",
+      "Vigilancia 24/7",
+      "Contrato mínimo por dos años",
+      "Todos los giros permitidos (excepto bares)",
+      "Alto flujo vehicular y peatonal",
+      "Zona de parquímetros y estacionamientos cercanos"
+    ],
+    gallery: [localMasaryk1, localMasaryk2, localMasaryk3, localMasaryk4, localMasaryk5, localMasaryk6, localMasaryk7, localMasaryk8],
+    youtubeVideoId: undefined
+  },
   // Propiedades en Venta
   "s1": {
     id: "s1",
@@ -245,7 +292,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
