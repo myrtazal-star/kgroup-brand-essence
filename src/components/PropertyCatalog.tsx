@@ -269,13 +269,13 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
 
         {/* Pagination - only show in grid view */}
         {viewMode === "grid" && totalPages > 1 && (
-          <div className="flex justify-center flex-wrap gap-2">
+          <div className="flex justify-center items-center flex-wrap gap-3 py-8">
             <Button 
               variant="outline" 
-              size="sm" 
+              size="default" 
               disabled={currentPage === 1}
               onClick={() => setCurrentPage(currentPage - 1)}
-              className="font-medium"
+              className="font-semibold border-2 hover:bg-foreground hover:text-background"
             >
               Anterior
             </Button>
@@ -283,19 +283,22 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
               <Button
                 key={page}
                 variant={currentPage === page ? "default" : "outline"}
-                size="sm"
+                size="default"
                 onClick={() => setCurrentPage(page)}
-                className="min-w-[40px] font-medium"
+                className={currentPage === page 
+                  ? "min-w-[48px] h-[48px] font-bold text-base bg-foreground text-background hover:bg-foreground/90" 
+                  : "min-w-[48px] h-[48px] font-semibold text-base border-2 hover:bg-foreground hover:text-background"
+                }
               >
                 {page}
               </Button>
             ))}
             <Button 
               variant="outline" 
-              size="sm" 
+              size="default" 
               disabled={currentPage === totalPages}
               onClick={() => setCurrentPage(currentPage + 1)}
-              className="font-medium"
+              className="font-semibold border-2 hover:bg-foreground hover:text-background"
             >
               Siguiente
             </Button>
