@@ -32,7 +32,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
   const [priceRange, setPriceRange] = useState("");
   const [sortBy, setSortBy] = useState("newest");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 3;
 
   // Filter and sort properties based on search criteria
   const filteredProperties = useMemo(() => {
@@ -268,7 +268,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           )}
 
         {/* Pagination - only show in grid view */}
-        {viewMode === "grid" && totalPages > 1 && (
+        {viewMode === "grid" && (
           <div className="flex justify-center items-center flex-wrap gap-3 py-8">
             <Button 
               variant="outline" 
