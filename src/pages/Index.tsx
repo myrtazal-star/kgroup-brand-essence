@@ -2,7 +2,7 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Youtube, ChevronDown, User } from "lucide-react";
+import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Youtube, ChevronDown, User, Bot } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -373,6 +373,17 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating AI Agent Button */}
+      <Link to="/ai-agent">
+        <Button
+          size="lg"
+          className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90 group"
+          aria-label="Abrir Agente IA"
+        >
+          <Bot className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        </Button>
+      </Link>
     </div>
   );
 };
