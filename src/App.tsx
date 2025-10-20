@@ -11,6 +11,7 @@ import SaleCatalog from "./pages/SaleCatalog";
 import Services from "./pages/Services";
 import ConsultationForm from "./pages/ConsultationForm";
 import PropertyDetails from "./pages/PropertyDetails";
+import AIAgent from "./pages/AIAgent";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/ai-agent" element={<AIAgent />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
