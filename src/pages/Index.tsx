@@ -116,7 +116,13 @@ const Index = () => {
             </div>
 
             <div className="hidden md:flex items-center gap-4 animate-fade-in-up">
-              <Button variant="minimal" size="sm" className="hover:scale-105 transition-transform duration-300">Sign In</Button>
+              <Link to="/consultation">
+                <Button 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-refined hover:shadow-premium transition-all duration-300 hover:scale-105 text-premium text-xs px-6"
+                >
+                  REGISTER
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -135,25 +141,36 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-6">
-          <div className="max-w-3xl space-y-10">
-            <div className="space-y-6 animate-fade-in-up">
-              <h1 className="text-hero font-light text-foreground drop-shadow-lg">
-                Where Luxury Meets 
-                <span className="block bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Innovation</span>
+          <div className="max-w-4xl space-y-12">
+            <div className="space-y-8 animate-fade-in-up">
+              <h1 className="text-hero font-light text-foreground drop-shadow-lg text-premium">
+                PREMIUM PROPERTY
+                <span className="block">WITH KGROUP</span>
               </h1>
-              <p className="text-xl text-foreground/80 max-w-2xl leading-relaxed font-light">
-                Descubre propiedades exclusivas a través de nuestra plataforma sofisticada, 
-                diseñada para clientes exigentes que valoran tanto la elegancia como la tecnología.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <Link to="/consultation" className="w-full sm:w-auto">
-                <Button variant="default" size="lg" className="w-full group shadow-luxury hover:shadow-premium transition-all duration-500 hover:scale-105">
-                  Pedir Asesoría
-                  <User className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              <Link to="/consultation">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-luxury hover:shadow-premium transition-all duration-500 hover:scale-105 text-premium px-12"
+                >
+                  CLAIM YOUR DREAM HOME TODAY
                 </Button>
               </Link>
+            </div>
+            
+            {/* Info Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <div className="glass-dark p-6 text-center space-y-2">
+                <div className="text-caption text-foreground/70 text-premium">UNIT TYPES</div>
+                <div className="text-heading text-foreground font-light">Studios, 1-3 BR</div>
+              </div>
+              <div className="glass-dark p-6 text-center space-y-2">
+                <div className="text-caption text-foreground/70 text-premium">STARTING FROM</div>
+                <div className="text-heading text-foreground font-light">$500,000 MXN</div>
+              </div>
+              <div className="glass-dark p-6 text-center space-y-2">
+                <div className="text-caption text-foreground/70 text-premium">PAYMENT PLAN</div>
+                <div className="text-heading text-foreground font-light">Flexible</div>
+              </div>
             </div>
           </div>
         </div>
@@ -163,8 +180,8 @@ const Index = () => {
       <section id="properties" className="relative py-3xl bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-2xl space-y-4 animate-fade-in-up">
-            <h2 className="text-display font-light bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-              Propiedades Destacadas
+            <h2 className="text-display font-light text-premium">
+              PROPIEDADES DESTACADAS
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-light">
               Colección curada de oportunidades inmobiliarias premium en México
@@ -203,8 +220,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-muted/10 to-background" />
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-2xl space-y-4 animate-fade-in-up">
-            <h2 className="text-display font-light bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-              Nuestros Servicios
+            <h2 className="text-display font-light text-premium">
+              NUESTROS SERVICIOS
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-light">
               Soluciones inmobiliarias integrales con experiencia inigualable
@@ -250,8 +267,8 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-2xl items-center">
             <div className="space-y-8 animate-fade-in-up">
-              <h2 className="text-display font-light bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-                Redefiniendo la Excelencia Inmobiliaria
+              <h2 className="text-display font-light text-premium">
+                REDEFINIENDO LA EXCELENCIA INMOBILIARIA
               </h2>
               <div className="space-y-5 text-muted-foreground text-lg font-light leading-relaxed">
                 <p>
@@ -300,8 +317,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background" />
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-2xl space-y-4 animate-fade-in-up">
-            <h2 className="text-display font-light bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-              Contact Us
+            <h2 className="text-display font-light text-premium">
+              CONTACT US
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-light">
               Comienza tu viaje inmobiliario con una consulta personalizada
@@ -379,8 +396,12 @@ const Index = () => {
                   rows={4}
                   placeholder="Tell us about your real estate needs..."
                 />
-                <Button variant="default" size="lg" className="w-full shadow-refined hover:shadow-premium transition-all duration-300 hover:scale-105">
-                  Agendar Consulta
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-refined hover:shadow-premium transition-all duration-300 hover:scale-105 text-premium"
+                >
+                  AGENDAR CONSULTA
                 </Button>
               </div>
             </div>
@@ -404,7 +425,7 @@ const Index = () => {
       <Link to="/ai-agent">
         <Button
           size="lg"
-          className="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full shadow-luxury hover:shadow-premium transition-all duration-500 bg-primary hover:bg-primary/90 hover:scale-110 group"
+          className="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full shadow-luxury hover:shadow-premium transition-all duration-500 bg-accent hover:bg-accent/90 text-accent-foreground hover:scale-110 group"
           aria-label="Abrir Agente IA"
         >
           <Bot className="w-7 h-7 group-hover:rotate-12 transition-transform duration-500" />
