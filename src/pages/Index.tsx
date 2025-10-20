@@ -2,7 +2,7 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, MapPin, TrendingUp, Shield, Users, Phone, Mail, Instagram, Youtube, ChevronDown, User, Bot } from "lucide-react";
+import { MapPin, TrendingUp, Shield, Phone, Mail, Instagram, Youtube, ChevronDown, Bot, ArrowRight, Sparkles, Home, Building2 } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -54,24 +54,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Grid Background Pattern */}
-      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none" />
-      
-      {/* Header */}
-      <header className="relative z-10 glass sticky top-0">
-        <div className="container mx-auto px-6 py-5">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 glass">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="animate-fade-in-up">
-              <KGroupLogo variant="full" size="md" />
-            </div>
+            <KGroupLogo variant="full" size="md" />
             
-            <nav className="hidden md:flex items-center gap-8 text-caption font-medium">
+            <div className="hidden lg:flex items-center gap-8">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-1 hover:text-foreground transition-all duration-300">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors">
                   Properties
-                  <ChevronDown className="w-3 h-3 transition-transform duration-300" />
+                  <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="glass border-border z-50 shadow-premium">
+                <DropdownMenuContent className="glass shadow-premium">
                   <DropdownMenuItem asChild>
                     <Link to="/rent-catalog" className="cursor-pointer">Renta</Link>
                   </DropdownMenuItem>
@@ -80,96 +75,142 @@ const Index = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link to="/services" className="hover:text-foreground transition-all duration-300">Services</Link>
-              <a href="#about" className="hover:text-foreground transition-all duration-300">About</a>
-              <Link to="/join-advisors" className="hover:text-foreground transition-all duration-300">Unite al KGroup</Link>
-              <a href="#contact" className="hover:text-foreground transition-all duration-300">Contact</a>
-            </nav>
-
-            {/* Mobile Menu */}
-            <div className="md:hidden">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm">Menu</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-background border-border z-50 w-48">
-                  <DropdownMenuItem asChild>
-                    <Link to="/rent-catalog" className="w-full">Renta</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/sale-catalog" className="w-full">Venta</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/services" className="w-full">Services</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="#about" className="w-full">About</a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/join-advisors" className="w-full">Unite al KGroup</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="#contact" className="w-full">Contact</a>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Link to="/services" className="text-sm font-medium hover:text-accent transition-colors">Services</Link>
+              <a href="#about" className="text-sm font-medium hover:text-accent transition-colors">About</a>
+              <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-colors">Unite al KGroup</Link>
+              <a href="#contact" className="text-sm font-medium hover:text-accent transition-colors">Contact</a>
             </div>
 
-            <div className="hidden md:flex items-center gap-4 animate-fade-in-up">
-              <Link to="/consultation">
-                <Button 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-refined hover:shadow-premium transition-all duration-300 hover:scale-105 text-premium text-xs px-6"
-                >
-                  REGISTER
-                </Button>
-              </Link>
-            </div>
+            <Link to="/consultation" className="hidden md:block">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-refined hover:shadow-premium transition-all hover:scale-105">
+                REGISTER
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild className="lg:hidden">
+                <Button variant="outline" size="sm">Menu</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="glass shadow-premium w-48">
+                <DropdownMenuItem asChild>
+                  <Link to="/rent-catalog">Renta</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/sale-catalog">Venta</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services">Services</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="#about">About</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/join-advisors">Unite al KGroup</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="#contact">Contact</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
-      </header>
+      </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Hero Section - Fullscreen Split */}
+      <section className="relative h-screen flex items-center pt-20">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10" />
           <img 
             src={heroProperty} 
-            alt="Interior de propiedad de lujo"
-            className="w-full h-full object-cover scale-105"
+            alt="Luxury Property Interior"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/50 to-background/70" />
-          <div className="absolute inset-0" style={{background: 'var(--gradient-hero)'}} />
         </div>
-        
-        <div className="relative z-10 container mx-auto px-6">
-          <div className="max-w-4xl space-y-12">
-            <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-hero font-light text-foreground drop-shadow-lg text-premium">
-                PREMIUM PROPERTY
-                <span className="block">WITH KGROUP</span>
+
+        <div className="container mx-auto px-6 relative z-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 glass-dark text-sm">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="text-foreground">Premium Real Estate in México</span>
+              </div>
+              
+              <h1 className="text-6xl lg:text-7xl font-extralight leading-none">
+                Your Dream
+                <span className="block text-accent font-light">Property Awaits</span>
               </h1>
-              <Link to="/consultation">
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-luxury hover:shadow-premium transition-all duration-500 hover:scale-105 text-premium px-12"
-                >
-                  CLAIM YOUR DREAM HOME TODAY
-                </Button>
-              </Link>
+
+              <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
+                Descubre propiedades exclusivas en las mejores ubicaciones de México. 
+                Tecnología de vanguardia al servicio del lujo inmobiliario.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/consultation">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-luxury hover:scale-105 transition-all group">
+                    Comenzar Ahora
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link to="/rent-catalog">
+                  <Button size="lg" variant="outline" className="hover:scale-105 transition-all">
+                    Ver Propiedades
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
+                <div>
+                  <div className="text-3xl font-light mb-1">$2.4B+</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Transactions</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-light mb-1">500+</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Clients</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-light mb-1">15+</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Years</div>
+                </div>
+              </div>
             </div>
-            
+
             {/* Info Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <div className="glass-dark p-6 text-center space-y-2">
-                <div className="text-caption text-foreground/70 text-premium">UNIT TYPES</div>
-                <div className="text-heading text-foreground font-light">Studios, 1-3 BR</div>
+            <div className="hidden lg:grid grid-cols-1 gap-4">
+              <div className="glass p-8 hover:shadow-premium transition-all group">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <Home className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Unit Types</div>
+                    <div className="text-2xl font-light">Studios, 1-3 BR</div>
+                  </div>
+                </div>
               </div>
-              <div className="glass-dark p-6 text-center space-y-2">
-                <div className="text-caption text-foreground/70 text-premium">STARTING FROM</div>
-                <div className="text-heading text-foreground font-light">$500,000 MXN</div>
+              <div className="glass p-8 hover:shadow-premium transition-all group">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <TrendingUp className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Starting From</div>
+                    <div className="text-2xl font-light">$500,000 MXN</div>
+                  </div>
+                </div>
               </div>
-              <div className="glass-dark p-6 text-center space-y-2">
-                <div className="text-caption text-foreground/70 text-premium">PAYMENT PLAN</div>
-                <div className="text-heading text-foreground font-light">Flexible</div>
+              <div className="glass p-8 hover:shadow-premium transition-all group">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <Building2 className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Payment Plan</div>
+                    <div className="text-2xl font-light">Flexible Options</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -177,84 +218,92 @@ const Index = () => {
       </section>
 
       {/* Featured Properties */}
-      <section id="properties" className="relative py-3xl bg-gradient-to-b from-background to-muted/20">
+      <section id="properties" className="py-32 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4 animate-fade-in-up">
-            <h2 className="text-display font-light text-premium">
-              PROPIEDADES DESTACADAS
+          <div className="max-w-3xl mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 glass text-sm mb-6">
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span>Featured Collection</span>
+            </div>
+            <h2 className="text-5xl font-light mb-6">
+              Propiedades Exclusivas
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-light">
-              Colección curada de oportunidades inmobiliarias premium en México
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Cada propiedad ha sido cuidadosamente seleccionada para ofrecer 
+              la mejor experiencia de lujo y confort en ubicaciones privilegiadas.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {featuredProperties.map((property, index) => (
               <div 
-                key={property.id} 
-                className="animate-fade-in-up hover:scale-105 transition-all duration-500"
-                style={{animationDelay: `${index * 0.1}s`}}
+                key={property.id}
+                className="group hover:-translate-y-2 transition-all duration-500"
+                style={{animationDelay: `${index * 100}ms`}}
               >
                 <PropertyCard {...property} />
               </div>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-xl">
-            <Link to="/rent-catalog" className="w-full sm:w-auto">
-              <Button variant="outline" className="w-full px-8 shadow-elegant hover:shadow-refined transition-all duration-300 hover:scale-105">
-                Ver Propiedades en Renta
+          <div className="flex justify-center gap-4">
+            <Link to="/rent-catalog">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-all">
+                Ver Todas en Renta
               </Button>
             </Link>
-            <Link to="/sale-catalog" className="w-full sm:w-auto">
-              <Button variant="outline" className="w-full px-8 shadow-elegant hover:shadow-refined transition-all duration-300 hover:scale-105">
-                Ver Propiedades en Venta
+            <Link to="/sale-catalog">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-all">
+                Ver Todas en Venta
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="relative py-3xl overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-muted/10 to-background" />
-        <div className="container mx-auto px-6 relative">
-          <div className="text-center mb-2xl space-y-4 animate-fade-in-up">
-            <h2 className="text-display font-light text-premium">
-              NUESTROS SERVICIOS
+      {/* Services Section */}
+      <section id="services" className="py-32">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 glass text-sm mb-6">
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span>Our Services</span>
+            </div>
+            <h2 className="text-5xl font-light mb-6">
+              Servicios Premium
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-light">
-              Soluciones inmobiliarias integrales con experiencia inigualable
+            <p className="text-lg text-muted-foreground">
+              Experiencia integral en bienes raíces con tecnología de punta
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group text-center space-y-4 p-10 glass hover:shadow-premium transition-all duration-500 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-primary/5 group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-500">
-                <MapPin className="w-7 h-7 text-foreground group-hover:scale-110 transition-transform duration-500" />
+            <div className="group p-10 glass hover:shadow-luxury transition-all duration-500 hover:-translate-y-2">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <MapPin className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-heading font-medium">Descubrimiento de Propiedades</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <h3 className="text-2xl font-light mb-4">Descubrimiento de Propiedades</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Acceso a listados exclusivos y oportunidades fuera del mercado a través de nuestra extensa red.
               </p>
             </div>
 
-            <div className="group text-center space-y-4 p-10 glass hover:shadow-premium transition-all duration-500 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-primary/5 group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-500">
-                <TrendingUp className="w-7 h-7 text-foreground group-hover:scale-110 transition-transform duration-500" />
+            <div className="group p-10 glass hover:shadow-luxury transition-all duration-500 hover:-translate-y-2">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-heading font-medium">Análisis de Mercado</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <h3 className="text-2xl font-light mb-4">Análisis de Mercado</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Insights basados en datos e inteligencia de mercado para informar tus decisiones de inversión.
               </p>
             </div>
 
-            <div className="group text-center space-y-4 p-10 glass hover:shadow-premium transition-all duration-500 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-primary/5 group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-500">
-                <Shield className="w-7 h-7 text-foreground group-hover:scale-110 transition-transform duration-500" />
+            <div className="group p-10 glass hover:shadow-luxury transition-all duration-500 hover:-translate-y-2">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Shield className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-heading font-medium">Servicio Concierge</h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <h3 className="text-2xl font-light mb-4">Servicio Concierge</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Servicio de guante blanco desde la consulta inicial hasta el cierre y más allá.
               </p>
             </div>
@@ -263,14 +312,31 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-3xl bg-gradient-to-b from-background to-muted/20">
+      <section id="about" className="py-32 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-2xl items-center">
-            <div className="space-y-8 animate-fade-in-up">
-              <h2 className="text-display font-light text-premium">
-                REDEFINIENDO LA EXCELENCIA INMOBILIARIA
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent blur-3xl" />
+              <div className="relative aspect-square glass shadow-luxury overflow-hidden group">
+                <img 
+                  src={kgroupLogo} 
+                  alt="KGroup Logo" 
+                  className="w-full h-full object-contain p-16 group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 glass text-sm">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span>About KGroup</span>
+              </div>
+              
+              <h2 className="text-5xl font-light">
+                Redefiniendo la Excelencia Inmobiliaria
               </h2>
-              <div className="space-y-5 text-muted-foreground text-lg font-light leading-relaxed">
+              
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   KGroup representa la intersección entre lujo e innovación en bienes raíces. 
                   Aprovechamos tecnología de vanguardia y experiencia profunda del mercado para entregar 
@@ -281,128 +347,104 @@ const Index = () => {
                   asegurando que cada transacción cumpla con los más altos estándares de excelencia.
                 </p>
               </div>
-              
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
-                <div className="text-center group">
-                  <div className="text-3xl sm:text-4xl font-extralight mb-2 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">$2.4B+</div>
-                  <div className="text-xs sm:text-caption text-muted-foreground font-medium tracking-wide">TRANSACTIONS</div>
-                </div>
-                <div className="text-center group">
-                  <div className="text-3xl sm:text-4xl font-extralight mb-2 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">500+</div>
-                  <div className="text-xs sm:text-caption text-muted-foreground font-medium tracking-wide">CLIENTS</div>
-                </div>
-                <div className="text-center group">
-                  <div className="text-3xl sm:text-4xl font-extralight mb-2 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">15+</div>
-                  <div className="text-xs sm:text-caption text-muted-foreground font-medium tracking-wide">YEARS</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative animate-fade-in-up">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/0 blur-3xl" />
-              <div className="relative aspect-square glass shadow-luxury overflow-hidden group">
-                <img 
-                  src={kgroupLogo} 
-                  alt="KGroup Logo" 
-                  className="w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-3xl overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background" />
-        <div className="container mx-auto px-6 relative">
-          <div className="text-center mb-2xl space-y-4 animate-fade-in-up">
-            <h2 className="text-display font-light text-premium">
-              CONTACT US
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg font-light">
-              Comienza tu viaje inmobiliario con una consulta personalizada
-            </p>
-          </div>
-
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="space-y-10 animate-fade-in-up">
-              <div className="space-y-6">
-                <h3 className="text-heading font-medium">Contact Information</h3>
-                <div className="space-y-5">
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
-                      <Phone className="w-4 h-4 text-foreground" />
-                    </div>
-                    <span className="font-light">+52 55 6080 8129</span>
-                  </div>
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
-                      <Mail className="w-4 h-4 text-foreground" />
-                    </div>
-                    <span className="font-light">groupkellar@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
-                      <MapPin className="w-4 h-4 text-foreground" />
-                    </div>
-                    <span className="font-light">Av. Paseo de Reforma 180, Ciudad de México</span>
-                  </div>
-                </div>
+      <section id="contact" className="py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 glass text-sm mb-6">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span>Get In Touch</span>
               </div>
-
-              <div className="space-y-6">
-                <h3 className="text-heading font-medium">Follow Us</h3>
-                <div className="flex gap-4">
-                  <a 
-                    href="https://www.instagram.com/kellargroup/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110 shadow-elegant hover:shadow-premium"
-                  >
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <a 
-                    href="https://www.youtube.com/@kgroup_real" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-110 shadow-elegant hover:shadow-premium"
-                  >
-                    <Youtube className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
+              <h2 className="text-5xl font-light mb-6">
+                Comienza Tu Viaje Inmobiliario
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Consulta personalizada con nuestros expertos
+              </p>
             </div>
 
-            <div className="glass p-10 shadow-luxury hover:shadow-premium transition-all duration-500 animate-fade-in-up">
-              <h3 className="text-heading font-medium mb-8">Agendar Consulta</h3>
-              <div className="space-y-5">
-                <div className="grid grid-cols-2 gap-4">
-                  <input 
-                    className="px-4 py-3.5 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 transition-all duration-300 font-light"
-                    placeholder="First Name"
-                  />
-                  <input 
-                    className="px-4 py-3.5 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 transition-all duration-300 font-light"
-                    placeholder="Last Name"
-                  />
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-light mb-6">Información de Contacto</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4 group">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Phone className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-lg">+52 55 6080 8129</span>
+                    </div>
+                    <div className="flex items-center gap-4 group">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Mail className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-lg">groupkellar@gmail.com</span>
+                    </div>
+                    <div className="flex items-center gap-4 group">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <MapPin className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-lg">Av. Paseo de Reforma 180, CDMX</span>
+                    </div>
+                  </div>
                 </div>
-                <input 
-                  className="w-full px-4 py-3.5 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 transition-all duration-300 font-light"
-                  placeholder="Email Address"
-                />
-                <textarea 
-                  className="w-full px-4 py-3.5 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 resize-none transition-all duration-300 font-light"
-                  rows={4}
-                  placeholder="Tell us about your real estate needs..."
-                />
-                <Button 
-                  variant="default" 
-                  size="lg" 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-refined hover:shadow-premium transition-all duration-300 hover:scale-105 text-premium"
-                >
-                  AGENDAR CONSULTA
-                </Button>
+
+                <div>
+                  <h3 className="text-2xl font-light mb-6">Síguenos</h3>
+                  <div className="flex gap-4">
+                    <a 
+                      href="https://www.instagram.com/kellargroup/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 rounded-full border-2 border-border hover:border-accent flex items-center justify-center hover:bg-accent/10 transition-all hover:scale-110"
+                    >
+                      <Instagram className="w-6 h-6" />
+                    </a>
+                    <a 
+                      href="https://www.youtube.com/@kgroup_real" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 rounded-full border-2 border-border hover:border-accent flex items-center justify-center hover:bg-accent/10 transition-all hover:scale-110"
+                    >
+                      <Youtube className="w-6 h-6" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass p-10 shadow-luxury">
+                <h3 className="text-2xl font-light mb-6">Agendar Consulta</h3>
+                <div className="space-y-5">
+                  <div className="grid grid-cols-2 gap-4">
+                    <input 
+                      className="px-4 py-3 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                      placeholder="Nombre"
+                    />
+                    <input 
+                      className="px-4 py-3 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                      placeholder="Apellido"
+                    />
+                  </div>
+                  <input 
+                    className="w-full px-4 py-3 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                    placeholder="Email"
+                  />
+                  <textarea 
+                    className="w-full px-4 py-3 glass text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 resize-none transition-all"
+                    rows={5}
+                    placeholder="Cuéntanos sobre tus necesidades..."
+                  />
+                  <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-refined hover:scale-105 transition-all group">
+                    Enviar Consulta
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -410,23 +452,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-border/50 glass py-xl">
+      <footer className="py-12 border-t border-border/50 glass">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
-            <div className="text-caption text-muted-foreground font-light">
+            <div className="text-sm text-muted-foreground">
               © 2024 KGroup. All rights reserved.
             </div>
           </div>
         </div>
       </footer>
 
-      {/* Floating AI Agent Button */}
+      {/* Floating AI Button */}
       <Link to="/ai-agent">
         <Button
           size="lg"
           className="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full shadow-luxury hover:shadow-premium transition-all duration-500 bg-accent hover:bg-accent/90 text-accent-foreground hover:scale-110 group"
-          aria-label="Abrir Agente IA"
+          aria-label="AI Agent"
         >
           <Bot className="w-7 h-7 group-hover:rotate-12 transition-transform duration-500" />
         </Button>
