@@ -14,14 +14,14 @@ export const useAIAgent = () => {
     setMessages(prev => [...prev, newUserMessage]);
     setIsLoading(true);
 
-    const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ai-agent`;
+    const CHAT_URL = 'https://nlgdpabuqiiqmarelntq.supabase.co/functions/v1/ai-agent';
 
     try {
       const resp = await fetch(CHAT_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5sZ2RwYWJ1cWlpcW1hcmVsbnRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3NTEyNTMsImV4cCI6MjA3NDMyNzI1M30.3TleLzP2NN8dmxU24qZS6AEut39AzYXVUkYWyU6xeSQ',
         },
         body: JSON.stringify({ messages: [...messages, newUserMessage] }),
       });
