@@ -129,24 +129,6 @@ const propertiesData = {
     gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-r5-1.jpg", "/src/assets/property-r5-2.jpg", "/src/assets/property-r5-3.jpg", "/src/assets/property-r5-4.jpg", "/src/assets/property-r5-5.jpg", "/src/assets/property-r5-6.jpg", "/src/assets/property-r5-7.jpg"],
     youtubeVideoId: undefined
   },
-  "r6": {
-    id: "r6",
-    title: "Oficina o Local con historia en San Miguel Chapultepec, frente al Bosque",
-    location: "Cl. 13 de Septiembre, San Miguel Chapultepec",
-    price: "$37,000",
-    priceType: "Renta mensual",
-    area: "100 m²",
-    bedrooms: 0,
-    bathrooms: 1,
-    parking: 0,
-    imageUrl: oficinaCh1,
-    featured: false,
-    description: "Trabaja donde la inspiración fluye y la elegancia se respira. Una oficina de 100 m² ubicada en planta baja de una casa antigua catalogada por el INAH, a solo pasos del Bosque de Chapultepec. Un espacio único que eleva marcas y conecta con lo auténtico.",
-    features: ["Casa de época catalogada por el INAH", "100 m² en planta baja", "Recepción con gran presencia", "4 espacios para oficinas privadas", "Iluminación natural abundante", "Pisos de madera", "Techos altos con molduras", "Área de cocina", "Espacio para almacenamiento", "Perfecto estado de conservación"],
-    amenities: ["A pasos del Bosque de Chapultepec", "San Miguel Chapultepec", "Ideal para despachos creativos", "Agencias y estudios de diseño"],
-    gallery: [oficinaCh1, oficinaCh2, oficinaCh3, oficinaCh4, oficinaCh5, oficinaCh6, oficinaCh7, oficinaCh8],
-    youtubeVideoId: "K982d-pMPMg"
-  },
   "r7": {
     id: "r7",
     title: "Oficina en Polanco, Ejercito Nacional",
@@ -292,7 +274,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

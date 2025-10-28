@@ -63,16 +63,6 @@ const RentCatalog = () => {
       imageUrl: oficinaEn1
     },
     {
-      id: "r6",
-      title: "Oficina frente de Parque de Chapultepec",
-      location: "Cl. 13 de Septiembre, San Miguel Chapultepec",
-      price: "$37,000/mes",
-      area: "100 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaCh1
-    },
-    {
       id: "r8",
       title: "Oficina PH en Polanco – Vista Panorámica y Terraza",
       location: "Rubén Darío, Polanco",
