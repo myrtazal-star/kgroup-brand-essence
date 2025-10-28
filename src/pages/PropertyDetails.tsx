@@ -35,6 +35,12 @@ import localMasaryk5 from "@/assets/local-masaryk-5.jpg";
 import localMasaryk6 from "@/assets/local-masaryk-6.jpg";
 import localMasaryk7 from "@/assets/local-masaryk-7.jpg";
 import localMasaryk8 from "@/assets/local-masaryk-8.jpg";
+import oficinaPh from "@/assets/oficina-ph-roma-norte.jpg";
+import oficinaPh1 from "@/assets/oficina-ph-1.jpg";
+import oficinaPh2 from "@/assets/oficina-ph-2.jpg";
+import oficinaPh3 from "@/assets/oficina-ph-3.jpg";
+import oficinaPh4 from "@/assets/oficina-ph-4.jpg";
+import oficinaPh5 from "@/assets/oficina-ph-5.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -67,12 +73,12 @@ const propertiesData = {
     bedrooms: 6,
     bathrooms: 1.5,
     parking: 2,
-    imageUrl: "/src/assets/oficina-ph-roma-norte.jpg",
+    imageUrl: oficinaPh,
     featured: false,
     description: "Moderna oficina en penthouse de dos niveles ubicada en Polanco. Ideal para empresas creativas que buscan un espacio único y bien ubicado con excelente conectividad.",
     features: ["2 niveles", "Iluminación natural", "6 espacios de trabajo", "Cocina", "2.5 baños", "Consierge y seguridad 24/7", "Piso 7 PH", "Acepta mascotas"],
     amenities: ["Seguridad", "Elevador", "Estacionamiento", "Recepción"],
-    gallery: ["/src/assets/oficina-ph-roma-norte.jpg", "/src/assets/oficina-ph-1.jpg", "/src/assets/oficina-ph-2.jpg", "/src/assets/oficina-ph-3.jpg", "/src/assets/oficina-ph-4.jpg", "/src/assets/oficina-ph-5.jpg"],
+    gallery: [oficinaPh, oficinaPh1, oficinaPh2, oficinaPh3, oficinaPh4, oficinaPh5],
     youtubeVideoId: "z43UebPM2B4"
   },
   "r3": {
