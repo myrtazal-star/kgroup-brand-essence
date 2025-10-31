@@ -41,6 +41,14 @@ import oficinaPh2 from "@/assets/oficina-ph-2.jpg";
 import oficinaPh3 from "@/assets/oficina-ph-3.jpg";
 import oficinaPh4 from "@/assets/oficina-ph-4.jpg";
 import oficinaPh5 from "@/assets/oficina-ph-5.jpg";
+import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
+import oficinaInsurgentes2 from "@/assets/oficina-insurgentes-2.jpg";
+import oficinaInsurgentes3 from "@/assets/oficina-insurgentes-3.jpg";
+import oficinaInsurgentes4 from "@/assets/oficina-insurgentes-4.jpg";
+import oficinaInsurgentes5 from "@/assets/oficina-insurgentes-5.jpg";
+import oficinaInsurgentes6 from "@/assets/oficina-insurgentes-6.jpg";
+import oficinaInsurgentes7 from "@/assets/oficina-insurgentes-7.jpg";
+import oficinaInsurgentes8 from "@/assets/oficina-insurgentes-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -210,6 +218,40 @@ const propertiesData = {
     gallery: [localMasaryk1, localMasaryk2, localMasaryk3, localMasaryk4, localMasaryk5, localMasaryk6, localMasaryk7, localMasaryk8],
     youtubeVideoId: undefined
   },
+  "r10": {
+    id: "r10",
+    title: "Oficina o Local en Renta – Avenida Insurgentes Sur",
+    location: "Avenida Insurgentes Sur, CDMX",
+    price: "$60,000",
+    priceType: "Renta mensual + IVA",
+    area: "100 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaInsurgentes1,
+    featured: false,
+    description: "Espacio ideal para oficinas corporativas, consultorios o showrooms ejecutivos. Ubicado sobre Insurgentes Sur, con vista directa a la avenida y a solo dos cuadras del World Trade Center. Zona rodeada de comercios, bancos, restaurantes y vías principales — el punto perfecto para tu negocio.",
+    features: [
+      "100 m² en primer piso (mezzanine)",
+      "Amplia vista hacia la avenida",
+      "1 cajón de estacionamiento incluido",
+      "Posibilidad de rentar más lugares ($650 mensuales c/u)",
+      "Elevador",
+      "Seguridad",
+      "Excelente iluminación natural",
+      "A 2 cuadras del World Trade Center"
+    ],
+    amenities: [
+      "Seguridad 24/7",
+      "Elevador",
+      "Estacionamiento",
+      "Ubicación sobre Insurgentes Sur",
+      "Zona comercial con bancos y restaurantes",
+      "Fácil acceso a vías principales"
+    ],
+    gallery: [oficinaInsurgentes1, oficinaInsurgentes2, oficinaInsurgentes3, oficinaInsurgentes4, oficinaInsurgentes5, oficinaInsurgentes6, oficinaInsurgentes7, oficinaInsurgentes8],
+    youtubeVideoId: undefined
+  },
   // Propiedades en Venta
   "s1": {
     id: "s1",
@@ -280,7 +322,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

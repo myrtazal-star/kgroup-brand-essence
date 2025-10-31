@@ -18,6 +18,7 @@ import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
 import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
+import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -81,6 +82,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 4,
       imageUrl: localMasaryk1
+    },
+    {
+      id: "r10",
+      title: "Oficina o Local en Renta – Avenida Insurgentes Sur",
+      location: "Avenida Insurgentes Sur, CDMX",
+      price: "$60,000/mes + IVA",
+      area: "100 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaInsurgentes1
     },
   ];
 
