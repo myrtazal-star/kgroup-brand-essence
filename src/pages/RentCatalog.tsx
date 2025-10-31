@@ -19,6 +19,7 @@ import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
 import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
+import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -92,6 +93,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaInsurgentes1
+    },
+    {
+      id: "r11",
+      title: "Oficina en renta en Homero, Polanco",
+      location: "Homero, Polanco",
+      price: "$45,000/mes + IVA",
+      area: "150 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaHomero1
     },
   ];
 

@@ -49,6 +49,14 @@ import oficinaInsurgentes5 from "@/assets/oficina-insurgentes-5.jpg";
 import oficinaInsurgentes6 from "@/assets/oficina-insurgentes-6.jpg";
 import oficinaInsurgentes7 from "@/assets/oficina-insurgentes-7.jpg";
 import oficinaInsurgentes8 from "@/assets/oficina-insurgentes-8.jpg";
+import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
+import oficinaHomero2 from "@/assets/oficina-homero-2.jpg";
+import oficinaHomero3 from "@/assets/oficina-homero-3.jpg";
+import oficinaHomero4 from "@/assets/oficina-homero-4.jpg";
+import oficinaHomero5 from "@/assets/oficina-homero-5.jpg";
+import oficinaHomero6 from "@/assets/oficina-homero-6.jpg";
+import oficinaHomero7 from "@/assets/oficina-homero-7.jpg";
+import oficinaHomero8 from "@/assets/oficina-homero-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -252,6 +260,37 @@ const propertiesData = {
     gallery: [oficinaInsurgentes1, oficinaInsurgentes2, oficinaInsurgentes3, oficinaInsurgentes4, oficinaInsurgentes5, oficinaInsurgentes6, oficinaInsurgentes7, oficinaInsurgentes8],
     youtubeVideoId: undefined
   },
+  "r11": {
+    id: "r11",
+    title: "Oficina en renta en Homero, Polanco",
+    location: "Homero, Polanco",
+    price: "$45,000",
+    priceType: "Renta mensual + IVA",
+    area: "150 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaHomero1,
+    featured: false,
+    description: "¿Buscas una oficina que combine imagen, comodidad y ubicación premium? Esta opción en Polanco tiene todo lo que necesitas para tu negocio. Perfecta para despachos, agencias o firmas corporativas que buscan proyección y conexión en una de las zonas más exclusivas de CDMX.",
+    features: [
+      "5 espacios privados",
+      "1 cajón de estacionamiento",
+      "Baños completos",
+      "Área de recepción",
+      "Espacio luminoso y funcional",
+      "Ubicación estratégica cerca de Masaryk y Reforma"
+    ],
+    amenities: [
+      "Ubicación premium en Polanco",
+      "Cerca de Av. Masaryk",
+      "Acceso a Reforma",
+      "Zona exclusiva de negocios",
+      "Conectividad excepcional"
+    ],
+    gallery: [oficinaHomero1, oficinaHomero2, oficinaHomero3, oficinaHomero4, oficinaHomero5, oficinaHomero6, oficinaHomero7, oficinaHomero8],
+    youtubeVideoId: undefined
+  },
   // Propiedades en Venta
   "s1": {
     id: "s1",
@@ -322,7 +361,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10", "r11"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
