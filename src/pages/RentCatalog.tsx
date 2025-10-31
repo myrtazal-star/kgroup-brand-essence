@@ -85,7 +85,7 @@ const RentCatalog = () => {
     },
     {
       id: "r10",
-      title: "Oficina o Local en Renta – Avenida Insurgentes Sur",
+      title: "Local en Insurgentes",
       location: "Avenida Insurgentes Sur, CDMX",
       price: "$60,000/mes + IVA",
       area: "100 m²",

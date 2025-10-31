@@ -220,7 +220,7 @@ const propertiesData = {
   },
   "r10": {
     id: "r10",
-    title: "Oficina o Local en Renta – Avenida Insurgentes Sur",
+    title: "Local en Insurgentes",
     location: "Avenida Insurgentes Sur, CDMX",
     price: "$60,000",
     priceType: "Renta mensual + IVA",
