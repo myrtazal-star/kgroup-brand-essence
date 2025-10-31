@@ -57,6 +57,14 @@ import oficinaHomero5 from "@/assets/oficina-homero-5.jpg";
 import oficinaHomero6 from "@/assets/oficina-homero-6.jpg";
 import oficinaHomero7 from "@/assets/oficina-homero-7.jpg";
 import oficinaHomero8 from "@/assets/oficina-homero-8.jpg";
+import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
+import localEscobedo2 from "@/assets/local-escobedo-2.jpg";
+import localEscobedo3 from "@/assets/local-escobedo-3.jpg";
+import localEscobedo4 from "@/assets/local-escobedo-4.jpg";
+import localEscobedo5 from "@/assets/local-escobedo-5.jpg";
+import localEscobedo6 from "@/assets/local-escobedo-6.jpg";
+import localEscobedo7 from "@/assets/local-escobedo-7.jpg";
+import localEscobedo8 from "@/assets/local-escobedo-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -291,6 +299,36 @@ const propertiesData = {
     gallery: [oficinaHomero1, oficinaHomero2, oficinaHomero3, oficinaHomero4, oficinaHomero5, oficinaHomero6, oficinaHomero7, oficinaHomero8],
     youtubeVideoId: undefined
   },
+  "r12": {
+    id: "r12",
+    title: "Espacio comercial en Mariano Escobedo, Polanco",
+    location: "Mariano Escobedo, Polanco",
+    price: "$48,000",
+    priceType: "Renta mensual + IVA",
+    area: "120 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: localEscobedo1,
+    featured: false,
+    description: "Espacio comercial ubicado en Mariano Escobedo, una de las principales avenidas de Polanco. Ideal para oficinas, consultorios o comercios que buscan una ubicación estratégica con excelente visibilidad y conectividad en una de las zonas más exclusivas de CDMX.",
+    features: [
+      "1 cajón de estacionamiento",
+      "Ubicación estratégica en Mariano Escobedo",
+      "Espacio versátil y funcional",
+      "Excelente iluminación natural",
+      "Zona de alto tráfico peatonal y vehicular"
+    ],
+    amenities: [
+      "Ubicación premium en Polanco",
+      "Cerca de restaurantes y comercios",
+      "Excelente conectividad",
+      "Zona exclusiva de negocios",
+      "Alta visibilidad"
+    ],
+    gallery: [localEscobedo1, localEscobedo2, localEscobedo3, localEscobedo4, localEscobedo5, localEscobedo6, localEscobedo7, localEscobedo8],
+    youtubeVideoId: undefined
+  },
   // Propiedades en Venta
   "s1": {
     id: "s1",
@@ -361,7 +399,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10", "r11"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10", "r11", "r12"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
