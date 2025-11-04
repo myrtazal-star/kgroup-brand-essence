@@ -8,34 +8,34 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* KGroup Premium Colors - Ultra Luxury Palette */
+    /* KGroup Commercial Colors - Corporate Luxury Palette */
     --background: 0 0% 100%;
-    --foreground: 0 0% 3%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 0 0% 8%;
+    --primary: 220 30% 20%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 30% 20%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 30 50% 45%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 40 85% 50%;
+    --accent-foreground: 220 30% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
-    --ring: 30 50% 45%;
+    --border: 220 15% 90%;
+    --input: 220 15% 92%;
+    --ring: 40 85% 50%;
 
     /* Premium Design Tokens */
     --grid-subtle: 0 0% 96%;
@@ -152,8 +152,13 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
   }
 
   /* Grid Pattern */

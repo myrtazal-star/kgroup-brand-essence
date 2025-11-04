@@ -16,6 +16,10 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+import Zonas from "./pages/Zonas";
+import Nosotros from "./pages/Nosotros";
+import Contacto from "./pages/Contacto";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -28,6 +32,9 @@ const App = () => (
           <Route path="/rent-catalog" element={<RentCatalog />} />
           <Route path="/sale-catalog" element={<SaleCatalog />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/zonas" element={<Zonas />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/contacto" element={<Contacto />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/ai-agent" element={<AIAgent />} />
