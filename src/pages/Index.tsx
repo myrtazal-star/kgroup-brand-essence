@@ -2,7 +2,7 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MapPin, TrendingUp, Shield, Building2, Search, ArrowRight, Sparkles, ChevronDown } from "lucide-react";
+import { MapPin, TrendingUp, Shield, Building2, Search, ArrowRight, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -88,10 +88,6 @@ const Index = () => {
               </DropdownMenu>
               <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth">Servicios</Link>
               <Link to="/zonas" className="text-sm font-medium hover:text-accent transition-smooth">Zonas</Link>
-              <Link to="/voice-agent" className="text-sm font-medium hover:text-accent transition-smooth flex items-center gap-2">
-                <Sparkles className="w-4 h-4" />
-                Agente IA
-              </Link>
               <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth">Contacto</Link>
             </div>
 
@@ -121,12 +117,6 @@ const Index = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/zonas">Zonas</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/voice-agent" className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4" />
-                    Agente IA
-                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/contacto">Contacto</Link>
@@ -417,29 +407,6 @@ const Index = () => {
                 <div className="font-medium">Roberto S.</div>
                 <div className="text-sm text-muted-foreground">CFO, Grupo Empresarial</div>
               </div>
-            </div>
-          </div>
-
-          {/* CTA para Agente IA */}
-          <div className="mt-16 text-center">
-            <div className="glass tech-border p-8 max-w-2xl mx-auto animate-float">
-              <Sparkles className="w-12 h-12 mx-auto mb-4 text-accent" />
-              <h3 className="text-2xl font-bold mb-4">
-                Prueba nuestro <span className="gradient-text">Agente Inteligente</span>
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Análisis de oportunidades y recomendaciones personalizadas por comando de voz
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech"
-                asChild
-              >
-                <Link to="/voice-agent">
-                  <Sparkles className="w-5 h-5 mr-2" />
-                  Hablar con el Agente
-                </Link>
-              </Button>
             </div>
           </div>
         </div>

@@ -11,16 +11,12 @@ import SaleCatalog from "./pages/SaleCatalog";
 import Services from "./pages/Services";
 import ConsultationForm from "./pages/ConsultationForm";
 import PropertyDetails from "./pages/PropertyDetails";
-import AIAgent from "./pages/AIAgent";
 import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
-
 import Zonas from "./pages/Zonas";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 
-import VoiceAgent from "./pages/VoiceAgent";
+const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -37,10 +33,8 @@ const App = () => (
           <Route path="/zonas" element={<Zonas />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/voice-agent" element={<VoiceAgent />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
-          <Route path="/ai-agent" element={<AIAgent />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
