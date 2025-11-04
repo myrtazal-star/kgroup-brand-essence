@@ -8,52 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Tech Minimalist Colors */
+    /* Premium Real Estate Colors - Minimalist & Elegant */
     --background: 0 0% 98%;
-    --foreground: 220 15% 10%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 10%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 10%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 220 15% 10%;
+    --primary: 0 0% 10%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 220 20% 95%;
-    --secondary-foreground: 220 15% 10%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 195 95% 55%;
-    --accent-foreground: 220 15% 10%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 94%;
-    --ring: 195 95% 55%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 0 0% 20%;
 
-    /* Tech Minimalist Design Tokens */
-    --grid-subtle: 220 15% 96%;
-    --shadow-elegant: 220 15% 20% / 0.04;
-    --shadow-refined: 220 15% 20% / 0.08;
-    --shadow-premium: 220 15% 20% / 0.15;
-    --shadow-tech: 195 95% 55% / 0.15;
+    /* Premium Design Tokens */
+    --grid-subtle: 0 0% 97%;
+    --shadow-elegant: 0 0% 0% / 0.03;
+    --shadow-refined: 0 0% 0% / 0.06;
+    --shadow-premium: 0 0% 0% / 0.12;
+    --shadow-tech: 0 0% 0% / 0.08;
     
-    /* Tech Gradients */
-    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(220 20% 96%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 25% 98%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 10% / 0.95) 0%, hsl(220 20% 5% / 0.95) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(195 95% 55%) 0%, hsl(210 100% 60%) 100%);
+    /* Elegant Gradients */
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 96%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 10% / 0.95) 0%, hsl(0 0% 5% / 0.95) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 20%) 0%, hsl(0 0% 10%) 100%);
     
     /* Glass Effects */
-    --glass-bg: 0 0% 100% / 0.7;
-    --glass-border: 220 15% 85% / 0.5;
-    --glass-dark: 220 15% 10% / 0.8;
+    --glass-bg: 0 0% 100% / 0.8;
+    --glass-border: 0 0% 85% / 0.4;
+    --glass-dark: 0 0% 10% / 0.85;
     
     /* Typography Scale */
     --text-hero: 4.5rem;
@@ -110,7 +110,7 @@ All colors MUST be HSL.
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 35 60% 55%;
+    --accent: 0 0% 85%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 30.6%;
@@ -118,7 +118,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 35 60% 55%;
+    --ring: 0 0% 85%;
     
     --grid-subtle: 0 0% 8%;
     --shadow-elegant: 0 0% 0% / 0.3;
@@ -129,7 +129,7 @@ All colors MUST be HSL.
     --gradient-subtle: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(0 0% 5%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 4%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.5) 0%, hsl(0 0% 0% / 0.8) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(35 60% 55%) 0%, hsl(40 70% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 85%) 0%, hsl(0 0% 75%) 100%);
     
     /* Dark Glass Effects */
     --glass-bg: 0 0% 10% / 0.6;
