@@ -88,7 +88,10 @@ const Index = () => {
               </DropdownMenu>
               <Link to="/services" className="text-sm font-medium hover:text-accent transition-colors">Servicios</Link>
               <Link to="/zonas" className="text-sm font-medium hover:text-accent transition-colors">Zonas</Link>
-              <Link to="/nosotros" className="text-sm font-medium hover:text-accent transition-colors">Nosotros</Link>
+              <Link to="/voice-agent" className="text-sm font-medium hover:text-accent transition-colors flex items-center gap-2">
+                <Sparkles className="w-4 h-4" />
+                Agente IA
+              </Link>
               <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-colors">Contacto</Link>
             </div>
 
@@ -120,7 +123,10 @@ const Index = () => {
                   <Link to="/zonas">Zonas</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/nosotros">Nosotros</Link>
+                  <Link to="/voice-agent" className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    Agente IA
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/contacto">Contacto</Link>
@@ -368,49 +374,72 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-light mb-4">
-              Lo que dicen <span className="text-accent">nuestros clientes</span>
+            <h2 className="text-4xl lg:text-5xl font-light mb-4">
+              <span className="italic">Testimonios</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="glass p-8">
+            <div className="glass p-8 border-2">
               <div className="mb-4">
-                <div className="text-accent text-4xl mb-2">"</div>
-                <p className="text-muted-foreground italic">
-                  Kira nos ayudó a encontrar la oficina perfecta en Polanco. Su conocimiento del mercado y capacidad de negociación fueron clave.
+                <div className="text-5xl font-light mb-4" style={{ fontFamily: 'Cormorant Garamond, serif' }}>"</div>
+                <p className="text-muted-foreground leading-relaxed italic">
+                  Excelente servicio profesional. Encontramos la oficina perfecta en tiempo récord.
                 </p>
               </div>
               <div className="pt-4 border-t border-border">
-                <div className="font-medium">Carlos Mendoza</div>
-                <div className="text-sm text-muted-foreground">CEO, TechStart MX</div>
+                <div className="font-medium">Carlos M.</div>
+                <div className="text-sm text-muted-foreground">CEO, Tech Startup</div>
               </div>
             </div>
 
-            <div className="glass p-8">
+            <div className="glass p-8 border-2">
               <div className="mb-4">
-                <div className="text-accent text-4xl mb-2">"</div>
-                <p className="text-muted-foreground italic">
-                  Proceso rápido y profesional. En menos de 3 semanas teníamos nuestro local en Masaryk operando.
+                <div className="text-5xl font-light mb-4" style={{ fontFamily: 'Cormorant Garamond, serif' }}>"</div>
+                <p className="text-muted-foreground leading-relaxed italic">
+                  Proceso rápido y transparente. Recomiendo ampliamente sus servicios.
                 </p>
               </div>
               <div className="pt-4 border-t border-border">
-                <div className="font-medium">María Fernández</div>
-                <div className="text-sm text-muted-foreground">Directora, Boutique Moda</div>
+                <div className="font-medium">María F.</div>
+                <div className="text-sm text-muted-foreground">Directora, Retail</div>
               </div>
             </div>
 
-            <div className="glass p-8">
+            <div className="glass p-8 border-2">
               <div className="mb-4">
-                <div className="text-accent text-4xl mb-2">"</div>
-                <p className="text-muted-foreground italic">
-                  El análisis de rentabilidad que nos presentó fue fundamental para tomar la decisión correcta.
+                <div className="text-5xl font-light mb-4" style={{ fontFamily: 'Cormorant Garamond, serif' }}>"</div>
+                <p className="text-muted-foreground leading-relaxed italic">
+                  El análisis de mercado fue fundamental para nuestra decisión de inversión.
                 </p>
               </div>
               <div className="pt-4 border-t border-border">
-                <div className="font-medium">Roberto Sánchez</div>
+                <div className="font-medium">Roberto S.</div>
                 <div className="text-sm text-muted-foreground">CFO, Grupo Empresarial</div>
               </div>
+            </div>
+          </div>
+
+          {/* CTA para Agente IA */}
+          <div className="mt-16 text-center">
+            <div className="glass p-8 max-w-2xl mx-auto border-2">
+              <Sparkles className="w-12 h-12 mx-auto mb-4" />
+              <h3 className="text-2xl font-light mb-4">
+                Prueba nuestro <span className="italic">Agente Inteligente</span>
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Análisis de oportunidades y recomendaciones personalizadas por comando de voz
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-foreground hover:bg-foreground/90 text-background font-semibold"
+                asChild
+              >
+                <Link to="/voice-agent">
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  Hablar con el Agente
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

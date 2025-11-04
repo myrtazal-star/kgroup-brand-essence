@@ -20,6 +20,8 @@ import Zonas from "./pages/Zonas";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 
+import VoiceAgent from "./pages/VoiceAgent";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -35,6 +37,7 @@ const App = () => (
           <Route path="/zonas" element={<Zonas />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/voice-agent" element={<VoiceAgent />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/ai-agent" element={<AIAgent />} />

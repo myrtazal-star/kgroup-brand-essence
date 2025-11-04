@@ -2,3 +2,6 @@ project_id = "nlgdpabuqiiqmarelntq"
 
 [functions.ai-agent]
 verify_jwt = false
+
+[functions.realtime-token]
+verify_jwt = false
