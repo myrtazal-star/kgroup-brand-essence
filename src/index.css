@@ -42,12 +42,15 @@ All colors MUST be HSL.
     --shadow-elegant: 0 0% 0% / 0.08;
     --shadow-refined: 0 0% 0% / 0.12;
     --shadow-premium: 0 0% 0% / 0.16;
+    --shadow-glow: 40 85% 50% / 0.3;
     
-    /* Gradients */
-    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 99%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.3) 0%, hsl(0 0% 0% / 0.6) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(30 50% 45%) 0%, hsl(35 60% 50%) 100%);
+    /* Tech Gradients */
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 15% 99%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 5% / 0.8) 0%, hsl(220 30% 15% / 0.6) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(40 85% 50%) 0%, hsl(200 80% 50%) 100%);
+    --gradient-tech: linear-gradient(135deg, hsl(220 30% 20%) 0%, hsl(200 60% 30%) 100%);
+    --gradient-ai: linear-gradient(135deg, hsl(280 60% 50% / 0.1) 0%, hsl(200 70% 50% / 0.1) 100%);
     
     /* Glass Effects */
     --glass-bg: 0 0% 100% / 0.8;
@@ -161,19 +164,25 @@ All colors MUST be HSL.
     font-family: 'Montserrat', system-ui, sans-serif;
   }
 
-  /* Grid Pattern */
+  /* Tech Grid Pattern */
   .grid-pattern {
     background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-    background-size: 20px 20px;
+      linear-gradient(rgba(40, 120, 200, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(40, 120, 200, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: grid-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes grid-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
   }
 
   /* Dark mode grid pattern */
   .dark .grid-pattern {
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(100, 180, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 180, 255, 0.05) 1px, transparent 1px);
   }
 
   /* Typography Scale */
@@ -218,12 +227,19 @@ All colors MUST be HSL.
     font-feature-settings: "ss01" 1;
   }
 
-  /* Premium Glass Effect */
+  /* Premium Glass Effect with Tech Glow */
   .glass {
     background: hsl(var(--glass-bg));
     border: 1px solid hsl(var(--glass-border));
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 8px 32px 0 rgba(40, 150, 200, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .glass:hover {
+    box-shadow: 0 8px 32px 0 rgba(40, 150, 200, 0.15);
+    border-color: rgba(40, 150, 200, 0.2);
   }
 
   .glass-dark {
@@ -259,5 +275,68 @@ All colors MUST be HSL.
     font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+  }
+  
+  /* Tech Effects */
+  .tech-glow {
+    position: relative;
+  }
+  
+  .tech-glow::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, hsl(40 85% 50% / 0.3), hsl(200 80% 50% / 0.3));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(10px);
+  }
+  
+  .tech-glow:hover::before {
+    opacity: 1;
+  }
+  
+  /* AI Pulse Animation */
+  @keyframes ai-pulse {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  
+  .ai-pulse {
+    animation: ai-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Gradient Text Effect */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(40 85% 50%), hsl(200 80% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Scan Line Effect */
+  @keyframes scan-line {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  .scan-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(200 80% 50% / 0.5), transparent);
+    pointer-events: none;
+    animation: scan-line 8s linear infinite;
+    z-index: 100;
   }
 }

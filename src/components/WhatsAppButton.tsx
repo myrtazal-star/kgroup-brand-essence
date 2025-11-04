@@ -13,11 +13,12 @@ export const WhatsAppButton = () => {
     >
       <Button
         size="lg"
-        className="rounded-full w-16 h-16 shadow-luxury hover:shadow-premium transition-all hover:scale-110 bg-[#25D366] hover:bg-[#128C7E] text-white border-0"
+        className="rounded-full w-16 h-16 shadow-glow hover:shadow-luxury transition-all hover:scale-110 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 relative overflow-hidden"
       >
-        <MessageCircle className="w-8 h-8" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <MessageCircle className="w-8 h-8 relative z-10" />
       </Button>
-      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-foreground text-background px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-foreground text-background px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-premium">
         Contactar por WhatsApp
       </span>
     </a>

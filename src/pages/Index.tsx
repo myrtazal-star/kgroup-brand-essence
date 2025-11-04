@@ -15,6 +15,8 @@ import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
+import { TechParticles } from "@/components/TechParticles";
+
 const Index = () => {
   const featuredProperties = [
     {
@@ -61,7 +63,13 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Tech Particles Background */}
+      <TechParticles />
+      
+      {/* Tech Scan Line Effect */}
+      <div className="scan-line" />
+      
       <WhatsAppButton />
       
       {/* Navigation Bar */}
@@ -150,8 +158,8 @@ const Index = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-light leading-tight mb-6">
-              Espacios Comerciales en CDMX que
-              <span className="block text-accent font-medium">hacen crecer tu negocio</span>
+              <span className="gradient-text">Espacios Comerciales</span> en CDMX que
+              <span className="block text-accent font-medium mt-2">hacen crecer tu negocio</span>
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
@@ -272,8 +280,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
             {zonas.map((zona) => (
               <Link key={zona.name} to="/zonas">
-                <div className="glass p-6 hover:shadow-luxury transition-all group cursor-pointer">
-                  <MapPin className="w-8 h-8 text-accent mb-3 group-hover:scale-110 transition-transform" />
+                <div className="glass p-6 hover:shadow-luxury transition-all group cursor-pointer tech-glow">
+                  <div className="ai-pulse">
+                    <MapPin className="w-8 h-8 text-accent mb-3 group-hover:scale-110 transition-transform" />
+                  </div>
                   <h3 className="text-xl font-medium mb-2">{zona.name}</h3>
                   <p className="text-sm text-muted-foreground">{zona.description}</p>
                 </div>
@@ -337,8 +347,8 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="relative">
-              <div className="glass p-8 hover:shadow-luxury transition-all">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+              <div className="glass p-8 hover:shadow-luxury transition-all tech-glow">
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 ai-pulse">
                   <span className="text-3xl font-light text-accent">1</span>
                 </div>
                 <h3 className="text-2xl font-medium mb-4">Brief</h3>
@@ -349,8 +359,8 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <div className="glass p-8 hover:shadow-luxury transition-all">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+              <div className="glass p-8 hover:shadow-luxury transition-all tech-glow">
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 ai-pulse">
                   <span className="text-3xl font-light text-accent">2</span>
                 </div>
                 <h3 className="text-2xl font-medium mb-4">Visitas</h3>
@@ -361,8 +371,8 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <div className="glass p-8 hover:shadow-luxury transition-all">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+              <div className="glass p-8 hover:shadow-luxury transition-all tech-glow">
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 ai-pulse">
                   <span className="text-3xl font-light text-accent">3</span>
                 </div>
                 <h3 className="text-2xl font-medium mb-4">Negociación</h3>
@@ -428,11 +438,17 @@ const Index = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-32 bg-foreground text-background">
-        <div className="container mx-auto px-6">
+      <section className="py-32 relative overflow-hidden">
+        {/* Tech Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent/20" />
+        <div className="absolute inset-0 opacity-10">
+          <div className="grid-pattern" />
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-5xl font-light mb-6">
-              Cuéntame qué buscas y te envío 3 opciones <span className="text-accent">hoy</span>
+            <h2 className="text-5xl font-light mb-6 text-background">
+              Cuéntame qué buscas y te envío 3 opciones <span className="gradient-text font-medium">hoy</span>
             </h2>
             <p className="text-xl text-background/70 mb-12">
               Respuesta garantizada en menos de 2 horas

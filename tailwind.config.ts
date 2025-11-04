@@ -78,6 +78,7 @@ export default {
         'refined': '0 4px 6px -1px hsl(var(--shadow-refined)), 0 2px 4px -1px hsl(var(--shadow-refined))',
         'premium': '0 10px 40px -10px hsl(var(--shadow-premium)), 0 4px 12px -4px hsl(var(--shadow-refined))',
         'luxury': '0 20px 60px -15px hsl(var(--shadow-premium)), 0 8px 20px -8px hsl(var(--shadow-refined))',
+        'glow': '0 0 30px hsl(var(--shadow-glow)), 0 0 60px hsl(var(--shadow-glow))',
       },
       borderRadius: {
         lg: "var(--radius)",
