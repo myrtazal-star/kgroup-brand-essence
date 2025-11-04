@@ -24,11 +24,11 @@ export const KGroupLogo = ({ variant = 'full', size = 'md', className = '' }: KG
   return (
     <div className={`${sizeClasses[size]} flex items-center gap-3 ${className}`}>
       <div className="inline-flex items-center justify-center w-10 h-10 bg-foreground">
-        <span className="text-background font-bold">K</span>
+        <span className="text-background font-bold text-lg" style={{ fontFamily: 'Cormorant Garamond, serif' }}>K</span>
       </div>
       <div className="flex flex-col leading-tight">
-        <span className="font-semibold tracking-tight">KGROUP</span>
-        <span className="text-[0.45em] text-muted-foreground uppercase tracking-widest font-medium">Bienes Raíces Comerciales</span>
+        <span className="font-semibold tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1em' }}>KGROUP</span>
+        <span className="text-[0.42em] text-muted-foreground uppercase tracking-[0.15em] font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>Bienes Raíces</span>
       </div>
     </div>
   );

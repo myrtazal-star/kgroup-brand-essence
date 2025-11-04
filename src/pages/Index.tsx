@@ -146,14 +146,15 @@ const Index = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-foreground/5 border border-foreground/10 text-sm mb-6">
               <Building2 className="w-4 h-4" />
-              <span className="font-medium">Bienes Raíces Comerciales CDMX</span>
+              <span className="font-medium tracking-wider uppercase text-xs">Bienes Raíces Comerciales CDMX</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-medium leading-tight mb-6">
-              Espacios Comerciales en <span className="block">Ciudad de México</span>
+            <h1 className="text-6xl lg:text-8xl font-light leading-[1.1] mb-6 tracking-tight">
+              Espacios Comerciales<br/>
+              <span className="italic">en Ciudad de México</span>
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               Oficinas, locales y terrenos comerciales en las mejores zonas de la ciudad.
             </p>
 
@@ -183,16 +184,16 @@ const Index = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 mt-8 border-t border-foreground/10">
               <div>
-                <div className="text-3xl font-semibold mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Propiedades</div>
+                <div className="text-4xl font-light mb-1" style={{ fontFamily: 'Cormorant Garamond, serif' }}>50+</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-widest">Propiedades</div>
               </div>
               <div>
-                <div className="text-3xl font-semibold mb-1">5</div>
-                <div className="text-sm text-muted-foreground">Zonas Premium</div>
+                <div className="text-4xl font-light mb-1" style={{ fontFamily: 'Cormorant Garamond, serif' }}>5</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-widest">Zonas Premium</div>
               </div>
               <div>
-                <div className="text-3xl font-semibold mb-1">24/7</div>
-                <div className="text-sm text-muted-foreground">Atención</div>
+                <div className="text-4xl font-light mb-1" style={{ fontFamily: 'Cormorant Garamond, serif' }}>24/7</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-widest">Atención</div>
               </div>
             </div>
           </div>
@@ -204,8 +205,8 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-semibold mb-4">
-                Busca tu espacio ideal
+              <h2 className="text-4xl lg:text-5xl font-light mb-4">
+                Busca tu <span className="italic">espacio ideal</span>
               </h2>
               <p className="text-muted-foreground">
                 Filtra por tus necesidades específicas
@@ -255,8 +256,8 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-light mb-4">
-              Zonas <span className="text-accent">Clave</span> en CDMX
+            <h2 className="text-4xl lg:text-5xl font-light mb-4">
+              Zonas <span className="italic">Premium</span> en CDMX
             </h2>
             <p className="text-muted-foreground">
               Las mejores ubicaciones para tu negocio
@@ -290,11 +291,11 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-light mb-4">
-              Propiedades <span className="text-accent">Destacadas</span>
+            <h2 className="text-4xl lg:text-5xl font-light mb-4">
+              Propiedades <span className="italic">Destacadas</span>
             </h2>
             <p className="text-muted-foreground">
-              Espacios comerciales premium disponibles ahora
+              Espacios comerciales disponibles ahora
             </p>
           </div>
 
@@ -321,11 +322,11 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-4">
-              Cómo <span className="text-accent">Trabajamos</span>
+            <h2 className="text-4xl lg:text-5xl font-light mb-4">
+              Cómo <span className="italic">Trabajamos</span>
             </h2>
             <p className="text-muted-foreground">
-              Proceso simple y efectivo para encontrar tu espacio ideal
+              Proceso simple y efectivo
             </p>
           </div>
 
@@ -419,8 +420,9 @@ const Index = () => {
       <section className="py-32 bg-foreground text-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl font-semibold mb-6">
-              Encuentra tu espacio comercial ideal
+            <h2 className="text-5xl lg:text-6xl font-light mb-6">
+              Encuentra tu espacio<br/>
+              <span className="italic">comercial ideal</span>
             </h2>
             <p className="text-xl text-background/80 mb-12">
               Contacta con nosotros para más información
