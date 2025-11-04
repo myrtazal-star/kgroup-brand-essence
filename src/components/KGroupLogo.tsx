@@ -22,13 +22,13 @@ export const KGroupLogo = ({ variant = 'full', size = 'md', className = '' }: KG
   }
 
   return (
-    <div className={`monogram ${sizeClasses[size]} flex items-center gap-3 ${className}`}>
-      <div className="inline-flex items-center justify-center w-10 h-10 border-2 border-accent">
-        <span className="text-accent font-bold">K</span>
+    <div className={`${sizeClasses[size]} flex items-center gap-3 ${className}`}>
+      <div className="inline-flex items-center justify-center w-10 h-10 bg-foreground">
+        <span className="text-background font-bold">K</span>
       </div>
       <div className="flex flex-col leading-tight">
-        <span className="font-bold tracking-tight">KGROUP</span>
-        <span className="text-[0.5em] text-muted-foreground uppercase tracking-widest">Real Estate Comercial</span>
+        <span className="font-semibold tracking-tight">KGROUP</span>
+        <span className="text-[0.45em] text-muted-foreground uppercase tracking-widest font-medium">Bienes Raíces Comerciales</span>
       </div>
     </div>
   );

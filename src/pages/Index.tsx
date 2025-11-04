@@ -15,8 +15,6 @@ import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
-import { TechParticles } from "@/components/TechParticles";
-
 const Index = () => {
   const featuredProperties = [
     {
@@ -63,13 +61,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Tech Particles Background */}
-      <TechParticles />
-      
-      {/* Tech Scan Line Effect */}
-      <div className="scan-line" />
-      
+    <div className="min-h-screen bg-background">
       <WhatsAppButton />
       
       {/* Navigation Bar */}
@@ -152,55 +144,55 @@ const Index = () => {
 
         <div className="container mx-auto px-6 relative z-20">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass-dark text-sm mb-6">
-              <Sparkles className="w-4 h-4 text-accent" />
-              <span className="text-foreground">Kira Kellar – Miembro AMPI</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-foreground/5 border border-foreground/10 text-sm mb-6">
+              <Building2 className="w-4 h-4" />
+              <span className="font-medium">Bienes Raíces Comerciales CDMX</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-light leading-tight mb-6">
-              <span className="gradient-text">Espacios Comerciales</span> en CDMX que
-              <span className="block text-accent font-medium mt-2">hacen crecer tu negocio</span>
+            <h1 className="text-5xl lg:text-7xl font-medium leading-tight mb-6">
+              Espacios Comerciales en <span className="block">Ciudad de México</span>
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Oficinas, locales y terrenos con análisis de rentabilidad y negociación experta.
+              Oficinas, locales y terrenos comerciales en las mejores zonas de la ciudad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground group"
+                className="bg-foreground hover:bg-foreground/90 text-background"
                 asChild
               >
-                <a href="https://wa.me/525560808129?text=Hola%20Kira%2C%20quiero%20un%20espacio%20comercial%20en%20CDMX" target="_blank" rel="noopener noreferrer">
-                  WhatsApp Ahora
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
+                  Contactar por WhatsApp
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
+                className="border-2"
                 asChild
               >
-                <Link to="/contacto">
-                  Agendar Visita
+                <Link to="/rent-catalog">
+                  Ver Propiedades
                 </Link>
               </Button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 mt-8 border-t border-border/50">
+            <div className="grid grid-cols-3 gap-8 pt-8 mt-8 border-t border-foreground/10">
               <div>
-                <div className="text-3xl font-light text-accent mb-1">+400K</div>
-                <div className="text-xs text-muted-foreground uppercase">Vistas/mes</div>
+                <div className="text-3xl font-semibold mb-1">50+</div>
+                <div className="text-sm text-muted-foreground">Propiedades</div>
               </div>
               <div>
-                <div className="text-3xl font-light text-accent mb-1">95%</div>
-                <div className="text-xs text-muted-foreground uppercase">Ocupación</div>
+                <div className="text-3xl font-semibold mb-1">5</div>
+                <div className="text-sm text-muted-foreground">Zonas Premium</div>
               </div>
               <div>
-                <div className="text-3xl font-light text-accent mb-1">30 días</div>
-                <div className="text-xs text-muted-foreground uppercase">Cierre promedio</div>
+                <div className="text-3xl font-semibold mb-1">24/7</div>
+                <div className="text-sm text-muted-foreground">Atención</div>
               </div>
             </div>
           </div>
@@ -208,32 +200,32 @@ const Index = () => {
       </section>
 
       {/* Buscador Rápido */}
-      <section className="py-20 bg-gradient-to-b from-muted/50 to-background">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-light mb-4">
-                Encuentra tu espacio <span className="text-accent">ideal</span>
+              <h2 className="text-3xl lg:text-4xl font-semibold mb-4">
+                Busca tu espacio ideal
               </h2>
               <p className="text-muted-foreground">
-                Búsqueda rápida por tus criterios específicos
+                Filtra por tus necesidades específicas
               </p>
             </div>
 
-            <div className="glass p-8">
-              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
-                <select className="p-3 bg-background border border-border rounded-lg text-sm focus:ring-2 focus:ring-accent">
+            <div className="glass p-8 border-2">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <select className="p-4 bg-background border-2 border-border hover:border-foreground/30 focus:border-foreground rounded text-sm transition-colors font-medium">
                   <option>Tipo de espacio</option>
                   <option>Oficina</option>
                   <option>Local</option>
                   <option>Terreno</option>
                 </select>
-                <select className="p-3 bg-background border border-border rounded-lg text-sm focus:ring-2 focus:ring-accent">
+                <select className="p-4 bg-background border-2 border-border hover:border-foreground/30 focus:border-foreground rounded text-sm transition-colors font-medium">
                   <option>Operación</option>
                   <option>Renta</option>
                   <option>Venta</option>
                 </select>
-                <select className="p-3 bg-background border border-border rounded-lg text-sm focus:ring-2 focus:ring-accent">
+                <select className="p-4 bg-background border-2 border-border hover:border-foreground/30 focus:border-foreground rounded text-sm transition-colors font-medium">
                   <option>Zona</option>
                   <option>Polanco</option>
                   <option>Reforma-Anzures</option>
@@ -241,22 +233,16 @@ const Index = () => {
                   <option>Del Valle</option>
                   <option>Roma-Condesa</option>
                 </select>
-                <select className="p-3 bg-background border border-border rounded-lg text-sm focus:ring-2 focus:ring-accent">
-                  <option>Precio</option>
+                <select className="p-4 bg-background border-2 border-border hover:border-foreground/30 focus:border-foreground rounded text-sm transition-colors font-medium">
+                  <option>Presupuesto</option>
                   <option>$0 - $50,000</option>
                   <option>$50,000 - $100,000</option>
                   <option>$100,000+</option>
                 </select>
-                <select className="p-3 bg-background border border-border rounded-lg text-sm focus:ring-2 focus:ring-accent">
-                  <option>m²</option>
-                  <option>0 - 100 m²</option>
-                  <option>100 - 200 m²</option>
-                  <option>200+ m²</option>
-                </select>
               </div>
-              <Button className="w-full bg-accent hover:bg-accent/90" size="lg" asChild>
+              <Button className="w-full bg-foreground hover:bg-foreground/90 text-background font-semibold" size="lg" asChild>
                 <Link to="/rent-catalog">
-                  <Search className="w-4 h-4 mr-2" />
+                  <Search className="w-5 h-5 mr-2" />
                   Buscar Propiedades
                 </Link>
               </Button>
@@ -280,11 +266,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
             {zonas.map((zona) => (
               <Link key={zona.name} to="/zonas">
-                <div className="glass p-6 hover:shadow-luxury transition-all group cursor-pointer tech-glow">
-                  <div className="ai-pulse">
-                    <MapPin className="w-8 h-8 text-accent mb-3 group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h3 className="text-xl font-medium mb-2">{zona.name}</h3>
+                <div className="glass p-6 hover:shadow-refined transition-all group cursor-pointer border-2 border-transparent hover:border-foreground/10">
+                  <MapPin className="w-8 h-8 mb-3 transition-transform group-hover:translate-y-[-2px]" />
+                  <h3 className="text-lg font-semibold mb-2">{zona.name}</h3>
                   <p className="text-sm text-muted-foreground">{zona.description}</p>
                 </div>
               </Link>
@@ -292,9 +276,9 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="border-2 font-semibold" asChild>
               <Link to="/zonas">
-                Ver Análisis Completo de Zonas
+                Ver Todas las Zonas
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -323,10 +307,10 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
+            <Button size="lg" className="bg-foreground hover:bg-foreground/90 text-background font-semibold" asChild>
               <Link to="/rent-catalog">
                 Ver Todas las Propiedades
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
           </div>
@@ -346,40 +330,34 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative">
-              <div className="glass p-8 hover:shadow-luxury transition-all tech-glow">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 ai-pulse">
-                  <span className="text-3xl font-light text-accent">1</span>
-                </div>
-                <h3 className="text-2xl font-medium mb-4">Brief</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Entendemos tus necesidades específicas: presupuesto, ubicación, tamaño y características especiales de tu negocio.
-                </p>
+            <div className="glass p-8 hover:shadow-refined transition-all border-2 border-transparent hover:border-foreground/10">
+              <div className="w-12 h-12 bg-foreground text-background flex items-center justify-center mb-6 font-bold text-xl">
+                1
               </div>
+              <h3 className="text-xl font-semibold mb-4">Consulta</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Entendemos tus necesidades: presupuesto, ubicación, tamaño y características del espacio ideal.
+              </p>
             </div>
 
-            <div className="relative">
-              <div className="glass p-8 hover:shadow-luxury transition-all tech-glow">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 ai-pulse">
-                  <span className="text-3xl font-light text-accent">2</span>
-                </div>
-                <h3 className="text-2xl font-medium mb-4">Visitas</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Te presentamos las 3 mejores opciones y coordinamos visitas personalizadas a los espacios que mejor se adapten.
-                </p>
+            <div className="glass p-8 hover:shadow-refined transition-all border-2 border-transparent hover:border-foreground/10">
+              <div className="w-12 h-12 bg-foreground text-background flex items-center justify-center mb-6 font-bold text-xl">
+                2
               </div>
+              <h3 className="text-xl font-semibold mb-4">Selección</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Presentamos las mejores opciones y coordinamos visitas a los espacios seleccionados.
+              </p>
             </div>
 
-            <div className="relative">
-              <div className="glass p-8 hover:shadow-luxury transition-all tech-glow">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 ai-pulse">
-                  <span className="text-3xl font-light text-accent">3</span>
-                </div>
-                <h3 className="text-2xl font-medium mb-4">Negociación</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Negociamos las mejores condiciones: precio, términos de contrato y beneficios adicionales para tu empresa.
-                </p>
+            <div className="glass p-8 hover:shadow-refined transition-all border-2 border-transparent hover:border-foreground/10">
+              <div className="w-12 h-12 bg-foreground text-background flex items-center justify-center mb-6 font-bold text-xl">
+                3
               </div>
+              <h3 className="text-xl font-semibold mb-4">Cierre</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Negociamos las mejores condiciones y gestionamos toda la documentación necesaria.
+              </p>
             </div>
           </div>
         </div>
@@ -438,39 +416,33 @@ const Index = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-32 relative overflow-hidden">
-        {/* Tech Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-accent/20" />
-        <div className="absolute inset-0 opacity-10">
-          <div className="grid-pattern" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
+      <section className="py-32 bg-foreground text-background">
+        <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-5xl font-light mb-6 text-background">
-              Cuéntame qué buscas y te envío 3 opciones <span className="gradient-text font-medium">hoy</span>
+            <h2 className="text-4xl lg:text-5xl font-semibold mb-6">
+              Encuentra tu espacio comercial ideal
             </h2>
-            <p className="text-xl text-background/70 mb-12">
-              Respuesta garantizada en menos de 2 horas
+            <p className="text-xl text-background/80 mb-12">
+              Contacta con nosotros para más información
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                className="bg-background hover:bg-background/90 text-foreground"
                 asChild
               >
-                <a href="https://wa.me/525560808129?text=Hola%20Kira%2C%20quiero%20un%20espacio%20comercial%20en%20CDMX" target="_blank" rel="noopener noreferrer">
-                  Contactar por WhatsApp
+                <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
+                  WhatsApp
                 </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-background/20 text-background hover:bg-background/10"
+                className="border-background/30 text-background hover:bg-background/10 border-2"
                 asChild
               >
                 <Link to="/contacto">
-                  Enviar Mensaje
+                  Contacto
                 </Link>
               </Button>
             </div>
@@ -484,7 +456,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
             <div className="text-sm text-muted-foreground">
-              © 2024 KGroup Real Estate – Comercial. Todos los derechos reservados.
+              © 2024 KGroup. Todos los derechos reservados.
             </div>
           </div>
         </div>
