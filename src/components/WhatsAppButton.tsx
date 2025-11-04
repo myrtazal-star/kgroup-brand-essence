@@ -13,7 +13,7 @@ export const WhatsAppButton = () => {
     >
       <Button
         size="lg"
-        className="rounded-full w-16 h-16 shadow-premium hover:shadow-refined transition-all hover:scale-105 bg-[#25D366] hover:bg-[#1ea952] text-white border-0"
+        className="rounded-full w-16 h-16 shadow-tech hover:shadow-premium transition-all hover:scale-110 bg-[#25D366] hover:bg-[#1ea952] text-white border-0 animate-float"
       >
         <MessageCircle className="w-8 h-8" />
       </Button>
