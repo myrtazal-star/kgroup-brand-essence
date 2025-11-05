@@ -47,10 +47,10 @@ const RentCatalog = () => {
     },
     {
       id: "r4",
-      title: "Oficina en Prado Norte",
+      title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
       location: "Lomas de Chapultepec, Prado Norte",
-      price: "$60,000/mes",
-      area: "103 m²",
+      price: "$70,000/mes",
+      area: "140 m²",
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaPn1

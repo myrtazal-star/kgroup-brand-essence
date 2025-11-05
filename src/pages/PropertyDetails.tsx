@@ -14,6 +14,10 @@ import oficinaPn3 from "@/assets/oficina-pn-3.jpg";
 import oficinaPn4 from "@/assets/oficina-pn-4.jpg";
 import oficinaPn5 from "@/assets/oficina-pn-5.jpg";
 import oficinaPn6 from "@/assets/oficina-pn-6.jpg";
+import oficinaPn7 from "@/assets/oficina-pn-7.jpg";
+import oficinaPn8 from "@/assets/oficina-pn-8.jpg";
+import oficinaPn9 from "@/assets/oficina-pn-9.jpg";
+import oficinaPn10 from "@/assets/oficina-pn-10.jpg";
 import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaCh2 from "@/assets/oficina-chapultepec-2.jpg";
 import oficinaCh3 from "@/assets/oficina-chapultepec-3.jpg";
@@ -125,21 +129,21 @@ const propertiesData = {
   },
   "r4": {
     id: "r4",
-    title: "Oficina en Prado Norte",
+    title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
     location: "Lomas de Chapultepec, Prado Norte",
-    price: "$60,000",
+    price: "$70,000",
     priceType: "Renta mensual",
-    area: "103 m²",
+    area: "140 m²",
     bedrooms: 0,
     bathrooms: 1,
     parking: 2,
     imageUrl: oficinaPn1,
     featured: false,
-    description: "Oficina nueva en renta. 103 m2, 2 cajones de estacionamiento, vigilancia 24/7. Puedes hacer las adecuaciones que desees, seguridad y cámaras 24 hrs. Ubicación privelegiada en Prado Norte a 5 min del Auditorio Nacional, rodeado de restaurantes de lujo y negocios de alto nivel.",
-    features: ["Oficina nueva", "2 cajones de estacionamiento", "Vigilancia 24/7", "Seguridad y cámaras 24 hrs", "Adecuaciones personalizadas", "Piso 2"],
-    amenities: ["Seguridad 24 horas", "Oficina"],
-    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6],
-    youtubeVideoId: "Qb3MgfN1kgQ"
+    description: "Oficina amueblada de 140 m², ubicada en una casa histórica adaptada para negocios de alto nivel. Cuenta con 6 espacios de trabajo, 4 privados, 1 baño privado, terraza y cocina equipada. El edificio cuenta con sala de juntas, baños en el primer piso y cocina. Además, dispone de 2 cajones de estacionamiento techados y seguridad 24 horas. A pasos de Paseo de la Reforma y rodeada de restaurantes, despachos y embajadas. Ideal para abogados, arquitectos, consultores o firmas corporativas que buscan prestigio y ubicación.",
+    features: ["Oficina amueblada", "140 m²", "6 espacios de trabajo", "4 privados", "1 baño privado", "Terraza", "Cocina equipada", "Sala de juntas en edificio", "Casa histórica adaptada", "2 cajones techados"],
+    amenities: ["Seguridad 24/7", "A pasos de Paseo de la Reforma", "Rodeada de restaurantes", "Zona de despachos y embajadas", "Ideal para profesionales"],
+    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6, oficinaPn7, oficinaPn8, oficinaPn9, oficinaPn10],
+    youtubeVideoId: undefined
   },
   "r5": {
     id: "r5",
