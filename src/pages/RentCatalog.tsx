@@ -20,6 +20,7 @@ import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
 import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
+import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
 import localGandhi1 from "@/assets/local-gandhi-1.jpg";
 
 const RentCatalog = () => {
@@ -94,6 +95,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaHomero1
+    },
+    {
+      id: "r12",
+      title: "Espacio comercial en Mariano Escobedo, Polanco",
+      location: "Mariano Escobedo, Polanco",
+      price: "$48,000/mes + IVA",
+      area: "120 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: localEscobedo1
     },
     {
       id: "r13",
