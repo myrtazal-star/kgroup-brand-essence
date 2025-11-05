@@ -147,24 +147,6 @@ const propertiesData = {
     gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6],
     youtubeVideoId: "Qb3MgfN1kgQ"
   },
-  "r5": {
-    id: "r5",
-    title: "Departamento en renta Arquímedes, Polanco",
-    location: "Arquímedes, Polanco",
-    price: "$39,000",
-    priceType: "Renta mensual",
-    area: "75 m²",
-    bedrooms: 2,
-    bathrooms: 1.5,
-    parking: 1,
-    imageUrl: "/src/assets/depto-arquimedes-polanco.jpg",
-    featured: false,
-    description: "Acogedor departamento de 1 nivel en renta ubicado en Arquímedes, Polanco. Completamente amueblado con acabados modernos y en una ubicación privilegiada cerca de restaurantes y centros comerciales. El frente del departamento está ubicado frente a un kinder.",
-    features: ["Completamente amueblado", "1 nivel", "Balcón", "Cocina integral", "Closets equipados", "Frente a kinder"],
-    amenities: ["Seguridad 24/7", "Elevador", "Estacionamiento", "Área de juegos infantiles", "Jacuzzi", "Alberca"],
-    gallery: ["/src/assets/depto-arquimedes-polanco.jpg", "/src/assets/property-r5-1.jpg", "/src/assets/property-r5-2.jpg", "/src/assets/property-r5-3.jpg", "/src/assets/property-r5-4.jpg", "/src/assets/property-r5-5.jpg", "/src/assets/property-r5-6.jpg", "/src/assets/property-r5-7.jpg"],
-    youtubeVideoId: undefined
-  },
   "r7": {
     id: "r7",
     title: "Oficina en Polanco, Ejercito Nacional",
@@ -409,7 +391,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r5", "r7", "r8", "r9", "r10", "r11", "r13"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r7", "r8", "r9", "r10", "r11", "r13"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

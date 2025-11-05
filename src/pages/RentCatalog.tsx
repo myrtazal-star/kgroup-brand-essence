@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import blockRenta from "@/assets/block-renta.jpg";
 import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
 import rentaMitikah from "@/assets/renta-mitikah.jpg";
-import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
+
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 import oficinaPn7 from "@/assets/oficina-pn-7.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
