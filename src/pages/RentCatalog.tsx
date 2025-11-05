@@ -47,16 +47,6 @@ const RentCatalog = () => {
       imageUrl: oficinaPH
     },
     {
-      id: "r4",
-      title: "Oficina en Prado Norte",
-      location: "Lomas de Chapultepec, Prado Norte",
-      price: "$60,000/mes",
-      area: "103 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaPn1
-    },
-    {
       id: "r7",
       title: "Oficina en Polanco, Ejercito Nacional",
       location: "Ejercito Nacional, Polanco",

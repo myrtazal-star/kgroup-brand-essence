@@ -421,7 +421,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10", "r11", "r12", "r13"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r5", "r7", "r8", "r9", "r10", "r11", "r12", "r13"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
