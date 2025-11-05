@@ -23,6 +23,7 @@ import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
 import localGandhi1 from "@/assets/local-gandhi-1.jpg";
 import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
+import oficinaPhCondesa1 from "@/assets/oficina-ph-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -137,6 +138,17 @@ const RentCatalog = () => {
       bedrooms: 1,
       bathrooms: 1,
       imageUrl: oficinaLomas1,
+      featured: true
+    },
+    {
+      id: "r16",
+      title: "Oficina en renta – Condesa, Av. Tamaulipas | PH de 2 niveles con terraza",
+      location: "Av. Tamaulipas, Condesa, CDMX",
+      price: "$90,000/mes + IVA",
+      area: "360 m²",
+      bedrooms: 0,
+      bathrooms: 3,
+      imageUrl: oficinaPhCondesa1,
       featured: true
     },
   ];

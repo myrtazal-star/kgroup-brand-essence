@@ -89,6 +89,14 @@ import oficinaLomas7 from "@/assets/oficina-lomas-7.jpg";
 import oficinaLomas8 from "@/assets/oficina-lomas-8.jpg";
 import oficinaLomas9 from "@/assets/oficina-lomas-9.jpg";
 import oficinaLomas10 from "@/assets/oficina-lomas-10.jpg";
+import oficinaPhCondesa1 from "@/assets/oficina-ph-1.jpg";
+import oficinaPhCondesa2 from "@/assets/oficina-ph-2.jpg";
+import oficinaPhCondesa3 from "@/assets/oficina-ph-3.jpg";
+import oficinaPhCondesa4 from "@/assets/oficina-ph-4.jpg";
+import oficinaPhCondesa5 from "@/assets/oficina-ph-5.jpg";
+import oficinaPhCondesa6 from "@/assets/oficina-ph-6.jpg";
+import oficinaPhCondesa7 from "@/assets/oficina-ph-7.jpg";
+import oficinaPhCondesa8 from "@/assets/oficina-ph-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -457,6 +465,42 @@ const propertiesData = {
     ],
     gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8, oficinaLomas9, oficinaLomas10],
     youtubeVideoId: undefined
+  },
+  "r16": {
+    id: "r16",
+    title: "Oficina en renta – Condesa, Av. Tamaulipas | PH de 2 niveles con terraza",
+    location: "Av. Tamaulipas, Condesa, CDMX",
+    price: "$90,000",
+    priceType: "Renta mensual + IVA",
+    area: "360 m²",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 0,
+    imageUrl: oficinaPhCondesa1,
+    featured: true,
+    description: "Vive la experiencia de trabajar en lo más alto de la Condesa. Este espectacular penthouse corporativo de 360 m², distribuido en dos niveles, combina elegancia, amplitud y vistas inigualables. Ideal para agencias creativas, despachos o marcas que buscan un espacio icónico con imagen de alto nivel en el corazón de la Condesa.",
+    features: [
+      "360 m² distribuidos en dos niveles",
+      "Ubicación: Piso 20 (Penthouse)",
+      "Terraza privada con vista panorámica",
+      "4 oficinas privadas en nivel superior",
+      "7 espacios independientes en nivel inferior",
+      "Sala de juntas equipada",
+      "Baños para hombres y mujeres",
+      "Diseño funcional y luminoso"
+    ],
+    amenities: [
+      "Terraza con vistas panorámicas de la ciudad",
+      "Dos niveles conectados",
+      "Oficinas privadas con excelente iluminación",
+      "Sala de juntas corporativa",
+      "Múltiples espacios de trabajo",
+      "Ubicación premium en Condesa",
+      "Acceso a Av. Tamaulipas",
+      "Zona con alta plusvalía"
+    ],
+    gallery: [oficinaPhCondesa1, oficinaPhCondesa2, oficinaPhCondesa3, oficinaPhCondesa4, oficinaPhCondesa5, oficinaPhCondesa6, oficinaPhCondesa7, oficinaPhCondesa8],
+    youtubeVideoId: undefined
   }
 };
 const PropertyDetails = () => {
@@ -473,7 +517,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r7", "r8", "r9", "r10", "r11", "r12", "r13"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r7", "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15", "r16"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
