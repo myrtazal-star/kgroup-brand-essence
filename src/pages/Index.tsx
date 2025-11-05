@@ -138,13 +138,13 @@ const Index = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-wide animate-fade-in-up">
-              THE FUTURE OF<br/>
-              <span className="gradient-text">COMMERCIAL REAL ESTATE</span><br/>
-              IN CDMX
+              ESPACIOS COMERCIALES<br/>
+              <span className="gradient-text">PREMIUM</span><br/>
+              EN CDMX
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Offices, Retail Spaces, and Land for Sale or Lease.
+              Oficinas, locales comerciales y terrenos en venta o renta en las mejores zonas de la ciudad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up">
