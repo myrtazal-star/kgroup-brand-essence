@@ -364,7 +364,7 @@ const propertiesData = {
   // Propiedades en Venta
   "s4": {
     id: "s4",
-    title: "Oficina en venta o renta – BeGrand Reforma, CDMX",
+    title: "Oficina Be Grand Reforma en Venta",
     location: "Lafragua #13, Col. Tabacalera, Cuauhtémoc",
     price: "$12,500,000",
     priceType: "Venta",
