@@ -79,6 +79,14 @@ import oficinaBegrand7 from "@/assets/oficina-begrand-7.jpg";
 import oficinaBegrand8 from "@/assets/oficina-begrand-8.jpg";
 import oficinaBegrand9 from "@/assets/oficina-begrand-9.jpg";
 import oficinaBegrand10 from "@/assets/oficina-begrand-10.jpg";
+import localGandhi1 from "@/assets/local-gandhi-1.jpg";
+import localGandhi2 from "@/assets/local-gandhi-2.jpg";
+import localGandhi3 from "@/assets/local-gandhi-3.jpg";
+import localGandhi4 from "@/assets/local-gandhi-4.jpg";
+import localGandhi5 from "@/assets/local-gandhi-5.jpg";
+import localGandhi6 from "@/assets/local-gandhi-6.jpg";
+import localGandhi7 from "@/assets/local-gandhi-7.jpg";
+import localGandhi8 from "@/assets/local-gandhi-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -359,6 +367,41 @@ const propertiesData = {
     features: ["Oficina amueblada", "140 m²", "6 espacios de trabajo", "4 privados", "1 baño", "Terraza", "Cocina equipada", "Casa histórica adaptada", "2 cajones techados"],
     amenities: ["Seguridad 24/7", "A pasos de Paseo de la Reforma", "Rodeada de restaurantes", "Zona de despachos y embajadas", "Ideal para profesionales"],
     gallery: [oficinaPn7, oficinaPn8, oficinaPn9, oficinaPn10],
+    youtubeVideoId: undefined
+  },
+  "r14": {
+    id: "r14",
+    title: "Local comercial en renta en Campos Elíseos, Polanco",
+    location: "Corporativo Gandhi, Campos Elíseos, Polanco",
+    price: "Consultar precio",
+    priceType: "Renta mensual",
+    area: "270 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 0,
+    imageUrl: localGandhi1,
+    featured: true,
+    description: "Corporativo Gandhi, ubicado en una de las zonas más céntricas y conectadas de la ciudad. Ofrece espacios corporativos funcionales e ideales para empresas que buscan una ubicación estratégica a un precio competitivo. El edificio cuenta con una imagen corporativa sobria y profesional, con vigilancia 24/7, accesos rápidos a importantes avenidas, transporte público, restaurantes y servicios. Una excelente opción para oficinas administrativas, call center, consultorías o empresas en crecimiento que buscan establecerse en una ubicación privilegiada.",
+    features: [
+      "270 m² en Piso 1",
+      "Recepción amplia",
+      "2 Elevadores",
+      "Bodega incluida",
+      "Cuarto de máquinas",
+      "Espacio funcional y adaptable",
+      "Mantenimiento: $4 USD por m²",
+      "Listo para adecuar a tus necesidades"
+    ],
+    amenities: [
+      "Vigilancia 24/7",
+      "Ubicación estratégica en Polanco",
+      "Accesos rápidos a avenidas importantes",
+      "Transporte público cercano",
+      "Restaurantes y servicios",
+      "Imagen corporativa profesional",
+      "Ideal para call center, consultorías y oficinas administrativas"
+    ],
+    gallery: [localGandhi1, localGandhi2, localGandhi3, localGandhi4, localGandhi5, localGandhi6, localGandhi7, localGandhi8],
     youtubeVideoId: undefined
   },
   // Propiedades en Venta

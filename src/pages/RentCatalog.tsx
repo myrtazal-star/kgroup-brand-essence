@@ -22,6 +22,7 @@ import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
+import localGandhi1 from "@/assets/local-gandhi-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -115,6 +116,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaPn7
+    },
+    {
+      id: "r14",
+      title: "Local comercial en renta en Campos Elíseos, Polanco",
+      location: "Corporativo Gandhi, Campos Elíseos, Polanco",
+      price: "Consultar precio",
+      area: "270 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: localGandhi1,
+      featured: true
     },
   ];
 
