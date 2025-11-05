@@ -77,6 +77,8 @@ import oficinaBegrand5 from "@/assets/oficina-begrand-5.jpg";
 import oficinaBegrand6 from "@/assets/oficina-begrand-6.jpg";
 import oficinaBegrand7 from "@/assets/oficina-begrand-7.jpg";
 import oficinaBegrand8 from "@/assets/oficina-begrand-8.jpg";
+import oficinaBegrand9 from "@/assets/oficina-begrand-9.jpg";
+import oficinaBegrand10 from "@/assets/oficina-begrand-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -357,6 +359,7 @@ const propertiesData = {
     features: ["Oficina amueblada", "140 m²", "6 espacios de trabajo", "4 privados", "1 baño", "Terraza", "Cocina equipada", "Casa histórica adaptada", "2 cajones techados"],
     amenities: ["Seguridad 24/7", "A pasos de Paseo de la Reforma", "Rodeada de restaurantes", "Zona de despachos y embajadas", "Ideal para profesionales"],
     gallery: [oficinaPn7, oficinaPn8, oficinaPn9, oficinaPn10],
+    youtubeVideoId: undefined
   },
   // Propiedades en Venta
   "s4": {
@@ -391,7 +394,7 @@ const propertiesData = {
       "Ubicación exclusiva en Reforma",
       "Dirección corporativa de alto nivel"
     ],
-    gallery: [oficinaBegrand1, oficinaBegrand2, oficinaBegrand3, oficinaBegrand4, oficinaBegrand5, oficinaBegrand6, oficinaBegrand7, oficinaBegrand8],
+    gallery: [oficinaBegrand1, oficinaBegrand2, oficinaBegrand3, oficinaBegrand4, oficinaBegrand5, oficinaBegrand6, oficinaBegrand7, oficinaBegrand8, oficinaBegrand9, oficinaBegrand10],
     youtubeVideoId: undefined
   }
 };
