@@ -97,6 +97,8 @@ import oficinaPhCondesa5 from "@/assets/oficina-ph-5.jpg";
 import oficinaPhCondesa6 from "@/assets/oficina-ph-6.jpg";
 import oficinaPhCondesa7 from "@/assets/oficina-ph-7.jpg";
 import oficinaPhCondesa8 from "@/assets/oficina-ph-8.jpg";
+import oficinaPhCondesa9 from "@/assets/oficina-ph-9.jpg";
+import oficinaPhCondesa10 from "@/assets/oficina-ph-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -499,7 +501,7 @@ const propertiesData = {
       "Acceso a Av. Tamaulipas",
       "Zona con alta plusvalía"
     ],
-    gallery: [oficinaPhCondesa1, oficinaPhCondesa2, oficinaPhCondesa3, oficinaPhCondesa4, oficinaPhCondesa5, oficinaPhCondesa6, oficinaPhCondesa7, oficinaPhCondesa8],
+    gallery: [oficinaPhCondesa1, oficinaPhCondesa2, oficinaPhCondesa3, oficinaPhCondesa4, oficinaPhCondesa5, oficinaPhCondesa6, oficinaPhCondesa7, oficinaPhCondesa8, oficinaPhCondesa9, oficinaPhCondesa10],
     youtubeVideoId: undefined
   }
 };
