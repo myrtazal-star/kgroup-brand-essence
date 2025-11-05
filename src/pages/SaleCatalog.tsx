@@ -12,9 +12,55 @@ import { Link } from "react-router-dom";
 import property1 from "@/assets/property-1.jpg";
 import property2 from "@/assets/property-2.jpg";
 import property3 from "@/assets/property-3.jpg";
+import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 
 const SaleCatalog = () => {
-  const saleProperties: any[] = [];
+  const saleProperties = [
+    {
+      id: "s4",
+      title: "Oficina en venta o renta – BeGrand Reforma, CDMX",
+      location: "Lafragua #13, Col. Tabacalera, Cuauhtémoc",
+      price: "$12,500,000",
+      area: "113 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaBegrand1,
+      featured: true,
+    },
+    {
+      id: "s1",
+      title: "Residencias Meridian",
+      location: "Polanco, Ciudad de México",
+      price: "$4,200,000",
+      area: "223 m²",
+      bedrooms: 3,
+      bathrooms: 2,
+      imageUrl: property1,
+      featured: true,
+    },
+    {
+      id: "s2",
+      title: "Torre Ejecutiva Santa Fe",
+      location: "Santa Fe, Ciudad de México",
+      price: "$850,000",
+      area: "111 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: property2,
+      featured: false,
+    },
+    {
+      id: "s3",
+      title: "Penthouse Skyline",
+      location: "Zona Rosa, Ciudad de México",
+      price: "$12,500,000",
+      area: "446 m²",
+      bedrooms: 4,
+      bathrooms: 3,
+      imageUrl: property3,
+      featured: true,
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">

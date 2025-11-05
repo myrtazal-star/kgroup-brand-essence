@@ -69,6 +69,14 @@ import localEscobedo5 from "@/assets/local-escobedo-5.jpg";
 import localEscobedo6 from "@/assets/local-escobedo-6.jpg";
 import localEscobedo7 from "@/assets/local-escobedo-7.jpg";
 import localEscobedo8 from "@/assets/local-escobedo-8.jpg";
+import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
+import oficinaBegrand2 from "@/assets/oficina-begrand-2.jpg";
+import oficinaBegrand3 from "@/assets/oficina-begrand-3.jpg";
+import oficinaBegrand4 from "@/assets/oficina-begrand-4.jpg";
+import oficinaBegrand5 from "@/assets/oficina-begrand-5.jpg";
+import oficinaBegrand6 from "@/assets/oficina-begrand-6.jpg";
+import oficinaBegrand7 from "@/assets/oficina-begrand-7.jpg";
+import oficinaBegrand8 from "@/assets/oficina-begrand-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -404,6 +412,41 @@ const propertiesData = {
     features: ["Vista 360°", "Terraza panorámica", "Jacuzzi privado", "Cocina gourmet", "Cava de vinos", "Home theater"],
     amenities: ["Concierge", "Spa privado", "Gimnasio", "Alberca infinity", "Helipuerto", "Seguridad VIP"],
     gallery: ["/src/assets/property-3.jpg", "/src/assets/property-1.jpg", "/src/assets/property-2.jpg"],
+    youtubeVideoId: undefined
+  },
+  "s4": {
+    id: "s4",
+    title: "Oficina en venta o renta – BeGrand Reforma, CDMX",
+    location: "Lafragua #13, Col. Tabacalera, Cuauhtémoc",
+    price: "$12,500,000",
+    priceType: "Venta",
+    area: "113 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 4,
+    imageUrl: oficinaBegrand1,
+    featured: true,
+    description: "Ubicada en uno de los corporativos más exclusivos de la ciudad, esta oficina de 113 m² con triple altura (3.90 m) te ofrece un espacio moderno, abierto y adaptable a cualquier tipo de empresa. Espacio abierto en obra gris, listo para adecuar a tus necesidades en el piso 15 con vistas panorámicas espectaculares.",
+    features: [
+      "113 m² con triple altura (3.90 m)",
+      "Espacio abierto en obra gris",
+      "Piso 15 con vistas panorámicas",
+      "4 lugares de estacionamiento privados",
+      "Salida de agua potable",
+      "Ducto para aire acondicionado",
+      "Sistema contra incendios",
+      "Listo para adecuar a tus necesidades"
+    ],
+    amenities: [
+      "Business Center con 4 salas de juntas equipadas",
+      "Sky Lobby y terraza con vista a Reforma",
+      "Cafetería y tiendas",
+      "Servicio de valet parking",
+      "Seguridad 24/7",
+      "Ubicación exclusiva en Reforma",
+      "Dirección corporativa de alto nivel"
+    ],
+    gallery: [oficinaBegrand1, oficinaBegrand2, oficinaBegrand3, oficinaBegrand4, oficinaBegrand5, oficinaBegrand6, oficinaBegrand7, oficinaBegrand8],
     youtubeVideoId: undefined
   }
 };
