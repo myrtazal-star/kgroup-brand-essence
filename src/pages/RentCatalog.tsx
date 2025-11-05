@@ -142,7 +142,7 @@ const RentCatalog = () => {
     },
     {
       id: "r16",
-      title: "Oficina en renta – Condesa, Av. Tamaulipas | PH de 2 niveles con terraza",
+      title: "Penthouse en Condesa Oficina 2 niveles",
       location: "Av. Tamaulipas, Condesa, CDMX",
       price: "$90,000/mes + IVA",
       area: "360 m²",
