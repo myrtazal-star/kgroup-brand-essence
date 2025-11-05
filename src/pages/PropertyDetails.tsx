@@ -87,6 +87,8 @@ import oficinaLomas5 from "@/assets/oficina-lomas-5.jpg";
 import oficinaLomas6 from "@/assets/oficina-lomas-6.jpg";
 import oficinaLomas7 from "@/assets/oficina-lomas-7.jpg";
 import oficinaLomas8 from "@/assets/oficina-lomas-8.jpg";
+import oficinaLomas9 from "@/assets/oficina-lomas-9.jpg";
+import oficinaLomas10 from "@/assets/oficina-lomas-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -453,7 +455,7 @@ const propertiesData = {
       "Acceso a vías principales",
       "Cerca de zonas corporativas"
     ],
-    gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8],
+    gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8, oficinaLomas9, oficinaLomas10],
     youtubeVideoId: undefined
   }
 };
