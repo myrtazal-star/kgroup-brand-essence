@@ -53,11 +53,11 @@ const Index = () => {
   ];
 
   const zonas = [
-    { name: "Polanco", description: "Distrito corporativo de lujo" },
-    { name: "Reforma – Anzures", description: "Corredor de negocios icónico" },
-    { name: "Santa Fe", description: "Hub empresarial moderno" },
-    { name: "Del Valle", description: "Balance perfecto precio-ubicación" },
-    { name: "Roma – Condesa", description: "Epicentro creativo" }
+    { name: "Polanco", description: "Luxury corporate district" },
+    { name: "Reforma – Anzures", description: "Iconic business corridor" },
+    { name: "Santa Fe", description: "Modern business hub" },
+    { name: "Del Valle", description: "Perfect price-location balance" },
+    { name: "Roma – Condesa", description: "Creative epicenter" }
   ];
 
   return (
@@ -71,30 +71,29 @@ const Index = () => {
             <KGroupLogo variant="full" size="md" />
             
             <div className="hidden lg:flex items-center gap-8">
-              <Link to="/" className="text-sm font-medium hover:text-accent transition-smooth">Inicio</Link>
+              <Link to="/" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Home</Link>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-smooth">
-                  Propiedades
+                <DropdownMenuTrigger className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">
+                  Properties
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="glass shadow-premium">
+                <DropdownMenuContent className="glass shadow-premium bg-background">
                   <DropdownMenuItem asChild>
-                    <Link to="/rent-catalog" className="cursor-pointer">Renta</Link>
+                    <Link to="/rent-catalog" className="cursor-pointer uppercase tracking-wider">Rent</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/sale-catalog" className="cursor-pointer">Venta</Link>
+                    <Link to="/sale-catalog" className="cursor-pointer uppercase tracking-wider">Sale</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth">Servicios</Link>
-              <Link to="/zonas" className="text-sm font-medium hover:text-accent transition-smooth">Zonas</Link>
-              <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-smooth">Únete a KGroup</Link>
-              <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth">Contacto</Link>
+              <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Services</Link>
+              <Link to="/zonas" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Zones</Link>
+              <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Contact</Link>
             </div>
 
             <Link to="/contacto" className="hidden md:block">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-tech hover:scale-105 transition-all">
-                Agendar Visita
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-tech hover:scale-105 transition-all uppercase tracking-wider">
+                Schedule Visit
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -146,16 +145,17 @@ const Index = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 glass tech-border text-sm mb-6 animate-slide-in-left">
               <Building2 className="w-4 h-4 text-accent" />
-              <span className="font-medium tracking-wider uppercase text-xs">Bienes Raíces Comerciales CDMX</span>
+              <span className="font-medium tracking-wider uppercase text-xs">Commercial Real Estate CDMX</span>
             </div>
             
-            <h1 className="text-6xl lg:text-8xl font-bold leading-[1.1] mb-6 tracking-tight animate-fade-in-up">
-              Espacios Comerciales<br/>
-              <span className="gradient-text">en Ciudad de México</span>
+            <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-wide animate-fade-in-up">
+              THE FUTURE OF<br/>
+              <span className="gradient-text">COMMERCIAL REAL ESTATE</span><br/>
+              IN CDMX
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Oficinas, locales y terrenos comerciales en las mejores zonas de la ciudad.
+              Offices, Retail Spaces, and Land for Sale or Lease.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up">
@@ -165,7 +165,7 @@ const Index = () => {
                 asChild
               >
                 <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
-                  Contactar por WhatsApp
+                  VIEW PROPERTIES
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
@@ -175,9 +175,9 @@ const Index = () => {
                 className="tech-border hover:bg-accent/10 transition-all"
                 asChild
               >
-                <Link to="/rent-catalog">
-                  Ver Propiedades
-                </Link>
+                <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
+                  CONTACT KIRA
+                </a>
               </Button>
             </div>
 
@@ -205,46 +205,52 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-                Busca tu <span className="gradient-text">espacio ideal</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+                FIND YOUR <span className="gradient-text">IDEAL SPACE</span>
               </h2>
               <p className="text-muted-foreground">
-                Filtra por tus necesidades específicas
+                Filter by your specific needs
               </p>
             </div>
 
             <div className="glass tech-border p-8">
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium">
-                  <option>Tipo de espacio</option>
-                  <option>Oficina</option>
-                  <option>Local</option>
-                  <option>Terreno</option>
+              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
+                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
+                  <option>Type of Space</option>
+                  <option>Office</option>
+                  <option>Retail</option>
+                  <option>Land</option>
                 </select>
-                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium">
-                  <option>Operación</option>
-                  <option>Renta</option>
-                  <option>Venta</option>
+                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
+                  <option>Operation</option>
+                  <option>Rent</option>
+                  <option>Sale</option>
                 </select>
-                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium">
-                  <option>Zona</option>
+                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
+                  <option>Zone</option>
                   <option>Polanco</option>
                   <option>Reforma-Anzures</option>
                   <option>Santa Fe</option>
                   <option>Del Valle</option>
                   <option>Roma-Condesa</option>
                 </select>
-                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium">
-                  <option>Presupuesto</option>
+                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
+                  <option>Budget</option>
                   <option>$0 - $50,000</option>
                   <option>$50,000 - $100,000</option>
                   <option>$100,000+</option>
                 </select>
+                <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
+                  <option>m²</option>
+                  <option>0 - 100 m²</option>
+                  <option>100 - 300 m²</option>
+                  <option>300+ m²</option>
+                </select>
               </div>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech" size="lg" asChild>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech uppercase tracking-wider" size="lg" asChild>
                 <Link to="/rent-catalog">
                   <Search className="w-5 h-5 mr-2" />
-                  Buscar Propiedades
+                  Search Properties
                 </Link>
               </Button>
             </div>
@@ -257,10 +263,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              Zonas <span className="gradient-text">Premium</span> en CDMX
+              PREMIUM <span className="gradient-text">ZONES</span> IN CDMX
             </h2>
             <p className="text-muted-foreground">
-              Las mejores ubicaciones para tu negocio
+              The best locations for your business
             </p>
           </div>
 
@@ -277,9 +283,9 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button variant="outline" size="lg" className="tech-border font-semibold hover:bg-accent/10" asChild>
+            <Button variant="outline" size="lg" className="tech-border font-semibold hover:bg-accent/10 uppercase tracking-wider" asChild>
               <Link to="/zonas">
-                Ver Todas las Zonas
+                View All Zones
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -292,10 +298,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              Propiedades <span className="gradient-text">Destacadas</span>
+              FEATURED <span className="gradient-text">PROPERTIES</span>
             </h2>
             <p className="text-muted-foreground">
-              Espacios comerciales disponibles ahora
+              Commercial spaces available now
             </p>
           </div>
 
@@ -308,9 +314,9 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech" asChild>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech uppercase tracking-wider" asChild>
               <Link to="/rent-catalog">
-                Ver Todas las Propiedades
+                View All Properties
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
@@ -323,10 +329,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              Cómo <span className="gradient-text">Trabajamos</span>
+              HOW <span className="gradient-text">WE WORK</span>
             </h2>
             <p className="text-muted-foreground">
-              Proceso simple y efectivo
+              Simple and effective process
             </p>
           </div>
 
@@ -335,9 +341,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center mb-6 font-bold text-xl">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-4">Consulta</h3>
+              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Brief</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Entendemos tus necesidades: presupuesto, ubicación, tamaño y características del espacio ideal.
+                We understand your needs: budget, location, size and features of the ideal space.
               </p>
             </div>
 
@@ -345,9 +351,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center mb-6 font-bold text-xl">
                 2
               </div>
-              <h3 className="text-xl font-semibold mb-4">Selección</h3>
+              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Visits</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Presentamos las mejores opciones y coordinamos visitas a los espacios seleccionados.
+                We present the best options and coordinate visits to the selected spaces.
               </p>
             </div>
 
@@ -355,9 +361,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center mb-6 font-bold text-xl">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-4">Cierre</h3>
+              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Negotiation & Closing</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Negociamos las mejores condiciones y gestionamos toda la documentación necesaria.
+                We negotiate the best terms and manage all necessary documentation.
               </p>
             </div>
           </div>
@@ -424,16 +430,16 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              Encuentra tu espacio<br/>
-              <span className="gradient-text">comercial ideal</span>
+              SPACES THAT MAKE<br/>
+              <span className="gradient-text">YOUR BUSINESS GROW</span>
             </h2>
             <p className="text-xl text-background/80 mb-12">
-              Contacta con nosotros para más información
+              Tell me what you're looking for — I'll send 3 commercial options today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-tech"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-tech uppercase tracking-wider"
                 asChild
               >
                 <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
@@ -443,11 +449,11 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-background/30 text-background hover:bg-background/10 tech-border"
+                className="border-background/30 text-background hover:bg-background/10 tech-border uppercase tracking-wider"
                 asChild
               >
                 <Link to="/contacto">
-                  Contacto
+                  Contact
                 </Link>
               </Button>
             </div>
