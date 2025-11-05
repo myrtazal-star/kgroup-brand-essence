@@ -42,7 +42,7 @@ export const PropertyCard = ({
           />
           {featured && (
             <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 text-caption">
-              FEATURED
+              DESTACADO
             </div>
           )}
         </div>
