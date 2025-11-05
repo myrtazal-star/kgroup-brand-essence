@@ -524,7 +524,7 @@ const propertiesData = {
     bedrooms: 0,
     bathrooms: 2,
     parking: 2,
-    imageUrl: oficinaCondesa16_1,
+    imageUrl: oficinaCondesa16_2,
     featured: true,
     description: "Espacio moderno, funcional y con una ubicación privilegiada en el corazón de la Condesa. Esta oficina de 180 m² combina practicidad, iluminación natural y un ambiente ideal para equipos profesionales. Ideal para agencias, despachos o empresas que buscan una imagen profesional y una ubicación estratégica, rodeada de cafeterías, restaurantes y servicios.",
     features: [

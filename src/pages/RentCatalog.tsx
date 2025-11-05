@@ -25,6 +25,7 @@ import localGandhi1 from "@/assets/local-gandhi-1.jpg";
 import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
 import oficinaPhCondesa1 from "@/assets/oficina-ph-1.jpg";
 import oficinaCondesa16_1 from "@/assets/oficina-condesa-16-1.jpg";
+import oficinaCondesa16_2 from "@/assets/oficina-condesa-16-2.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -160,7 +161,7 @@ const RentCatalog = () => {
       area: "180 m²",
       bedrooms: 0,
       bathrooms: 2,
-      imageUrl: oficinaCondesa16_1,
+      imageUrl: oficinaCondesa16_2,
       featured: true
     },
   ];
