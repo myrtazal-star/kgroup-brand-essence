@@ -99,6 +99,14 @@ import oficinaPhCondesa7 from "@/assets/oficina-ph-7.jpg";
 import oficinaPhCondesa8 from "@/assets/oficina-ph-8.jpg";
 import oficinaPhCondesa9 from "@/assets/oficina-ph-9.jpg";
 import oficinaPhCondesa10 from "@/assets/oficina-ph-10.jpg";
+import oficinaCondesa16_1 from "@/assets/oficina-condesa-16-1.jpg";
+import oficinaCondesa16_2 from "@/assets/oficina-condesa-16-2.jpg";
+import oficinaCondesa16_3 from "@/assets/oficina-condesa-16-3.jpg";
+import oficinaCondesa16_4 from "@/assets/oficina-condesa-16-4.jpg";
+import oficinaCondesa16_5 from "@/assets/oficina-condesa-16-5.jpg";
+import oficinaCondesa16_6 from "@/assets/oficina-condesa-16-6.jpg";
+import oficinaCondesa16_7 from "@/assets/oficina-condesa-16-7.jpg";
+import oficinaCondesa16_8 from "@/assets/oficina-condesa-16-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -503,6 +511,42 @@ const propertiesData = {
     ],
     gallery: [oficinaPhCondesa1, oficinaPhCondesa2, oficinaPhCondesa3, oficinaPhCondesa4, oficinaPhCondesa5, oficinaPhCondesa6, oficinaPhCondesa7, oficinaPhCondesa8, oficinaPhCondesa9, oficinaPhCondesa10],
     youtubeVideoId: undefined
+  },
+  "r17": {
+    id: "r17",
+    title: "Oficina en renta – Condesa, Av. Tamaulipas | Piso 16",
+    location: "Av. Tamaulipas, Condesa, CDMX",
+    price: "$50,000",
+    priceType: "Renta mensual + IVA",
+    area: "180 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 2,
+    imageUrl: oficinaCondesa16_1,
+    featured: true,
+    description: "Espacio moderno, funcional y con una ubicación privilegiada en el corazón de la Condesa. Esta oficina de 180 m² combina practicidad, iluminación natural y un ambiente ideal para equipos profesionales. Ideal para agencias, despachos o empresas que buscan una imagen profesional y una ubicación estratégica, rodeada de cafeterías, restaurantes y servicios.",
+    features: [
+      "180 m² de espacio funcional",
+      "Ubicación: Piso 16 con excelentes vistas",
+      "2 cajones de estacionamiento incluidos",
+      "4 oficinas privadas equipadas",
+      "Sala de juntas totalmente equipada",
+      "Baños para hombres y mujeres",
+      "Iluminación natural en todos los espacios",
+      "Diseño moderno y contemporáneo"
+    ],
+    amenities: [
+      "Vistas panorámicas desde el piso 16",
+      "Oficinas privadas con luz natural",
+      "Estacionamiento incluido (2 lugares)",
+      "Sala de juntas profesional",
+      "Baños separados por género",
+      "Ubicación premium en Av. Tamaulipas",
+      "Cercano a cafeterías y restaurantes",
+      "Zona con alta plusvalía y conectividad"
+    ],
+    gallery: [oficinaCondesa16_1, oficinaCondesa16_2, oficinaCondesa16_3, oficinaCondesa16_4, oficinaCondesa16_5, oficinaCondesa16_6, oficinaCondesa16_7, oficinaCondesa16_8],
+    youtubeVideoId: undefined
   }
 };
 const PropertyDetails = () => {
@@ -519,7 +563,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r7", "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15", "r16"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r7", "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15", "r16", "r17"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

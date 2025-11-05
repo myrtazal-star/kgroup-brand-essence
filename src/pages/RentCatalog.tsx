@@ -24,6 +24,7 @@ import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
 import localGandhi1 from "@/assets/local-gandhi-1.jpg";
 import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
 import oficinaPhCondesa1 from "@/assets/oficina-ph-1.jpg";
+import oficinaCondesa16_1 from "@/assets/oficina-condesa-16-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -149,6 +150,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: oficinaPhCondesa1,
+      featured: true
+    },
+    {
+      id: "r17",
+      title: "Oficina en renta – Condesa, Av. Tamaulipas | Piso 16",
+      location: "Av. Tamaulipas, Condesa, CDMX",
+      price: "$50,000/mes + IVA",
+      area: "180 m²",
+      bedrooms: 0,
+      bathrooms: 2,
+      imageUrl: oficinaCondesa16_1,
       featured: true
     },
   ];
