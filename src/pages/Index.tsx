@@ -12,7 +12,7 @@ import {
 import heroProperty from "@/assets/hero-property.jpg";
 import oficinaPN1 from "@/assets/oficina-pn-1.jpg";
 import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
-import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
+
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
@@ -37,17 +37,6 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 2,
       imageUrl: localMasaryk1,
-      featured: true
-    },
-    {
-      id: "r5",
-      title: "Oficina Chapultepec",
-      location: "Chapultepec",
-      price: "$48,000/mes + IVA",
-      area: "90 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaChapultepec1,
       featured: true
     }
   ];
