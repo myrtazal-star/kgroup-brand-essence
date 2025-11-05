@@ -51,7 +51,7 @@ export const PropertyCard = ({
         <div className="p-6 space-y-4">
           <div className="space-y-2">
             <h3 className="text-heading font-medium group-hover:text-muted-foreground transition-colors">
-              {title.includes('Oficina') ? 'Oficina' : title.split(' ')[0]}
+              {title.includes('amueblada') ? 'Oficina amueblada' : title.includes('Oficina') ? 'Oficina' : title.split(' ')[0]}
             </h3>
             <div className="flex items-center gap-1 text-muted-foreground text-caption">
               <MapPin className="w-3 h-3" />
