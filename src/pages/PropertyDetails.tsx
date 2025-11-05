@@ -107,6 +107,8 @@ import oficinaCondesa16_5 from "@/assets/oficina-condesa-16-5.jpg";
 import oficinaCondesa16_6 from "@/assets/oficina-condesa-16-6.jpg";
 import oficinaCondesa16_7 from "@/assets/oficina-condesa-16-7.jpg";
 import oficinaCondesa16_8 from "@/assets/oficina-condesa-16-8.jpg";
+import oficinaCondesa16_9 from "@/assets/oficina-condesa-16-9.jpg";
+import oficinaCondesa16_10 from "@/assets/oficina-condesa-16-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -545,7 +547,7 @@ const propertiesData = {
       "Cercano a cafeterías y restaurantes",
       "Zona con alta plusvalía y conectividad"
     ],
-    gallery: [oficinaCondesa16_1, oficinaCondesa16_2, oficinaCondesa16_3, oficinaCondesa16_4, oficinaCondesa16_5, oficinaCondesa16_6, oficinaCondesa16_7, oficinaCondesa16_8],
+    gallery: [oficinaCondesa16_1, oficinaCondesa16_2, oficinaCondesa16_3, oficinaCondesa16_4, oficinaCondesa16_5, oficinaCondesa16_6, oficinaCondesa16_7, oficinaCondesa16_8, oficinaCondesa16_9, oficinaCondesa16_10],
     youtubeVideoId: undefined
   }
 };
