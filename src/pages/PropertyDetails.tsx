@@ -129,21 +129,21 @@ const propertiesData = {
   },
   "r4": {
     id: "r4",
-    title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
+    title: "Oficina en Prado Norte",
     location: "Lomas de Chapultepec, Prado Norte",
-    price: "$70,000",
+    price: "$60,000",
     priceType: "Renta mensual",
-    area: "140 m²",
+    area: "103 m²",
     bedrooms: 0,
     bathrooms: 1,
     parking: 2,
     imageUrl: oficinaPn1,
     featured: false,
-    description: "Oficina amueblada de 140 m², ubicada en una casa histórica adaptada para negocios de alto nivel. Cuenta con 6 espacios de trabajo, 4 privados, 1 baño privado, terraza y cocina equipada. El edificio cuenta con sala de juntas, baños en el primer piso y cocina. Además, dispone de 2 cajones de estacionamiento techados y seguridad 24 horas. A pasos de Paseo de la Reforma y rodeada de restaurantes, despachos y embajadas. Ideal para abogados, arquitectos, consultores o firmas corporativas que buscan prestigio y ubicación.",
-    features: ["Oficina amueblada", "140 m²", "6 espacios de trabajo", "4 privados", "1 baño privado", "Terraza", "Cocina equipada", "Sala de juntas en edificio", "Casa histórica adaptada", "2 cajones techados"],
-    amenities: ["Seguridad 24/7", "A pasos de Paseo de la Reforma", "Rodeada de restaurantes", "Zona de despachos y embajadas", "Ideal para profesionales"],
-    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6, oficinaPn7, oficinaPn8, oficinaPn9, oficinaPn10],
-    youtubeVideoId: undefined
+    description: "Oficina nueva en renta. 103 m2, 2 cajones de estacionamiento, vigilancia 24/7. Puedes hacer las adecuaciones que desees, seguridad y cámaras 24 hrs. Ubicación privelegiada en Prado Norte a 5 min del Auditorio Nacional, rodeado de restaurantes de lujo y negocios de alto nivel.",
+    features: ["Oficina nueva", "2 cajones de estacionamiento", "Vigilancia 24/7", "Seguridad y cámaras 24 hrs", "Adecuaciones personalizadas", "Piso 2"],
+    amenities: ["Seguridad 24 horas", "Oficina"],
+    gallery: [oficinaPn1, oficinaPn2, oficinaPn3, oficinaPn4, oficinaPn5, oficinaPn6],
+    youtubeVideoId: "Qb3MgfN1kgQ"
   },
   "r5": {
     id: "r5",
@@ -333,6 +333,24 @@ const propertiesData = {
     gallery: [localEscobedo1, localEscobedo2, localEscobedo3, localEscobedo4, localEscobedo5, localEscobedo6, localEscobedo7, localEscobedo8],
     youtubeVideoId: undefined
   },
+  "r13": {
+    id: "r13",
+    title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
+    location: "Lomas de Chapultepec, Prado Norte",
+    price: "$70,000",
+    priceType: "Renta mensual",
+    area: "140 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 2,
+    imageUrl: oficinaPn7,
+    featured: false,
+    description: "Oficina amueblada de 140 m², ubicada en una casa histórica adaptada para negocios de alto nivel. Cuenta con 6 espacios de trabajo, 4 privados, 1 baño, terraza y cocina equipada. Además, dispone de 2 cajones de estacionamiento techados y seguridad 24 horas. A pasos de Paseo de la Reforma y rodeada de restaurantes, despachos y embajadas. Ideal para abogados, arquitectos, consultores o firmas corporativas que buscan prestigio y ubicación.",
+    features: ["Oficina amueblada", "140 m²", "6 espacios de trabajo", "4 privados", "1 baño", "Terraza", "Cocina equipada", "Casa histórica adaptada", "2 cajones techados"],
+    amenities: ["Seguridad 24/7", "A pasos de Paseo de la Reforma", "Rodeada de restaurantes", "Zona de despachos y embajadas", "Ideal para profesionales"],
+    gallery: [oficinaPn7, oficinaPn8, oficinaPn9, oficinaPn10],
+    youtubeVideoId: undefined
+  },
   // Propiedades en Venta
   "s1": {
     id: "s1",
@@ -403,7 +421,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10", "r11", "r12"];
+  const rentalPropertyIds = ["r1", "r2", "r3", "r4", "r5", "r7", "r8", "r9", "r10", "r11", "r12", "r13"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

@@ -14,6 +14,7 @@ import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
 import rentaMitikah from "@/assets/renta-mitikah.jpg";
 import deptoArquimedes from "@/assets/depto-arquimedes-polanco.jpg";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
+import oficinaPn7 from "@/assets/oficina-pn-7.jpg";
 import oficinaCh1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
@@ -47,10 +48,10 @@ const RentCatalog = () => {
     },
     {
       id: "r4",
-      title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
+      title: "Oficina en Prado Norte",
       location: "Lomas de Chapultepec, Prado Norte",
-      price: "$70,000/mes",
-      area: "140 m²",
+      price: "$60,000/mes",
+      area: "103 m²",
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaPn1
@@ -114,6 +115,16 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: localEscobedo1
+    },
+    {
+      id: "r13",
+      title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
+      location: "Lomas de Chapultepec, Prado Norte",
+      price: "$70,000/mes",
+      area: "140 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPn7
     },
   ];
 
