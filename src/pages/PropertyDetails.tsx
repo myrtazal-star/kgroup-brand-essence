@@ -79,6 +79,14 @@ import localGandhi5 from "@/assets/local-gandhi-5.jpg";
 import localGandhi6 from "@/assets/local-gandhi-6.jpg";
 import localGandhi7 from "@/assets/local-gandhi-7.jpg";
 import localGandhi8 from "@/assets/local-gandhi-8.jpg";
+import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
+import oficinaLomas2 from "@/assets/oficina-lomas-2.jpg";
+import oficinaLomas3 from "@/assets/oficina-lomas-3.jpg";
+import oficinaLomas4 from "@/assets/oficina-lomas-4.jpg";
+import oficinaLomas5 from "@/assets/oficina-lomas-5.jpg";
+import oficinaLomas6 from "@/assets/oficina-lomas-6.jpg";
+import oficinaLomas7 from "@/assets/oficina-lomas-7.jpg";
+import oficinaLomas8 from "@/assets/oficina-lomas-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -412,6 +420,40 @@ const propertiesData = {
       "Dirección corporativa de alto nivel"
     ],
     gallery: [oficinaBegrand1, oficinaBegrand2, oficinaBegrand3, oficinaBegrand4, oficinaBegrand5, oficinaBegrand6, oficinaBegrand7, oficinaBegrand8, oficinaBegrand9, oficinaBegrand10],
+    youtubeVideoId: undefined
+  },
+  "r15": {
+    id: "r15",
+    title: "Oficina en Lomas de Chapultepec – ubicación premium CDMX",
+    location: "Lomas de Chapultepec, CDMX",
+    price: "$76,500",
+    priceType: "Renta mensual + IVA",
+    area: "88 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaLomas1,
+    featured: true,
+    description: "Oficina moderna de 88 m², ideal para empresas que buscan un espacio ejecutivo con seguridad y excelente ubicación. Perfecta para despachos, startups o marcas que valoran imagen, comodidad y seguridad. Ubicación estratégica con acceso rápido a zonas corporativas, comercios y vías principales.",
+    features: [
+      "1 cajón de estacionamiento incluido",
+      "Seguridad 24/7 (primer filtro)",
+      "Recepción profesional (segundo filtro)",
+      "Mantenimiento incluido",
+      "Agua incluida",
+      "Espacio ejecutivo moderno",
+      "Ubicación premium en Lomas de Chapultepec"
+    ],
+    amenities: [
+      "Luz e internet no incluidos",
+      "Seguridad con doble filtro",
+      "Recepción corporativa",
+      "Mantenimiento del edificio",
+      "Estacionamiento privado",
+      "Acceso a vías principales",
+      "Cerca de zonas corporativas"
+    ],
+    gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8],
     youtubeVideoId: undefined
   }
 };

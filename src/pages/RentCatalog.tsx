@@ -22,6 +22,7 @@ import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
 import localGandhi1 from "@/assets/local-gandhi-1.jpg";
+import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -125,6 +126,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: localGandhi1,
+      featured: true
+    },
+    {
+      id: "r15",
+      title: "Oficina en Lomas de Chapultepec – ubicación premium CDMX",
+      location: "Lomas de Chapultepec, CDMX",
+      price: "$76,500/mes + IVA",
+      area: "88 m²",
+      bedrooms: 1,
+      bathrooms: 1,
+      imageUrl: oficinaLomas1,
       featured: true
     },
   ];
