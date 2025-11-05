@@ -165,7 +165,7 @@ const Index = () => {
                 asChild
               >
                 <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
-                  CONTACT KIRA
+                  Contact
                 </a>
               </Button>
             </div>
