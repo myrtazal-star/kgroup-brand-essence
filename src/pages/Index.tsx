@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import heroProperty from "@/assets/oficina-condesa-16-2.jpg";
+import heroProperty from "@/assets/hero-building.jpg";
 import oficinaPN1 from "@/assets/oficina-pn-1.jpg";
 import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 
