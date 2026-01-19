@@ -42,11 +42,11 @@ const Index = () => {
   ];
 
   const zonas = [
-    { name: "Polanco", description: "Luxury corporate district" },
-    { name: "Reforma – Anzures", description: "Iconic business corridor" },
-    { name: "Santa Fe", description: "Modern business hub" },
-    { name: "Del Valle", description: "Perfect price-location balance" },
-    { name: "Roma – Condesa", description: "Creative epicenter" }
+    { name: "Polanco", description: "Distrito corporativo de lujo" },
+    { name: "Reforma – Anzures", description: "Corredor de negocios icónico" },
+    { name: "Santa Fe", description: "Centro empresarial moderno" },
+    { name: "Del Valle", description: "Balance perfecto precio-ubicación" },
+    { name: "Roma – Condesa", description: "Epicentro creativo" }
   ];
 
   return (
@@ -60,25 +60,25 @@ const Index = () => {
             <KGroupLogo variant="full" size="md" />
             
             <div className="hidden lg:flex items-center gap-8">
-              <Link to="/" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Home</Link>
+              <Link to="/" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Inicio</Link>
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">
-                  Properties
+                  Propiedades
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="glass shadow-premium bg-background">
                   <DropdownMenuItem asChild>
-                    <Link to="/rent-catalog" className="cursor-pointer uppercase tracking-wider">Rent</Link>
+                    <Link to="/rent-catalog" className="cursor-pointer uppercase tracking-wider">Renta</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/sale-catalog" className="cursor-pointer uppercase tracking-wider">Sale</Link>
+                    <Link to="/sale-catalog" className="cursor-pointer uppercase tracking-wider">Venta</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Services</Link>
+              <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Servicios</Link>
               
-              <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Join KGroup</Link>
-              <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Contact</Link>
+              <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Únete a KGroup</Link>
+              <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Contacto</Link>
             </div>
 
 
@@ -126,7 +126,7 @@ const Index = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 glass tech-border text-sm mb-6 animate-slide-in-left">
               <Building2 className="w-4 h-4 text-accent" />
-              <span className="font-medium tracking-wider uppercase text-xs">Commercial Real Estate CDMX</span>
+              <span className="font-medium tracking-wider uppercase text-xs">Bienes Raíces Comerciales CDMX</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-wide animate-fade-in-up">
@@ -146,7 +146,7 @@ const Index = () => {
                 asChild
               >
                 <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
-                  VIEW PROPERTIES
+                  VER PROPIEDADES
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
@@ -157,7 +157,7 @@ const Index = () => {
                 asChild
               >
                 <a href="https://wa.me/525560808129?text=Hola%2C%20quiero%20información%20sobre%20espacios%20comerciales%20en%20CDMX" target="_blank" rel="noopener noreferrer">
-                  Contact
+                  Contactar
                 </a>
               </Button>
             </div>
@@ -187,28 +187,28 @@ const Index = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-                FIND YOUR <span className="gradient-text">IDEAL SPACE</span>
+                ENCUENTRA TU <span className="gradient-text">ESPACIO IDEAL</span>
               </h2>
               <p className="text-muted-foreground">
-                Filter by your specific needs
+                Filtra según tus necesidades específicas
               </p>
             </div>
 
             <div className="glass tech-border p-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
                 <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
-                  <option>Type of Space</option>
-                  <option>Office</option>
-                  <option>Retail</option>
-                  <option>Land</option>
+                  <option>Tipo de Espacio</option>
+                  <option>Oficina</option>
+                  <option>Local Comercial</option>
+                  <option>Terreno</option>
                 </select>
                 <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
-                  <option>Operation</option>
-                  <option>Rent</option>
-                  <option>Sale</option>
+                  <option>Operación</option>
+                  <option>Renta</option>
+                  <option>Venta</option>
                 </select>
                 <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
-                  <option>Zone</option>
+                  <option>Zona</option>
                   <option>Polanco</option>
                   <option>Reforma-Anzures</option>
                   <option>Santa Fe</option>
@@ -216,7 +216,7 @@ const Index = () => {
                   <option>Roma-Condesa</option>
                 </select>
                 <select className="p-4 bg-background tech-border hover:border-accent transition-all font-medium uppercase tracking-wider text-sm">
-                  <option>Budget</option>
+                  <option>Presupuesto</option>
                   <option>$0 - $50,000</option>
                   <option>$50,000 - $100,000</option>
                   <option>$100,000+</option>
@@ -231,7 +231,7 @@ const Index = () => {
               <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech uppercase tracking-wider" size="lg" asChild>
                 <Link to="/rent-catalog">
                   <Search className="w-5 h-5 mr-2" />
-                  Search Properties
+                  Buscar Propiedades
                 </Link>
               </Button>
             </div>
@@ -244,32 +244,21 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              PREMIUM <span className="gradient-text">ZONES</span> IN CDMX
+              ZONAS <span className="gradient-text">PREMIUM</span> EN CDMX
             </h2>
             <p className="text-muted-foreground">
-              The best locations for your business
+              Las mejores ubicaciones para tu negocio
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {zonas.map((zona) => (
-              <Link key={zona.name} to="/zonas">
-                <div className="glass tech-border p-6 hover:shadow-tech transition-all group cursor-pointer hover:scale-105">
-                  <MapPin className="w-8 h-8 mb-3 text-accent transition-transform group-hover:translate-y-[-2px]" />
-                  <h3 className="text-lg font-semibold mb-2">{zona.name}</h3>
-                  <p className="text-sm text-muted-foreground">{zona.description}</p>
-                </div>
-              </Link>
+              <div key={zona.name} className="glass tech-border p-6 hover:shadow-tech transition-all group cursor-pointer hover:scale-105">
+                <MapPin className="w-8 h-8 mb-3 text-accent transition-transform group-hover:translate-y-[-2px]" />
+                <h3 className="text-lg font-semibold mb-2">{zona.name}</h3>
+                <p className="text-sm text-muted-foreground">{zona.description}</p>
+              </div>
             ))}
-          </div>
-
-          <div className="text-center">
-            <Button variant="outline" size="lg" className="tech-border font-semibold hover:bg-accent/10 uppercase tracking-wider" asChild>
-              <Link to="/zonas">
-                View All Zones
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
@@ -279,10 +268,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              FEATURED <span className="gradient-text">PROPERTIES</span>
+              PROPIEDADES <span className="gradient-text">DESTACADAS</span>
             </h2>
             <p className="text-muted-foreground">
-              Commercial spaces available now
+              Espacios comerciales disponibles ahora
             </p>
           </div>
 
@@ -297,7 +286,7 @@ const Index = () => {
           <div className="text-center">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech uppercase tracking-wider" asChild>
               <Link to="/rent-catalog">
-                View All Properties
+                Ver Todas las Propiedades
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
@@ -310,10 +299,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              HOW <span className="gradient-text">WE WORK</span>
+              CÓMO <span className="gradient-text">TRABAJAMOS</span>
             </h2>
             <p className="text-muted-foreground">
-              Simple and effective process
+              Proceso simple y efectivo
             </p>
           </div>
 
@@ -322,9 +311,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center mb-6 font-bold text-xl">
                 1
               </div>
-              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Brief</h3>
+              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Briefing</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We understand your needs: budget, location, size and features of the ideal space.
+                Entendemos tus necesidades: presupuesto, ubicación, tamaño y características del espacio ideal.
               </p>
             </div>
 
@@ -332,9 +321,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center mb-6 font-bold text-xl">
                 2
               </div>
-              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Visits</h3>
+              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Visitas</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We present the best options and coordinate visits to the selected spaces.
+                Presentamos las mejores opciones y coordinamos visitas a los espacios seleccionados.
               </p>
             </div>
 
@@ -342,9 +331,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center mb-6 font-bold text-xl">
                 3
               </div>
-              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Negotiation & Closing</h3>
+              <h3 className="text-xl font-semibold mb-4 uppercase tracking-wide">Negociación y Cierre</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We negotiate the best terms and manage all necessary documentation.
+                Negociamos las mejores condiciones y gestionamos toda la documentación necesaria.
               </p>
             </div>
           </div>
@@ -411,11 +400,11 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">
-              SPACES THAT MAKE<br/>
-              <span className="gradient-text">YOUR BUSINESS GROW</span>
+              ESPACIOS QUE HACEN<br/>
+              <span className="gradient-text">CRECER TU NEGOCIO</span>
             </h2>
             <p className="text-xl text-background/80 mb-12">
-              Tell me what you're looking for — I'll send 3 commercial options today.
+              Cuéntame qué buscas — te envío 3 opciones comerciales hoy mismo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -434,7 +423,7 @@ const Index = () => {
                 asChild
               >
                 <Link to="/contacto">
-                  Contact
+                  Contacto
                 </Link>
               </Button>
             </div>
