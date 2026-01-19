@@ -77,6 +77,7 @@ const Index = () => {
               </DropdownMenu>
               <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Services</Link>
               <Link to="/zonas" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Zones</Link>
+              <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Join KGroup</Link>
               <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Contact</Link>
             </div>
 
