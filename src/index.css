@@ -244,7 +244,6 @@ All colors MUST be HSL.
     background: hsl(var(--glass-bg));
     box-shadow: 0 8px 32px 0 hsl(var(--shadow-tech));
     border-color: hsl(var(--accent) / 0.3);
-    transform: translateY(-2px);
   }
 
   .glass-dark {
@@ -268,10 +267,17 @@ All colors MUST be HSL.
     border: 1px solid hsl(var(--accent));
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
   }
 
   .tech-border:hover::before {
     opacity: 1;
+  }
+
+  .tech-border > * {
+    position: relative;
+    z-index: 1;
   }
 
   /* Animated Gradient Text */

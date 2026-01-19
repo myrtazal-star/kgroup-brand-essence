@@ -50,6 +50,7 @@ ${formData.mensaje ? `Mensaje: ${formData.mensaje}` : ''}`;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    console.log("Input changed:", e.target.name, e.target.value);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -146,11 +147,11 @@ ${formData.mensaje ? `Mensaje: ${formData.mensaje}` : ''}`;
           <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12">
             
             {/* Contact Form - Larger */}
-            <div className="lg:col-span-3 glass tech-border p-8 lg:p-10">
+            <div className="lg:col-span-3 bg-card border border-border rounded-lg p-8 lg:p-10 relative z-20">
               <h2 className="text-2xl font-bold mb-2">Solicita Asesoría Gratuita</h2>
               <p className="text-muted-foreground mb-8">Completa el formulario y te contactaremos en menos de 24 horas</p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-30">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="nombre">Nombre completo *</Label>
