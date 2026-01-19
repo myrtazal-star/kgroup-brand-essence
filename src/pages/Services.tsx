@@ -103,9 +103,9 @@ ${validatedData.message ? `Mensaje: ${validatedData.message}` : ''}`;
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
       <WhatsAppButton />
-      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none" />
+      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none z-0" />
       
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
@@ -145,7 +145,7 @@ ${validatedData.message ? `Mensaje: ${validatedData.message}` : ''}`;
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 pt-32 pb-20">
+      <main className="relative z-20 pt-32 pb-20">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             {/* Hero */}
