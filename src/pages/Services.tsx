@@ -65,7 +65,7 @@ ${formData.mensaje ? `Mensaje: ${formData.mensaje}` : ''}`;
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
       <WhatsAppButton />
       
       {/* Header */}
@@ -141,7 +141,7 @@ ${formData.mensaje ? `Mensaje: ${formData.mensaje}` : ''}`;
       </section>
 
       {/* Main Content: Form + Contact Info */}
-      <section className="py-16">
+      <section className="py-16 relative z-10">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12">
             
