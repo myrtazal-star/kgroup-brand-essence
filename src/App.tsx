@@ -12,9 +12,7 @@ import Services from "./pages/Services";
 import ConsultationForm from "./pages/ConsultationForm";
 import PropertyDetails from "./pages/PropertyDetails";
 import NotFound from "./pages/NotFound";
-
 import Nosotros from "./pages/Nosotros";
-import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +30,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           
           <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/contacto" element={<Services />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
