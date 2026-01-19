@@ -131,24 +131,6 @@ const propertiesData = {
     gallery: ["/src/assets/block-renta.jpg", "/src/assets/property-r1-1.jpg", "/src/assets/property-r1-2.jpg", "/src/assets/property-r1-3.jpg", "/src/assets/property-r1-4.jpg", "/src/assets/property-r1-5.jpg", "/src/assets/property-r1-6.jpg", "/src/assets/property-r1-7.jpg"],
     youtubeVideoId: undefined
   },
-  "r2": {
-    id: "r2",
-    title: "Oficina PH de 2 niveles en Polanco",
-    location: "Homero, Polanco",
-    price: "$88,000",
-    priceType: "Renta mensual",
-    area: "200 m²",
-    bedrooms: 6,
-    bathrooms: 1.5,
-    parking: 2,
-    imageUrl: oficinaPh,
-    featured: false,
-    description: "Moderna oficina en penthouse de dos niveles ubicada en Polanco. Ideal para empresas creativas que buscan un espacio único y bien ubicado con excelente conectividad.",
-    features: ["2 niveles", "Iluminación natural", "6 espacios de trabajo", "Cocina", "2.5 baños", "Consierge y seguridad 24/7", "Piso 7 PH", "Acepta mascotas"],
-    amenities: ["Seguridad", "Elevador", "Estacionamiento", "Recepción"],
-    gallery: [oficinaPh, oficinaPh1, oficinaPh2, oficinaPh3, oficinaPh4, oficinaPh5],
-    youtubeVideoId: "z43UebPM2B4"
-  },
   "r3": {
     id: "r3",
     title: "Renta en Mitikah",
@@ -323,36 +305,6 @@ const propertiesData = {
       "Conectividad excepcional"
     ],
     gallery: [oficinaHomero1, oficinaHomero2, oficinaHomero3, oficinaHomero4, oficinaHomero5, oficinaHomero6, oficinaHomero7, oficinaHomero8],
-    youtubeVideoId: undefined
-  },
-  "r12": {
-    id: "r12",
-    title: "Espacio comercial en Mariano Escobedo, Polanco",
-    location: "Mariano Escobedo, Polanco",
-    price: "$48,000",
-    priceType: "Renta mensual + IVA",
-    area: "120 m²",
-    bedrooms: 0,
-    bathrooms: 1,
-    parking: 1,
-    imageUrl: localEscobedo1,
-    featured: false,
-    description: "Espacio comercial ubicado en Mariano Escobedo, una de las principales avenidas de Polanco. Ideal para oficinas, consultorios o comercios que buscan una ubicación estratégica con excelente visibilidad y conectividad en una de las zonas más exclusivas de CDMX.",
-    features: [
-      "1 cajón de estacionamiento",
-      "Ubicación estratégica en Mariano Escobedo",
-      "Espacio versátil y funcional",
-      "Excelente iluminación natural",
-      "Zona de alto tráfico peatonal y vehicular"
-    ],
-    amenities: [
-      "Ubicación premium en Polanco",
-      "Cerca de restaurantes y comercios",
-      "Excelente conectividad",
-      "Zona exclusiva de negocios",
-      "Alta visibilidad"
-    ],
-    gallery: [localEscobedo1, localEscobedo2, localEscobedo3, localEscobedo4, localEscobedo5, localEscobedo6, localEscobedo7, localEscobedo8],
     youtubeVideoId: undefined
   },
   "r13": {

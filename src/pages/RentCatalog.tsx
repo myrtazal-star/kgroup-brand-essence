@@ -41,16 +41,6 @@ const RentCatalog = () => {
       featured: true
     },
     {
-      id: "r2",
-      title: "Oficina en Polanco PH 2 niveles",
-      location: "Homero, Polanco",
-      price: "$88,000/mes",
-      area: "200 m²",
-      bedrooms: 6,
-      bathrooms: 1.5,
-      imageUrl: oficinaPH
-    },
-    {
       id: "r7",
       title: "Oficina en Polanco, Ejercito Nacional",
       location: "Ejercito Nacional, Polanco",
@@ -99,16 +89,6 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaHomero1
-    },
-    {
-      id: "r12",
-      title: "Espacio comercial en Mariano Escobedo, Polanco",
-      location: "Mariano Escobedo, Polanco",
-      price: "$48,000/mes + IVA",
-      area: "120 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: localEscobedo1
     },
     {
       id: "r13",
