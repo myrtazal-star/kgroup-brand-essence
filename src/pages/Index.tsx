@@ -134,10 +134,9 @@ const Index = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Servicios</Link>
+              <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Asesoría</Link>
               
               <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Únete a KGroup</Link>
-              <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Contacto</Link>
             </div>
 
 
@@ -156,13 +155,10 @@ const Index = () => {
                   <Link to="/sale-catalog">Venta</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services">Servicios</Link>
+                  <Link to="/services">Asesoría</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/join-advisors">Únete a KGroup</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/contacto">Contacto</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
