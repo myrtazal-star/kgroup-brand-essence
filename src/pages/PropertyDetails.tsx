@@ -307,24 +307,6 @@ const propertiesData = {
     gallery: [oficinaHomero1, oficinaHomero2, oficinaHomero3, oficinaHomero4, oficinaHomero5, oficinaHomero6, oficinaHomero7, oficinaHomero8],
     youtubeVideoId: undefined
   },
-  "r13": {
-    id: "r13",
-    title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
-    location: "Lomas de Chapultepec, Prado Norte",
-    price: "$70,000",
-    priceType: "Renta mensual",
-    area: "140 m²",
-    bedrooms: 0,
-    bathrooms: 1,
-    parking: 2,
-    imageUrl: oficinaPn7,
-    featured: false,
-    description: "Oficina amueblada de 140 m², ubicada en una casa histórica adaptada para negocios de alto nivel. Cuenta con 6 espacios de trabajo, 4 privados, 1 baño, terraza y cocina equipada. Además, dispone de 2 cajones de estacionamiento techados y seguridad 24 horas. A pasos de Paseo de la Reforma y rodeada de restaurantes, despachos y embajadas. Ideal para abogados, arquitectos, consultores o firmas corporativas que buscan prestigio y ubicación.",
-    features: ["Oficina amueblada", "140 m²", "6 espacios de trabajo", "4 privados", "1 baño", "Terraza", "Cocina equipada", "Casa histórica adaptada", "2 cajones techados"],
-    amenities: ["Seguridad 24/7", "A pasos de Paseo de la Reforma", "Rodeada de restaurantes", "Zona de despachos y embajadas", "Ideal para profesionales"],
-    gallery: [oficinaPn7, oficinaPn8, oficinaPn9, oficinaPn10],
-    youtubeVideoId: undefined
-  },
   "r14": {
     id: "r14",
     title: "Local comercial en renta en Campos Elíseos, Polanco",
@@ -430,78 +412,6 @@ const propertiesData = {
     gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8, oficinaLomas9, oficinaLomas10],
     youtubeVideoId: undefined
   },
-  "r16": {
-    id: "r16",
-    title: "Penthouse en Condesa Oficina 2 niveles",
-    location: "Av. Tamaulipas, Condesa, CDMX",
-    price: "$90,000",
-    priceType: "Renta mensual + IVA",
-    area: "360 m²",
-    bedrooms: 0,
-    bathrooms: 3,
-    parking: 0,
-    imageUrl: oficinaPhCondesa1,
-    featured: true,
-    description: "Vive la experiencia de trabajar en lo más alto de la Condesa. Este espectacular penthouse corporativo de 360 m², distribuido en dos niveles, combina elegancia, amplitud y vistas inigualables. Ideal para agencias creativas, despachos o marcas que buscan un espacio icónico con imagen de alto nivel en el corazón de la Condesa.",
-    features: [
-      "360 m² distribuidos en dos niveles",
-      "Ubicación: Piso 20 (Penthouse)",
-      "Terraza privada con vista panorámica",
-      "4 oficinas privadas en nivel superior",
-      "7 espacios independientes en nivel inferior",
-      "Sala de juntas equipada",
-      "Baños para hombres y mujeres",
-      "Diseño funcional y luminoso"
-    ],
-    amenities: [
-      "Terraza con vistas panorámicas de la ciudad",
-      "Dos niveles conectados",
-      "Oficinas privadas con excelente iluminación",
-      "Sala de juntas corporativa",
-      "Múltiples espacios de trabajo",
-      "Ubicación premium en Condesa",
-      "Acceso a Av. Tamaulipas",
-      "Zona con alta plusvalía"
-    ],
-    gallery: [oficinaPhCondesa1, oficinaPhCondesa2, oficinaPhCondesa3, oficinaPhCondesa4, oficinaPhCondesa5, oficinaPhCondesa6, oficinaPhCondesa7, oficinaPhCondesa8, oficinaPhCondesa9, oficinaPhCondesa10],
-    youtubeVideoId: undefined
-  },
-  "r17": {
-    id: "r17",
-    title: "Oficina en renta – Condesa, Av. Tamaulipas | Piso 16",
-    location: "Av. Tamaulipas, Condesa, CDMX",
-    price: "$50,000",
-    priceType: "Renta mensual + IVA",
-    area: "180 m²",
-    bedrooms: 0,
-    bathrooms: 2,
-    parking: 2,
-    imageUrl: oficinaCondesa16_2,
-    featured: true,
-    description: "Espacio moderno, funcional y con una ubicación privilegiada en el corazón de la Condesa. Esta oficina de 180 m² combina practicidad, iluminación natural y un ambiente ideal para equipos profesionales. Ideal para agencias, despachos o empresas que buscan una imagen profesional y una ubicación estratégica, rodeada de cafeterías, restaurantes y servicios.",
-    features: [
-      "180 m² de espacio funcional",
-      "Ubicación: Piso 16 con excelentes vistas",
-      "2 cajones de estacionamiento incluidos",
-      "4 oficinas privadas equipadas",
-      "Sala de juntas totalmente equipada",
-      "Baños para hombres y mujeres",
-      "Iluminación natural en todos los espacios",
-      "Diseño moderno y contemporáneo"
-    ],
-    amenities: [
-      "Vistas panorámicas desde el piso 16",
-      "Oficinas privadas con luz natural",
-      "Estacionamiento incluido (2 lugares)",
-      "Sala de juntas profesional",
-      "Baños separados por género",
-      "Ubicación premium en Av. Tamaulipas",
-      "Cercano a cafeterías y restaurantes",
-      "Zona con alta plusvalía y conectividad"
-    ],
-    gallery: [oficinaCondesa16_1, oficinaCondesa16_2, oficinaCondesa16_3, oficinaCondesa16_4, oficinaCondesa16_5, oficinaCondesa16_6, oficinaCondesa16_7, oficinaCondesa16_8, oficinaCondesa16_9, oficinaCondesa16_10],
-    youtubeVideoId: undefined
-  }
 };
 const PropertyDetails = () => {
   const {
@@ -517,7 +427,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r2", "r3", "r7", "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15", "r16", "r17"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r10", "r11", "r14", "r15"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
