@@ -2,7 +2,7 @@ import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MapPin, TrendingUp, Shield, Building2, Search, ArrowRight, ChevronDown } from "lucide-react";
+import { Building2, Search, ArrowRight, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,43 +10,102 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import heroProperty from "@/assets/hero-building.jpg";
-import oficinaPN1 from "@/assets/oficina-pn-1.jpg";
+import blockRenta from "@/assets/block-renta.jpg";
+import oficinaEn1 from "@/assets/oficina-en-1.jpg";
+import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
 import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
+import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
+import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
+import localGandhi1 from "@/assets/local-gandhi-1.jpg";
+import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
-  const featuredProperties = [
+  const allProperties = [
     {
-      id: "r4",
-      title: "Oficina en Prado Norte",
-      location: "Lomas de Chapultepec, Prado Norte",
-      price: "$60,000/mes + IVA",
-      area: "103 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaPN1,
+      id: "r1",
+      title: "Departamento en renta Roma Norte",
+      location: "Durango 262, Roma Norte",
+      price: "$92,000/mes",
+      area: "120 m²",
+      bedrooms: 2,
+      bathrooms: 2,
+      imageUrl: blockRenta,
       featured: true
     },
     {
+      id: "r7",
+      title: "Oficina en Polanco, Ejercito Nacional",
+      location: "Ejercito Nacional, Polanco",
+      price: "$75,000/mes",
+      area: "215 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaEn1
+    },
+    {
       id: "r8",
-      title: "Local comercial en Masaryk",
-      location: "Avenida Masaryk, Polanco",
-      price: "$80,000/mes + IVA",
-      area: "150 m²",
+      title: "Oficina PH en Polanco – Vista Panorámica",
+      location: "Rubén Darío, Polanco",
+      price: "$46,000/mes + IVA",
+      area: "215 m²",
       bedrooms: 0,
       bathrooms: 2,
-      imageUrl: localMasaryk1,
+      imageUrl: oficinaRd1
+    },
+    {
+      id: "r9",
+      title: "Local Comercial – Av. Masaryk, Polanco",
+      location: "Av. Presidente Masaryk, Polanco",
+      price: "$235,000/mes + IVA",
+      area: "250 m²",
+      bedrooms: 0,
+      bathrooms: 4,
+      imageUrl: localMasaryk1
+    },
+    {
+      id: "r10",
+      title: "Local en Insurgentes",
+      location: "Avenida Insurgentes Sur, CDMX",
+      price: "$60,000/mes + IVA",
+      area: "100 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaInsurgentes1
+    },
+    {
+      id: "r11",
+      title: "Oficina en renta en Homero, Polanco",
+      location: "Homero, Polanco",
+      price: "$45,000/mes + IVA",
+      area: "150 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaHomero1
+    },
+    {
+      id: "r14",
+      title: "Local comercial en Campos Elíseos",
+      location: "Corporativo Gandhi, Polanco",
+      price: "Consultar precio",
+      area: "270 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: localGandhi1,
       featured: true
-    }
-  ];
-
-  const zonas = [
-    { name: "Polanco", description: "Distrito corporativo de lujo" },
-    { name: "Reforma – Anzures", description: "Corredor de negocios icónico" },
-    { name: "Santa Fe", description: "Centro empresarial moderno" },
-    { name: "Del Valle", description: "Balance perfecto precio-ubicación" },
-    { name: "Roma – Condesa", description: "Epicentro creativo" }
+    },
+    {
+      id: "r15",
+      title: "Oficina en Lomas de Chapultepec",
+      location: "Lomas de Chapultepec, CDMX",
+      price: "$76,500/mes + IVA",
+      area: "88 m²",
+      bedrooms: 1,
+      bathrooms: 1,
+      imageUrl: oficinaLomas1,
+      featured: true
+    },
   ];
 
   return (
@@ -239,7 +298,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Todas las Propiedades */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+              NUESTRAS <span className="gradient-text">PROPIEDADES</span>
+            </h2>
+            <p className="text-muted-foreground">
+              Espacios comerciales disponibles en renta
+            </p>
+          </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {allProperties.map((property) => (
+              <div key={property.id} className="group hover:-translate-y-2 transition-all duration-500 hover:shadow-tech">
+                <PropertyCard {...property} />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-tech uppercase tracking-wider" asChild>
+              <Link to="/rent-catalog">
+                Ver Catálogo Completo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="relative border-t border-border bg-background py-xl">
