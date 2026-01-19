@@ -76,17 +76,11 @@ const Index = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               <Link to="/services" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Services</Link>
-              <Link to="/zonas" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Zones</Link>
+              
               <Link to="/join-advisors" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Join KGroup</Link>
               <Link to="/contacto" className="text-sm font-medium hover:text-accent transition-smooth uppercase tracking-wider">Contact</Link>
             </div>
 
-            <Link to="/contacto" className="hidden md:block">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-tech hover:scale-105 transition-all uppercase tracking-wider">
-                Schedule Visit
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild className="lg:hidden">
@@ -104,9 +98,6 @@ const Index = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services">Servicios</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/zonas">Zonas</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/join-advisors">Únete a KGroup</Link>

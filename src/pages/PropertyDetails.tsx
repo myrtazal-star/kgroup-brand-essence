@@ -751,12 +751,6 @@ const PropertyDetails = () => {
                       </a>
                     </Button>
                     
-                    <Button variant="outline" className="w-full" size="lg" asChild>
-                      <Link to="/consultation">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Agendar Visita
-                      </Link>
-                    </Button>
                   </div>
 
                   {/* Quick Info */}
