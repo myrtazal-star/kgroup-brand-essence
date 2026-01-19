@@ -239,29 +239,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Zonas Clave */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              ZONAS <span className="gradient-text">PREMIUM</span> EN CDMX
-            </h2>
-            <p className="text-muted-foreground">
-              Las mejores ubicaciones para tu negocio
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {zonas.map((zona) => (
-              <div key={zona.name} className="glass tech-border p-6 hover:shadow-tech transition-all group cursor-pointer hover:scale-105">
-                <MapPin className="w-8 h-8 mb-3 text-accent transition-transform group-hover:translate-y-[-2px]" />
-                <h3 className="text-lg font-semibold mb-2">{zona.name}</h3>
-                <p className="text-sm text-muted-foreground">{zona.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Últimas Propiedades */}
       <section className="py-20 bg-muted/30">
