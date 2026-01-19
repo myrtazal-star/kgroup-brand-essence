@@ -1,137 +1,91 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronDown, MapPin, TrendingUp, Shield, Users, Phone, Mail, Building, Search, BarChart3, Target, Headphones, Star, Clock } from "lucide-react";
+import { ArrowLeft, ChevronDown, MessageCircle, CheckCircle, Building2, Users, TrendingUp, Clock, Phone, MapPin, Star, ArrowRight } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Services = () => {
-  const mainServices = [
+  const benefits = [
+    "Acceso a propiedades exclusivas no listadas públicamente",
+    "Ahorro de tiempo: te presentamos solo opciones que cumplen tus criterios",
+    "Negociación experta para obtener las mejores condiciones",
+    "Acompañamiento legal y administrativo incluido",
+    "Sin costo para ti — el propietario paga nuestra comisión"
+  ];
+
+  const stats = [
+    { number: "50+", label: "Propiedades Disponibles" },
+    { number: "98%", label: "Clientes Satisfechos" },
+    { number: "24h", label: "Tiempo de Respuesta" },
+    { number: "0", label: "Costo para Ti" }
+  ];
+
+  const steps = [
     {
-      icon: MapPin,
-      title: "Descubrimiento de Propiedades",
-      description: "Acceso exclusivo a listados premium y oportunidades fuera del mercado a través de nuestra extensa red de contactos.",
-      features: [
-        "Propiedades exclusivas no listadas públicamente",
-        "Red de desarrolladores y propietarios premium",
-        "Acceso prioritario a pre-ventas",
-        "Inventario actualizado en tiempo real"
-      ]
+      number: "1",
+      title: "Cuéntanos qué buscas",
+      description: "Zona, presupuesto, tamaño y características de tu espacio ideal."
     },
     {
-      icon: TrendingUp,
-      title: "Análisis de Mercado con IA",
-      description: "Insights basados en datos e inteligencia artificial para optimizar tus decisiones de inversión inmobiliaria.",
-      features: [
-        "Algoritmos de valoración automatizada",
-        "Análisis predictivo de tendencias",
-        "Reportes personalizados de mercado",
-        "Comparativos de precios en tiempo real"
-      ]
+      number: "2",
+      title: "Recibe opciones curadas",
+      description: "En 24 horas te enviamos 3-5 propiedades que cumplen tus criterios."
     },
     {
-      icon: Shield,
-      title: "Servicio Concierge Premium",
-      description: "Acompañamiento integral desde la consulta inicial hasta el cierre y seguimiento post-venta.",
-      features: [
-        "Asesor personal dedicado",
-        "Gestión legal y financiera",
-        "Coordinación de inspecciones",
-        "Seguimiento post-transacción"
-      ]
-    },
-    {
-      icon: Building,
-      title: "Gestión de Inversiones",
-      description: "Estrategias personalizadas para maximizar el retorno de inversión en bienes raíces.",
-      features: [
-        "Portfolio diversificado de propiedades",
-        "Análisis de ROI personalizado",
-        "Gestión de propiedades de renta",
-        "Estrategias de salida optimizadas"
-      ]
+      number: "3",
+      title: "Visita y elige",
+      description: "Coordinamos visitas, negociamos y te acompañamos hasta el cierre."
     }
   ];
 
-  const additionalServices = [
+  const testimonials = [
     {
-      icon: Search,
-      title: "Búsqueda Personalizada",
-      description: "Utilizamos IA para encontrar propiedades que coincidan exactamente con tus criterios específicos."
+      quote: "Encontré mi oficina ideal en Polanco en menos de una semana. Servicio excepcional.",
+      author: "Carlos M.",
+      role: "CEO, Startup Tech"
     },
     {
-      icon: BarChart3,
-      title: "Valuación Automatizada",
-      description: "Tecnología de machine learning para valuaciones precisas y actualizadas del mercado inmobiliario."
+      quote: "Me ahorraron meses de búsqueda. Las opciones que me presentaron eran exactamente lo que necesitaba.",
+      author: "María F.",
+      role: "Directora, Retail"
     },
     {
-      icon: Target,
-      title: "Marketing Digital",
-      description: "Estrategias avanzadas de marketing para vendedores, maximizando la exposición de tu propiedad."
-    },
-    {
-      icon: Headphones,
-      title: "Soporte 24/7",
-      description: "Equipo de soporte técnico y comercial disponible las 24 horas para resolver cualquier consulta."
-    },
-    {
-      icon: Star,
-      title: "Certificación de Calidad",
-      description: "Proceso riguroso de verificación y certificación para garantizar la calidad de cada propiedad."
-    },
-    {
-      icon: Clock,
-      title: "Gestión de Tiempo",
-      description: "Optimización de procesos para reducir tiempos de cierre y agilizar todas las transacciones."
+      quote: "Profesionales, eficientes y conocen perfectamente el mercado de CDMX.",
+      author: "Roberto S.",
+      role: "CFO, Grupo Empresarial"
     }
   ];
 
-  const processSteps = [
-    {
-      step: "01",
-      title: "Consulta Inicial",
-      description: "Reunión personalizada para entender tus necesidades, presupuesto y objetivos específicos."
-    },
-    {
-      step: "02", 
-      title: "Análisis con IA",
-      description: "Nuestros algoritmos analizan el mercado para identificar las mejores oportunidades disponibles."
-    },
-    {
-      step: "03",
-      title: "Presentación de Opciones",
-      description: "Te presentamos una selección curada de propiedades que coinciden perfectamente con tus criterios."
-    },
-    {
-      step: "04",
-      title: "Acompañamiento",
-      description: "Visitas guiadas, negociación, gestión legal y seguimiento hasta la firma del contrato."
-    }
-  ];
+  const handleWhatsAppClick = () => {
+    const message = "Hola, me interesa recibir asesoría para encontrar un espacio comercial en CDMX";
+    const phone = "525560808129";
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Grid Background Pattern */}
-      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none" />
+      <WhatsAppButton />
       
       {/* Header */}
-      <header className="relative z-10 border-b border-border bg-background/95 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <KGroupLogo variant="full" size="md" />
             
-            <nav className="hidden md:flex items-center gap-8 text-caption">
-              <Link to="/" className="hover:text-muted-foreground transition-colors">Home</Link>
+            <nav className="hidden md:flex items-center gap-8 text-sm">
+              <Link to="/" className="hover:text-accent transition-colors uppercase tracking-wider">Inicio</Link>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-1 hover:text-muted-foreground transition-colors">
-                  Properties
+                <DropdownMenuTrigger className="flex items-center gap-1 hover:text-accent transition-colors uppercase tracking-wider">
+                  Propiedades
                   <ChevronDown className="w-3 h-3" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="glass shadow-premium bg-background">
                   <DropdownMenuItem asChild>
                     <Link to="/rent-catalog">Renta</Link>
                   </DropdownMenuItem>
@@ -140,13 +94,14 @@ const Services = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link to="/services" className="text-foreground font-medium">Services</Link>
-              <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
+              <Link to="/services" className="text-accent font-medium uppercase tracking-wider">Asesoría</Link>
+              <Link to="/join-advisors" className="hover:text-accent transition-colors uppercase tracking-wider">Únete a KGroup</Link>
+              <Link to="/contacto" className="hover:text-accent transition-colors uppercase tracking-wider">Contacto</Link>
             </nav>
 
             <Link to="/">
-              <Button variant="minimal" className="group">
-                <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+              <Button variant="outline" size="sm" className="tech-border">
+                <ArrowLeft className="w-4 h-4 mr-2" />
                 Volver
               </Button>
             </Link>
@@ -155,112 +110,167 @@ const Services = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-3xl">
+      <section className="relative pt-32 pb-20 bg-gradient-to-b from-muted/50 to-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-hero font-light text-foreground">
-                Nuestros Servicios
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Soluciones inmobiliarias integrales potenciadas por inteligencia artificial 
-                para brindar una experiencia excepcional a nuestros clientes.
-              </p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 glass tech-border text-sm">
+              <Building2 className="w-4 h-4 text-accent" />
+              <span className="font-medium tracking-wider uppercase text-xs">Asesoría Inmobiliaria Comercial</span>
+            </div>
+            
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              ENCUENTRA TU ESPACIO<br/>
+              <span className="gradient-text">COMERCIAL IDEAL</span><br/>
+              EN CDMX
+            </h1>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Te ayudamos a encontrar la oficina, local o terreno perfecto para tu negocio. 
+              <strong className="text-foreground"> Sin costo para ti.</strong>
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button 
+                size="lg" 
+                className="bg-green-600 hover:bg-green-700 text-white shadow-tech text-lg px-8"
+                onClick={handleWhatsAppClick}
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Solicitar Asesoría Gratis
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="tech-border"
+                asChild
+              >
+                <a href="tel:+525560808129">
+                  <Phone className="w-5 h-5 mr-2" />
+                  (55) 6080-8129
+                </a>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Services */}
-      <section className="relative py-3xl bg-muted/30">
+      {/* Stats Section */}
+      <section className="py-12 border-y border-border bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Servicios Principales</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Tecnología avanzada y experiencia humana trabajando juntas para tu éxito
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">{stat.number}</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                ¿POR QUÉ USAR <span className="gradient-text">NUESTRA ASESORÍA</span>?
+              </h2>
+              <p className="text-muted-foreground">
+                Beneficios exclusivos para nuestros clientes
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start gap-4 p-4 glass tech-border hover:shadow-tech transition-all">
+                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              CÓMO <span className="gradient-text">FUNCIONA</span>
+            </h2>
+            <p className="text-muted-foreground">
+              Proceso simple en 3 pasos
             </p>
           </div>
-
-          <div className="grid lg:grid-cols-2 gap-2xl">
-            {mainServices.map((service, index) => (
-              <div key={index} className="bg-card border border-border p-2xl space-y-6 hover:shadow-elegant transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 flex items-center justify-center border border-border flex-shrink-0">
-                    <service.icon className="w-6 h-6" />
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {steps.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="glass tech-border p-8 text-center hover:shadow-tech transition-all h-full">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center text-2xl font-bold">
+                    {step.number}
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-heading">{service.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
                 </div>
-                
-                <div className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-3">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
+                {index < steps.length - 1 && (
+                  <div className="hidden md:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                    <ArrowRight className="w-8 h-8 text-accent" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zones Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              ZONAS <span className="gradient-text">DONDE OPERAMOS</span>
+            </h2>
+            <p className="text-muted-foreground">
+              Las mejores ubicaciones comerciales de CDMX
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+            {["Polanco", "Reforma", "Santa Fe", "Lomas", "Roma-Condesa"].map((zona) => (
+              <div key={zona} className="glass tech-border p-4 text-center hover:shadow-tech transition-all">
+                <MapPin className="w-6 h-6 mx-auto mb-2 text-accent" />
+                <span className="font-medium">{zona}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              LO QUE DICEN <span className="gradient-text">NUESTROS CLIENTES</span>
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="glass tech-border p-8">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services */}
-      <section className="relative py-3xl">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Servicios Adicionales</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Herramientas y servicios complementarios para una experiencia completa
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {additionalServices.map((service, index) => (
-              <div key={index} className="text-center space-y-4 p-6 bg-card border border-border hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 mx-auto flex items-center justify-center border border-border">
-                  <service.icon className="w-6 h-6" />
+                <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
+                <div>
+                  <div className="font-semibold">{testimonial.author}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                 </div>
-                <h3 className="text-heading">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="relative py-3xl bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-2xl space-y-4">
-            <h2 className="text-display font-light">Nuestro Proceso</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Metodología probada que combina tecnología e expertise humano
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="relative">
-                  <div className="w-16 h-16 mx-auto bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-light">
-                    {step.step}
-                  </div>
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 left-full w-full h-px bg-border transform -translate-y-1/2" />
-                  )}
-                </div>
-                <h3 className="text-heading">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {step.description}
-                </p>
               </div>
             ))}
           </div>
@@ -268,27 +278,31 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-3xl">
+      <section className="py-24 bg-gradient-to-br from-foreground via-accent/10 to-foreground text-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-display font-light">¿Listo para Comenzar?</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Agenda una consulta gratuita y descubre cómo podemos ayudarte 
-                a alcanzar tus objetivos inmobiliarios.
-              </p>
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl lg:text-5xl font-bold">
+              ¿LISTO PARA ENCONTRAR<br/>
+              <span className="gradient-text">TU ESPACIO IDEAL?</span>
+            </h2>
+            <p className="text-xl text-background/80">
+              Cuéntanos qué buscas y en 24 horas te enviamos opciones personalizadas.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button 
+                size="lg" 
+                className="bg-green-600 hover:bg-green-700 text-white text-lg px-8"
+                onClick={handleWhatsAppClick}
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Solicitar Asesoría por WhatsApp
+              </Button>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="luxury" className="group">
-                <Phone className="w-4 h-4 mr-2" />
-                Agendar Consulta
-              </Button>
-              <Button variant="minimal">
-                <Mail className="w-4 h-4 mr-2" />
-                Enviar Mensaje
-              </Button>
-            </div>
+            <p className="text-sm text-background/60">
+              Sin compromiso • Respuesta en menos de 24 horas • 100% gratuito
+            </p>
           </div>
         </div>
       </section>
@@ -298,8 +312,8 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
-            <div className="text-caption text-muted-foreground">
-              © 2024 KGroup. All rights reserved.
+            <div className="text-sm text-muted-foreground">
+              © 2024 KGroup. Todos los derechos reservados.
             </div>
           </div>
         </div>
