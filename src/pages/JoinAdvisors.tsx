@@ -79,13 +79,13 @@ const JoinAdvisors = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="luxury" className="group">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 tracking-wide uppercase text-sm font-medium group">
                 <Users className="w-4 h-4 mr-2" />
-                Apply Now
+                Aplicar Ahora
               </Button>
-              <Button variant="minimal">
+              <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-3">
                 <Phone className="w-4 h-4 mr-2" />
-                Schedule Interview
+                Agendar Entrevista
               </Button>
             </div>
           </div>
@@ -256,7 +256,7 @@ const JoinAdvisors = () => {
                     rows={4}
                     placeholder="Cuéntanos sobre tu experiencia y por qué quieres unirte a KGroup..."
                   />
-                  <Button variant="luxury" className="w-full">
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 tracking-wide uppercase text-sm font-medium">
                     Enviar Solicitud
                   </Button>
                 </div>
