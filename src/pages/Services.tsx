@@ -1,7 +1,10 @@
-import { KGroupLogo } from "@/components/KGroupLogo";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { KGroupLogo } from "@/components/KGroupLogo";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronDown, MessageCircle, CheckCircle, Building2, Users, TrendingUp, Clock, Phone, MapPin, Star, ArrowRight } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin, User, MessageSquare, ChevronDown, Building2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,67 +13,99 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
+const consultationSchema = z.object({
+  firstName: z.string().trim().nonempty({ message: "El nombre es requerido" }).max(50, { message: "Máximo 50 caracteres" }),
+  lastName: z.string().trim().nonempty({ message: "El apellido es requerido" }).max(50, { message: "Máximo 50 caracteres" }),
+  email: z.string().trim().email({ message: "Email inválido" }).max(255, { message: "Máximo 255 caracteres" }),
+  phone: z.string().trim().nonempty({ message: "El teléfono es requerido" }).max(20, { message: "Máximo 20 caracteres" }),
+  propertyType: z.enum(["compra", "venta", "renta"], { message: "Selecciona un tipo de servicio" }),
+  budget: z.string().trim().nonempty({ message: "El presupuesto es requerido" }).max(50, { message: "Máximo 50 caracteres" }),
+  location: z.string().trim().nonempty({ message: "La ubicación es requerida" }).max(100, { message: "Máximo 100 caracteres" }),
+  message: z.string().trim().max(1000, { message: "Máximo 1000 caracteres" }).optional()
+});
+
+type ConsultationData = z.infer<typeof consultationSchema>;
+
 const Services = () => {
-  const benefits = [
-    "Acceso a propiedades exclusivas no listadas públicamente",
-    "Ahorro de tiempo: te presentamos solo opciones que cumplen tus criterios",
-    "Negociación experta para obtener las mejores condiciones",
-    "Acompañamiento legal y administrativo incluido",
-    "Sin costo para ti — el propietario paga nuestra comisión"
-  ];
+  const { toast } = useToast();
+  const [formData, setFormData] = useState<ConsultationData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    propertyType: "renta",
+    budget: "",
+    location: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState<Partial<Record<keyof ConsultationData, string>>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const stats = [
-    { number: "50+", label: "Propiedades Disponibles" },
-    { number: "98%", label: "Clientes Satisfechos" },
-    { number: "24h", label: "Tiempo de Respuesta" },
-    { number: "0", label: "Costo para Ti" }
-  ];
-
-  const steps = [
-    {
-      number: "1",
-      title: "Cuéntanos qué buscas",
-      description: "Zona, presupuesto, tamaño y características de tu espacio ideal."
-    },
-    {
-      number: "2",
-      title: "Recibe opciones curadas",
-      description: "En 24 horas te enviamos 3-5 propiedades que cumplen tus criterios."
-    },
-    {
-      number: "3",
-      title: "Visita y elige",
-      description: "Coordinamos visitas, negociamos y te acompañamos hasta el cierre."
+  const handleInputChange = (field: keyof ConsultationData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: undefined }));
     }
-  ];
+  };
 
-  const testimonials = [
-    {
-      quote: "Encontré mi oficina ideal en Polanco en menos de una semana. Servicio excepcional.",
-      author: "Carlos M.",
-      role: "CEO, Startup Tech"
-    },
-    {
-      quote: "Me ahorraron meses de búsqueda. Las opciones que me presentaron eran exactamente lo que necesitaba.",
-      author: "María F.",
-      role: "Directora, Retail"
-    },
-    {
-      quote: "Profesionales, eficientes y conocen perfectamente el mercado de CDMX.",
-      author: "Roberto S.",
-      role: "CFO, Grupo Empresarial"
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const validatedData = consultationSchema.parse(formData);
+      
+      // Send to WhatsApp with form data
+      const message = `Hola, solicito asesoría inmobiliaria:
+      
+Nombre: ${validatedData.firstName} ${validatedData.lastName}
+Email: ${validatedData.email}
+Teléfono: ${validatedData.phone}
+Tipo: ${validatedData.propertyType === 'compra' ? 'Compra' : validatedData.propertyType === 'venta' ? 'Venta' : 'Renta'}
+Presupuesto: ${validatedData.budget}
+Ubicación: ${validatedData.location}
+${validatedData.message ? `Mensaje: ${validatedData.message}` : ''}`;
+
+      const phone = "525560808129";
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+      
+      toast({
+        title: "¡Redirigiendo a WhatsApp!",
+        description: "Completa el envío en WhatsApp para recibir asesoría.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        propertyType: "renta",
+        budget: "",
+        location: "",
+        message: ""
+      });
+      setErrors({});
+      
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const fieldErrors: Partial<Record<keyof ConsultationData, string>> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            fieldErrors[err.path[0] as keyof ConsultationData] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+      }
+    } finally {
+      setIsSubmitting(false);
     }
-  ];
-
-  const handleWhatsAppClick = () => {
-    const message = "Hola, me interesa recibir asesoría para encontrar un espacio comercial en CDMX";
-    const phone = "525560808129";
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-background">
       <WhatsAppButton />
+      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none" />
       
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
@@ -109,206 +144,197 @@ const Services = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-b from-muted/50 to-background">
+      {/* Main Content */}
+      <main className="relative z-10 pt-32 pb-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass tech-border text-sm">
-              <Building2 className="w-4 h-4 text-accent" />
-              <span className="font-medium tracking-wider uppercase text-xs">Asesoría Inmobiliaria Comercial</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              ENCUENTRA TU ESPACIO<br/>
-              <span className="gradient-text">COMERCIAL IDEAL</span><br/>
-              EN CDMX
-            </h1>
-            
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Te ayudamos a encontrar la oficina, local o terreno perfecto para tu negocio. 
-              <strong className="text-foreground"> Sin costo para ti.</strong>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button 
-                size="lg" 
-                className="bg-green-600 hover:bg-green-700 text-white shadow-tech text-lg px-8"
-                onClick={handleWhatsAppClick}
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Solicitar Asesoría Gratis
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="tech-border"
-                asChild
-              >
-                <a href="tel:+525560808129">
-                  <Phone className="w-5 h-5 mr-2" />
-                  (55) 6080-8129
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-12 border-y border-border bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">{stat.number}</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+          <div className="max-w-2xl mx-auto">
+            {/* Hero */}
+            <div className="text-center mb-12 space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 glass tech-border text-sm">
+                <Building2 className="w-4 h-4 text-accent" />
+                <span className="font-medium tracking-wider uppercase text-xs">Asesoría Gratuita</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                ¿POR QUÉ USAR <span className="gradient-text">NUESTRA ASESORÍA</span>?
-              </h2>
-              <p className="text-muted-foreground">
-                Beneficios exclusivos para nuestros clientes
+              <h1 className="text-4xl lg:text-5xl font-bold">
+                SOLICITA <span className="gradient-text">ASESORÍA</span>
+              </h1>
+              <p className="text-muted-foreground text-lg">
+                Completa el formulario y un asesor especializado te contactará en menos de 24 horas
               </p>
             </div>
-            
-            <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 glass tech-border hover:shadow-tech transition-all">
-                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-lg">{benefit}</span>
+
+            {/* Form Card */}
+            <div className="glass tech-border p-8 space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Personal Information */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold flex items-center gap-2">
+                    <User className="w-4 h-4 text-accent" />
+                    Información Personal
+                  </h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Nombre *</label>
+                      <input
+                        type="text"
+                        value={formData.firstName}
+                        onChange={(e) => handleInputChange("firstName", e.target.value)}
+                        className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                        placeholder="Tu nombre"
+                        maxLength={50}
+                      />
+                      {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Apellido *</label>
+                      <input
+                        type="text"
+                        value={formData.lastName}
+                        onChange={(e) => handleInputChange("lastName", e.target.value)}
+                        className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                        placeholder="Tu apellido"
+                        maxLength={50}
+                      />
+                      {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Email *</label>
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                        placeholder="tu@email.com"
+                        maxLength={255}
+                      />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Teléfono *</label>
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange("phone", e.target.value)}
+                        className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                        placeholder="+52 55 1234 5678"
+                        maxLength={20}
+                      />
+                      {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                    </div>
+                  </div>
                 </div>
-              ))}
+
+                {/* Property Information */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-accent" />
+                    Información del Espacio
+                  </h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Tipo de Servicio *</label>
+                    <select
+                      value={formData.propertyType}
+                      onChange={(e) => handleInputChange("propertyType", e.target.value as "compra" | "venta" | "renta")}
+                      className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                    >
+                      <option value="renta">Busco rentar un espacio comercial</option>
+                      <option value="compra">Quiero comprar una propiedad</option>
+                      <option value="venta">Quiero vender mi propiedad</option>
+                    </select>
+                    {errors.propertyType && <p className="text-red-500 text-sm mt-1">{errors.propertyType}</p>}
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Presupuesto *</label>
+                      <input
+                        type="text"
+                        value={formData.budget}
+                        onChange={(e) => handleInputChange("budget", e.target.value)}
+                        className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                        placeholder="$30,000 - $50,000/mes"
+                        maxLength={50}
+                      />
+                      {errors.budget && <p className="text-red-500 text-sm mt-1">{errors.budget}</p>}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Zona Preferida *</label>
+                      <input
+                        type="text"
+                        value={formData.location}
+                        onChange={(e) => handleInputChange("location", e.target.value)}
+                        className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent rounded-lg"
+                        placeholder="Polanco, Reforma, Santa Fe..."
+                        maxLength={100}
+                      />
+                      {errors.location && <p className="text-red-500 text-sm mt-1">{errors.location}</p>}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Additional Information */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold flex items-center gap-2">
+                    <MessageSquare className="w-4 h-4 text-accent" />
+                    Información Adicional
+                  </h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Mensaje (Opcional)</label>
+                    <textarea
+                      value={formData.message}
+                      onChange={(e) => handleInputChange("message", e.target.value)}
+                      className="w-full px-4 py-3 border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent resize-none rounded-lg"
+                      rows={4}
+                      placeholder="Cuéntanos más sobre lo que buscas: tamaño, características especiales, etc."
+                      maxLength={1000}
+                    />
+                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                  </div>
+                </div>
+
+                <Button 
+                  type="submit" 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-12 text-base font-semibold uppercase tracking-wider"
+                  size="lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Enviando..." : "Solicitar Asesoría Gratis"}
+                </Button>
+                
+                <p className="text-center text-sm text-muted-foreground">
+                  Sin costo • Respuesta en menos de 24 horas
+                </p>
+              </form>
+            </div>
+
+            {/* Contact Info */}
+            <div className="mt-12 text-center space-y-4">
+              <p className="text-muted-foreground">¿Prefieres contactarnos directamente?</p>
+              <div className="flex flex-col sm:flex-row justify-center gap-6 text-sm">
+                <a href="tel:+525560808129" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
+                  <Phone className="w-4 h-4" />
+                  <span>+52 55 6080 8129</span>
+                </a>
+                <a href="mailto:groupkellar@gmail.com" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
+                  <Mail className="w-4 h-4" />
+                  <span>groupkellar@gmail.com</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* How it Works */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              CÓMO <span className="gradient-text">FUNCIONA</span>
-            </h2>
-            <p className="text-muted-foreground">
-              Proceso simple en 3 pasos
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {steps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="glass tech-border p-8 text-center hover:shadow-tech transition-all h-full">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-accent to-accent/70 text-accent-foreground flex items-center justify-center text-2xl font-bold">
-                    {step.number}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden md:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                    <ArrowRight className="w-8 h-8 text-accent" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Zones Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              ZONAS <span className="gradient-text">DONDE OPERAMOS</span>
-            </h2>
-            <p className="text-muted-foreground">
-              Las mejores ubicaciones comerciales de CDMX
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
-            {["Polanco", "Reforma", "Santa Fe", "Lomas", "Roma-Condesa"].map((zona) => (
-              <div key={zona} className="glass tech-border p-4 text-center hover:shadow-tech transition-all">
-                <MapPin className="w-6 h-6 mx-auto mb-2 text-accent" />
-                <span className="font-medium">{zona}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              LO QUE DICEN <span className="gradient-text">NUESTROS CLIENTES</span>
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="glass tech-border p-8">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                <div>
-                  <div className="font-semibold">{testimonial.author}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-foreground via-accent/10 to-foreground text-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl lg:text-5xl font-bold">
-              ¿LISTO PARA ENCONTRAR<br/>
-              <span className="gradient-text">TU ESPACIO IDEAL?</span>
-            </h2>
-            <p className="text-xl text-background/80">
-              Cuéntanos qué buscas y en 24 horas te enviamos opciones personalizadas.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button 
-                size="lg" 
-                className="bg-green-600 hover:bg-green-700 text-white text-lg px-8"
-                onClick={handleWhatsAppClick}
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Solicitar Asesoría por WhatsApp
-              </Button>
-            </div>
-            
-            <p className="text-sm text-background/60">
-              Sin compromiso • Respuesta en menos de 24 horas • 100% gratuito
-            </p>
-          </div>
-        </div>
-      </section>
+      </main>
 
       {/* Footer */}
-      <footer className="relative border-t border-border bg-background py-xl">
+      <footer className="relative border-t border-border bg-background py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
