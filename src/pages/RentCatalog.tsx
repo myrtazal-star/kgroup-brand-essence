@@ -91,16 +91,6 @@ const RentCatalog = () => {
       imageUrl: oficinaHomero1
     },
     {
-      id: "r13",
-      title: "Oficina amueblada en Lomas de Chapultepec, Prado Norte",
-      location: "Lomas de Chapultepec, Prado Norte",
-      price: "$70,000/mes",
-      area: "140 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaPn7
-    },
-    {
       id: "r14",
       title: "Local comercial en renta en Campos Elíseos, Polanco",
       location: "Corporativo Gandhi, Campos Elíseos, Polanco",
@@ -120,28 +110,6 @@ const RentCatalog = () => {
       bedrooms: 1,
       bathrooms: 1,
       imageUrl: oficinaLomas1,
-      featured: true
-    },
-    {
-      id: "r16",
-      title: "Penthouse en Condesa Oficina 2 niveles",
-      location: "Av. Tamaulipas, Condesa, CDMX",
-      price: "$90,000/mes + IVA",
-      area: "360 m²",
-      bedrooms: 0,
-      bathrooms: 3,
-      imageUrl: oficinaPhCondesa1,
-      featured: true
-    },
-    {
-      id: "r17",
-      title: "Oficina en renta – Condesa, Av. Tamaulipas | Piso 16",
-      location: "Av. Tamaulipas, Condesa, CDMX",
-      price: "$50,000/mes + IVA",
-      area: "180 m²",
-      bedrooms: 0,
-      bathrooms: 2,
-      imageUrl: oficinaCondesa16_2,
       featured: true
     },
   ];
