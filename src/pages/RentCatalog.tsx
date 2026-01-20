@@ -9,37 +9,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
-import blockRenta from "@/assets/block-renta.jpg";
-import oficinaPH from "@/assets/oficina-ph-roma-norte.jpg";
-import rentaMitikah from "@/assets/renta-mitikah.jpg";
-
-import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
-import oficinaPn7 from "@/assets/oficina-pn-7.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
-import oficinaRd1 from "@/assets/oficina-rd-1.jpg";
-import localMasaryk1 from "@/assets/local-masaryk-1.jpg";
 import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
-import localEscobedo1 from "@/assets/local-escobedo-1.jpg";
-import localGandhi1 from "@/assets/local-gandhi-1.jpg";
-import oficinaLomas1 from "@/assets/oficina-lomas-1.jpg";
-import oficinaPhCondesa1 from "@/assets/oficina-ph-1.jpg";
-import oficinaCondesa16_1 from "@/assets/oficina-condesa-16-1.jpg";
-import oficinaCondesa16_2 from "@/assets/oficina-condesa-16-2.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
-    {
-      id: "r1",
-      title: "Departamento en renta Roma Norte",
-      location: "Durango 262, Roma Norte",
-      price: "$92,000/mes",
-      area: "120 m²",
-      bedrooms: 2,
-      bathrooms: 2,
-      imageUrl: blockRenta,
-      featured: true
-    },
     {
       id: "r7",
       title: "Oficina en Polanco, Ejercito Nacional",
@@ -51,28 +26,8 @@ const RentCatalog = () => {
       imageUrl: oficinaEn1
     },
     {
-      id: "r8",
-      title: "Oficina PH en Polanco – Vista Panorámica y Terraza",
-      location: "Rubén Darío, Polanco",
-      price: "$46,000/mes + IVA",
-      area: "215 m²",
-      bedrooms: 0,
-      bathrooms: 2,
-      imageUrl: oficinaRd1
-    },
-    {
-      id: "r9",
-      title: "Local Comercial en Renta – Av. Presidente Masaryk, Polanco",
-      location: "Av. Presidente Masaryk, Polanco",
-      price: "$235,000/mes + IVA",
-      area: "250 m²",
-      bedrooms: 0,
-      bathrooms: 4,
-      imageUrl: localMasaryk1
-    },
-    {
       id: "r10",
-      title: "Local en Insurgentes",
+      title: "Oficina en Insurgentes",
       location: "Avenida Insurgentes Sur, CDMX",
       price: "$60,000/mes + IVA",
       area: "100 m²",
@@ -89,28 +44,6 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaHomero1
-    },
-    {
-      id: "r14",
-      title: "Local comercial en renta en Campos Elíseos, Polanco",
-      location: "Corporativo Gandhi, Campos Elíseos, Polanco",
-      price: "Consultar precio",
-      area: "270 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: localGandhi1,
-      featured: true
-    },
-    {
-      id: "r15",
-      title: "Oficina en Lomas de Chapultepec – ubicación premium CDMX",
-      location: "Lomas de Chapultepec, CDMX",
-      price: "$76,500/mes + IVA",
-      area: "88 m²",
-      bedrooms: 1,
-      bathrooms: 1,
-      imageUrl: oficinaLomas1,
-      featured: true
     },
   ];
 
