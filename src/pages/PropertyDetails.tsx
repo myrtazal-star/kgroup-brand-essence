@@ -412,6 +412,42 @@ const propertiesData = {
     gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8, oficinaLomas9, oficinaLomas10],
     youtubeVideoId: undefined
   },
+  "r16": {
+    id: "r16",
+    title: "Oficina en Renta – Torre Porsche, Santa Fe",
+    location: "Torre Porsche, Santa Fe – Piso 22",
+    price: "$52,000",
+    priceType: "Renta mensual + IVA (mantenimiento incluido)",
+    area: "130 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 5,
+    imageUrl: oficinaBegrand1,
+    featured: true,
+    description: "Oficina totalmente terminada y lista para ocuparse en Torre Porsche, Santa Fe, ubicada en el piso 22 con vista panorámica espectacular. Santa Fe es ideal para empresas corporativas que buscan ubicación, conectividad y una imagen profesional sólida.",
+    features: [
+      "130 m² de superficie",
+      "Oficina principal",
+      "Área libre funcional",
+      "Gran salón de juntas",
+      "Baño privado",
+      "5 baños para hombres y 5 para mujeres en el mismo piso",
+      "5 cajones de estacionamiento",
+      "Bodega de 12 m²",
+      "Vista panorámica espectacular",
+      "Piso 22"
+    ],
+    amenities: [
+      "Mantenimiento incluido",
+      "Ubicación premium en Torre Porsche",
+      "Santa Fe - zona corporativa",
+      "Alta conectividad",
+      "Imagen profesional sólida",
+      "Edificio de primer nivel"
+    ],
+    gallery: [oficinaBegrand1, oficinaBegrand2, oficinaBegrand3, oficinaBegrand4, oficinaBegrand5],
+    youtubeVideoId: undefined
+  },
 };
 const PropertyDetails = () => {
   const {
@@ -427,7 +463,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r10", "r11", "r14", "r15"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r10", "r11", "r14", "r15", "r16"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
