@@ -13,11 +13,23 @@ import heroProperty from "@/assets/hero-building.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
+import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   const allProperties = [
+    {
+      id: "r16",
+      title: "Oficina en Renta – Torre Porsche, Santa Fe",
+      location: "Torre Porsche, Santa Fe – Piso 22",
+      price: "$52,000/mes + IVA",
+      area: "130 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaBegrand1,
+      featured: true
+    },
     {
       id: "r7",
       title: "Oficina en Polanco, Ejercito Nacional",
