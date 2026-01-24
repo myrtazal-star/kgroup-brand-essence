@@ -20,6 +20,7 @@ import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
 import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
+import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -129,6 +130,17 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaChapultepec1,
+      featured: true
+    },
+    {
+      id: "r23",
+      title: "Oficina Corporativa – Prol. Paseo de la Reforma",
+      location: "Corredor Reforma–Bosques – Piso 10",
+      price: "$150,000/mes + IVA",
+      area: "Consultar",
+      bedrooms: 0,
+      bathrooms: 3,
+      imageUrl: oficinaReforma1,
       featured: true
     },
   ];
