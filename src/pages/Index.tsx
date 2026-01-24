@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import heroProperty from "@/assets/hero-building.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
-import oficinaInsurgentes1 from "@/assets/oficina-insurgentes-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 
@@ -20,11 +19,11 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 const Index = () => {
   const allProperties = [
     {
-      id: "r16",
-      title: "Oficina en Renta – Torre Porsche, Santa Fe",
-      location: "Torre Porsche, Santa Fe – Piso 22",
-      price: "$52,000/mes + IVA",
-      area: "130 m²",
+      id: "s4",
+      title: "Oficina en Venta – Be Grand, Tabacalera",
+      location: "Lafragua #13, Col. Tabacalera, Cuauhtémoc",
+      price: "$12,500,000 MXN",
+      area: "113 m²",
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaBegrand1,
@@ -39,16 +38,6 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaEn1
-    },
-    {
-      id: "r10",
-      title: "Oficina en Insurgentes",
-      location: "Avenida Insurgentes Sur, CDMX",
-      price: "$60,000/mes + IVA",
-      area: "100 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaInsurgentes1
     },
     {
       id: "r11",
