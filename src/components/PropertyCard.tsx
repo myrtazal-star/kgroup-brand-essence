@@ -1,4 +1,3 @@
-import { MapPin, Square, BedDouble, Bath } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface PropertyCardProps {
@@ -19,8 +18,6 @@ export const PropertyCard = ({
   location, 
   price, 
   area, 
-  bedrooms, 
-  bathrooms, 
   imageUrl, 
   featured = false 
 }: PropertyCardProps) => {
@@ -30,50 +27,61 @@ export const PropertyCard = ({
     navigate(`/property/${id}`);
   };
 
+  // Split title into two parts for styling
+  const titleParts = title.split(/\s*[–-]\s*/);
+  const mainTitle = titleParts[0] || title;
+  const subTitle = titleParts[1] || "";
+
+  // Determine if it's a sale or rent based on price
+  const isSale = price.includes("MXN") && !price.includes("/mes");
+  const operationType = isSale ? "VENTA" : "RENTA";
+
   return (
-    <div className="group cursor-pointer" onClick={handleClick}>
-      <div className="relative overflow-hidden border border-border bg-card hover:shadow-refined transition-all duration-300">
-        {/* Property Image */}
-        <div className="aspect-[4/3] overflow-hidden bg-muted">
-          <img 
-            src={imageUrl} 
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          {featured && (
-            <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 text-caption">
-              DESTACADO
-            </div>
-          )}
-        </div>
-
-        {/* Property Details */}
-        <div className="p-6 space-y-4">
-          <div className="space-y-2">
-            <h3 className="text-heading font-medium group-hover:text-muted-foreground transition-colors">
-              {title}
+    <div 
+      className="group cursor-pointer relative overflow-hidden"
+      onClick={handleClick}
+    >
+      {/* Full Cover Image */}
+      <div className="aspect-[4/5] overflow-hidden">
+        <img 
+          src={imageUrl} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        
+        {/* Featured Badge */}
+        {featured && (
+          <div className="absolute top-4 left-4 bg-accent text-accent-foreground px-3 py-1 text-xs font-medium tracking-wider">
+            DESTACADO
+          </div>
+        )}
+        
+        {/* Property Info Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+          {/* Title - Two Lines Style */}
+          <div className="mb-2">
+            <h3 className="text-lg font-light tracking-wide uppercase">
+              {mainTitle}
             </h3>
-            <div className="flex items-center gap-1 text-muted-foreground text-caption">
-              <MapPin className="w-3 h-3" />
-              {location}
-            </div>
+            {subTitle && (
+              <p className="text-xl font-bold tracking-wide uppercase text-accent">
+                {subTitle}
+              </p>
+            )}
           </div>
-
-          <div className="flex justify-between items-center text-caption">
-            <span className="text-xl font-medium text-primary">{price}</span>
-          </div>
-
-          <div className="flex items-center gap-6 text-muted-foreground text-caption border-t border-border pt-4">
-            <div className="flex items-center gap-1">
-              <Square className="w-3 h-3" />
-              {area}
-            </div>
-            <div className="flex items-center gap-1">
-              <BedDouble className="w-3 h-3" />
-              {bedrooms} {bedrooms === 1 ? 'estacionamiento' : 'bed'}
-            </div>
-          </div>
-
+          
+          {/* Location */}
+          <p className="text-xs uppercase tracking-widest text-white/80 mb-2">
+            {location}
+          </p>
+          
+          {/* Price */}
+          <p className="text-sm font-medium">
+            {operationType} {price}
+          </p>
         </div>
       </div>
     </div>
