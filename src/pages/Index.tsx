@@ -249,11 +249,9 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {allProperties.map((property) => (
-              <div key={property.id} className="group hover:-translate-y-2 transition-all duration-500 hover:shadow-tech">
-                <PropertyCard {...property} />
-              </div>
+              <PropertyCard key={property.id} {...property} />
             ))}
           </div>
 
