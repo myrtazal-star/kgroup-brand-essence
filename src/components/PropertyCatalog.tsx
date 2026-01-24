@@ -149,7 +149,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
 
       {/* Content */}
       {viewMode === "grid" ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
           {currentProperties.map((property) => (
             <PropertyCard key={property.id} {...property} />
           ))}
