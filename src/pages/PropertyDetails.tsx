@@ -164,6 +164,16 @@ import oficinaChapultepec3 from "@/assets/oficina-chapultepec-3.jpg";
 import oficinaChapultepec4 from "@/assets/oficina-chapultepec-4.jpg";
 import oficinaChapultepec5 from "@/assets/oficina-chapultepec-5.jpg";
 import oficinaChapultepec6 from "@/assets/oficina-chapultepec-6.jpg";
+import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
+import oficinaReforma2 from "@/assets/oficina-reforma-2.jpg";
+import oficinaReforma3 from "@/assets/oficina-reforma-3.jpg";
+import oficinaReforma4 from "@/assets/oficina-reforma-4.jpg";
+import oficinaReforma5 from "@/assets/oficina-reforma-5.jpg";
+import oficinaReforma6 from "@/assets/oficina-reforma-6.jpg";
+import oficinaReforma7 from "@/assets/oficina-reforma-7.jpg";
+import oficinaReforma8 from "@/assets/oficina-reforma-8.jpg";
+import oficinaReforma9 from "@/assets/oficina-reforma-9.jpg";
+import oficinaReforma10 from "@/assets/oficina-reforma-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -668,6 +678,84 @@ const propertiesData = {
     gallery: [oficinaChapultepec1, oficinaChapultepec2, oficinaChapultepec3, oficinaChapultepec4, oficinaChapultepec5, oficinaChapultepec6],
     youtubeVideoId: undefined
   },
+  "r23": {
+    id: "r23",
+    title: "Oficina Corporativa en Renta – Prol. Paseo de la Reforma",
+    location: "Prol. Paseo de la Reforma 379, Corredor Reforma–Bosques – Piso 10",
+    price: "$150,000",
+    priceType: "Renta mensual + IVA",
+    area: "Consultar",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 27,
+    imageUrl: oficinaReforma1,
+    featured: true,
+    description: "Oficina en renta ubicada en el Piso 10 de uno de los corporativos más exclusivos de Prol. Paseo de la Reforma 379, dentro del corredor financiero Reforma–Bosques. Ideal para empresas que buscan imagen corporativa, seguridad y un espacio premium adaptable a sus necesidades.\n\nEl espacio se entrega en obra gris, listo para diseñar a la medida. Cuenta con ventanales de piso a techo con cancelería Reynaers CW50 y vidrio TE-Low E, lo que garantiza excelente iluminación natural, aislamiento acústico y eficiencia energética.\n\nIncluye preparaciones para aire acondicionado (agua helada), rociadores contra incendio, instalación hidráulica y sanitaria, ventilación, renovación de aire y ductería eléctrica desde los medidores.\n\nEl nivel dispone de baños totalmente terminados para hombres, mujeres y accesibilidad, con acabados de lujo: granito Negro Austral, porcelanato gris, lavabos Helvex Lucerna, mezcladoras Moen M Press, WC Helvex y mamparas Disacsa. Iluminación LED indirecta de diseño.",
+    features: [
+      "Piso 10 en corporativo exclusivo",
+      "Entrega en obra gris, listo para diseñar",
+      "Ventanales piso a techo",
+      "Cancelería Reynaers CW50 con vidrio TE-Low E",
+      "Excelente iluminación natural",
+      "Aislamiento acústico y eficiencia energética",
+      "Preparaciones para A/C (agua helada)",
+      "Rociadores contra incendio",
+      "Instalación hidráulica y sanitaria",
+      "27 cajones de estacionamiento por nivel"
+    ],
+    amenities: [
+      "Lobby de doble altura con front desk",
+      "6 elevadores Mitsubishi de alta velocidad + VIP",
+      "Seguridad y CCTV 24/7",
+      "Control de accesos vehicular y peatonal",
+      "Planta de emergencia",
+      "Terraza ajardinada y Lounge VIP",
+      "Directorio digital",
+      "9 sótanos de estacionamiento",
+      "Baños de lujo con acabados premium"
+    ],
+    gallery: [oficinaReforma1, oficinaReforma2, oficinaReforma3, oficinaReforma4, oficinaReforma5, oficinaReforma6, oficinaReforma7, oficinaReforma8, oficinaReforma9, oficinaReforma10],
+    youtubeVideoId: undefined
+  },
+  "s5": {
+    id: "s5",
+    title: "Oficina Corporativa en Venta – Prol. Paseo de la Reforma",
+    location: "Prol. Paseo de la Reforma 379, Corredor Reforma–Bosques – Piso 10",
+    price: "$22,000,000",
+    priceType: "MXN",
+    area: "Consultar",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 27,
+    imageUrl: oficinaReforma1,
+    featured: true,
+    description: "Oficina en venta ubicada en el Piso 10 de uno de los corporativos más exclusivos de Prol. Paseo de la Reforma 379, dentro del corredor financiero Reforma–Bosques. Ideal para empresas que buscan imagen corporativa, seguridad y un espacio premium adaptable a sus necesidades.\n\nEl espacio se entrega en obra gris, listo para diseñar a la medida. Cuenta con ventanales de piso a techo con cancelería Reynaers CW50 y vidrio TE-Low E, lo que garantiza excelente iluminación natural, aislamiento acústico y eficiencia energética.\n\nIncluye preparaciones para aire acondicionado (agua helada), rociadores contra incendio, instalación hidráulica y sanitaria, ventilación, renovación de aire y ductería eléctrica desde los medidores.\n\nEl nivel dispone de baños totalmente terminados para hombres, mujeres y accesibilidad, con acabados de lujo: granito Negro Austral, porcelanato gris, lavabos Helvex Lucerna, mezcladoras Moen M Press, WC Helvex y mamparas Disacsa. Iluminación LED indirecta de diseño.",
+    features: [
+      "Piso 10 en corporativo exclusivo",
+      "Entrega en obra gris, listo para diseñar",
+      "Ventanales piso a techo",
+      "Cancelería Reynaers CW50 con vidrio TE-Low E",
+      "Excelente iluminación natural",
+      "Aislamiento acústico y eficiencia energética",
+      "Preparaciones para A/C (agua helada)",
+      "Rociadores contra incendio",
+      "Instalación hidráulica y sanitaria",
+      "27 cajones de estacionamiento por nivel"
+    ],
+    amenities: [
+      "Lobby de doble altura con front desk",
+      "6 elevadores Mitsubishi de alta velocidad + VIP",
+      "Seguridad y CCTV 24/7",
+      "Control de accesos vehicular y peatonal",
+      "Planta de emergencia",
+      "Terraza ajardinada y Lounge VIP",
+      "Directorio digital",
+      "9 sótanos de estacionamiento",
+      "Baños de lujo con acabados premium"
+    ],
+    gallery: [oficinaReforma1, oficinaReforma2, oficinaReforma3, oficinaReforma4, oficinaReforma5, oficinaReforma6, oficinaReforma7, oficinaReforma8, oficinaReforma9, oficinaReforma10],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -684,7 +772,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21", "r22"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21", "r22", "r23"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

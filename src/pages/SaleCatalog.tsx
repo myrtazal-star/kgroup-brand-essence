@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
+import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
@@ -22,6 +23,17 @@ const SaleCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaBegrand1,
+      featured: true,
+    },
+    {
+      id: "s5",
+      title: "Oficina Corporativa – Prol. Paseo de la Reforma",
+      location: "Corredor Reforma–Bosques – Piso 10",
+      price: "$22,000,000 MXN",
+      area: "Consultar",
+      bedrooms: 0,
+      bathrooms: 3,
+      imageUrl: oficinaReforma1,
       featured: true,
     },
   ];
