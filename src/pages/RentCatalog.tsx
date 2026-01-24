@@ -11,12 +11,24 @@ import {
 import { Link } from "react-router-dom";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
+import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
     {
+      id: "r16",
+      title: "Oficina Corporativa – Torre Porsche, Santa Fe",
+      location: "Torre Porsche, Santa Fe – Piso 22",
+      price: "$45,900/mes + IVA",
+      area: "130 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPorsche1,
+      featured: true
+    },
+    {
       id: "r7",
-      title: "Oficina en Polanco, Ejercito Nacional",
+      title: "Oficina en Polanco – Ejercito Nacional",
       location: "Ejercito Nacional, Polanco",
       price: "$75,000/mes",
       area: "215 m²",
@@ -26,7 +38,7 @@ const RentCatalog = () => {
     },
     {
       id: "r11",
-      title: "Oficina en renta en Homero, Polanco",
+      title: "Oficina en renta – Homero, Polanco",
       location: "Homero, Polanco",
       price: "$45,000/mes + IVA",
       area: "150 m²",
