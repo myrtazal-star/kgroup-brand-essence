@@ -126,6 +126,16 @@ import oficinaEn2_7 from "@/assets/oficina-en2-7.jpg";
 import oficinaEn2_8 from "@/assets/oficina-en2-8.jpg";
 import oficinaEn2_9 from "@/assets/oficina-en2-9.jpg";
 import oficinaEn2_10 from "@/assets/oficina-en2-10.jpg";
+import oficinaEn3_1 from "@/assets/oficina-en3-1.jpg";
+import oficinaEn3_2 from "@/assets/oficina-en3-2.jpg";
+import oficinaEn3_3 from "@/assets/oficina-en3-3.jpg";
+import oficinaEn3_4 from "@/assets/oficina-en3-4.jpg";
+import oficinaEn3_5 from "@/assets/oficina-en3-5.jpg";
+import oficinaEn3_6 from "@/assets/oficina-en3-6.jpg";
+import oficinaEn3_7 from "@/assets/oficina-en3-7.jpg";
+import oficinaEn3_8 from "@/assets/oficina-en3-8.jpg";
+import oficinaEn3_9 from "@/assets/oficina-en3-9.jpg";
+import oficinaEn3_10 from "@/assets/oficina-en3-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -462,6 +472,36 @@ const propertiesData = {
     gallery: [oficinaEn2_1, oficinaEn2_2, oficinaEn2_3, oficinaEn2_4, oficinaEn2_5, oficinaEn2_6, oficinaEn2_7, oficinaEn2_8, oficinaEn2_9, oficinaEn2_10],
     youtubeVideoId: undefined
   },
+  "r18": {
+    id: "r18",
+    title: "Oficina en Renta – Ejercito Nacional, 5 Privados",
+    location: "Ejercito Nacional, Polanco",
+    price: "$60,000",
+    priceType: "Renta mensual + IVA",
+    area: "170 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 2,
+    imageUrl: oficinaEn3_1,
+    featured: false,
+    description: "Oficina en renta con 170 m² de superficie, diseñada para ofrecer una distribución eficiente y funcional, ideal para empresas que buscan comodidad, productividad y una excelente imagen corporativa. Ubicación estratégica con fácil acceso a vialidades principales, ideal para corporativos, despachos o empresas que requieren espacios bien definidos en una zona estratégica.",
+    features: [
+      "Superficie total: 170 m²",
+      "5 oficinas privadas bien distribuidas",
+      "2 lugares de estacionamiento",
+      "Diseño funcional que optimiza espacios",
+      "Excelente iluminación y circulación",
+      "Entorno profesional y moderno"
+    ],
+    amenities: [
+      "Ubicación privilegiada",
+      "Fácil acceso a vialidades principales",
+      "Zona estratégica",
+      "Ideal para corporativos y despachos"
+    ],
+    gallery: [oficinaEn3_1, oficinaEn3_2, oficinaEn3_3, oficinaEn3_4, oficinaEn3_5, oficinaEn3_6, oficinaEn3_7, oficinaEn3_8, oficinaEn3_9, oficinaEn3_10],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -478,7 +518,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
