@@ -136,6 +136,24 @@ import oficinaEn3_7 from "@/assets/oficina-en3-7.jpg";
 import oficinaEn3_8 from "@/assets/oficina-en3-8.jpg";
 import oficinaEn3_9 from "@/assets/oficina-en3-9.jpg";
 import oficinaEn3_10 from "@/assets/oficina-en3-10.jpg";
+import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
+import oficinaMoliere2 from "@/assets/oficina-moliere-2.jpg";
+import oficinaMoliere3 from "@/assets/oficina-moliere-3.jpg";
+import oficinaMoliere4 from "@/assets/oficina-moliere-4.jpg";
+import oficinaMoliere5 from "@/assets/oficina-moliere-5.jpg";
+import oficinaMoliere6 from "@/assets/oficina-moliere-6.jpg";
+import oficinaMoliere7 from "@/assets/oficina-moliere-7.jpg";
+import oficinaMoliere8 from "@/assets/oficina-moliere-8.jpg";
+import oficinaMoliere9 from "@/assets/oficina-moliere-9.jpg";
+import oficinaMoliere10 from "@/assets/oficina-moliere-10.jpg";
+import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
+import espacioMasaryk2 from "@/assets/espacio-masaryk-2.jpg";
+import espacioMasaryk3 from "@/assets/espacio-masaryk-3.jpg";
+import espacioMasaryk4 from "@/assets/espacio-masaryk-4.jpg";
+import espacioMasaryk5 from "@/assets/espacio-masaryk-5.jpg";
+import espacioMasaryk6 from "@/assets/espacio-masaryk-6.jpg";
+import espacioMasaryk7 from "@/assets/espacio-masaryk-7.jpg";
+import espacioMasaryk8 from "@/assets/espacio-masaryk-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -502,6 +520,76 @@ const propertiesData = {
     gallery: [oficinaEn3_1, oficinaEn3_2, oficinaEn3_3, oficinaEn3_4, oficinaEn3_5, oficinaEn3_6, oficinaEn3_7, oficinaEn3_8, oficinaEn3_9, oficinaEn3_10],
     youtubeVideoId: undefined
   },
+  "r19": {
+    id: "r19",
+    title: "Oficina en Renta – Av. Moliere, Polanco",
+    location: "Av. Moliere, Polanco – Piso 5",
+    price: "$58,000",
+    priceType: "Renta mensual + IVA",
+    area: "288 m²",
+    bedrooms: 0,
+    bathrooms: 4,
+    parking: 0,
+    imageUrl: oficinaMoliere1,
+    featured: true,
+    description: "Excelente oficina corporativa en renta ubicada sobre Avenida Moliere, en el corazón de Polanco, una de las zonas empresariales más consolidadas de la Ciudad de México. La oficina se encuentra en piso 5, con 288 m² distribuidos de manera funcional, ideal para empresas que buscan una imagen corporativa sólida y espacios bien definidos.",
+    features: [
+      "Superficie: 288 m²",
+      "Recepción con sala de espera",
+      "Sala de juntas",
+      "4 oficinas privadas",
+      "4 baños",
+      "Cocina con área de bodega",
+      "Amplia área abierta de trabajo",
+      "Espacio para archivo o almacenamiento"
+    ],
+    amenities: [
+      "Seguridad 24 horas",
+      "Elevador",
+      "Escaleras",
+      "Helipuerto",
+      "Motor lobby",
+      "Estacionamiento público cercano (renta no incluye estacionamiento)",
+      "Excelente conectividad y accesos viales",
+      "Rodeada de bancos, restaurantes, comercios"
+    ],
+    gallery: [oficinaMoliere1, oficinaMoliere2, oficinaMoliere3, oficinaMoliere4, oficinaMoliere5, oficinaMoliere6, oficinaMoliere7, oficinaMoliere8, oficinaMoliere9, oficinaMoliere10],
+    youtubeVideoId: undefined
+  },
+  "r20": {
+    id: "r20",
+    title: "Espacio en Renta – Av. Presidente Masaryk, Polanco",
+    location: "Av. Presidente Masaryk, Polanco – Piso 5",
+    price: "$85,000",
+    priceType: "Renta mensual + IVA",
+    area: "Consultar",
+    bedrooms: 0,
+    bathrooms: 4,
+    parking: 0,
+    imageUrl: espacioMasaryk1,
+    featured: true,
+    description: "Espacio en renta ubicado en Av. Presidente Masaryk, una de las zonas más exclusivas de Polanco. Ideal para SPA, consultorios, wellness, o oficinas corporativas boutique. El inmueble se encuentra en el piso 5 (edificio sin elevador) y ofrece un ambiente moderno, luminoso y con vista arbolada. Distribuido en dos niveles, este espacio fue diseñado originalmente para SPA, por lo que cuenta con áreas funcionales y una atmósfera relajante.",
+    features: [
+      "Área de recepción",
+      "2 niveles acondicionados",
+      "5 espacios independientes en el primer nivel (cabinas u oficinas)",
+      "4 baños",
+      "Excelente iluminación natural",
+      "Vista arbolada",
+      "Último piso del edificio (mayor privacidad)"
+    ],
+    amenities: [
+      "Ubicación exclusiva en Masaryk",
+      "Ideal para SPA y centros de bienestar",
+      "Consultorios de belleza o salud",
+      "Oficinas corporativas boutique",
+      "Despachos ejecutivos",
+      "Estudios o firmas creativas",
+      "Imagen, prestigio y fácil acceso"
+    ],
+    gallery: [espacioMasaryk1, espacioMasaryk2, espacioMasaryk3, espacioMasaryk4, espacioMasaryk5, espacioMasaryk6, espacioMasaryk7, espacioMasaryk8],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -518,7 +606,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   

@@ -16,6 +16,8 @@ import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
 import oficinaEn2_1 from "@/assets/oficina-en2-1.jpg";
 import oficinaEn3_1 from "@/assets/oficina-en3-1.jpg";
+import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
+import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -82,6 +84,28 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaEn3_1
+    },
+    {
+      id: "r19",
+      title: "Oficina en Renta – Av. Moliere, Polanco",
+      location: "Av. Moliere, Polanco – Piso 5",
+      price: "$58,000/mes + IVA",
+      area: "288 m²",
+      bedrooms: 0,
+      bathrooms: 4,
+      imageUrl: oficinaMoliere1,
+      featured: true
+    },
+    {
+      id: "r20",
+      title: "Espacio en Renta – Av. Presidente Masaryk",
+      location: "Av. Presidente Masaryk, Polanco – Piso 5",
+      price: "$85,000/mes + IVA",
+      area: "Consultar",
+      bedrooms: 0,
+      bathrooms: 4,
+      imageUrl: espacioMasaryk1,
+      featured: true
     },
   ];
 
