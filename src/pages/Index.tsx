@@ -14,6 +14,7 @@ import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
+import oficinaEn2_1 from "@/assets/oficina-en2-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -60,6 +61,16 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaHomero1
+    },
+    {
+      id: "r17",
+      title: "Oficina en renta – Ejercito Nacional, Polanco",
+      location: "Ejercito Nacional, Polanco",
+      price: "$18,000/mes",
+      area: "70 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaEn2_1
     },
   ];
 
