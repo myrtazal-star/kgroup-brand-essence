@@ -8,59 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* KGroup Real Estate Colors - Corporate Gold & Minimalist */
+    /* Ultra Minimalist - Pure Black & White */
     --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
+    --foreground: 0 0% 0%;
 
-    --card: 0 0% 95%;
-    --card-foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 0 0% 7%;
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 7%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 43 40% 57%;
-    --accent-foreground: 0 0% 7%;
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
+    --border: 0 0% 92%;
     --input: 0 0% 96%;
-    --ring: 0 0% 20%;
+    --ring: 0 0% 0%;
 
-    /* Premium Design Tokens */
-    --grid-subtle: 0 0% 97%;
-    --shadow-elegant: 0 0% 0% / 0.03;
-    --shadow-refined: 0 0% 0% / 0.06;
-    --shadow-premium: 0 0% 0% / 0.12;
-    --shadow-tech: 0 0% 0% / 0.08;
-    
-    /* Elegant Gradients */
-    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 95%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 7% / 0.95) 0%, hsl(0 0% 3% / 0.95) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(43 40% 57%) 0%, hsl(43 35% 50%) 100%);
-    
-    /* Glass Effects */
-    --glass-bg: 0 0% 100% / 0.8;
-    --glass-border: 0 0% 85% / 0.4;
-    --glass-dark: 0 0% 10% / 0.85;
+    /* Minimalist Tokens */
+    --shadow-subtle: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.04);
     
     /* Typography Scale */
-    --text-hero: 4.5rem;
-    --text-display: 3rem;
-    --text-heading: 2rem;
+    --text-hero: 3.5rem;
+    --text-display: 2.5rem;
+    --text-heading: 1.5rem;
     --text-body: 1rem;
-    --text-caption: 0.875rem;
+    --text-caption: 0.75rem;
     
     /* Spacing Scale */
     --space-xs: 0.5rem;
@@ -71,78 +57,58 @@ All colors MUST be HSL.
     --space-2xl: 4rem;
     --space-3xl: 6rem;
 
-    --radius: 0.125rem;
+    --radius: 0;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 0 0% 0%;
   }
 
   .dark {
-    /* Premium Dark Mode - Ultra Luxury Night */
-    --background: 0 0% 3%;
-    --foreground: 0 0% 98%;
+    /* Ultra Minimalist Dark */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 8%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 10%;
+    --muted: 0 0% 8%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 0 0% 85%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 85%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 100%;
     
-    --grid-subtle: 0 0% 8%;
-    --shadow-elegant: 0 0% 0% / 0.3;
-    --shadow-refined: 0 0% 0% / 0.4;
-    --shadow-premium: 0 0% 0% / 0.5;
-    
-    /* Dark Gradients */
-    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(0 0% 5%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 4%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.5) 0%, hsl(0 0% 0% / 0.8) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(0 0% 85%) 0%, hsl(0 0% 75%) 100%);
-    
-    /* Dark Glass Effects */
-    --glass-bg: 0 0% 10% / 0.6;
-    --glass-border: 0 0% 100% / 0.1;
-    --glass-dark: 0 0% 0% / 0.6;
+    --shadow-subtle: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3);
 
     --sidebar-background: 0 0% 0%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
     --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 3%;
+    --sidebar-accent: 0 0% 8%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 10%;
+    --sidebar-border: 0 0% 12%;
     --sidebar-ring: 0 0% 100%;
   }
 }
@@ -154,156 +120,71 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Lato', system-ui, sans-serif;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    font-weight: 400;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
   
   h1 {
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    font-weight: 200;
+    letter-spacing: 0.15em;
   }
 
-  /* Minimalist Grid Pattern */
-  .grid-pattern {
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  /* Dark mode grid pattern */
-  .dark .grid-pattern {
-    background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  }
-
-  /* Typography Scale */
+  /* Typography Classes */
   .text-hero {
     font-size: var(--text-hero);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    font-weight: 200;
   }
 
   .text-display {
     font-size: var(--text-display);
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    font-weight: 300;
   }
 
   .text-heading {
     font-size: var(--text-heading);
-    line-height: 1.35;
-    letter-spacing: 0;
-    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    font-weight: 400;
   }
 
   .text-body {
     font-size: var(--text-body);
     line-height: 1.7;
-    letter-spacing: 0.01em;
-    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-weight: 300;
   }
 
   .text-caption {
     font-size: var(--text-caption);
     line-height: 1.5;
-    letter-spacing: 0.02em;
-    font-weight: 500;
+    letter-spacing: 0.15em;
+    font-weight: 400;
     text-transform: uppercase;
   }
 
-  /* KGroup Brand Monogram */
-  .monogram {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    font-feature-settings: "ss01" 1;
+  /* Minimal Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
-  /* Tech Glass Effect */
-  .glass {
-    background: hsl(var(--glass-bg));
-    border: 1px solid hsl(var(--glass-border));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .glass:hover {
-    background: hsl(var(--glass-bg));
-    box-shadow: 0 8px 32px 0 hsl(var(--shadow-tech));
-    border-color: hsl(var(--accent) / 0.3);
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
   }
 
-  .glass-dark {
-    background: hsl(var(--glass-dark));
-    border: 1px solid hsl(var(--glass-border));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  /* Tech Border Animation */
-  .tech-border {
-    position: relative;
-    border: 1px solid hsl(var(--border));
-    transition: all 0.3s ease;
-  }
-
-  .tech-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 1px solid hsl(var(--accent));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .tech-border:hover::before {
-    opacity: 1;
-  }
-
-  .tech-border > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Animated Gradient Text */
-  .gradient-text {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Pulse Animation */
-  .tech-pulse {
-    animation: tech-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  @keyframes tech-pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.6;
-    }
-  }
-
-  /* Tech Animations */
-  @keyframes fadeInUp {
+  @keyframes slideUp {
     from {
       opacity: 0;
       transform: translateY(20px);
@@ -314,68 +195,27 @@ All colors MUST be HSL.
     }
   }
 
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
   }
 
-  @keyframes slideInFromLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .animate-slide-in-left {
-    animation: slideInFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  /* Smooth Transitions */
-  .transition-smooth {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Premium Typography */
-  .text-premium {
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+  /* Smooth hover transitions */
+  .hover-lift {
+    transition: transform 0.3s ease;
   }
   
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
   /* Mobile Optimizations */
   @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5rem !important;
-      line-height: 1.2 !important;
+    :root {
+      --text-hero: 2rem;
+      --text-display: 1.5rem;
+      --text-heading: 1.25rem;
     }
     
-    h2 {
-      font-size: 2rem !important;
-      line-height: 1.3 !important;
-    }
-    
-    .glass {
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    
-    /* Touch-friendly tap targets */
     button, a {
       min-height: 44px;
     }
@@ -387,5 +227,4 @@ All colors MUST be HSL.
       scroll-behavior: smooth;
     }
   }
-  
 }

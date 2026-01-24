@@ -1,14 +1,7 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCatalog } from "@/components/PropertyCatalog";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
@@ -25,8 +18,8 @@ const RentCatalog = () => {
     {
       id: "r16",
       title: "Oficina Corporativa – Torre Porsche, Santa Fe",
-      location: "Torre Porsche, Santa Fe – Piso 22",
-      price: "$45,900/mes + IVA",
+      location: "Santa Fe · Piso 22",
+      price: "$45,900/mes",
       area: "130 m²",
       bedrooms: 0,
       bathrooms: 1,
@@ -36,7 +29,7 @@ const RentCatalog = () => {
     {
       id: "r7",
       title: "Oficina en Polanco – Ejercito Nacional",
-      location: "Ejercito Nacional, Polanco",
+      location: "Polanco",
       price: "$75,000/mes",
       area: "215 m²",
       bedrooms: 0,
@@ -46,8 +39,8 @@ const RentCatalog = () => {
     {
       id: "r11",
       title: "Oficina en renta – Homero, Polanco",
-      location: "Homero, Polanco",
-      price: "$45,000/mes + IVA",
+      location: "Polanco · Homero",
+      price: "$45,000/mes",
       area: "150 m²",
       bedrooms: 0,
       bathrooms: 1,
@@ -56,7 +49,7 @@ const RentCatalog = () => {
     {
       id: "r17",
       title: "Oficina en renta – Ejercito Nacional, Polanco",
-      location: "Ejercito Nacional, Polanco",
+      location: "Polanco",
       price: "$18,000/mes",
       area: "70 m²",
       bedrooms: 0,
@@ -66,8 +59,8 @@ const RentCatalog = () => {
     {
       id: "r18",
       title: "Oficina en Renta – Ejercito Nacional, 5 Privados",
-      location: "Ejercito Nacional, Polanco",
-      price: "$60,000/mes + IVA",
+      location: "Polanco",
+      price: "$60,000/mes",
       area: "170 m²",
       bedrooms: 0,
       bathrooms: 1,
@@ -76,8 +69,8 @@ const RentCatalog = () => {
     {
       id: "r19",
       title: "Oficina en Renta – Av. Moliere, Polanco",
-      location: "Av. Moliere, Polanco – Piso 5",
-      price: "$58,000/mes + IVA",
+      location: "Polanco · Piso 5",
+      price: "$58,000/mes",
       area: "288 m²",
       bedrooms: 0,
       bathrooms: 4,
@@ -87,8 +80,8 @@ const RentCatalog = () => {
     {
       id: "r20",
       title: "Espacio en Renta – Av. Presidente Masaryk",
-      location: "Av. Presidente Masaryk, Polanco – Piso 5",
-      price: "$85,000/mes + IVA",
+      location: "Polanco · Masaryk",
+      price: "$85,000/mes",
       area: "Consultar",
       bedrooms: 0,
       bathrooms: 4,
@@ -98,8 +91,8 @@ const RentCatalog = () => {
     {
       id: "r21",
       title: "Oficina en Renta – Torre Vinkel, Monterrey",
-      location: "Av. Lázaro Cárdenas, Monterrey – Piso 18",
-      price: "$130,000/mes + IVA",
+      location: "Monterrey · Piso 18",
+      price: "$130,000/mes",
       area: "170 m²",
       bedrooms: 0,
       bathrooms: 1,
@@ -109,7 +102,7 @@ const RentCatalog = () => {
     {
       id: "r22",
       title: "Oficina en Renta – Lomas de Chapultepec",
-      location: "Prado Sur, Lomas de Chapultepec – Piso 5",
+      location: "Lomas · Piso 5",
       price: "$70,000/mes",
       area: "140 m²",
       bedrooms: 0,
@@ -120,8 +113,8 @@ const RentCatalog = () => {
     {
       id: "r23",
       title: "Oficina Corporativa – Prol. Paseo de la Reforma",
-      location: "Corredor Reforma–Bosques – Piso 10",
-      price: "$150,000/mes + IVA",
+      location: "Reforma–Bosques · Piso 10",
+      price: "$150,000/mes",
       area: "Consultar",
       bedrooms: 0,
       bathrooms: 3,
@@ -132,65 +125,52 @@ const RentCatalog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Grid Background Pattern */}
-      <div className="fixed inset-0 grid-pattern opacity-50 pointer-events-none" />
-      
       {/* Header */}
-      <header className="relative z-10 border-b border-border bg-background/95 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <KGroupLogo variant="full" size="md" />
+      <header className="border-b border-border bg-background">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-16">
+            <Link to="/">
+              <KGroupLogo variant="full" size="md" />
+            </Link>
             
-            <nav className="hidden md:flex items-center gap-8 text-caption">
-              <Link to="/" className="hover:text-muted-foreground transition-colors">Home</Link>
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-foreground font-medium">
-                  Properties
-                  <ChevronDown className="w-3 h-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-background border-border z-50">
-                  <DropdownMenuItem asChild>
-                    <Link to="/rent-catalog" className="text-foreground font-medium">Renta</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/sale-catalog">Venta</Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              <Link to="/join-advisors" className="hover:text-muted-foreground transition-colors">Unite al KGroup</Link>
+            <nav className="hidden md:flex items-center gap-12">
+              <Link to="/rent-catalog" className="text-caption text-foreground">
+                Renta
+              </Link>
+              <Link to="/sale-catalog" className="text-caption text-muted-foreground hover:text-foreground transition-colors">
+                Venta
+              </Link>
+              <Link to="/services" className="text-caption text-muted-foreground hover:text-foreground transition-colors">
+                Servicios
+              </Link>
             </nav>
 
-            {/* Mobile & Desktop Back Button */}
-            <Link to="/">
-              <Button variant="minimal" size="sm" className="group">
-                <ArrowLeft className="w-4 h-4 mr-1 sm:mr-2 group-hover:-translate-x-1 transition-transform" />
-                <span className="hidden sm:inline">Volver</span>
-              </Button>
+            <Link to="/" className="flex items-center gap-2 text-caption text-muted-foreground hover:text-foreground transition-colors">
+              <ArrowLeft className="w-4 h-4" />
+              <span className="hidden sm:inline">Inicio</span>
             </Link>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="relative py-3xl">
-        <div className="container mx-auto px-6">
-          <PropertyCatalog
-            title="Propiedades en Renta"
-            subtitle="Descubre espacios únicos para vivir o trabajar en las mejores ubicaciones de Ciudad de México con nuestro catálogo de propiedades en renta"
-            properties={rentalProperties}
-            type="rent"
-          />
-        </div>
+      {/* Main */}
+      <main className="container mx-auto px-6 py-12 md:py-16">
+        <PropertyCatalog
+          title="PROPIEDADES EN RENTA"
+          subtitle="Espacios comerciales y oficinas disponibles para renta en las mejores ubicaciones de Ciudad de México"
+          properties={rentalProperties}
+          type="rent"
+        />
       </main>
 
       {/* Footer */}
-      <footer className="relative border-t border-border bg-background py-xl">
+      <footer className="border-t border-border py-12">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
-            <div className="text-caption text-muted-foreground">
-              © 2024 KGroup. All rights reserved.
-            </div>
+            <p className="text-caption text-muted-foreground">
+              © 2024 KGroup
+            </p>
           </div>
         </div>
       </footer>
