@@ -174,6 +174,13 @@ import oficinaReforma7 from "@/assets/oficina-reforma-7.jpg";
 import oficinaReforma8 from "@/assets/oficina-reforma-8.jpg";
 import oficinaReforma9 from "@/assets/oficina-reforma-9.jpg";
 import oficinaReforma10 from "@/assets/oficina-reforma-10.jpg";
+import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
+import oficinaYama2 from "@/assets/oficina-yama-2.jpg";
+import oficinaYama3 from "@/assets/oficina-yama-3.jpg";
+import oficinaYama4 from "@/assets/oficina-yama-4.jpg";
+import oficinaYama5 from "@/assets/oficina-yama-5.jpg";
+import oficinaYama6 from "@/assets/oficina-yama-6.jpg";
+import oficinaYama7 from "@/assets/oficina-yama-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -756,6 +763,72 @@ const propertiesData = {
     gallery: [oficinaReforma1, oficinaReforma2, oficinaReforma3, oficinaReforma4, oficinaReforma5, oficinaReforma6, oficinaReforma7, oficinaReforma8, oficinaReforma9, oficinaReforma10],
     youtubeVideoId: undefined
   },
+  "r24": {
+    id: "r24",
+    title: "Oficina en Renta – Yama Jardines del Pedregal",
+    location: "Edificio Yama, Anillo Periférico, Jardines del Pedregal – Piso 10",
+    price: "$27,000",
+    priceType: "Renta mensual MXN",
+    area: "73.5 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 2,
+    imageUrl: oficinaYama1,
+    featured: true,
+    description: "Última oficina disponible ubicada en el Piso 10 del edificio Yama Jardines del Pedregal, un desarrollo corporativo moderno con excelente ubicación al sur de la Ciudad de México, sobre Anillo Periférico.\n\nLa oficina cuenta con 73.5 m², ideal para empresas, despachos o inversionistas que buscan plusvalía y una imagen corporativa sólida.\n\nOportunidad ideal para ocupar o invertir en una de las zonas corporativas con mayor proyección del sur de la CDMX.",
+    features: [
+      "Piso 10",
+      "73.5 m² de superficie",
+      "2 cajones de estacionamiento",
+      "Obra gris – lista para diseñar",
+      "Ventanales con vista panorámica",
+      "Ubicación estratégica al sur de CDMX"
+    ],
+    amenities: [
+      "Lobby corporativo",
+      "Elevadores",
+      "Seguridad 24/7",
+      "Estacionamiento",
+      "Excelente conectividad vial",
+      "Terraza con vista panorámica",
+      "Sala de juntas de uso común"
+    ],
+    gallery: [oficinaYama1, oficinaYama2, oficinaYama3, oficinaYama4, oficinaYama5, oficinaYama6, oficinaYama7],
+    youtubeVideoId: undefined
+  },
+  "s6": {
+    id: "s6",
+    title: "Oficina en Venta – Yama Jardines del Pedregal",
+    location: "Edificio Yama, Anillo Periférico, Jardines del Pedregal – Piso 10",
+    price: "$5,500,000",
+    priceType: "MXN",
+    area: "73.5 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 2,
+    imageUrl: oficinaYama1,
+    featured: true,
+    description: "Última oficina disponible ubicada en el Piso 10 del edificio Yama Jardines del Pedregal, un desarrollo corporativo moderno con excelente ubicación al sur de la Ciudad de México, sobre Anillo Periférico.\n\nLa oficina cuenta con 73.5 m², ideal para empresas, despachos o inversionistas que buscan plusvalía y una imagen corporativa sólida.\n\nOportunidad ideal para ocupar o invertir en una de las zonas corporativas con mayor proyección del sur de la CDMX.",
+    features: [
+      "Piso 10",
+      "73.5 m² de superficie",
+      "2 cajones de estacionamiento",
+      "Obra gris – lista para diseñar",
+      "Ventanales con vista panorámica",
+      "Ubicación estratégica al sur de CDMX"
+    ],
+    amenities: [
+      "Lobby corporativo",
+      "Elevadores",
+      "Seguridad 24/7",
+      "Estacionamiento",
+      "Excelente conectividad vial",
+      "Terraza con vista panorámica",
+      "Sala de juntas de uso común"
+    ],
+    gallery: [oficinaYama1, oficinaYama2, oficinaYama3, oficinaYama4, oficinaYama5, oficinaYama6, oficinaYama7],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -772,7 +845,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21", "r22", "r23"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21", "r22", "r23", "r24"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
