@@ -27,7 +27,7 @@ export const PropertyCard = ({
 
   // Split title into type and name
   const titleParts = title.split(/\s*[–-]\s*/);
-  const propertyType = titleParts[0]?.replace(/^(Oficina|Local|Espacio|Departamento)\s+(en\s+)?(Renta|Venta)?\s*/i, '') || titleParts[0];
+  const propertyType = titleParts[0]?.replace(/^(Oficina|Local|Espacio|Departamento)\s+(en\s+)?(Renta|Venta|Corporativa)?\s*/i, '').trim() || "OFICINA";
   const propertyName = titleParts[1] || "";
 
   // Determine if it's a sale or rent based on price
@@ -48,29 +48,29 @@ export const PropertyCard = ({
         />
         
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
         
         {/* Content Overlay */}
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-          {/* Title - Split Typography */}
-          <div className="mb-3">
-            <h3 className="text-white text-lg md:text-xl font-light tracking-[0.1em] uppercase leading-tight">
+          {/* Title - Split Typography like Gubond */}
+          <div className="mb-4">
+            <p className="text-white/80 text-base md:text-lg font-extralight tracking-[0.2em] uppercase">
               {propertyType || "OFICINA"}
-            </h3>
+            </p>
             {propertyName && (
-              <p className="text-white text-xl md:text-2xl font-light tracking-[0.05em] uppercase leading-tight mt-1">
+              <h3 className="text-white text-2xl md:text-3xl font-medium tracking-[0.02em] uppercase leading-tight mt-1">
                 {propertyName}
-              </p>
+              </h3>
             )}
           </div>
           
           {/* Location */}
-          <p className="text-white/70 text-xs tracking-[0.15em] uppercase mb-3">
+          <p className="text-white/60 text-xs tracking-[0.2em] uppercase mb-2">
             {location}
           </p>
           
           {/* Price */}
-          <p className="text-white text-sm tracking-[0.1em] uppercase">
+          <p className="text-white text-sm font-light tracking-[0.1em]">
             {operationType} {price}
           </p>
         </div>
