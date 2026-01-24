@@ -21,6 +21,7 @@ import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
 import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
+import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -141,6 +142,17 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: oficinaReforma1,
+      featured: true
+    },
+    {
+      id: "r24",
+      title: "Oficina en Renta – Yama Jardines del Pedregal",
+      location: "Edificio Yama, Anillo Periférico – Piso 10",
+      price: "$27,000/mes",
+      area: "73.5 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaYama1,
       featured: true
     },
   ];

@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
+import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
@@ -34,6 +35,17 @@ const SaleCatalog = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: oficinaReforma1,
+      featured: true,
+    },
+    {
+      id: "s6",
+      title: "Oficina en Venta – Yama Jardines del Pedregal",
+      location: "Edificio Yama, Anillo Periférico – Piso 10",
+      price: "$5,500,000 MXN",
+      area: "73.5 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaYama1,
       featured: true,
     },
   ];
