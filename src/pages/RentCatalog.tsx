@@ -17,6 +17,7 @@ import oficinaEn3_1 from "@/assets/oficina-en3-1.jpg";
 import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
+import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -102,6 +103,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaVinkel1,
+      featured: true
+    },
+    {
+      id: "r22",
+      title: "Oficina en Renta – Lomas de Chapultepec",
+      location: "Prado Sur, Lomas de Chapultepec – Piso 5",
+      price: "$70,000/mes",
+      area: "140 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaChapultepec1,
       featured: true
     },
   ];
