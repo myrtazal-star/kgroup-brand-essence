@@ -18,6 +18,7 @@ import oficinaEn2_1 from "@/assets/oficina-en2-1.jpg";
 import oficinaEn3_1 from "@/assets/oficina-en3-1.jpg";
 import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
+import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -105,6 +106,17 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 4,
       imageUrl: espacioMasaryk1,
+      featured: true
+    },
+    {
+      id: "r21",
+      title: "Oficina en Renta – Torre Vinkel, Monterrey",
+      location: "Av. Lázaro Cárdenas, Monterrey – Piso 18",
+      price: "$130,000/mes + IVA",
+      area: "170 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaVinkel1,
       featured: true
     },
   ];
