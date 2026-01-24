@@ -158,6 +158,12 @@ import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
 import oficinaVinkel2 from "@/assets/oficina-vinkel-2.jpg";
 import oficinaVinkel3 from "@/assets/oficina-vinkel-3.jpg";
 import oficinaVinkel4 from "@/assets/oficina-vinkel-4.jpg";
+import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
+import oficinaChapultepec2 from "@/assets/oficina-chapultepec-2.jpg";
+import oficinaChapultepec3 from "@/assets/oficina-chapultepec-3.jpg";
+import oficinaChapultepec4 from "@/assets/oficina-chapultepec-4.jpg";
+import oficinaChapultepec5 from "@/assets/oficina-chapultepec-5.jpg";
+import oficinaChapultepec6 from "@/assets/oficina-chapultepec-6.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -628,6 +634,40 @@ const propertiesData = {
     gallery: [oficinaVinkel1, oficinaVinkel2, oficinaVinkel3, oficinaVinkel4],
     youtubeVideoId: undefined
   },
+  "r22": {
+    id: "r22",
+    title: "Oficina en Renta – Lomas de Chapultepec, Prado Sur",
+    location: "Prado Sur, Lomas de Chapultepec – Piso 5",
+    price: "$70,000",
+    priceType: "Renta mensual",
+    area: "140 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 5,
+    imageUrl: oficinaChapultepec1,
+    featured: true,
+    description: "Oficina ubicada en una zona de alto nivel en Lomas de Chapultepec, cercana a vías principales como Reforma y Periférico, corporativos, restaurantes y centros comerciales.\n\nTener tu oficina en una ubicación privilegiada como Lomas de Chapultepec le proporciona a tu imagen corporativa beneficios de posición y prestigio para clientes y socios. En la zona tendrás además acceso a amenidades y servicios de primer nivel que facilitan un ambiente de trabajo moderno y profesional.\n\nUna ubicación privilegiada te ayuda a atraer y mantener talento calificado para tu negocio. Tendrás una oficina que te ofrece comodidad y privacidad para trabajar sin distracciones.",
+    features: [
+      "140 m² en Piso 5",
+      "5 despachos privados",
+      "Sala de reuniones o Coworking",
+      "Paredes de cristal para amplitud y luminosidad",
+      "5 cajones de estacionamiento",
+      "Acceso a sala de juntas",
+      "Comedor y cocina",
+      "Elevador"
+    ],
+    amenities: [
+      "Ubicación premium en Lomas de Chapultepec",
+      "Cerca de Reforma y Periférico",
+      "Zona de corporativos y restaurantes",
+      "Centros comerciales cercanos",
+      "Prestigio e imagen corporativa",
+      "Ambiente profesional de alto nivel"
+    ],
+    gallery: [oficinaChapultepec1, oficinaChapultepec2, oficinaChapultepec3, oficinaChapultepec4, oficinaChapultepec5, oficinaChapultepec6],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -644,7 +684,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21", "r22"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
