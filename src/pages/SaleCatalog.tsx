@@ -15,9 +15,9 @@ const SaleCatalog = () => {
   const saleProperties = [
     {
       id: "s4",
-      title: "Oficina Be Grand Reforma en Venta",
+      title: "Oficina en Venta – Be Grand, Tabacalera",
       location: "Lafragua #13, Col. Tabacalera, Cuauhtémoc",
-      price: "$12,500,000",
+      price: "$12,500,000 MXN",
       area: "113 m²",
       bedrooms: 0,
       bathrooms: 1,
