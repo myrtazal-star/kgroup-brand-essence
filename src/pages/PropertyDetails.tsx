@@ -154,6 +154,10 @@ import espacioMasaryk5 from "@/assets/espacio-masaryk-5.jpg";
 import espacioMasaryk6 from "@/assets/espacio-masaryk-6.jpg";
 import espacioMasaryk7 from "@/assets/espacio-masaryk-7.jpg";
 import espacioMasaryk8 from "@/assets/espacio-masaryk-8.jpg";
+import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
+import oficinaVinkel2 from "@/assets/oficina-vinkel-2.jpg";
+import oficinaVinkel3 from "@/assets/oficina-vinkel-3.jpg";
+import oficinaVinkel4 from "@/assets/oficina-vinkel-4.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -590,6 +594,40 @@ const propertiesData = {
     gallery: [espacioMasaryk1, espacioMasaryk2, espacioMasaryk3, espacioMasaryk4, espacioMasaryk5, espacioMasaryk6, espacioMasaryk7, espacioMasaryk8],
     youtubeVideoId: undefined
   },
+  "r21": {
+    id: "r21",
+    title: "Oficina en Renta – Torre Vinkel Office Park, Monterrey",
+    location: "Av. Lázaro Cárdenas 506, San Agustín, Monterrey – Piso 18",
+    price: "$130,000",
+    priceType: "Renta mensual + IVA",
+    area: "170 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaVinkel1,
+    featured: true,
+    description: "Oficina en renta en Torre Vinkel Office Park, ubicada en Avenida Lázaro Cárdenas 506, colonia Antiguo Hacienda San Agustín, Monterrey, Nuevo León. Se encuentra en el piso 18 y cuenta con 170 metros cuadrados. La oficina es completamente nueva, con piso terminado y lista para amueblar según las necesidades del cliente.\n\nIncluye una terraza privada con vista panorámica al cerro de la silla y acceso a amenidades del edificio como seguridad 24 horas, estacionamiento, salas de juntas, área de comedor y baños.\n\nIdeal para empresas que buscan un espacio moderno, bien ubicado y con excelente imagen corporativa en una de las zonas más exclusivas de Monterrey.",
+    features: [
+      "170 m² en Piso 18",
+      "Oficina completamente nueva",
+      "Piso terminado",
+      "Lista para amueblar",
+      "Terraza privada",
+      "Vista panorámica al Cerro de la Silla",
+      "Espacio moderno y funcional"
+    ],
+    amenities: [
+      "Seguridad 24 horas",
+      "Estacionamiento",
+      "Salas de juntas",
+      "Área de comedor",
+      "Baños",
+      "Ubicación premium en Monterrey",
+      "Excelente imagen corporativa"
+    ],
+    gallery: [oficinaVinkel1, oficinaVinkel2, oficinaVinkel3, oficinaVinkel4],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -606,7 +644,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17", "r18", "r19", "r20", "r21"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
