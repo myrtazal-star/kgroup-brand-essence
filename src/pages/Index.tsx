@@ -13,11 +13,23 @@ import heroProperty from "@/assets/hero-building.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
+import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   const allProperties = [
+    {
+      id: "r16",
+      title: "Oficina Corporativa – Torre Porsche, Santa Fe",
+      location: "Torre Porsche, Santa Fe – Piso 22",
+      price: "$45,900/mes + IVA",
+      area: "130 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPorsche1,
+      featured: true
+    },
     {
       id: "s4",
       title: "Oficina en Venta – Be Grand, Tabacalera",
@@ -31,7 +43,7 @@ const Index = () => {
     },
     {
       id: "r7",
-      title: "Oficina en Polanco, Ejercito Nacional",
+      title: "Oficina en Polanco – Ejercito Nacional",
       location: "Ejercito Nacional, Polanco",
       price: "$75,000/mes",
       area: "215 m²",
@@ -41,7 +53,7 @@ const Index = () => {
     },
     {
       id: "r11",
-      title: "Oficina en renta en Homero, Polanco",
+      title: "Oficina en renta – Homero, Polanco",
       location: "Homero, Polanco",
       price: "$45,000/mes + IVA",
       area: "150 m²",

@@ -109,6 +109,13 @@ import oficinaCondesa16_7 from "@/assets/oficina-condesa-16-7.jpg";
 import oficinaCondesa16_8 from "@/assets/oficina-condesa-16-8.jpg";
 import oficinaCondesa16_9 from "@/assets/oficina-condesa-16-9.jpg";
 import oficinaCondesa16_10 from "@/assets/oficina-condesa-16-10.jpg";
+import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
+import oficinaPorsche2 from "@/assets/oficina-porsche-2.jpg";
+import oficinaPorsche3 from "@/assets/oficina-porsche-3.jpg";
+import oficinaPorsche4 from "@/assets/oficina-porsche-4.jpg";
+import oficinaPorsche5 from "@/assets/oficina-porsche-5.jpg";
+import oficinaPorsche6 from "@/assets/oficina-porsche-6.jpg";
+import oficinaPorsche7 from "@/assets/oficina-porsche-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -378,6 +385,42 @@ const propertiesData = {
     gallery: [oficinaLomas1, oficinaLomas2, oficinaLomas3, oficinaLomas4, oficinaLomas5, oficinaLomas6, oficinaLomas7, oficinaLomas8, oficinaLomas9, oficinaLomas10],
     youtubeVideoId: undefined
   },
+  "r16": {
+    id: "r16",
+    title: "Oficina Corporativa – Torre Porsche, Santa Fe",
+    location: "Torre Porsche, Santa Fe – Piso 22",
+    price: "$45,900",
+    priceType: "Renta mensual + IVA (mantenimiento $5,600 MXN aprox.)",
+    area: "130 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 5,
+    imageUrl: oficinaPorsche1,
+    featured: true,
+    description: "Oficina en renta en Torre Porsche Santa Fe, una de las direcciones corporativas más reconocidas del corredor México–Toluca, ideal para empresas que buscan imagen, funcionalidad y ubicación estratégica. Ubicada en piso 22, esta oficina cuenta con 130 m², está totalmente terminada y lista para ocuparse, con una distribución eficiente y una espectacular vista panorámica. Edificio corporativo AAA, con seguridad, excelente imagen institucional y ubicación estratégica dentro del distrito financiero de Santa Fe.",
+    features: [
+      "130 m² totalmente terminados",
+      "Oficina principal",
+      "Área libre de trabajo",
+      "Gran salón de juntas",
+      "Baño privado dentro de la oficina",
+      "Bodega de 12 m²",
+      "5 cajones de estacionamiento",
+      "5 baños para hombres y 5 para mujeres en el piso",
+      "Vista panorámica espectacular",
+      "Piso 22"
+    ],
+    amenities: [
+      "Edificio corporativo AAA",
+      "Seguridad 24/7",
+      "Excelente imagen institucional",
+      "Ubicación estratégica en Santa Fe",
+      "Corredor México–Toluca",
+      "Distrito financiero"
+    ],
+    gallery: [oficinaPorsche1, oficinaPorsche2, oficinaPorsche3, oficinaPorsche4, oficinaPorsche5, oficinaPorsche6, oficinaPorsche7],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -394,7 +437,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
