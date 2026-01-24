@@ -116,6 +116,16 @@ import oficinaPorsche4 from "@/assets/oficina-porsche-4.jpg";
 import oficinaPorsche5 from "@/assets/oficina-porsche-5.jpg";
 import oficinaPorsche6 from "@/assets/oficina-porsche-6.jpg";
 import oficinaPorsche7 from "@/assets/oficina-porsche-7.jpg";
+import oficinaEn2_1 from "@/assets/oficina-en2-1.jpg";
+import oficinaEn2_2 from "@/assets/oficina-en2-2.jpg";
+import oficinaEn2_3 from "@/assets/oficina-en2-3.jpg";
+import oficinaEn2_4 from "@/assets/oficina-en2-4.jpg";
+import oficinaEn2_5 from "@/assets/oficina-en2-5.jpg";
+import oficinaEn2_6 from "@/assets/oficina-en2-6.jpg";
+import oficinaEn2_7 from "@/assets/oficina-en2-7.jpg";
+import oficinaEn2_8 from "@/assets/oficina-en2-8.jpg";
+import oficinaEn2_9 from "@/assets/oficina-en2-9.jpg";
+import oficinaEn2_10 from "@/assets/oficina-en2-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -421,6 +431,37 @@ const propertiesData = {
     gallery: [oficinaPorsche1, oficinaPorsche2, oficinaPorsche3, oficinaPorsche4, oficinaPorsche5, oficinaPorsche6, oficinaPorsche7],
     youtubeVideoId: undefined
   },
+  "r17": {
+    id: "r17",
+    title: "Oficina en renta – Ejercito Nacional, Polanco",
+    location: "Ejercito Nacional, Polanco",
+    price: "$18,000",
+    priceType: "Renta mensual",
+    area: "70 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaEn2_1,
+    featured: false,
+    description: "Oficinas en renta en Ejercito Nacional con 70 m² de superficie. Este espacio ofrece un ambiente abierto y luminoso, ideal para un entorno profesional y moderno. Diseño funcional para un ambiente de trabajo eficiente con ubicación privilegiada y excelente conectividad.",
+    features: [
+      "Superficie: 70 m²",
+      "1 piso",
+      "1 cajón de estacionamiento",
+      "Guardia 24/7",
+      "Espacio abierto y luminoso",
+      "Diseño funcional",
+      "Entorno profesional y moderno"
+    ],
+    amenities: [
+      "Seguridad 24/7",
+      "Ubicación privilegiada",
+      "Excelente conectividad",
+      "Ambiente de trabajo eficiente"
+    ],
+    gallery: [oficinaEn2_1, oficinaEn2_2, oficinaEn2_3, oficinaEn2_4, oficinaEn2_5, oficinaEn2_6, oficinaEn2_7, oficinaEn2_8, oficinaEn2_9, oficinaEn2_10],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
@@ -437,7 +478,7 @@ const PropertyDetails = () => {
   const property = id ? propertiesData[id as keyof typeof propertiesData] : null;
 
   // Get rental properties for navigation
-  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16"];
+  const rentalPropertyIds = ["r1", "r3", "r7", "r8", "r9", "r11", "r14", "r15", "r16", "r17"];
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
