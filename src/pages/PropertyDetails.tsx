@@ -184,6 +184,11 @@ import oficinaJuarez7 from "@/assets/oficina-juarez-7.jpg";
 import oficinaJuarez8 from "@/assets/oficina-juarez-8.jpg";
 import oficinaJuarez9 from "@/assets/oficina-juarez-9.jpg";
 import oficinaJuarez10 from "@/assets/oficina-juarez-10.jpg";
+import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
+import oficinaPininfarina2 from "@/assets/oficina-pininfarina-2.jpg";
+import oficinaPininfarina3 from "@/assets/oficina-pininfarina-3.jpg";
+import oficinaPininfarina4 from "@/assets/oficina-pininfarina-4.jpg";
+import oficinaPininfarina5 from "@/assets/oficina-pininfarina-5.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -797,6 +802,44 @@ const propertiesData = {
       "Baños de lujo con acabados premium"
     ],
     gallery: [oficinaReforma1, oficinaReforma2, oficinaReforma3, oficinaReforma4, oficinaReforma5, oficinaReforma6, oficinaReforma7, oficinaReforma8, oficinaReforma9, oficinaReforma10],
+    youtubeVideoId: undefined
+  },
+  "s6": {
+    id: "s6",
+    title: "Oficinas Preventa – Torre Designo by Pininfarina, Bosque Real",
+    location: "Bosque Real, Entrada Principal · Huixquilucan",
+    price: "Desde $2,500,000 MXN",
+    priceType: "Preventa – Entrega Diciembre 2026",
+    area: "Desde 54 m² hasta 250 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaPininfarina1,
+    featured: true,
+    description: "TORRE DESIGNO es el primer espacio de oficinas en Bosque Real, diseñada por la prestigiosa firma Italiana Pininfarina.\n\nDos torres de oficinas diseñadas con curvas orgánicas que dan un toque contemporáneo y dinámico, un diseño excepcional que se distingue ante la mirada de los más exigentes.\n\nTORRE DESIGNO destaca por su alto rendimiento al cumplir los mayores estándares de diseño y construcción, reduciendo al mínimo su impacto al medio ambiente y siendo sustentable, características que lo hacen alcanzar la Certificación LEED (Leadership in Energy & Environmental Design) avalada por la USGBC.\n\nUbicado en la entrada principal de Bosque Real, en el poniente de la CDMX, a menos de un km del túnel BosqueReal-Interlomas. Modernas vialidades conectan con las mejores zonas residenciales y servicios de la CDMX. A muy pocos minutos de Santa Fe, Bosques, Interlomas, Polanco y Aeropuerto internacional de Toluca.",
+    features: [
+      "Diseño exclusivo por Pininfarina",
+      "Certificación LEED sustentable",
+      "Altura entrepisos 4.5 m",
+      "Vistas panorámicas a Bosque Real e Interlomas",
+      "Plantas desde 1,270 m²",
+      "Eficiencia al 85%",
+      "1 cajón cada 30 m²",
+      "6 Elevadores inteligentes de alta velocidad",
+      "Elevador VIP",
+      "Oficinas desde 54 m² hasta 250 m²"
+    ],
+    amenities: [
+      "Escaleras de emergencia presurizadas",
+      "Seguridad 24/7 CCTV",
+      "Sistema de prevención contra incendios",
+      "Sistema de aire acondicionado",
+      "Amenidades en el edificio",
+      "A menos de 1 km del túnel Bosque Real-Interlomas",
+      "Cerca de Santa Fe, Bosques, Interlomas y Polanco",
+      "Diferentes esquemas de pago disponibles"
+    ],
+    gallery: [oficinaPininfarina1, oficinaPininfarina2, oficinaPininfarina3, oficinaPininfarina4, oficinaPininfarina5],
     youtubeVideoId: undefined
   },
 };
