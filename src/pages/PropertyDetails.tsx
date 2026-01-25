@@ -189,6 +189,8 @@ import oficinaPininfarina2 from "@/assets/oficina-pininfarina-2.jpg";
 import oficinaPininfarina3 from "@/assets/oficina-pininfarina-3.jpg";
 import oficinaPininfarina4 from "@/assets/oficina-pininfarina-4.jpg";
 import oficinaPininfarina5 from "@/assets/oficina-pininfarina-5.jpg";
+import oficinaPininfarina6 from "@/assets/oficina-pininfarina-6.jpg";
+import oficinaPininfarina7 from "@/assets/oficina-pininfarina-7.jpg";
 import oficinaPininfarinaPlan from "@/assets/oficina-pininfarina-plano.png";
 
 // Property data - en una app real esto vendría de una base de datos
@@ -840,7 +842,7 @@ const propertiesData = {
       "Cerca de Santa Fe, Bosques, Interlomas y Polanco",
       "Esquemas de pago flexibles con descuentos"
     ],
-    gallery: [oficinaPininfarina1, oficinaPininfarina2, oficinaPininfarina3, oficinaPininfarina4, oficinaPininfarina5, oficinaPininfarinaPlan],
+    gallery: [oficinaPininfarina1, oficinaPininfarina2, oficinaPininfarina3, oficinaPininfarina4, oficinaPininfarina5, oficinaPininfarina6, oficinaPininfarina7, oficinaPininfarinaPlan],
     youtubeVideoId: undefined
   },
 };
