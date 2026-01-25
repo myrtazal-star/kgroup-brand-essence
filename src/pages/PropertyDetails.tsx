@@ -174,6 +174,16 @@ import oficinaReforma7 from "@/assets/oficina-reforma-7.jpg";
 import oficinaReforma8 from "@/assets/oficina-reforma-8.jpg";
 import oficinaReforma9 from "@/assets/oficina-reforma-9.jpg";
 import oficinaReforma10 from "@/assets/oficina-reforma-10.jpg";
+import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
+import oficinaJuarez2 from "@/assets/oficina-juarez-2.jpg";
+import oficinaJuarez3 from "@/assets/oficina-juarez-3.jpg";
+import oficinaJuarez4 from "@/assets/oficina-juarez-4.jpg";
+import oficinaJuarez5 from "@/assets/oficina-juarez-5.jpg";
+import oficinaJuarez6 from "@/assets/oficina-juarez-6.jpg";
+import oficinaJuarez7 from "@/assets/oficina-juarez-7.jpg";
+import oficinaJuarez8 from "@/assets/oficina-juarez-8.jpg";
+import oficinaJuarez9 from "@/assets/oficina-juarez-9.jpg";
+import oficinaJuarez10 from "@/assets/oficina-juarez-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -715,6 +725,39 @@ const propertiesData = {
       "Baños de lujo con acabados premium"
     ],
     gallery: [oficinaReforma1, oficinaReforma2, oficinaReforma3, oficinaReforma4, oficinaReforma5, oficinaReforma6, oficinaReforma7, oficinaReforma8, oficinaReforma9, oficinaReforma10],
+    youtubeVideoId: undefined
+  },
+  "r24": {
+    id: "r24",
+    title: "Oficina Amueblada en Renta – Colonia Juárez",
+    location: "Colonia Juárez, CDMX – Piso 6",
+    price: "$53,000",
+    priceType: "Renta mensual",
+    area: "105 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 0,
+    imageUrl: oficinaJuarez1,
+    featured: true,
+    description: "Oficina amueblada de 105 m² ubicada en la Colonia Juárez, en el piso 6 del edificio. Cuenta con 2 baños y estacionamiento para hombres y mujeres. La zona de Juárez es conocida por su ambiente comercial y su excelente conectividad. Encontrarás una gran variedad de restaurantes, cafeterías y tiendas, así como fácil acceso a transporte público. Está cerca de importantes avenidas que facilitan el desplazamiento a otras áreas de la ciudad. Disponibilidad inmediata.",
+    features: [
+      "105 m² de superficie",
+      "Completamente amueblada",
+      "2 baños (Hombres y Mujeres)",
+      "Piso 6",
+      "Disponibilidad inmediata",
+      "Ambiente comercial",
+      "Excelente conectividad"
+    ],
+    amenities: [
+      "Fácil acceso a transporte público",
+      "Cerca de importantes avenidas",
+      "Zona con restaurantes y cafeterías",
+      "Tiendas cercanas",
+      "Ambiente comercial vibrante",
+      "Terraza con vista a la ciudad"
+    ],
+    gallery: [oficinaJuarez1, oficinaJuarez2, oficinaJuarez3, oficinaJuarez4, oficinaJuarez5, oficinaJuarez6, oficinaJuarez7, oficinaJuarez8, oficinaJuarez9, oficinaJuarez10],
     youtubeVideoId: undefined
   },
   "s5": {

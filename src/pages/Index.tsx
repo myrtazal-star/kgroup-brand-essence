@@ -15,6 +15,7 @@ import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
 import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
+import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
 
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -137,6 +138,17 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: oficinaReforma1,
+      featured: true
+    },
+    {
+      id: "r24",
+      title: "Oficina Amueblada – Juárez",
+      location: "Juárez · Piso 6",
+      price: "$53,000/mes",
+      area: "105 m²",
+      bedrooms: 0,
+      bathrooms: 2,
+      imageUrl: oficinaJuarez1,
       featured: true
     },
   ];
