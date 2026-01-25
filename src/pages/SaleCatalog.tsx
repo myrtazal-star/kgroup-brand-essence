@@ -4,9 +4,21 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
+import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
+    {
+      id: "s6",
+      title: "Oficinas Preventa – Torre Designo by Pininfarina",
+      location: "Bosque Real · Huixquilucan",
+      price: "Desde $2,500,000 MXN",
+      area: "54–250 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPininfarina1,
+      featured: true,
+    },
     {
       id: "s4",
       title: "Oficina en Venta – Be Grand, Tabacalera",
