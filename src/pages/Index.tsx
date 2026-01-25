@@ -28,7 +28,7 @@ const Index = () => {
       id: "r16",
       title: "Oficina Corporativa – Torre Porsche",
       location: "Santa Fe · Piso 22",
-      price: "$45,900/mes",
+      price: "$52,000/mes",
       area: "130 m²",
       bedrooms: 0,
       bathrooms: 1,
