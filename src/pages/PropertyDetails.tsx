@@ -189,6 +189,7 @@ import oficinaPininfarina2 from "@/assets/oficina-pininfarina-2.jpg";
 import oficinaPininfarina3 from "@/assets/oficina-pininfarina-3.jpg";
 import oficinaPininfarina4 from "@/assets/oficina-pininfarina-4.jpg";
 import oficinaPininfarina5 from "@/assets/oficina-pininfarina-5.jpg";
+import oficinaPininfarinaPlan from "@/assets/oficina-pininfarina-plano.png";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -808,26 +809,26 @@ const propertiesData = {
     id: "s6",
     title: "Oficinas Preventa – Torre Designo by Pininfarina, Bosque Real",
     location: "Bosque Real, Entrada Principal · Huixquilucan",
-    price: "Desde $2,500,000 MXN",
-    priceType: "Preventa – Entrega Diciembre 2026",
-    area: "Desde 54 m² hasta 250 m²",
+    price: "Desde $5,306,436 MXN",
+    priceType: "Preventa – Entrega Diciembre 2026 + 6 meses de gracia",
+    area: "Desde 47.18 m²",
     bedrooms: 0,
     bathrooms: 1,
     parking: 1,
     imageUrl: oficinaPininfarina1,
     featured: true,
-    description: "TORRE DESIGNO es el primer espacio de oficinas en Bosque Real, diseñada por la prestigiosa firma Italiana Pininfarina.\n\nDos torres de oficinas diseñadas con curvas orgánicas que dan un toque contemporáneo y dinámico, un diseño excepcional que se distingue ante la mirada de los más exigentes.\n\nTORRE DESIGNO destaca por su alto rendimiento al cumplir los mayores estándares de diseño y construcción, reduciendo al mínimo su impacto al medio ambiente y siendo sustentable, características que lo hacen alcanzar la Certificación LEED (Leadership in Energy & Environmental Design) avalada por la USGBC.\n\nUbicado en la entrada principal de Bosque Real, en el poniente de la CDMX, a menos de un km del túnel BosqueReal-Interlomas. Modernas vialidades conectan con las mejores zonas residenciales y servicios de la CDMX. A muy pocos minutos de Santa Fe, Bosques, Interlomas, Polanco y Aeropuerto internacional de Toluca.",
+    description: "Oficinas en preventa en un edificio de clase A+, diseñado por la reconocida firma PININFARINA. Este exclusivo proyecto combina innovación, sostenibilidad y diseño de vanguardia, además de contar con la prestigiosa certificación LEED, que garantiza un alto estándar en eficiencia energética y cuidado ambiental.\n\nTORRE DESIGNO es el primer espacio de oficinas en Bosque Real. Dos torres diseñadas con curvas orgánicas que dan un toque contemporáneo y dinámico, un diseño excepcional que se distingue ante la mirada de los más exigentes.\n\nUbicado en la entrada principal de Bosque Real, en el poniente de la CDMX, a menos de un km del túnel BosqueReal-Interlomas. Modernas vialidades conectan con las mejores zonas residenciales y servicios de la CDMX. A muy pocos minutos de Santa Fe, Bosques, Interlomas, Polanco y Aeropuerto internacional de Toluca.\n\n**Esquemas de Pago:**\n• 30% enganche, 70% a la entrega\n• 10% de enganche, 90% a 12 meses\n\n**Tabla de Descuentos:**\n• Contado: 10% de descuento\n• 12 mensualidades: 5% de descuento",
     features: [
       "Diseño exclusivo por Pininfarina",
-      "Certificación LEED sustentable",
+      "Edificio clase A+ con certificación LEED",
+      "Oficinas desde 47.18 m²",
       "Altura entrepisos 4.5 m",
       "Vistas panorámicas a Bosque Real e Interlomas",
       "Plantas desde 1,270 m²",
       "Eficiencia al 85%",
       "1 cajón cada 30 m²",
       "6 Elevadores inteligentes de alta velocidad",
-      "Elevador VIP",
-      "Oficinas desde 54 m² hasta 250 m²"
+      "Elevador VIP"
     ],
     amenities: [
       "Escaleras de emergencia presurizadas",
@@ -837,9 +838,9 @@ const propertiesData = {
       "Amenidades en el edificio",
       "A menos de 1 km del túnel Bosque Real-Interlomas",
       "Cerca de Santa Fe, Bosques, Interlomas y Polanco",
-      "Diferentes esquemas de pago disponibles"
+      "Esquemas de pago flexibles con descuentos"
     ],
-    gallery: [oficinaPininfarina1, oficinaPininfarina2, oficinaPininfarina3, oficinaPininfarina4, oficinaPininfarina5],
+    gallery: [oficinaPininfarina1, oficinaPininfarina2, oficinaPininfarina3, oficinaPininfarina4, oficinaPininfarina5, oficinaPininfarinaPlan],
     youtubeVideoId: undefined
   },
 };
