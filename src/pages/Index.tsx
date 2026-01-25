@@ -37,7 +37,7 @@ const Index = () => {
     },
     {
       id: "s4",
-      title: "Oficina en Venta – Be Grand, Tabacalera",
+      title: "Oficina en Venta – Be Grand Reforma",
       location: "Tabacalera · Cuauhtémoc",
       price: "$12,500,000 MXN",
       area: "113 m²",
