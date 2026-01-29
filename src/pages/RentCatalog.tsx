@@ -51,7 +51,7 @@ const RentCatalog = () => {
       id: "r17",
       title: "Oficina en renta – Ejercito Nacional, Polanco",
       location: "Polanco",
-      price: "$18,000/mes",
+      price: "$40,000/mes",
       area: "70 m²",
       bedrooms: 0,
       bathrooms: 1,
