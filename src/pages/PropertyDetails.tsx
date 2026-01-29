@@ -501,7 +501,7 @@ const propertiesData = {
     id: "r17",
     title: "Oficina en renta – Ejercito Nacional, Polanco",
     location: "Ejercito Nacional, Polanco",
-    price: "$18,000",
+    price: "$40,000",
     priceType: "Renta mensual",
     area: "70 m²",
     bedrooms: 0,
