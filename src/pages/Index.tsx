@@ -251,7 +251,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img 
             src={heroProperty} 
-            alt="Espacios Premium"
+            alt="Bienes Raíces de Lujo"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
@@ -260,12 +260,11 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10 pb-16 md:pb-24">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-light tracking-[0.1em] leading-tight mb-6 animate-slide-up">
-              ESPACIOS<br />
-              COMERCIALES<br />
-              PREMIUM
+              BIENES RAÍCES<br />
+              DE LUJO
             </h1>
             <p className="text-white/80 text-lg md:text-xl font-light max-w-xl animate-fade-in">
-              Oficinas y locales comerciales en las mejores zonas de Ciudad de México
+              Propiedades exclusivas en venta y renta con un servicio de calidad excepcional
             </p>
           </div>
         </div>
@@ -276,10 +275,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="mb-12">
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.1em] mb-4">
-              PROPIEDADES
+              PROPIEDADES EXCLUSIVAS
             </h2>
             <p className="text-muted-foreground font-light">
-              {allProperties.length} espacios disponibles
+              {allProperties.length} propiedades disponibles
             </p>
           </div>
 
