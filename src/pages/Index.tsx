@@ -264,7 +264,7 @@ const Index = () => {
               REAL ESTATE
             </h1>
             <p className="text-white/80 text-lg md:text-xl font-light max-w-xl animate-fade-in">
-              Propiedades exclusivas en venta y renta con un servicio de calidad excepcional
+              En KGroup ofrecemos los mejores servicios para la venta y renta de tu propiedad.
             </p>
           </div>
         </div>
