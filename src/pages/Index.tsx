@@ -260,8 +260,8 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10 pb-16 md:pb-24">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-light tracking-[0.1em] leading-tight mb-6 animate-slide-up">
-              BIENES RAÍCES<br />
-              DE LUJO
+              LUXURY<br />
+              REAL ESTATE
             </h1>
             <p className="text-white/80 text-lg md:text-xl font-light max-w-xl animate-fade-in">
               Propiedades exclusivas en venta y renta con un servicio de calidad excepcional
