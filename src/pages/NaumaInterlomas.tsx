@@ -93,7 +93,7 @@ const NaumaInterlomas = () => {
               NAUMA INTERLOMAS
             </h1>
             <p className="text-white/90 text-xl md:text-2xl font-light">
-              Departamentos nuevos desde $4.9 MDP
+              Departamentos nuevos desde $5,306,436 MXN
             </p>
           </div>
         </div>
@@ -235,8 +235,8 @@ const NaumaInterlomas = () => {
               {/* Price Card */}
               <div className="border border-border rounded-lg p-6 space-y-4">
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Precio desde</p>
-                  <p className="text-3xl font-light tracking-wide">$4,900,000</p>
+238:                   <p className="text-sm text-muted-foreground mb-1">Precio desde</p>
+                  <p className="text-3xl font-light tracking-wide">$5,306,436</p>
                   <p className="text-sm text-muted-foreground">MXN</p>
                 </div>
                 <div className="border-t border-border pt-4">
