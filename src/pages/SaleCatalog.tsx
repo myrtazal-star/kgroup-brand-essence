@@ -13,7 +13,7 @@ const SaleCatalog = () => {
       id: "nauma-interlomas",
       title: "Departamentos Venta – Nauma Interlomas",
       location: "Interlomas · Estado de México",
-      price: "Desde $4,900,000 MXN",
+      price: "Desde $5,306,436 MXN",
       area: "Loft a 3 rec",
       bedrooms: 3,
       bathrooms: 2,
