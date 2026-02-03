@@ -22,7 +22,12 @@ export const PropertyCard = ({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/property/${id}`);
+    // Special handling for Nauma Interlomas dedicated page
+    if (id === "nauma-interlomas") {
+      navigate("/nauma-interlomas");
+    } else {
+      navigate(`/property/${id}`);
+    }
   };
 
   // Split title into type and name
