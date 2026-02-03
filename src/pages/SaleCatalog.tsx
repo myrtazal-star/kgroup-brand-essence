@@ -24,7 +24,7 @@ const SaleCatalog = () => {
       id: "s6",
       title: "Oficinas Preventa – Torre Designo by Pininfarina",
       location: "Bosque Real · Huixquilucan",
-      price: "Desde $2,500,000 MXN",
+      price: "Desde $5,306,436 MXN",
       area: "54–250 m²",
       bedrooms: 0,
       bathrooms: 1,
