@@ -13,6 +13,7 @@ import ConsultationForm from "./pages/ConsultationForm";
 import PropertyDetails from "./pages/PropertyDetails";
 import NotFound from "./pages/NotFound";
 import Nosotros from "./pages/Nosotros";
+import NaumaInterlomas from "./pages/NaumaInterlomas";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/contacto" element={<Services />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/nauma-interlomas" element={<NaumaInterlomas />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

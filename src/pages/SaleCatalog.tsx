@@ -5,9 +5,21 @@ import { ArrowLeft } from "lucide-react";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
+import naumaFachada from "@/assets/nauma-fachada.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
+    {
+      id: "nauma-interlomas",
+      title: "Departamentos Venta – Nauma Interlomas",
+      location: "Interlomas · Estado de México",
+      price: "Desde $4,900,000 MXN",
+      area: "Loft a 3 rec",
+      bedrooms: 3,
+      bathrooms: 2,
+      imageUrl: naumaFachada,
+      featured: true,
+    },
     {
       id: "s6",
       title: "Oficinas Preventa – Torre Designo by Pininfarina",
