@@ -2,114 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Ultra Minimalist - Pure Black & White */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Ultra Luxury Dark Palette */
+    --background: 225 14% 5%;
+    --foreground: 36 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 225 12% 8%;
+    --card-foreground: 36 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 225 12% 8%;
+    --popover-foreground: 36 20% 95%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 40 45% 56%;
+    --primary-foreground: 225 14% 5%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 225 10% 12%;
+    --secondary-foreground: 36 20% 95%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 225 10% 14%;
+    --muted-foreground: 36 12% 68%;
 
-    --accent: 0 0% 0%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 40 45% 56%;
+    --accent-foreground: 225 14% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 36 20% 95%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 96%;
-    --ring: 0 0% 0%;
+    --border: 225 10% 15%;
+    --input: 225 10% 12%;
+    --ring: 40 45% 56%;
 
-    /* Minimalist Tokens */
-    --shadow-subtle: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
-    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.04);
-    
-    /* Typography Scale */
-    --text-hero: 3.5rem;
-    --text-display: 2.5rem;
-    --text-heading: 1.5rem;
-    --text-body: 1rem;
-    --text-caption: 0.75rem;
-    
-    /* Spacing Scale */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-2xl: 4rem;
-    --space-3xl: 6rem;
+    --radius: 0px;
 
-    --radius: 0;
-
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 0%;
-    --sidebar-primary: 0 0% 0%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 0%;
-    --sidebar-border: 0 0% 92%;
-    --sidebar-ring: 0 0% 0%;
-  }
-
-  .dark {
-    /* Ultra Minimalist Dark */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 12%;
-    --input: 0 0% 12%;
-    --ring: 0 0% 100%;
-    
-    --shadow-subtle: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
-    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3);
-
-    --sidebar-background: 0 0% 0%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 8%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 12%;
-    --sidebar-ring: 0 0% 100%;
+    --sidebar-background: 225 14% 5%;
+    --sidebar-foreground: 36 20% 95%;
+    --sidebar-primary: 40 45% 56%;
+    --sidebar-primary-foreground: 225 14% 5%;
+    --sidebar-accent: 225 10% 12%;
+    --sidebar-accent-foreground: 36 20% 95%;
+    --sidebar-border: 225 10% 15%;
+    --sidebar-ring: 40 45% 56%;
   }
 }
 
@@ -120,68 +53,123 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
   }
   
   h1 {
-    font-weight: 200;
-    letter-spacing: 0.15em;
+    font-weight: 300;
+    letter-spacing: 0.06em;
   }
 
   /* Typography Classes */
   .text-hero {
-    font-size: var(--text-hero);
-    line-height: 1.1;
-    letter-spacing: 0.1em;
-    font-weight: 200;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.375rem;
+    line-height: 1.05;
+    letter-spacing: 0.06em;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 
   .text-display {
-    font-size: var(--text-display);
-    line-height: 1.2;
-    letter-spacing: 0.08em;
-    font-weight: 300;
-  }
-
-  .text-heading {
-    font-size: var(--text-heading);
-    line-height: 1.3;
-    letter-spacing: 0.05em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.75rem;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
     font-weight: 400;
   }
 
+  .text-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+  }
+
   .text-body {
-    font-size: var(--text-body);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     line-height: 1.7;
     letter-spacing: 0.02em;
     font-weight: 300;
   }
 
   .text-caption {
-    font-size: var(--text-caption);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
     line-height: 1.5;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.22em;
     font-weight: 400;
     text-transform: uppercase;
   }
 
-  /* Minimal Animations */
+  .text-nav {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    letter-spacing: 0.22em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  /* Luxury Animations */
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeUpBlur {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .animate-fade-up-blur {
+    animation: fadeUpBlur 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-fade-up-blur-delay-1 {
+    opacity: 0;
+    animation: fadeUpBlur 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  }
+
+  .animate-fade-up-blur-delay-2 {
+    opacity: 0;
+    animation: fadeUpBlur 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+  }
+
+  .animate-fade-up-blur-delay-3 {
+    opacity: 0;
+    animation: fadeUpBlur 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+  }
+
+  @keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.06); }
+  }
+
+  .animate-slow-zoom {
+    animation: slowZoom 15s ease-in-out infinite alternate;
   }
 
   @keyframes slideUp {
@@ -199,21 +187,47 @@ All colors MUST be HSL.
     animation: slideUp 0.8s ease-out;
   }
 
-  /* Smooth hover transitions */
+  @keyframes drawLine {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  .animate-draw-line {
+    transform-origin: left;
+    animation: drawLine 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  /* Hover transitions */
   .hover-lift {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
   }
   
   .hover-lift:hover {
     transform: translateY(-4px);
   }
 
+  /* Luxury button glow */
+  .btn-luxury {
+    border-radius: 14px;
+    border: 1px solid hsl(var(--primary) / 0.4);
+    transition: all 0.4s ease;
+  }
+
+  .btn-luxury:hover {
+    border-color: hsl(var(--primary) / 0.8);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.15), 0 0 40px hsl(var(--primary) / 0.05);
+  }
+
   /* Mobile Optimizations */
   @media (max-width: 768px) {
-    :root {
-      --text-hero: 2rem;
-      --text-display: 1.5rem;
-      --text-heading: 1.25rem;
+    .text-hero {
+      font-size: 2.75rem;
+    }
+    .text-display {
+      font-size: 1.75rem;
+    }
+    .text-heading {
+      font-size: 1.25rem;
     }
     
     button, a {
@@ -226,5 +240,17 @@ All colors MUST be HSL.
     html {
       scroll-behavior: smooth;
     }
+  }
+
+  /* Scroll reveal utility */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
