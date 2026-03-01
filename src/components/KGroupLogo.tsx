@@ -14,14 +14,14 @@ export const KGroupLogo = ({ variant = 'full', size = 'md', className = '' }: KG
   if (variant === 'monogram') {
     return (
       <div className={`${sizeClasses[size]} ${className}`}>
-        <span className="font-light tracking-[0.3em] uppercase">K</span>
+        <span className="tracking-[0.3em] uppercase text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400 }}>K</span>
       </div>
     );
   }
 
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
-      <span className="font-light tracking-[0.3em] uppercase">KGROUP</span>
+      <span className="tracking-[0.3em] uppercase text-foreground" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, letterSpacing: '0.35em' }}>KGROUP</span>
     </div>
   );
 };

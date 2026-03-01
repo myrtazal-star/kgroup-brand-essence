@@ -3,6 +3,7 @@ import { PropertyCard } from "@/components/PropertyCard";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import heroProperty from "@/assets/hero-building.jpg";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
@@ -23,6 +24,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const scrollRef = useScrollReveal();
 
   const allProperties = [
     {
@@ -178,33 +180,33 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" ref={scrollRef}>
       <WhatsAppButton />
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+          <div className="flex items-center justify-between h-20">
             <Link to="/">
               <KGroupLogo variant="full" size="md" />
             </Link>
             
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-12">
-              <Link to="/rent-catalog" className="text-caption hover:text-muted-foreground transition-colors">
+            <div className="hidden md:flex items-center gap-14">
+              <Link to="/rent-catalog" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">
                 Renta
               </Link>
-              <Link to="/sale-catalog" className="text-caption hover:text-muted-foreground transition-colors">
+              <Link to="/sale-catalog" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">
                 Venta
               </Link>
-              <Link to="/services" className="text-caption hover:text-muted-foreground transition-colors">
+              <Link to="/services" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">
                 Servicios
               </Link>
               <a 
                 href="https://wa.me/525560808129" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-caption hover:text-muted-foreground transition-colors"
+                className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 Contacto
               </a>
@@ -212,7 +214,7 @@ const Index = () => {
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden p-2"
+              className="md:hidden p-2 text-foreground"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -221,25 +223,25 @@ const Index = () => {
 
           {/* Mobile Nav */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-6 border-t border-border animate-fade-in">
-              <div className="flex flex-col gap-6">
+            <div className="md:hidden py-8 border-t border-border/50 animate-fade-in">
+              <div className="flex flex-col gap-8">
                 <Link 
                   to="/rent-catalog" 
-                  className="text-caption"
+                  className="text-nav text-muted-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Renta
                 </Link>
                 <Link 
                   to="/sale-catalog" 
-                  className="text-caption"
+                  className="text-nav text-muted-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Venta
                 </Link>
                 <Link 
                   to="/services" 
-                  className="text-caption"
+                  className="text-nav text-muted-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Servicios
@@ -248,7 +250,7 @@ const Index = () => {
                   href="https://wa.me/525560808129" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-caption"
+                  className="text-nav text-muted-foreground"
                 >
                   Contacto
                 </a>
@@ -259,57 +261,75 @@ const Index = () => {
       </nav>
 
       {/* Hero */}
-      <section className="relative h-[85vh] flex items-end pt-16">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroProperty} 
-            alt="Bienes Raíces de Lujo"
-            className="w-full h-full object-cover"
+            alt="Propiedades de Lujo en CDMX"
+            className="w-full h-full object-cover animate-slow-zoom"
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 pb-16 md:pb-24">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-light tracking-[0.1em] leading-tight mb-6 animate-slide-up">
-              LUXURY<br />
-              REAL ESTATE
-            </h1>
-            <p className="text-white/80 text-lg md:text-xl font-light max-w-xl animate-fade-in">
-              En KGroup ofrecemos los mejores servicios para la venta y renta de tu propiedad.
-            </p>
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-hero text-foreground animate-fade-up-blur">
+            KGROUP<br />INMOBILIARIA
+          </h1>
+          <p className="text-muted-foreground text-lg md:text-xl font-light tracking-wide mt-6 animate-fade-up-blur-delay-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Propiedades premium en CDMX
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 animate-fade-up-blur-delay-2">
+            <Link 
+              to="/rent-catalog"
+              className="btn-luxury px-8 py-3.5 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all duration-400"
+            >
+              Ver Propiedades
+            </Link>
+            <a 
+              href="https://wa.me/525560808129?text=Hola%2C%20quiero%20agendar%20una%20visita"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-luxury px-8 py-3.5 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all duration-400"
+            >
+              Agendar Visita
+            </a>
           </div>
         </div>
       </section>
 
       {/* Properties Grid */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-light tracking-[0.1em] mb-4">
-              PROPIEDADES EXCLUSIVAS
-            </h2>
-            <p className="text-muted-foreground font-light">
+      <section className="py-[120px]">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+          <div className="mb-16 scroll-reveal">
+            <div className="flex items-center gap-6 mb-6">
+              <h2 className="text-display text-foreground uppercase">
+                Propiedades Exclusivas
+              </h2>
+            </div>
+            <div className="h-px bg-primary/30 animate-draw-line mb-4" />
+            <p className="text-muted-foreground font-light text-sm tracking-wide" style={{ fontFamily: "'Inter', sans-serif" }}>
               {allProperties.length} propiedades disponibles
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
-            {allProperties.map((property) => (
-              <PropertyCard key={property.id} {...property} />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allProperties.map((property, index) => (
+              <div key={property.id} className="scroll-reveal" style={{ transitionDelay: `${index * 80}ms` }}>
+                <PropertyCard {...property} />
+              </div>
             ))}
           </div>
 
-          <div className="flex gap-6 mt-16 justify-center">
+          <div className="flex gap-8 mt-20 justify-center scroll-reveal">
             <Link 
               to="/rent-catalog"
-              className="text-caption border-b border-foreground pb-1 hover:text-muted-foreground hover:border-muted-foreground transition-colors"
+              className="btn-luxury px-8 py-3 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all"
             >
               Ver todas las rentas
             </Link>
             <Link 
               to="/sale-catalog"
-              className="text-caption border-b border-foreground pb-1 hover:text-muted-foreground hover:border-muted-foreground transition-colors"
+              className="btn-luxury px-8 py-3 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all"
             >
               Ver todas las ventas
             </Link>
@@ -318,12 +338,12 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12">
-        <div className="container mx-auto px-6">
+      <footer className="border-t border-border/50 py-16">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
             <p className="text-caption text-muted-foreground">
-              © 2024 KGroup
+              © 2024 KGroup Inmobiliaria
             </p>
           </div>
         </div>
