@@ -977,6 +977,40 @@ const propertiesData = {
     gallery: [oficinaPatriotismo77_1, oficinaPatriotismo77_2, oficinaPatriotismo77_3, oficinaPatriotismo77_4, oficinaPatriotismo77_5, oficinaPatriotismo77_6, oficinaPatriotismo77_7, oficinaPatriotismo77_8],
     youtubeVideoId: undefined
   },
+  "s7": {
+    id: "s7",
+    title: "Oficina en Venta – Yama Pedregal",
+    location: "Pedregal",
+    price: "Consultar precio",
+    priceType: "Venta",
+    area: "73.5 m²",
+    bedrooms: 0,
+    bathrooms: 0,
+    parking: 2,
+    imageUrl: oficinaYama1,
+    featured: true,
+    description: "Oficina en venta en el corporativo Yama Pedregal, un desarrollo moderno con accesos fáciles desde la avenida principal. Cuenta con 73.5 m² en obra gris, ideal para adaptar a las necesidades de tu empresa o como inversión.\n\nSe ubica en el piso 10 con vistas panorámicas. Dispone de 2 lugares de estacionamiento y entrega inmediata.\n\nEl corporativo cuenta con amenidades de primer nivel, incluyendo terraza rooftop con área lounge y sala de juntas equipada.",
+    features: [
+      "73.5 m² de superficie",
+      "Piso 10 con vistas panorámicas",
+      "Obra gris – listo para adaptar",
+      "2 lugares de estacionamiento",
+      "Entrega inmediata",
+      "Corporativo moderno",
+      "Accesos fáciles desde avenida principal",
+      "Ideal para inversión o uso propio"
+    ],
+    amenities: [
+      "Terraza rooftop con área lounge",
+      "Sala de juntas equipada",
+      "Seguridad 24/7",
+      "Elevador",
+      "Estacionamiento techado",
+      "Acceso a transporte público"
+    ],
+    gallery: [oficinaYama1, oficinaYama2, oficinaYama3, oficinaYama4, oficinaYama5, oficinaYama6, oficinaYama7, oficinaYama8],
+    youtubeVideoId: undefined
+  },
 };
 
 const PropertyDetails = () => {
