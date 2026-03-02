@@ -146,6 +146,16 @@ import oficinaMoliere7 from "@/assets/oficina-moliere-7.jpg";
 import oficinaMoliere8 from "@/assets/oficina-moliere-8.jpg";
 import oficinaMoliere9 from "@/assets/oficina-moliere-9.jpg";
 import oficinaMoliere10 from "@/assets/oficina-moliere-10.jpg";
+import oficinaMoliere2_1 from "@/assets/oficina-moliere2-1.jpg";
+import oficinaMoliere2_2 from "@/assets/oficina-moliere2-2.jpg";
+import oficinaMoliere2_3 from "@/assets/oficina-moliere2-3.jpg";
+import oficinaMoliere2_4 from "@/assets/oficina-moliere2-4.jpg";
+import oficinaMoliere2_5 from "@/assets/oficina-moliere2-5.jpg";
+import oficinaMoliere2_6 from "@/assets/oficina-moliere2-6.jpg";
+import oficinaMoliere2_7 from "@/assets/oficina-moliere2-7.jpg";
+import oficinaMoliere2_8 from "@/assets/oficina-moliere2-8.jpg";
+import oficinaMoliere2_9 from "@/assets/oficina-moliere2-9.jpg";
+import oficinaMoliere2_10 from "@/assets/oficina-moliere2-10.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import espacioMasaryk2 from "@/assets/espacio-masaryk-2.jpg";
 import espacioMasaryk3 from "@/assets/espacio-masaryk-3.jpg";
@@ -843,6 +853,43 @@ const propertiesData = {
       "Esquemas de pago flexibles con descuentos"
     ],
     gallery: [oficinaPininfarina1, oficinaPininfarina2, oficinaPininfarina3, oficinaPininfarina4, oficinaPininfarina5, oficinaPininfarina6, oficinaPininfarina7, oficinaPininfarinaPlan],
+    youtubeVideoId: undefined
+  },
+  "r25": {
+    id: "r25",
+    title: "Oficina / Bodega en Renta – Moliere, Polanco",
+    location: "Moliere, Polanco",
+    price: "$140,000",
+    priceType: "Renta mensual + 10% mantenimiento + IVA",
+    area: "247 m²",
+    bedrooms: 0,
+    bathrooms: 5,
+    parking: 4,
+    imageUrl: oficinaMoliere2_1,
+    featured: true,
+    description: "Ubicada en una de las calles más corporativas y exclusivas de Polanco, esta oficina de 247 m² en un solo nivel ofrece el espacio ideal para empresas que buscan presencia, funcionalidad y ubicación estratégica.\n\nSu ubicación sobre Moliere, a pasos de Av. Presidente Masaryk y principales corredores corporativos, brinda conectividad inmediata, prestigio de marca y comodidad para colaboradores y clientes.\n\nIdeal para corporativos, bodega, firmas legales, consultorios, despachos financieros o empresas que buscan posicionarse en el corazón de Polanco.",
+    features: [
+      "247 m² perfectamente distribuidos",
+      "Piso completo en un solo nivel",
+      "5 baños",
+      "4 cajones de estacionamiento",
+      "Cocineta con barra de granito",
+      "Vigilancia 24 horas",
+      "Elevador",
+      "Lobby corporativo"
+    ],
+    amenities: [
+      "Seguridad 24/7",
+      "A pasos de Av. Presidente Masaryk",
+      "Corredores corporativos principales",
+      "Conectividad inmediata",
+      "Prestigio de marca",
+      "1 mes de renta anticipada",
+      "2 depósitos",
+      "Aval requerido",
+      "1 mes de gracia"
+    ],
+    gallery: [oficinaMoliere2_1, oficinaMoliere2_2, oficinaMoliere2_3, oficinaMoliere2_4, oficinaMoliere2_5, oficinaMoliere2_6, oficinaMoliere2_7, oficinaMoliere2_8, oficinaMoliere2_9, oficinaMoliere2_10],
     youtubeVideoId: undefined
   },
 };
