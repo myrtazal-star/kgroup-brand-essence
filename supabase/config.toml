@@ -1,1 +1,4 @@
 project_id = "nlgdpabuqiiqmarelntq"
+
+[functions.kgroup-advisor]
+verify_jwt = false
