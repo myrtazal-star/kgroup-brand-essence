@@ -2,3 +2,6 @@ project_id = "nlgdpabuqiiqmarelntq"
 
 [functions.kgroup-advisor]
 verify_jwt = false
+
+[functions.whatsapp-webhook]
+verify_jwt = false
