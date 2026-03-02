@@ -13,6 +13,7 @@ import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
 import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
+import oficinaMoliere2_1 from "@/assets/oficina-moliere2-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -131,6 +132,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 2,
       imageUrl: oficinaJuarez1,
+      featured: true
+    },
+    {
+      id: "r25",
+      title: "Oficina / Bodega en Renta – Moliere, Polanco",
+      location: "Polanco · Moliere",
+      price: "$140,000/mes",
+      area: "247 m²",
+      bedrooms: 0,
+      bathrooms: 5,
+      imageUrl: oficinaMoliere2_1,
       featured: true
     },
   ];
