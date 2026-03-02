@@ -28,17 +28,6 @@ const Index = () => {
 
   const allProperties = [
     {
-      id: "nauma-interlomas",
-      title: "Departamentos Venta – Nauma Interlomas",
-      location: "Interlomas · Estado de México",
-      price: "Desde $5,306,436 MXN",
-      area: "Loft a 3 rec",
-      bedrooms: 3,
-      bathrooms: 2,
-      imageUrl: naumaFachada,
-      featured: true
-    },
-    {
       id: "r16",
       title: "Oficina Corporativa – Torre Porsche",
       location: "Santa Fe · Piso 22",
@@ -131,17 +120,6 @@ const Index = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaVinkel1,
-      featured: true
-    },
-    {
-      id: "r22",
-      title: "Oficina en Renta – Lomas de Chapultepec",
-      location: "Lomas · Piso 5",
-      price: "$70,000/mes",
-      area: "140 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaChapultepec1,
       featured: true
     },
     {
