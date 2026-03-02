@@ -156,6 +156,15 @@ import oficinaMoliere2_7 from "@/assets/oficina-moliere2-7.jpg";
 import oficinaMoliere2_8 from "@/assets/oficina-moliere2-8.jpg";
 import oficinaMoliere2_9 from "@/assets/oficina-moliere2-9.jpg";
 import oficinaMoliere2_10 from "@/assets/oficina-moliere2-10.jpg";
+import oficinaPatriotismo1 from "@/assets/oficina-patriotismo-1.jpg";
+import oficinaPatriotismo2 from "@/assets/oficina-patriotismo-2.jpg";
+import oficinaPatriotismo3 from "@/assets/oficina-patriotismo-3.jpg";
+import oficinaPatriotismo4 from "@/assets/oficina-patriotismo-4.jpg";
+import oficinaPatriotismo5 from "@/assets/oficina-patriotismo-5.jpg";
+import oficinaPatriotismo6 from "@/assets/oficina-patriotismo-6.jpg";
+import oficinaPatriotismo7 from "@/assets/oficina-patriotismo-7.jpg";
+import oficinaPatriotismo8 from "@/assets/oficina-patriotismo-8.jpg";
+import oficinaPatriotismo9 from "@/assets/oficina-patriotismo-9.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import espacioMasaryk2 from "@/assets/espacio-masaryk-2.jpg";
 import espacioMasaryk3 from "@/assets/espacio-masaryk-3.jpg";
@@ -890,6 +899,40 @@ const propertiesData = {
       "1 mes de gracia"
     ],
     gallery: [oficinaMoliere2_1, oficinaMoliere2_2, oficinaMoliere2_3, oficinaMoliere2_4, oficinaMoliere2_5, oficinaMoliere2_6, oficinaMoliere2_7, oficinaMoliere2_8, oficinaMoliere2_9, oficinaMoliere2_10],
+    youtubeVideoId: undefined
+  },
+  "r26": {
+    id: "r26",
+    title: "Oficina en Patriotismo con Vistas Panorámicas",
+    location: "Condesa, Hipódromo",
+    price: "Consultar precio",
+    priceType: "Renta mensual",
+    area: "120 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 2,
+    imageUrl: oficinaPatriotismo1,
+    featured: true,
+    description: "Oficina disponible en renta en la Condesa, Hipódromo. Cuenta con 120 m², ideal para adaptar a las necesidades de tu empresa. Dispone de 2 baños y 2 lugares de estacionamiento. Se ubica en el piso 7 y cuenta con disponibilidad inmediata.\n\nSaliendo de metro Patriotismo, se quedan muy cerca opciones de transporte público, como estaciones de Metro y Metrobús, además de fácil acceso a avenidas principales.\n\nLa zona ofrece una amplia gama de servicios, desde supermercados y bancos hasta restaurantes y centros de entretenimiento. También cuenta con parques y espacios verdes, como el Parque México, ideales para disfrutar al aire libre.",
+    features: [
+      "120 m² de superficie",
+      "Vistas panorámicas",
+      "Piso 7",
+      "2 baños",
+      "2 lugares de estacionamiento",
+      "Disponibilidad inmediata",
+      "Excelente iluminación natural",
+      "Espacio abierto para adaptar"
+    ],
+    amenities: [
+      "Seguridad",
+      "Elevador",
+      "Acceso a transporte público (Metro y Metrobús)",
+      "Cerca de avenidas principales",
+      "Zona de servicios y restaurantes",
+      "Cerca de Parque México"
+    ],
+    gallery: [oficinaPatriotismo1, oficinaPatriotismo2, oficinaPatriotismo3, oficinaPatriotismo4, oficinaPatriotismo5, oficinaPatriotismo6, oficinaPatriotismo7, oficinaPatriotismo8, oficinaPatriotismo9],
     youtubeVideoId: undefined
   },
 };

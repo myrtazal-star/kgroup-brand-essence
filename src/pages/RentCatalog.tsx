@@ -14,6 +14,7 @@ import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
 import oficinaMoliere2_1 from "@/assets/oficina-moliere2-1.jpg";
+import oficinaPatriotismo1 from "@/assets/oficina-patriotismo-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -143,6 +144,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 5,
       imageUrl: oficinaMoliere2_1,
+      featured: true
+    },
+    {
+      id: "r26",
+      title: "Oficina en Patriotismo con Vistas Panorámicas",
+      location: "Condesa · Hipódromo",
+      price: "Consultar precio",
+      area: "120 m²",
+      bedrooms: 0,
+      bathrooms: 2,
+      imageUrl: oficinaPatriotismo1,
       featured: true
     },
   ];
