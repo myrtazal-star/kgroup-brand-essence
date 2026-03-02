@@ -6,6 +6,7 @@ import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
 import naumaFachada from "@/assets/nauma-fachada.jpg";
+import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
@@ -51,6 +52,17 @@ const SaleCatalog = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: oficinaReforma1,
+      featured: true,
+    },
+    {
+      id: "s7",
+      title: "Oficina en Venta – Yama Pedregal",
+      location: "Pedregal",
+      price: "Consultar precio",
+      area: "73.5 m²",
+      bedrooms: 0,
+      bathrooms: 0,
+      imageUrl: oficinaYama1,
       featured: true,
     },
   ];
