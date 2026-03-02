@@ -219,6 +219,14 @@ import oficinaPininfarina5 from "@/assets/oficina-pininfarina-5.jpg";
 import oficinaPininfarina6 from "@/assets/oficina-pininfarina-6.jpg";
 import oficinaPininfarina7 from "@/assets/oficina-pininfarina-7.jpg";
 import oficinaPininfarinaPlan from "@/assets/oficina-pininfarina-plano.png";
+import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
+import oficinaYama2 from "@/assets/oficina-yama-2.jpg";
+import oficinaYama3 from "@/assets/oficina-yama-3.jpg";
+import oficinaYama4 from "@/assets/oficina-yama-4.jpg";
+import oficinaYama5 from "@/assets/oficina-yama-5.jpg";
+import oficinaYama6 from "@/assets/oficina-yama-6.jpg";
+import oficinaYama7 from "@/assets/oficina-yama-7.jpg";
+import oficinaYama8 from "@/assets/oficina-yama-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
