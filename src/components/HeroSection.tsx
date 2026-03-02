@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroProperty from "@/assets/hero-building.jpg";
+import heroProperty from "@/assets/hero-corporate.jpg";
 
 const StaggerText = ({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) => {
   return (
