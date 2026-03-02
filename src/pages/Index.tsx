@@ -1,10 +1,13 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyCard } from "@/components/PropertyCard";
+import { HeroSection } from "@/components/HeroSection";
+import { ScrollRevealSection } from "@/components/ScrollRevealSection";
+import { GoldDivider } from "@/components/GoldDivider";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
-import heroProperty from "@/assets/hero-building.jpg";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
@@ -20,11 +23,8 @@ import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
 import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
 import naumaFachada from "@/assets/nauma-fachada.jpg";
 
-import { WhatsAppButton } from "@/components/WhatsAppButton";
-
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const scrollRef = useScrollReveal();
 
   const allProperties = [
     {
@@ -180,11 +180,11 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background" ref={scrollRef}>
+    <div className="min-h-screen bg-background">
       <WhatsAppButton />
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10">
           <div className="flex items-center justify-between h-20">
             <Link to="/">
@@ -225,35 +225,10 @@ const Index = () => {
           {mobileMenuOpen && (
             <div className="md:hidden py-8 border-t border-border/50 animate-fade-in">
               <div className="flex flex-col gap-8">
-                <Link 
-                  to="/rent-catalog" 
-                  className="text-nav text-muted-foreground"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Renta
-                </Link>
-                <Link 
-                  to="/sale-catalog" 
-                  className="text-nav text-muted-foreground"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Venta
-                </Link>
-                <Link 
-                  to="/services" 
-                  className="text-nav text-muted-foreground"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Servicios
-                </Link>
-                <a 
-                  href="https://wa.me/525560808129" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-nav text-muted-foreground"
-                >
-                  Contacto
-                </a>
+                <Link to="/rent-catalog" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Renta</Link>
+                <Link to="/sale-catalog" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Venta</Link>
+                <Link to="/services" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Servicios</Link>
+                <a href="https://wa.me/525560808129" target="_blank" rel="noopener noreferrer" className="text-nav text-muted-foreground">Contacto</a>
               </div>
             </div>
           )}
@@ -261,89 +236,55 @@ const Index = () => {
       </nav>
 
       {/* Hero */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={heroProperty} 
-            alt="Propiedades de Lujo en CDMX"
-            className="w-full h-full object-cover animate-slow-zoom"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-hero text-foreground animate-fade-up-blur">
-            KGROUP<br />INMOBILIARIA
-          </h1>
-          <p className="text-muted-foreground text-lg md:text-xl font-light tracking-wide mt-6 animate-fade-up-blur-delay-1" style={{ fontFamily: "'Inter', sans-serif" }}>
-            Propiedades premium en CDMX
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 animate-fade-up-blur-delay-2">
-            <Link 
-              to="/rent-catalog"
-              className="btn-luxury px-8 py-3.5 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all duration-400"
-            >
-              Ver Propiedades
-            </Link>
-            <a 
-              href="https://wa.me/525560808129?text=Hola%2C%20quiero%20agendar%20una%20visita"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-luxury px-8 py-3.5 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all duration-400"
-            >
-              Agendar Visita
-            </a>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Properties Grid */}
       <section className="py-[120px]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10">
-          <div className="mb-16 scroll-reveal">
+          <ScrollRevealSection className="mb-16">
             <div className="flex items-center gap-6 mb-6">
               <h2 className="text-display text-foreground uppercase">
-                Propiedades Exclusivas
+                Portafolio Corporativo
               </h2>
             </div>
-            <div className="h-px bg-primary/30 animate-draw-line mb-4" />
+            <GoldDivider className="mb-4" />
             <p className="text-muted-foreground font-light text-sm tracking-wide" style={{ fontFamily: "'Inter', sans-serif" }}>
               {allProperties.length} propiedades disponibles
             </p>
-          </div>
+          </ScrollRevealSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allProperties.map((property, index) => (
-              <div key={property.id} className="scroll-reveal" style={{ transitionDelay: `${index * 80}ms` }}>
+              <ScrollRevealSection key={property.id} delay={index * 0.08}>
                 <PropertyCard {...property} />
-              </div>
+              </ScrollRevealSection>
             ))}
           </div>
 
-          <div className="flex gap-8 mt-20 justify-center scroll-reveal">
+          <ScrollRevealSection className="flex gap-8 mt-20 justify-center" delay={0.2}>
             <Link 
               to="/rent-catalog"
-              className="btn-luxury px-8 py-3 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all"
+              className="btn-luxury px-10 py-4 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all duration-500"
             >
               Ver todas las rentas
             </Link>
             <Link 
               to="/sale-catalog"
-              className="btn-luxury px-8 py-3 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all"
+              className="btn-luxury px-10 py-4 text-nav text-foreground hover:text-primary-foreground hover:bg-primary/90 transition-all duration-500"
             >
               Ver todas las ventas
             </Link>
-          </div>
+          </ScrollRevealSection>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-16">
+      <footer className="border-t border-border/30 py-16">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
             <p className="text-caption text-muted-foreground">
-              © 2024 KGroup Inmobiliaria
+              © 2024 KGroup Commercial Real Estate
             </p>
           </div>
         </div>
