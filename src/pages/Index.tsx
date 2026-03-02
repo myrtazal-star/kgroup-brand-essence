@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { InteractiveMap } from "@/components/InteractiveMap";
 
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
@@ -291,6 +292,9 @@ const Index = () => {
           </ScrollRevealSection>
         </div>
       </section>
+
+      {/* Interactive Map */}
+      <InteractiveMap />
 
       {/* Footer */}
       <footer className="border-t border-border/30 py-16">
