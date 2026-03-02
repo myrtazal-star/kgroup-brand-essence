@@ -989,7 +989,7 @@ const propertiesData = {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
     location: "Pedregal",
-    price: "Consultar precio",
+    price: "$5,500,000 MXN",
     priceType: "Venta",
     area: "73.5 m²",
     bedrooms: 0,
