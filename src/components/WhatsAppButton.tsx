@@ -8,7 +8,7 @@ export const WhatsAppButton = () => {
       href={whatsappURL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-24 right-6 z-50 group"
     >
       <div className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_20px_hsl(40,45%,56%,0.1)]">
         <MessageCircle className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
