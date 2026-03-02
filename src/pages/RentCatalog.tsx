@@ -15,6 +15,7 @@ import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
 import oficinaMoliere2_1 from "@/assets/oficina-moliere2-1.jpg";
 import oficinaPatriotismo1 from "@/assets/oficina-patriotismo-1.jpg";
+import oficinaPatriotismo77_1 from "@/assets/oficina-patriotismo-77-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -155,6 +156,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 2,
       imageUrl: oficinaPatriotismo1,
+      featured: true
+    },
+    {
+      id: "r27",
+      title: "Oficina en Renta – Patriotismo, Condesa",
+      location: "Condesa · Hipódromo",
+      price: "Consultar precio",
+      area: "77 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaPatriotismo77_1,
       featured: true
     },
   ];
