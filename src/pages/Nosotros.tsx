@@ -1,20 +1,76 @@
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Award, TrendingUp, Users, Target, Eye, Heart } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ScrollRevealSection } from "@/components/ScrollRevealSection";
+import { GoldDivider } from "@/components/GoldDivider";
+import { motion } from "framer-motion";
+
+const executives = [
+  {
+    name: "Kira Kellar",
+    title: "CEO",
+    initials: "KK",
+    description: [
+      "Especialista en bienes raíces corporativos con enfoque estratégico en oficinas e inmuebles industriales.",
+      "Lidera la firma con visión empresarial, negociación inteligente y posicionamiento de alto nivel.",
+    ],
+  },
+  {
+    name: "Santiago Mendoza",
+    title: "Director Jurídico",
+    initials: "SM",
+    description: [
+      "Abogado especializado en operaciones inmobiliarias con más de 10 años de experiencia en real estate.",
+      "Encargado de blindar cada operación con estructura legal sólida y procesos seguros.",
+    ],
+  },
+];
+
+const ExecutiveCard = ({ exec, index }: { exec: typeof executives[0]; index: number }) => (
+  <ScrollRevealSection delay={index * 0.15}>
+    <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12 items-center">
+      {/* Portrait */}
+      <motion.div
+        whileHover={{ scale: 1.03, y: -4 }}
+        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        className="mx-auto md:mx-0"
+      >
+        <div className="w-56 h-56 md:w-64 md:h-64 rounded-2xl bg-card shadow-premium flex items-center justify-center overflow-hidden border border-border/50">
+          <span className="text-5xl md:text-6xl font-light tracking-wider text-accent font-serif">
+            {exec.initials}
+          </span>
+        </div>
+      </motion.div>
+
+      {/* Text */}
+      <div className="text-center md:text-left space-y-4">
+        <div>
+          <h3 className="text-3xl md:text-4xl font-light tracking-wide font-serif">{exec.name}</h3>
+          <div className="w-12 h-px bg-accent mt-3 mb-2 mx-auto md:mx-0" />
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">{exec.title}</p>
+        </div>
+        <div className="space-y-3 pt-2">
+          {exec.description.map((line, i) => (
+            <p key={i} className="text-muted-foreground leading-relaxed text-base md:text-lg">{line}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  </ScrollRevealSection>
+);
 
 const Nosotros = () => {
   return (
     <div className="min-h-screen bg-background">
       <WhatsAppButton />
-      
+
       {/* Header */}
       <header className="relative z-10 border-b border-border bg-background/95 backdrop-blur-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <KGroupLogo variant="full" size="md" />
-            
             <Link to="/">
               <Button variant="outline" className="group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
@@ -25,174 +81,107 @@ const Nosotros = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/50 to-background">
+      {/* Hero */}
+      <section className="py-24 md:py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-light mb-6">
-              Sobre <span className="text-accent font-medium">KGroup</span>
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Especialistas en bienes raíces comerciales que transforman espacios en oportunidades de crecimiento.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Kira Kellar Profile */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="glass p-8 lg:p-12">
-              <div className="grid lg:grid-cols-3 gap-12">
-                <div className="lg:col-span-1">
-                  <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-32 h-32 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-5xl font-light text-accent">KK</span>
-                      </div>
-                      <h3 className="text-2xl font-medium mb-2">Kira Kellar</h3>
-                      <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                        <Award className="w-4 h-4" />
-                        <span className="text-sm">Miembro AMPI</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-2 space-y-6">
-                  <div>
-                    <h2 className="text-3xl font-light mb-4">Especialista en Bienes Raíces Comerciales</h2>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                      Con más de 10 años de experiencia en el mercado inmobiliario comercial de CDMX, 
-                      Kira Kellar ha consolidado su reputación como la asesora de confianza para empresas 
-                      que buscan el espacio perfecto para crecer.
-                    </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      Miembro certificada de la Asociación Mexicana de Profesionales Inmobiliarios (AMPI), 
-                      Kira combina conocimiento profundo del mercado con un enfoque personalizado que garantiza 
-                      resultados excepcionales para cada cliente.
-                    </p>
-                  </div>
-
-                  <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-border">
-                    <div>
-                      <div className="text-3xl font-light text-accent mb-2">+400K</div>
-                      <div className="text-sm text-muted-foreground">Vistas mensuales</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-light text-accent mb-2">95%</div>
-                      <div className="text-sm text-muted-foreground">Tasa de ocupación</div>
-                    </div>
-                    <div>
-                      <div className="text-3xl font-light text-accent mb-2">30 días</div>
-                      <div className="text-sm text-muted-foreground">Tiempo promedio de cierre</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            <div className="glass p-8">
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="text-2xl font-medium mb-4">Misión</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Conectar a empresas con espacios comerciales estratégicos que potencien su crecimiento, 
-                ofreciendo asesoría experta, análisis de rentabilidad y negociación profesional que 
-                maximice el valor de cada transacción.
+          <ScrollRevealSection>
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <p className="text-xs uppercase tracking-[0.4em] text-accent font-medium">KGroup Real Estate</p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-serif">
+                Quiénes Somos
+              </h1>
+              <GoldDivider width="w-24" className="mx-auto" />
+              <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide">
+                Estrategia. Experiencia. Crecimiento empresarial.
               </p>
             </div>
+          </ScrollRevealSection>
+        </div>
+      </section>
 
-            <div className="glass p-8">
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
-                <Eye className="w-6 h-6 text-accent" />
+      {/* Executives */}
+      <section className="pb-20 md:pb-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto space-y-16 md:space-y-20">
+            {executives.map((exec, i) => (
+              <div key={exec.name}>
+                <ExecutiveCard exec={exec} index={i} />
+                {i < executives.length - 1 && (
+                  <div className="pt-16 md:pt-20">
+                    <GoldDivider width="w-48" className="mx-auto" />
+                  </div>
+                )}
               </div>
-              <h3 className="text-2xl font-medium mb-4">Visión</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Ser la consultora líder en bienes raíces comerciales de CDMX, reconocida por transformar 
-                la forma en que las empresas encuentran y negocian sus espacios, estableciendo nuevos 
-                estándares de excelencia y profesionalismo.
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Statement */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <ScrollRevealSection>
+            <div className="max-w-3xl mx-auto">
+              <div className="relative rounded-2xl border border-border/50 bg-card shadow-premium p-10 md:p-14 text-center">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-px w-24 h-px bg-accent" />
+                <p className="text-xl md:text-2xl font-light leading-relaxed text-foreground font-serif">
+                  Más de <span className="text-accent font-medium">10 años</span> de experiencia combinada en el sector inmobiliario industrial y corporativo.
+                </p>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-px w-24 h-px bg-accent" />
+              </div>
+            </div>
+          </ScrollRevealSection>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <ScrollRevealSection>
+              <div className="rounded-2xl border border-border/50 bg-card shadow-refined p-10 md:p-14 text-center space-y-10">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold uppercase tracking-[0.25em]">Visión</h3>
+                  <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                    Ser la firma inmobiliaria industrial y corporativa más influyente de México, reconocida por conectar empresas con espacios que potencien su operación, posicionamiento y expansión a largo plazo.
+                  </p>
+                </div>
+                <GoldDivider width="w-48" className="mx-auto" />
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold uppercase tracking-[0.25em]">Misión</h3>
+                  <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                    Impulsar el crecimiento de empresas a través de espacios corporativos e industriales estratégicamente ubicados, ofreciendo asesoría experta, negociación inteligente y soluciones inmobiliarias que generen valor real para cada negocio.
+                  </p>
+                </div>
+              </div>
+            </ScrollRevealSection>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <ScrollRevealSection>
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl md:text-4xl font-light font-serif">
+                ¿Listo para encontrar tu espacio ideal?
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Agenda una consulta y descubre cómo podemos ayudarte a crecer
               </p>
+              <Button variant="luxury" asChild>
+                <a href="https://wa.me/525560808129?text=Hola%20Kira%2C%20quiero%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
+                  Agendar Consulta
+                </a>
+              </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12">Nuestros Valores</h2>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-accent" />
-                </div>
-                <h4 className="text-xl font-medium mb-3">Transparencia</h4>
-                <p className="text-muted-foreground">
-                  Comunicación clara y honesta en cada paso del proceso
-                </p>
-              </div>
-
-              <div className="text-center p-6">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-accent" />
-                </div>
-                <h4 className="text-xl font-medium mb-3">Resultados</h4>
-                <p className="text-muted-foreground">
-                  Enfoque orientado a maximizar el valor de cada negociación
-                </p>
-              </div>
-
-              <div className="text-center p-6">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-accent" />
-                </div>
-                <h4 className="text-xl font-medium mb-3">Compromiso</h4>
-                <p className="text-muted-foreground">
-                  Dedicación total al éxito de cada cliente
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-light mb-6">
-              ¿Listo para encontrar tu espacio ideal?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Agenda una consulta con Kira y descubre cómo podemos ayudarte a crecer
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90"
-              asChild
-            >
-              <a href="https://wa.me/525560808129?text=Hola%20Kira%2C%20quiero%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer">
-                Agendar Consulta
-              </a>
-            </Button>
-          </div>
+          </ScrollRevealSection>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-border bg-background py-xl">
+      <footer className="border-t border-border bg-background py-xl">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <KGroupLogo variant="full" size="sm" />
