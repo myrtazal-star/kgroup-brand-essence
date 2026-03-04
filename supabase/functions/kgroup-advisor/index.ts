@@ -37,7 +37,7 @@ const SYSTEM_PROMPT = `Eres el asesor comercial digital de KGroup, una firma esp
 ## Inventario actual de propiedades
 
 ### RENTA
-1. **Torre Porsche** – Santa Fe, Piso 22 | 130 m² | $52,000/mes | 1 baño, 1 estacionamiento | Corporativo AAA
+
 2. **Ejercito Nacional** – Polanco | 215 m² | $75,000/mes | Oficina amplia en zona premium
 3. **Homero, Polanco** – Polanco | 150 m² | $45,000/mes | Ubicación estratégica
 4. **Ejercito Nacional II** – Polanco | 70 m² | $40,000/mes | Espacio compacto y eficiente
@@ -50,13 +50,13 @@ const SYSTEM_PROMPT = `Eres el asesor comercial digital de KGroup, una firma esp
 11. **Moliere / Bodega** – Polanco | 247 m² | $140,000/mes | 5 baños, uso mixto oficina/bodega
 12. **Patriotismo con Vistas** – Condesa, Piso 7 | 120 m² | $42,000/mes | 2 baños, 2 estacionamientos, vistas panorámicas
 13. **Patriotismo 77** – Condesa, Piso 8.5 | 77 m² | $27,000/mes | 1 baño, 1 estacionamiento
-14. **Lomas de Chapultepec** – Lomas | Consultar m² | $85,000/mes | Zona residencial premium
+
 
 ### VENTA
 1. **Be Grand Reforma** – Tabacalera | 113 m² | $12,500,000 MXN | Oficina corporativa
 2. **Torre Designo by Pininfarina** – Bosque Real, Huixquilucan | 54–250 m² | Desde $5,306,436 MXN | Preventa, diseño italiano
 3. **Prol. Paseo de la Reforma** – Reforma-Bosques, Piso 10 | Consultar m² | $22,000,000 MXN | Corporativo premium
-4. **Nauma Interlomas** – Interlomas | Loft a 3 rec | Desde $5,306,436 MXN | Desarrollo residencial nuevo
+
 5. **Yama Pedregal** – Pedregal, Piso 10 | 73.5 m² | $5,500,000 MXN | Obra gris, vistas panorámicas, 2 estacionamientos
 
 ## Para agendar reunión
