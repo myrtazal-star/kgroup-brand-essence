@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
-import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
+
 import oficinaEn2_1 from "@/assets/oficina-en2-1.jpg";
 import oficinaEn3_1 from "@/assets/oficina-en3-1.jpg";
 import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
-import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
+
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
 import oficinaMoliere2_1 from "@/assets/oficina-moliere2-1.jpg";
@@ -19,17 +19,6 @@ import oficinaPatriotismo77_1 from "@/assets/oficina-patriotismo-77-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
-    {
-      id: "r16",
-      title: "Oficina Corporativa – Torre Porsche, Santa Fe",
-      location: "Santa Fe · Piso 22",
-      price: "$45,900/mes",
-      area: "130 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaPorsche1,
-      featured: true
-    },
     {
       id: "r7",
       title: "Oficina en Polanco – Ejercito Nacional",
@@ -101,17 +90,6 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaVinkel1,
-      featured: true
-    },
-    {
-      id: "r22",
-      title: "Oficina en Renta – Lomas de Chapultepec",
-      location: "Lomas · Piso 5",
-      price: "$70,000/mes",
-      area: "140 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaChapultepec1,
       featured: true
     },
     {

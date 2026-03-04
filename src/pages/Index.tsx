@@ -12,13 +12,13 @@ import { InteractiveMap } from "@/components/InteractiveMap";
 import oficinaEn1 from "@/assets/oficina-en-1.jpg";
 import oficinaHomero1 from "@/assets/oficina-homero-1.jpg";
 import oficinaBegrand1 from "@/assets/oficina-begrand-1.jpg";
-import oficinaPorsche1 from "@/assets/oficina-porsche-1.jpg";
+
 import oficinaEn2_1 from "@/assets/oficina-en2-1.jpg";
 import oficinaEn3_1 from "@/assets/oficina-en3-1.jpg";
 import oficinaMoliere1 from "@/assets/oficina-moliere-1.jpg";
 import espacioMasaryk1 from "@/assets/espacio-masaryk-1.jpg";
 import oficinaVinkel1 from "@/assets/oficina-vinkel-1.jpg";
-import oficinaChapultepec1 from "@/assets/oficina-chapultepec-1.jpg";
+
 import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaJuarez1 from "@/assets/oficina-juarez-1.jpg";
 import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
@@ -31,17 +31,6 @@ const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const allProperties = [
-    {
-      id: "r16",
-      title: "Oficina Corporativa – Torre Porsche",
-      location: "Santa Fe · Piso 22",
-      price: "$52,000/mes",
-      area: "130 m²",
-      bedrooms: 0,
-      bathrooms: 1,
-      imageUrl: oficinaPorsche1,
-      featured: true
-    },
     {
       id: "s4",
       title: "Oficina en Venta – Be Grand Reforma",
