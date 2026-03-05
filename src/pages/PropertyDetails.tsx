@@ -227,6 +227,16 @@ import oficinaYama5 from "@/assets/oficina-yama-5.jpg";
 import oficinaYama6 from "@/assets/oficina-yama-6.jpg";
 import oficinaYama7 from "@/assets/oficina-yama-7.jpg";
 import oficinaYama8 from "@/assets/oficina-yama-8.jpg";
+import oficinaSanjeronimo1 from "@/assets/oficina-sanjeronimo-1.jpg";
+import oficinaSanjeronimo2 from "@/assets/oficina-sanjeronimo-2.jpg";
+import oficinaSanjeronimo3 from "@/assets/oficina-sanjeronimo-3.jpg";
+import oficinaSanjeronimo4 from "@/assets/oficina-sanjeronimo-4.jpg";
+import oficinaSanjeronimo5 from "@/assets/oficina-sanjeronimo-5.jpg";
+import oficinaSanjeronimo6 from "@/assets/oficina-sanjeronimo-6.jpg";
+import oficinaSanjeronimo7 from "@/assets/oficina-sanjeronimo-7.jpg";
+import oficinaSanjeronimo8 from "@/assets/oficina-sanjeronimo-8.jpg";
+import oficinaSanjeronimo9 from "@/assets/oficina-sanjeronimo-9.jpg";
+import oficinaSanjeronimo10 from "@/assets/oficina-sanjeronimo-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -1017,6 +1027,42 @@ const propertiesData = {
       "Acceso a transporte público"
     ],
     gallery: [oficinaYama1, oficinaYama2, oficinaYama3, oficinaYama4, oficinaYama5, oficinaYama6, oficinaYama7, oficinaYama8],
+    youtubeVideoId: undefined
+  },
+  "s8": {
+    id: "s8",
+    title: "Oficina en Venta – San Jerónimo, CDMX",
+    location: "San Jerónimo, a una cuadra de Periférico Sur",
+    price: "$6,500,000",
+    priceType: "MXN",
+    area: "128 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 2,
+    imageUrl: oficinaSanjeronimo1,
+    featured: true,
+    description: "Excelente oportunidad de inversión o para establecer tu empresa en una zona corporativa estratégica del sur de la Ciudad de México.\n\nEsta oficina cuenta con 128 m² de superficie y una distribución funcional con 5 privados, ideal para despachos, consultorías, empresas de tecnología, firmas legales o corporativos que buscan un espacio profesional y bien ubicado.\n\nUbicada en San Jerónimo, a una cuadra de Periférico Sur, con acceso inmediato a importantes puntos de la ciudad como Hospital Ángeles del Pedregal, Artz Pedregal, Perisur y la Supervía, lo que permite una excelente conectividad para clientes y colaboradores.\n\nIdeal para empresas que buscan ubicación, funcionalidad y una excelente proyección corporativa en el sur de la CDMX.",
+    features: [
+      "128 m² de superficie",
+      "Piso 3",
+      "5 privados",
+      "1 baño",
+      "2 cajones de estacionamiento",
+      "Distribución funcional",
+      "Excelente iluminación",
+      "A una cuadra de Periférico Sur"
+    ],
+    amenities: [
+      "8 salas de juntas totalmente equipadas",
+      "Salón VIP para reuniones ejecutivas",
+      "Valet parking",
+      "Áreas comunes",
+      "Elevador",
+      "Cerca de Hospital Ángeles del Pedregal",
+      "Acceso inmediato a Artz Pedregal y Perisur",
+      "Conectividad con la Supervía"
+    ],
+    gallery: [oficinaSanjeronimo1, oficinaSanjeronimo2, oficinaSanjeronimo3, oficinaSanjeronimo4, oficinaSanjeronimo5, oficinaSanjeronimo6, oficinaSanjeronimo7, oficinaSanjeronimo8, oficinaSanjeronimo9, oficinaSanjeronimo10],
     youtubeVideoId: undefined
   },
 };
