@@ -7,6 +7,7 @@ import oficinaReforma1 from "@/assets/oficina-reforma-1.jpg";
 import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
 
 import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
+import oficinaSanjeronimo1 from "@/assets/oficina-sanjeronimo-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
@@ -52,6 +53,17 @@ const SaleCatalog = () => {
       bedrooms: 0,
       bathrooms: 0,
       imageUrl: oficinaYama1,
+      featured: true,
+    },
+    {
+      id: "s8",
+      title: "Oficina en Venta – San Jerónimo",
+      location: "San Jerónimo · CDMX",
+      price: "$6,500,000 MXN",
+      area: "128 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaSanjeronimo1,
       featured: true,
     },
   ];

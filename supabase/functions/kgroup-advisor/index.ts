@@ -58,6 +58,7 @@ const SYSTEM_PROMPT = `Eres el asesor comercial digital de KGroup, una firma esp
 3. **Prol. Paseo de la Reforma** – Reforma-Bosques, Piso 10 | Consultar m² | $22,000,000 MXN | Corporativo premium
 
 5. **Yama Pedregal** – Pedregal, Piso 10 | 73.5 m² | $5,500,000 MXN | Obra gris, vistas panorámicas, 2 estacionamientos
+6. **San Jerónimo** – San Jerónimo, CDMX | 128 m² | $6,500,000 MXN | 5 privados, 2 estacionamientos, piso 3, 8 salas de juntas en edificio, a cuadra de Periférico Sur
 
 ## Para agendar reunión
 Cuando el cliente esté listo, invítalo a contactar directamente:
