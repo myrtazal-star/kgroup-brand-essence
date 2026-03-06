@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import Nosotros from "./pages/Nosotros";
 import NaumaInterlomas from "./pages/NaumaInterlomas";
 import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 import { AdvisorChat } from "./components/AdvisorChat";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/contacto" element={<Services />} />
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
