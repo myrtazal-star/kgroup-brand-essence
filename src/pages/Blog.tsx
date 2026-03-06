@@ -83,14 +83,12 @@ const ArticleCard = ({
         <p className="text-sm text-muted-foreground leading-relaxed">
           {article.description}
         </p>
-        <a
-          href="https://wa.me/525560808129?text=Hola%2C%20me%20interesa%20saber%20más%20sobre%20inversión%20inmobiliaria"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to={`/blog/${article.slug}`}
           className="inline-block text-caption text-accent hover:text-foreground transition-colors duration-300 pt-2"
         >
           Leer artículo →
-        </a>
+        </Link>
       </div>
     </motion.div>
   </ScrollRevealSection>
