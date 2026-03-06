@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import { GoogleMap, useJsApiLoader, OverlayViewF, OverlayView } from "@react-google-maps/api";
 import { useNavigate } from "react-router-dom";
 import { ScrollRevealSection } from "./ScrollRevealSection";
@@ -196,6 +196,19 @@ export const InteractiveMap = () => {
     setMap(map);
   }, []);
 
+  const [mapError, setMapError] = useState(false);
+
+  useEffect(() => {
+    const handler = (e: ErrorEvent) => {
+      if (e.message?.includes?.('Google Maps') || e.message?.includes?.('ApiNotActivatedMapError')) {
+        setMapError(true);
+      }
+    };
+    window.addEventListener('error', handler);
+    (window as any).gm_authFailure = () => setMapError(true);
+    return () => window.removeEventListener('error', handler);
+  }, []);
+
   const handleMarkerClick = useCallback(
     (property: MapProperty) => {
       setActiveId(property.id);
@@ -224,6 +237,27 @@ export const InteractiveMap = () => {
       </section>
     );
   }
+
+  const MapFallback = () => (
+    <div
+      className="w-full h-full rounded-2xl flex flex-col items-center justify-center text-center p-8"
+      style={{
+        background: "linear-gradient(135deg, hsl(230 15% 10%), hsl(230 15% 14%))",
+        border: "1px solid hsl(230 15% 20%)",
+      }}
+    >
+      <MapPin className="w-12 h-12 mb-4" style={{ color: "#C6A15B" }} />
+      <h3
+        className="text-xl mb-2"
+        style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F5F3EF" }}
+      >
+        Mapa Interactivo
+      </h3>
+      <p className="text-sm text-muted-foreground max-w-md" style={{ fontFamily: "'Inter', sans-serif" }}>
+        Explora nuestras ubicaciones estratégicas en la lista inferior o contáctanos para más información.
+      </p>
+    </div>
+  );
 
   return (
     <section className="py-[100px] md:py-[120px]">
@@ -291,33 +325,37 @@ export const InteractiveMap = () => {
                 boxShadow: "0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px hsl(230 15% 18%)",
               }}
             >
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={defaultCenter}
-                zoom={12}
-                onLoad={onLoad}
-                options={{
-                  styles: darkMapStyle,
-                  disableDefaultUI: true,
-                  zoomControl: true,
-                  fullscreenControl: true,
-                  zoomControlOptions: { position: 3 },
-                  fullscreenControlOptions: { position: 7 },
-                  gestureHandling: "greedy",
-                }}
-              >
-                {filteredProperties.map((property) => (
-                  <CustomMarker
-                    key={property.id}
-                    property={property}
-                    isActive={activeId === property.id}
-                    isHovered={hoveredId === property.id}
-                    onHover={() => setHoveredId(property.id)}
-                    onLeave={() => setHoveredId(null)}
-                    onClick={() => handleMarkerClick(property)}
-                  />
-                ))}
-              </GoogleMap>
+              {mapError ? (
+                <MapFallback />
+              ) : (
+                <GoogleMap
+                  mapContainerStyle={mapContainerStyle}
+                  center={defaultCenter}
+                  zoom={12}
+                  onLoad={onLoad}
+                  options={{
+                    styles: darkMapStyle,
+                    disableDefaultUI: true,
+                    zoomControl: true,
+                    fullscreenControl: true,
+                    zoomControlOptions: { position: 3 },
+                    fullscreenControlOptions: { position: 7 },
+                    gestureHandling: "greedy",
+                  }}
+                >
+                  {filteredProperties.map((property) => (
+                    <CustomMarker
+                      key={property.id}
+                      property={property}
+                      isActive={activeId === property.id}
+                      isHovered={hoveredId === property.id}
+                      onHover={() => setHoveredId(property.id)}
+                      onLeave={() => setHoveredId(null)}
+                      onClick={() => handleMarkerClick(property)}
+                    />
+                  ))}
+                </GoogleMap>
+              )}
             </div>
 
             {/* Sidebar Card */}
