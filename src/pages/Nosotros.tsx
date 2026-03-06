@@ -188,15 +188,14 @@ const Nosotros = () => {
               <p className="text-lg text-muted-foreground">
                 Agenda una asesoría y descubre las mejores oportunidades en CDMX
               </p>
-              <Button variant="luxury" asChild>
-                <a
-                  href="https://wa.me/525560808129?text=Hola%2C%20quiero%20agendar%20una%20asesoría%20inmobiliaria"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Agenda una Asesoría
-                </a>
-              </Button>
+              <a
+                href="https://wa.me/525560808129?text=Hola%2C%20quiero%20agendar%20una%20asesoría%20inmobiliaria"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-10 py-4 bg-primary text-primary-foreground uppercase text-caption font-medium tracking-[0.2em] rounded-xl border border-primary/60 hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
+              >
+                Agenda una Asesoría
+              </a>
             </div>
           </ScrollRevealSection>
         </div>
