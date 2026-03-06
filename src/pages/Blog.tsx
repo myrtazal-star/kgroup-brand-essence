@@ -15,30 +15,35 @@ import blogInterlomas from "@/assets/blog-interlomas.jpg";
 
 const articles = [
   {
+    slug: "como-invertir-bienes-raices-cdmx",
     image: blogInversionCdmx,
     title: "Cómo invertir en bienes raíces en Ciudad de México",
     description:
       "Guía para inversionistas que buscan oportunidades inmobiliarias en zonas premium como Polanco, Santa Fe e Interlomas.",
   },
   {
+    slug: "mejores-zonas-invertir-cdmx",
     image: blogZonasCdmx,
     title: "Mejores zonas para invertir en CDMX",
     description:
       "Análisis de las zonas con mayor plusvalía inmobiliaria en Ciudad de México.",
   },
   {
+    slug: "comprar-vs-rentar-oficina-cdmx",
     image: blogComprarVsRentar,
     title: "Comprar vs rentar oficina en CDMX",
     description:
       "Factores clave para empresas e inversionistas al elegir entre comprar o rentar una oficina.",
   },
   {
+    slug: "inversion-inmobiliaria-polanco",
     image: blogPolanco,
     title: "Inversión inmobiliaria en Polanco",
     description:
       "Por qué Polanco sigue siendo una de las zonas más atractivas para inversión.",
   },
   {
+    slug: "interlomas-oportunidad-inversion",
     image: blogInterlomas,
     title: "Interlomas como oportunidad de inversión",
     description: "Crecimiento inmobiliario y demanda en Interlomas.",
