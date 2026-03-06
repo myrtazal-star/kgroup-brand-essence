@@ -198,6 +198,17 @@ export const InteractiveMap = () => {
 
   const [mapError, setMapError] = useState(false);
 
+  useEffect(() => {
+    const handler = (e: ErrorEvent) => {
+      if (e.message?.includes?.('Google Maps') || e.message?.includes?.('ApiNotActivatedMapError')) {
+        setMapError(true);
+      }
+    };
+    window.addEventListener('error', handler);
+    (window as any).gm_authFailure = () => setMapError(true);
+    return () => window.removeEventListener('error', handler);
+  }, []);
+
   const handleMarkerClick = useCallback(
     (property: MapProperty) => {
       setActiveId(property.id);
