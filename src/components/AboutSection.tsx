@@ -8,13 +8,13 @@ const teamMembers = [
   {
     name: "Kira Kellar",
     role: "CEO",
-    initials: "KK",
+    photo: teamKira,
     description: "Especialista en inversión inmobiliaria en zonas premium de Ciudad de México.",
   },
   {
     name: "Santiago Montez",
     role: "Director Jurídico",
-    initials: "SM",
+    photo: teamSantiago,
     description: "Experto en contratos inmobiliarios y seguridad jurídica en operaciones inmobiliarias.",
   },
 ];
