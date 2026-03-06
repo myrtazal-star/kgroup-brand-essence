@@ -84,12 +84,15 @@ const Nosotros = () => {
       {/* Hero with skyline background */}
       <section className="relative py-32 md:py-44 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={cdmxSkyline}
-            alt="Ciudad de México skyline"
-            className="w-full h-full object-cover animate-slow-zoom"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            src="/videos/nosotros-hero.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         </div>
 
         <div className="relative container mx-auto px-6">
