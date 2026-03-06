@@ -1,6 +1,8 @@
 import { ScrollRevealSection } from "./ScrollRevealSection";
 import { GoldDivider } from "./GoldDivider";
 import { Building2, Scale, TrendingUp } from "lucide-react";
+import teamKira from "@/assets/team-kira.png";
+import teamSantiago from "@/assets/team-santiago.png";
 
 const teamMembers = [
   {
