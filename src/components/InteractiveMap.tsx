@@ -225,6 +225,27 @@ export const InteractiveMap = () => {
     );
   }
 
+  const MapFallback = () => (
+    <div
+      className="w-full h-full rounded-2xl flex flex-col items-center justify-center text-center p-8"
+      style={{
+        background: "linear-gradient(135deg, hsl(230 15% 10%), hsl(230 15% 14%))",
+        border: "1px solid hsl(230 15% 20%)",
+      }}
+    >
+      <MapPin className="w-12 h-12 mb-4" style={{ color: "#C6A15B" }} />
+      <h3
+        className="text-xl mb-2"
+        style={{ fontFamily: "'Cormorant Garamond', serif", color: "#F5F3EF" }}
+      >
+        Mapa Interactivo
+      </h3>
+      <p className="text-sm text-muted-foreground max-w-md" style={{ fontFamily: "'Inter', sans-serif" }}>
+        Explora nuestras ubicaciones estratégicas en la lista inferior o contáctanos para más información.
+      </p>
+    </div>
+  );
+
   return (
     <section className="py-[100px] md:py-[120px]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
