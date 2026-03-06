@@ -314,33 +314,37 @@ export const InteractiveMap = () => {
                 boxShadow: "0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px hsl(230 15% 18%)",
               }}
             >
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={defaultCenter}
-                zoom={12}
-                onLoad={onLoad}
-                options={{
-                  styles: darkMapStyle,
-                  disableDefaultUI: true,
-                  zoomControl: true,
-                  fullscreenControl: true,
-                  zoomControlOptions: { position: 3 },
-                  fullscreenControlOptions: { position: 7 },
-                  gestureHandling: "greedy",
-                }}
-              >
-                {filteredProperties.map((property) => (
-                  <CustomMarker
-                    key={property.id}
-                    property={property}
-                    isActive={activeId === property.id}
-                    isHovered={hoveredId === property.id}
-                    onHover={() => setHoveredId(property.id)}
-                    onLeave={() => setHoveredId(null)}
-                    onClick={() => handleMarkerClick(property)}
-                  />
-                ))}
-              </GoogleMap>
+              {mapError ? (
+                <MapFallback />
+              ) : (
+                <GoogleMap
+                  mapContainerStyle={mapContainerStyle}
+                  center={defaultCenter}
+                  zoom={12}
+                  onLoad={onLoad}
+                  options={{
+                    styles: darkMapStyle,
+                    disableDefaultUI: true,
+                    zoomControl: true,
+                    fullscreenControl: true,
+                    zoomControlOptions: { position: 3 },
+                    fullscreenControlOptions: { position: 7 },
+                    gestureHandling: "greedy",
+                  }}
+                >
+                  {filteredProperties.map((property) => (
+                    <CustomMarker
+                      key={property.id}
+                      property={property}
+                      isActive={activeId === property.id}
+                      isHovered={hoveredId === property.id}
+                      onHover={() => setHoveredId(property.id)}
+                      onLeave={() => setHoveredId(null)}
+                      onClick={() => handleMarkerClick(property)}
+                    />
+                  ))}
+                </GoogleMap>
+              )}
             </div>
 
             {/* Sidebar Card */}
