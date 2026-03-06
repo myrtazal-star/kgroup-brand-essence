@@ -7,19 +7,21 @@ import { ScrollRevealSection } from "@/components/ScrollRevealSection";
 import { GoldDivider } from "@/components/GoldDivider";
 import { motion } from "framer-motion";
 import cdmxSkyline from "@/assets/cdmx-skyline.jpg";
+import teamKira from "@/assets/team-kira.png";
+import teamSantiago from "@/assets/team-santiago.png";
 
 const executives = [
   {
     name: "Kira Kellar",
     title: "CEO",
-    initials: "KK",
+    photo: teamKira,
     description:
       "Especialista en inversiones inmobiliarias y estrategias de compra y renta en zonas premium de Ciudad de México. Su enfoque está en identificar oportunidades de alto valor para inversionistas y empresas.",
   },
   {
     name: "Santiago Montez",
     title: "Director Jurídico",
-    initials: "SM",
+    photo: teamSantiago,
     description:
       "Experto en contratos inmobiliarios, estructuración legal y seguridad jurídica en operaciones de compraventa y arrendamiento.",
   },
@@ -33,12 +35,12 @@ const ExecutiveCard = ({ exec, index }: { exec: (typeof executives)[0]; index: n
       className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md shadow-[0_8px_40px_-12px_hsl(var(--primary)/0.12)] overflow-hidden"
     >
       <div className="p-8 md:p-10 flex flex-col items-center text-center space-y-6">
-        {/* Portrait placeholder */}
-        <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-secondary border border-border/60 flex items-center justify-center shadow-[0_0_30px_hsl(var(--primary)/0.08)]">
-          <span className="text-4xl md:text-5xl font-light tracking-wider text-accent font-serif">
-            {exec.initials}
-          </span>
-        </div>
+        <img
+          src={exec.photo}
+          alt={exec.name}
+          className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover object-top shadow-[0_0_30px_hsl(var(--primary)/0.08)]"
+          style={{ border: "2px solid hsl(var(--primary) / 0.3)" }}
+        />
 
         {/* Info */}
         <div className="space-y-3">
