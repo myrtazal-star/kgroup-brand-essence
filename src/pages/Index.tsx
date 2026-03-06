@@ -68,6 +68,7 @@ const Index = () => {
               <Link to="/sale-catalog" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">Venta</Link>
               <Link to="/nosotros" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">Nosotros</Link>
               <Link to="/services" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">Servicios</Link>
+              <Link to="/blog" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">Blog</Link>
               <a href="https://wa.me/525560808129" target="_blank" rel="noopener noreferrer" className="text-nav text-muted-foreground hover:text-foreground transition-colors duration-300">Contacto</a>
             </div>
             <button className="md:hidden p-2 text-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
