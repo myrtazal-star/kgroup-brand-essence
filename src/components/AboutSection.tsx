@@ -79,17 +79,14 @@ export const AboutSection = () => {
                 style={{ background: "hsl(var(--card))" }}
               >
                 <div className="flex items-center gap-5 mb-5">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-lg"
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-16 h-16 rounded-full object-cover object-top"
                     style={{
-                      background: "linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05))",
-                      border: "1px solid hsl(var(--primary) / 0.3)",
-                      fontFamily: "'Cormorant Garamond', serif",
-                      color: "hsl(var(--primary))",
+                      border: "2px solid hsl(var(--primary) / 0.3)",
                     }}
-                  >
-                    {member.initials}
-                  </div>
+                  />
                   <div>
                     <h3 className="text-heading text-foreground" style={{ fontSize: "1.25rem" }}>{member.name}</h3>
                     <p className="text-xs tracking-[0.2em] uppercase text-primary" style={{ fontFamily: "'Inter', sans-serif" }}>
