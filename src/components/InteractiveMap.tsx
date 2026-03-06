@@ -196,6 +196,8 @@ export const InteractiveMap = () => {
     setMap(map);
   }, []);
 
+  const [mapError, setMapError] = useState(false);
+
   const handleMarkerClick = useCallback(
     (property: MapProperty) => {
       setActiveId(property.id);
