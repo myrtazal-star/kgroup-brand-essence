@@ -127,6 +127,33 @@ const Nosotros = () => {
 
       <GoldDivider width="w-48" className="mx-auto" />
 
+      {/* Visión & Misión */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <ScrollRevealSection>
+              <div className="rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md p-10 md:p-14 space-y-10 text-center">
+                <div className="space-y-5">
+                  <h3 className="text-heading uppercase tracking-[0.2em] text-foreground">Visión</h3>
+                  <p className="text-muted-foreground font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Ser la firma inmobiliaria industrial y corporativa más influyente de México, reconocida por conectar empresas con espacios que potencien su operación, posicionamiento y expansión a largo plazo.
+                  </p>
+                </div>
+
+                <div className="w-48 h-px bg-border/60 mx-auto" />
+
+                <div className="space-y-5">
+                  <h3 className="text-heading uppercase tracking-[0.2em] text-foreground">Misión</h3>
+                  <p className="text-muted-foreground font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Impulsar el crecimiento de empresas a través de espacios corporativos e industriales estratégicamente ubicados, ofreciendo asesoría experta, negociación inteligente y soluciones inmobiliarias que generen valor real para cada negocio.
+                  </p>
+                </div>
+              </div>
+            </ScrollRevealSection>
+          </div>
+        </div>
+      </section>
+
       {/* Team section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-6">
