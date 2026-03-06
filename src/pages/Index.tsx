@@ -82,6 +82,7 @@ const Index = () => {
                 <Link to="/sale-catalog" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Venta</Link>
                 <Link to="/nosotros" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Nosotros</Link>
                 <Link to="/services" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Servicios</Link>
+                <Link to="/blog" className="text-nav text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
                 <a href="https://wa.me/525560808129" target="_blank" rel="noopener noreferrer" className="text-nav text-muted-foreground">Contacto</a>
               </div>
             </div>
