@@ -1,0 +1,27 @@
+ID,Nombre,Dirección,Tipo,Modalidad,Precio,Tamaño,Baños,Estacionamientos,Zona,Piso,Destacada
+r1,Departamento en renta Roma Norte,"Durango 262, Roma Norte",Departamento,Renta,"$92,000/mes",120 m²,2,0,Roma Norte,,Sí
+r3,Renta en Mitikah,"Polanco, Homero",Departamento,Renta,"$70,000/mes",100 m²,3,1,Polanco,,Sí
+r4,Oficina en Prado Norte,"Lomas de Chapultepec, Prado Norte",Oficina,Renta,"$60,000/mes",103 m²,1,2,Lomas de Chapultepec,Piso 2,No
+r7,Oficina en Polanco – Ejercito Nacional,"Ejercito Nacional, Polanco",Oficina,Renta,"$75,000/mes",215 m²,1,2,Polanco,,No
+r8,Oficina PH en Polanco – Vista Panorámica y Terraza,"Rubén Darío, Polanco",Oficina,Renta,"$46,000/mes + IVA",215 m²,2,1,Polanco,Piso 9,No
+r9,Local Comercial – Av. Presidente Masaryk,"Av. Presidente Masaryk, Polanco",Local Comercial,Renta,"$235,000/mes + IVA",250 m²,4,0,Polanco,Planta Baja,No
+r11,Oficina en Homero – Polanco,"Homero, Polanco",Oficina,Renta,"$45,000/mes + IVA",150 m²,1,1,Polanco,,No
+r14,Local comercial – Campos Elíseos Polanco,"Corporativo Gandhi, Campos Elíseos, Polanco",Local Comercial,Renta,Consultar,270 m²,1,0,Polanco,Piso 1,Sí
+r15,Oficina en Lomas de Chapultepec,"Lomas de Chapultepec, CDMX",Oficina,Renta,"$76,500/mes + IVA",88 m²,1,1,Lomas de Chapultepec,,Sí
+r16,Oficina Corporativa – Torre Porsche Santa Fe,"Torre Porsche, Santa Fe",Oficina,Renta,"$45,900/mes + IVA",130 m²,1,5,Santa Fe,Piso 22,Sí
+r17,Oficina en Ejercito Nacional – Polanco,"Ejercito Nacional, Polanco",Oficina,Renta,"$40,000/mes",70 m²,1,1,Polanco,,No
+r18,Oficina en Ejercito Nacional – 5 Privados,"Ejercito Nacional, Polanco",Oficina,Renta,"$60,000/mes + IVA",170 m²,1,2,Polanco,,No
+r19,Oficina en Av. Moliere – Polanco,"Av. Moliere, Polanco",Oficina,Renta,"$58,000/mes + IVA",288 m²,4,0,Polanco,Piso 5,Sí
+r20,Espacio en Av. Presidente Masaryk,"Av. Presidente Masaryk, Polanco",Espacio Comercial,Renta,"$85,000/mes + IVA",Consultar,4,0,Polanco,Piso 5,Sí
+r21,Oficina – Torre Vinkel Monterrey,"Av. Lázaro Cárdenas 506, San Agustín, Monterrey",Oficina,Renta,"$130,000/mes + IVA",170 m²,1,1,Monterrey,Piso 18,Sí
+r22,Oficina en Lomas de Chapultepec – Prado Sur,"Prado Sur, Lomas de Chapultepec",Oficina,Renta,"$70,000/mes",140 m²,1,5,Lomas de Chapultepec,Piso 5,Sí
+r23,Oficina Corporativa – Prol. Paseo de la Reforma,"Prol. Paseo de la Reforma 379, Reforma–Bosques",Oficina,Renta,"$150,000/mes + IVA",Consultar,3,27,Reforma–Bosques,Piso 10,Sí
+r24,Oficina Amueblada – Juárez,"Colonia Juárez, CDMX",Oficina,Renta,"$53,000/mes",105 m²,2,0,Juárez,Piso 6,Sí
+r25,Oficina / Bodega – Moliere Polanco,"Moliere, Polanco",Oficina/Bodega,Renta,"$140,000/mes + IVA",247 m²,5,4,Polanco,,Sí
+r26,Oficina en Patriotismo – Vistas Panorámicas,"Condesa, Hipódromo",Oficina,Renta,"$42,000/mes",120 m²,2,2,Condesa,Piso 7,Sí
+r27,Oficina en Patriotismo – Condesa,"Condesa, Hipódromo",Oficina,Renta,"$27,000/mes",77 m²,1,1,Condesa,Piso 8.5,Sí
+s4,Oficina en Venta – Be Grand Tabacalera,"Lafragua #13, Col. Tabacalera, Cuauhtémoc",Oficina,Venta,"$12,500,000 MXN",113 m²,1,4,Tabacalera,Piso 15,Sí
+s5,Oficina Corporativa – Prol. Paseo de la Reforma,"Prol. Paseo de la Reforma 379, Reforma–Bosques",Oficina,Venta,"$22,000,000 MXN",Consultar,3,27,Reforma–Bosques,Piso 10,Sí
+s6,Oficinas Preventa – Torre Designo by Pininfarina,"Bosque Real, Entrada Principal, Huixquilucan",Oficina,Preventa,"Desde $5,306,436 MXN",Desde 47.18 m²,1,1,Bosque Real,,Sí
+s7,Oficina en Venta – Yama Pedregal,Pedregal,Oficina,Venta,"$5,500,000 MXN",73.5 m²,0,2,Pedregal,Piso 10,Sí
+s8,Oficina en Venta – San Jerónimo,"San Jerónimo, a una cuadra de Periférico Sur",Oficina,Venta,"$6,500,000 MXN",128 m²,1,2,San Jerónimo,Piso 3,Sí
