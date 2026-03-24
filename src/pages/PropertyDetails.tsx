@@ -263,7 +263,7 @@ import oficinaDiagPat9 from "@/assets/oficina-diagonal-pat-9.jpg";
 import oficinaDiagPat10 from "@/assets/oficina-diagonal-pat-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
-const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string }> = {
+const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string; lat?: number; lng?: number }> = {
   // Propiedades en Renta
   "r1": {
     id: "r1",
