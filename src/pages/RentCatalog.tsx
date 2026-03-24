@@ -18,6 +18,7 @@ import oficinaPatriotismo1 from "@/assets/oficina-patriotismo-1.jpg";
 import oficinaPatriotismo77_1 from "@/assets/oficina-patriotismo-77-1.jpg";
 import diagonalPatriotismo1 from "@/assets/diagonal-patriotismo-1.jpg";
 import oficinaTamaulipas1 from "@/assets/oficina-tamaulipas-1.jpg";
+import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
