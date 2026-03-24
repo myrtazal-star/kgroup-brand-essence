@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { KGroupLogo } from "@/components/KGroupLogo";
+import { PropertyLocationMap } from "@/components/PropertyLocationMap";
 
 import { useState } from "react";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
@@ -263,7 +264,7 @@ import oficinaDiagPat9 from "@/assets/oficina-diagonal-pat-9.jpg";
 import oficinaDiagPat10 from "@/assets/oficina-diagonal-pat-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
-const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string }> = {
+const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string; lat?: number; lng?: number }> = {
   // Propiedades en Renta
   "r1": {
     id: "r1",
@@ -1196,6 +1197,36 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined
   },
 };
+const propertyCoords: Record<string, { lat: number; lng: number }> = {
+  "r1": { lat: 19.4180, lng: -99.1630 },
+  "r3": { lat: 19.3750, lng: -99.1580 },
+  "r4": { lat: 19.4370, lng: -99.1920 },
+  "r7": { lat: 19.4370, lng: -99.1920 },
+  "r8": { lat: 19.4180, lng: -99.1650 },
+  "r9": { lat: 19.4335, lng: -99.1940 },
+  "r11": { lat: 19.4340, lng: -99.1960 },
+  "r14": { lat: 19.4320, lng: -99.1970 },
+  "r15": { lat: 19.4230, lng: -99.2120 },
+  "r16": { lat: 19.3590, lng: -99.2743 },
+  "r17": { lat: 19.4375, lng: -99.1900 },
+  "r18": { lat: 19.4365, lng: -99.1910 },
+  "r19": { lat: 19.4330, lng: -99.1990 },
+  "r20": { lat: 19.4335, lng: -99.1940 },
+  "r21": { lat: 25.6580, lng: -100.3490 },
+  "r22": { lat: 19.4230, lng: -99.2120 },
+  "r23": { lat: 19.3980, lng: -99.2580 },
+  "r24": { lat: 19.4280, lng: -99.1610 },
+  "r25": { lat: 19.4325, lng: -99.2000 },
+  "r26": { lat: 19.4120, lng: -99.1760 },
+  "r27": { lat: 19.4115, lng: -99.1765 },
+  "r28": { lat: 19.4110, lng: -99.1770 },
+  "r29": { lat: 19.4100, lng: -99.1720 },
+  "r30": { lat: 19.4110, lng: -99.1770 },
+  "s4": { lat: 19.4350, lng: -99.1530 },
+  "s6": { lat: 19.3960, lng: -99.2930 },
+  "s7": { lat: 19.3130, lng: -99.1950 },
+  "s8": { lat: 19.4350, lng: -99.1530 },
+};
 
 const PropertyDetails = () => {
   const {
@@ -1473,6 +1504,15 @@ const PropertyDetails = () => {
                   ) : null}
                 </div>
               </div>
+            )}
+
+            {/* Location Map */}
+            {propertyCoords[id || ""] && (
+              <PropertyLocationMap
+                lat={propertyCoords[id || ""].lat}
+                lng={propertyCoords[id || ""].lng}
+                title={property.title}
+              />
             )}
 
             {/* Property Navigation - Only for rental properties */}
