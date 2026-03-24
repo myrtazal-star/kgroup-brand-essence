@@ -1048,7 +1048,7 @@ const propertiesData = {
     id: "r29",
     title: "Oficina en Renta – Tamaulipas, Condesa",
     location: "Tamaulipas, Condesa",
-    price: "$52,000 MXN",
+    price: "$59,500 MXN",
     priceType: "Renta mensual",
     area: "180 m²",
     bedrooms: 0,
