@@ -995,6 +995,40 @@ const propertiesData = {
     gallery: [oficinaPatriotismo77_1, oficinaPatriotismo77_2, oficinaPatriotismo77_3, oficinaPatriotismo77_4, oficinaPatriotismo77_5, oficinaPatriotismo77_6, oficinaPatriotismo77_7, oficinaPatriotismo77_8],
     youtubeVideoId: undefined
   },
+  "r28": {
+    id: "r28",
+    title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
+    location: "Diagonal Patriotismo 12, Condesa",
+    price: "$54,000 MXN",
+    priceType: "Renta mensual",
+    area: "140 m²",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 1,
+    imageUrl: diagonalPatriotismo1,
+    featured: true,
+    description: "Oficina en renta ubicada en Diagonal Patriotismo 12, en la zona de la Condesa. Cuenta con 140 m² distribuidos en 5 privados, cocina equipada y 3 baños. Incluye 1 lugar de estacionamiento.\n\nSe ubica en el piso 8 con excelentes vistas panorámicas a la ciudad. La zona cuenta con fácil acceso a transporte público, restaurantes, bancos y servicios.\n\nIdeal para empresas que buscan un espacio funcional y bien ubicado en una de las zonas con mayor demanda de Ciudad de México.",
+    features: [
+      "140 m² de superficie",
+      "Piso 8",
+      "5 privados",
+      "Cocina equipada",
+      "3 baños",
+      "1 lugar de estacionamiento",
+      "Vistas panorámicas",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad",
+      "Elevador",
+      "Acceso a transporte público (Metro Patriotismo)",
+      "Cerca de avenidas principales",
+      "Zona de restaurantes y servicios",
+      "Cerca de Parque México"
+    ],
+    gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4],
+    youtubeVideoId: undefined
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",

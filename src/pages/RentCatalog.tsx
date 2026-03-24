@@ -147,6 +147,17 @@ const RentCatalog = () => {
       imageUrl: oficinaPatriotismo77_1,
       featured: true
     },
+    {
+      id: "r28",
+      title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
+      location: "Condesa · Piso 8",
+      price: "$54,000/mes",
+      area: "140 m²",
+      bedrooms: 0,
+      bathrooms: 3,
+      imageUrl: diagonalPatriotismo1,
+      featured: true
+    },
   ];
 
   return (
