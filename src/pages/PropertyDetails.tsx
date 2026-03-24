@@ -1077,7 +1077,8 @@ const propertiesData = {
       "Cerca de Parque México"
     ],
     gallery: [oficinaTamaulipas1, oficinaTamaulipas2, oficinaTamaulipas3, oficinaTamaulipas4, oficinaTamaulipas5, oficinaTamaulipas6, oficinaTamaulipas7],
-    youtubeVideoId: undefined
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-tamaulipas.mp4"
   },
   "s7": {
     id: "s7",
