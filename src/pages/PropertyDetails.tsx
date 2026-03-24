@@ -241,6 +241,9 @@ import diagonalPatriotismo1 from "@/assets/diagonal-patriotismo-1.jpg";
 import diagonalPatriotismo2 from "@/assets/diagonal-patriotismo-2.jpg";
 import diagonalPatriotismo3 from "@/assets/diagonal-patriotismo-3.jpg";
 import diagonalPatriotismo4 from "@/assets/diagonal-patriotismo-4.jpg";
+import diagonalPatriotismo5 from "@/assets/diagonal-patriotismo-5.jpg";
+import diagonalPatriotismo6 from "@/assets/diagonal-patriotismo-6.jpg";
+import diagonalPatriotismo7 from "@/assets/diagonal-patriotismo-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
