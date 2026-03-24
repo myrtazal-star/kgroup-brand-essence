@@ -251,6 +251,16 @@ import oficinaTamaulipas4 from "@/assets/oficina-tamaulipas-4.jpg";
 import oficinaTamaulipas5 from "@/assets/oficina-tamaulipas-5.jpg";
 import oficinaTamaulipas6 from "@/assets/oficina-tamaulipas-6.jpg";
 import oficinaTamaulipas7 from "@/assets/oficina-tamaulipas-7.jpg";
+import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
+import oficinaDiagPat2 from "@/assets/oficina-diagonal-pat-2.jpg";
+import oficinaDiagPat3 from "@/assets/oficina-diagonal-pat-3.jpg";
+import oficinaDiagPat4 from "@/assets/oficina-diagonal-pat-4.jpg";
+import oficinaDiagPat5 from "@/assets/oficina-diagonal-pat-5.jpg";
+import oficinaDiagPat6 from "@/assets/oficina-diagonal-pat-6.jpg";
+import oficinaDiagPat7 from "@/assets/oficina-diagonal-pat-7.jpg";
+import oficinaDiagPat8 from "@/assets/oficina-diagonal-pat-8.jpg";
+import oficinaDiagPat9 from "@/assets/oficina-diagonal-pat-9.jpg";
+import oficinaDiagPat10 from "@/assets/oficina-diagonal-pat-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string }> = {
