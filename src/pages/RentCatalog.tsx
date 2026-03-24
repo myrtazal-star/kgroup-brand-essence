@@ -17,6 +17,7 @@ import oficinaMoliere2_1 from "@/assets/oficina-moliere2-1.jpg";
 import oficinaPatriotismo1 from "@/assets/oficina-patriotismo-1.jpg";
 import oficinaPatriotismo77_1 from "@/assets/oficina-patriotismo-77-1.jpg";
 import diagonalPatriotismo1 from "@/assets/diagonal-patriotismo-1.jpg";
+import oficinaTamaulipas1 from "@/assets/oficina-tamaulipas-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -157,6 +158,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: diagonalPatriotismo1,
+      featured: true
+    },
+    {
+      id: "r29",
+      title: "Oficina en Renta – Tamaulipas, Condesa",
+      location: "Condesa · Piso 14",
+      price: "$52,000/mes",
+      area: "180 m²",
+      bedrooms: 0,
+      bathrooms: 2,
+      imageUrl: oficinaTamaulipas1,
       featured: true
     },
   ];

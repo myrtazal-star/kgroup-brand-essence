@@ -244,6 +244,13 @@ import diagonalPatriotismo4 from "@/assets/diagonal-patriotismo-4.jpg";
 import diagonalPatriotismo5 from "@/assets/diagonal-patriotismo-5.jpg";
 import diagonalPatriotismo6 from "@/assets/diagonal-patriotismo-6.jpg";
 import diagonalPatriotismo7 from "@/assets/diagonal-patriotismo-7.jpg";
+import oficinaTamaulipas1 from "@/assets/oficina-tamaulipas-1.jpg";
+import oficinaTamaulipas2 from "@/assets/oficina-tamaulipas-2.jpg";
+import oficinaTamaulipas3 from "@/assets/oficina-tamaulipas-3.jpg";
+import oficinaTamaulipas4 from "@/assets/oficina-tamaulipas-4.jpg";
+import oficinaTamaulipas5 from "@/assets/oficina-tamaulipas-5.jpg";
+import oficinaTamaulipas6 from "@/assets/oficina-tamaulipas-6.jpg";
+import oficinaTamaulipas7 from "@/assets/oficina-tamaulipas-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -1035,6 +1042,41 @@ const propertiesData = {
       "Cerca de Parque México"
     ],
     gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4, diagonalPatriotismo5, diagonalPatriotismo6, diagonalPatriotismo7],
+    youtubeVideoId: undefined
+  },
+  "r29": {
+    id: "r29",
+    title: "Oficina en Renta – Tamaulipas, Condesa",
+    location: "Tamaulipas, Condesa",
+    price: "$52,000 MXN",
+    priceType: "Renta mensual",
+    area: "180 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 2,
+    imageUrl: oficinaTamaulipas1,
+    featured: true,
+    description: "Oficina en renta ubicada en Tamaulipas, Condesa, piso 14 con vistas panorámicas espectaculares de la ciudad. Cuenta con 180 m² de superficie, cocina, baños para hombres y mujeres, y 2 lugares de estacionamiento.\n\nPrecio de renta: $52,000/mes + $7,500 de mantenimiento. Precio total: $59,500/mes.\n\nUbicación privilegiada en la Condesa con acceso a transporte, restaurantes y servicios. Ideal para empresas que buscan un espacio amplio y bien ubicado.",
+    features: [
+      "180 m² de superficie",
+      "Piso 14 con vistas panorámicas",
+      "Cocina",
+      "Baño para hombres y mujeres",
+      "2 lugares de estacionamiento",
+      "Renta: $52,000/mes",
+      "Mantenimiento: $7,500/mes",
+      "Precio total: $59,500/mes",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad 24/7",
+      "Elevador",
+      "Lobby con recepción",
+      "Acceso a transporte público",
+      "Zona de restaurantes y servicios",
+      "Cerca de Parque México"
+    ],
+    gallery: [oficinaTamaulipas1, oficinaTamaulipas2, oficinaTamaulipas3, oficinaTamaulipas4, oficinaTamaulipas5, oficinaTamaulipas6, oficinaTamaulipas7],
     youtubeVideoId: undefined
   },
   "s7": {
