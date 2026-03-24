@@ -176,10 +176,10 @@ const RentCatalog = () => {
       id: "r30",
       title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
       location: "Condesa · Piso 7",
-      price: "$85,000/mes",
-      area: "200 m²",
+      price: "$85,000/mes + IVA",
+      area: "288 m²",
       bedrooms: 0,
-      bathrooms: 2,
+      bathrooms: 3,
       imageUrl: oficinaDiagPat1,
       featured: true
     },

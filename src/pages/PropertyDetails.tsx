@@ -1093,21 +1093,24 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
   "r30": {
     id: "r30",
     title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
-    location: "Diagonal Patriotismo, Condesa",
-    price: "$85,000 MXN",
+    location: "Diagonal Patriotismo 1, Condesa",
+    price: "$85,000 MXN + IVA",
     priceType: "Renta mensual (mantenimiento incluido)",
-    area: "200 m²",
+    area: "288 m²",
     bedrooms: 0,
-    bathrooms: 2,
-    parking: 1,
+    bathrooms: 3,
+    parking: 4,
     imageUrl: oficinaDiagPat1,
     featured: true,
-    description: "Oficina en renta ubicada en Diagonal Patriotismo, Condesa. Piso 7 con 200 m² de superficie. Precio de $85,000/mes con mantenimiento incluido.\n\nEspacio amplio y luminoso en una de las zonas con mayor demanda comercial de Ciudad de México. Excelente conectividad y acceso a servicios.",
+    description: "Oficina en renta ubicada en Diagonal Patriotismo 1, Condesa. Piso 7 con 288 m² de superficie. Precio de $85,000/mes + IVA con mantenimiento incluido.\n\nCuenta con 3 baños, cocina y 4 lugares de estacionamiento. Espacio amplio y luminoso en una de las zonas con mayor demanda comercial de Ciudad de México. Excelente conectividad y acceso a servicios.",
     features: [
-      "200 m² de superficie",
+      "288 m² de superficie",
       "Piso 7",
+      "3 baños",
+      "Cocina",
+      "4 lugares de estacionamiento",
       "Mantenimiento incluido",
-      "Precio total: $85,000/mes",
+      "Precio: $85,000/mes + IVA",
       "Disponibilidad inmediata"
     ],
     amenities: [
@@ -1119,7 +1122,8 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
       "Cerca de Parque México"
     ],
     gallery: [oficinaDiagPat1, oficinaDiagPat2, oficinaDiagPat3, oficinaDiagPat4, oficinaDiagPat5, oficinaDiagPat6, oficinaDiagPat7, oficinaDiagPat8, oficinaDiagPat9, oficinaDiagPat10],
-    youtubeVideoId: undefined
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-diagonal-pat.mp4"
   },
   "s7": {
     id: "s7",
