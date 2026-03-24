@@ -253,7 +253,7 @@ import oficinaTamaulipas6 from "@/assets/oficina-tamaulipas-6.jpg";
 import oficinaTamaulipas7 from "@/assets/oficina-tamaulipas-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
-const propertiesData = {
+const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string }> = {
   // Propiedades en Renta
   "r1": {
     id: "r1",
