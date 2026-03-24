@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { KGroupLogo } from "@/components/KGroupLogo";
+import { PropertyLocationMap } from "@/components/PropertyLocationMap";
 
 import { useState } from "react";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
