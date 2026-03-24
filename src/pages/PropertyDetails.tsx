@@ -251,6 +251,16 @@ import oficinaTamaulipas4 from "@/assets/oficina-tamaulipas-4.jpg";
 import oficinaTamaulipas5 from "@/assets/oficina-tamaulipas-5.jpg";
 import oficinaTamaulipas6 from "@/assets/oficina-tamaulipas-6.jpg";
 import oficinaTamaulipas7 from "@/assets/oficina-tamaulipas-7.jpg";
+import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
+import oficinaDiagPat2 from "@/assets/oficina-diagonal-pat-2.jpg";
+import oficinaDiagPat3 from "@/assets/oficina-diagonal-pat-3.jpg";
+import oficinaDiagPat4 from "@/assets/oficina-diagonal-pat-4.jpg";
+import oficinaDiagPat5 from "@/assets/oficina-diagonal-pat-5.jpg";
+import oficinaDiagPat6 from "@/assets/oficina-diagonal-pat-6.jpg";
+import oficinaDiagPat7 from "@/assets/oficina-diagonal-pat-7.jpg";
+import oficinaDiagPat8 from "@/assets/oficina-diagonal-pat-8.jpg";
+import oficinaDiagPat9 from "@/assets/oficina-diagonal-pat-9.jpg";
+import oficinaDiagPat10 from "@/assets/oficina-diagonal-pat-10.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string }> = {
@@ -1079,6 +1089,37 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     gallery: [oficinaTamaulipas1, oficinaTamaulipas2, oficinaTamaulipas3, oficinaTamaulipas4, oficinaTamaulipas5, oficinaTamaulipas6, oficinaTamaulipas7],
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-tamaulipas.mp4"
+  },
+  "r30": {
+    id: "r30",
+    title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
+    location: "Diagonal Patriotismo, Condesa",
+    price: "$85,000 MXN",
+    priceType: "Renta mensual (mantenimiento incluido)",
+    area: "200 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 1,
+    imageUrl: oficinaDiagPat1,
+    featured: true,
+    description: "Oficina en renta ubicada en Diagonal Patriotismo, Condesa. Piso 7 con 200 m² de superficie. Precio de $85,000/mes con mantenimiento incluido.\n\nEspacio amplio y luminoso en una de las zonas con mayor demanda comercial de Ciudad de México. Excelente conectividad y acceso a servicios.",
+    features: [
+      "200 m² de superficie",
+      "Piso 7",
+      "Mantenimiento incluido",
+      "Precio total: $85,000/mes",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad",
+      "Elevador",
+      "Acceso a transporte público (Metro Patriotismo)",
+      "Cerca de avenidas principales",
+      "Zona de restaurantes y servicios",
+      "Cerca de Parque México"
+    ],
+    gallery: [oficinaDiagPat1, oficinaDiagPat2, oficinaDiagPat3, oficinaDiagPat4, oficinaDiagPat5, oficinaDiagPat6, oficinaDiagPat7, oficinaDiagPat8, oficinaDiagPat9, oficinaDiagPat10],
+    youtubeVideoId: undefined
   },
   "s7": {
     id: "s7",

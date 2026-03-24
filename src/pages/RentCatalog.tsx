@@ -18,6 +18,7 @@ import oficinaPatriotismo1 from "@/assets/oficina-patriotismo-1.jpg";
 import oficinaPatriotismo77_1 from "@/assets/oficina-patriotismo-77-1.jpg";
 import diagonalPatriotismo1 from "@/assets/diagonal-patriotismo-1.jpg";
 import oficinaTamaulipas1 from "@/assets/oficina-tamaulipas-1.jpg";
+import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -169,6 +170,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 2,
       imageUrl: oficinaTamaulipas1,
+      featured: true
+    },
+    {
+      id: "r30",
+      title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
+      location: "Condesa · Piso 7",
+      price: "$85,000/mes",
+      area: "200 m²",
+      bedrooms: 0,
+      bathrooms: 2,
+      imageUrl: oficinaDiagPat1,
       featured: true
     },
   ];
