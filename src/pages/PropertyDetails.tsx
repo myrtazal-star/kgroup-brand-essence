@@ -1476,6 +1476,15 @@ const PropertyDetails = () => {
               </div>
             )}
 
+            {/* Location Map */}
+            {propertyCoords[id || ""] && (
+              <PropertyLocationMap
+                lat={propertyCoords[id || ""].lat}
+                lng={propertyCoords[id || ""].lng}
+                title={property.title}
+              />
+            )}
+
             {/* Property Navigation - Only for rental properties */}
             {isRentalProperty && (
               <div className="flex items-center justify-center gap-1 sm:gap-2 flex-wrap py-4">
