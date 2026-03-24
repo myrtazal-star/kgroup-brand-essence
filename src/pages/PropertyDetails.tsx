@@ -1090,6 +1090,37 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-tamaulipas.mp4"
   },
+  "r30": {
+    id: "r30",
+    title: "Oficina en Renta – Diagonal Patriotismo, Condesa",
+    location: "Diagonal Patriotismo, Condesa",
+    price: "$85,000 MXN",
+    priceType: "Renta mensual (mantenimiento incluido)",
+    area: "200 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 1,
+    imageUrl: oficinaDiagPat1,
+    featured: true,
+    description: "Oficina en renta ubicada en Diagonal Patriotismo, Condesa. Piso 7 con 200 m² de superficie. Precio de $85,000/mes con mantenimiento incluido.\n\nEspacio amplio y luminoso en una de las zonas con mayor demanda comercial de Ciudad de México. Excelente conectividad y acceso a servicios.",
+    features: [
+      "200 m² de superficie",
+      "Piso 7",
+      "Mantenimiento incluido",
+      "Precio total: $85,000/mes",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad",
+      "Elevador",
+      "Acceso a transporte público (Metro Patriotismo)",
+      "Cerca de avenidas principales",
+      "Zona de restaurantes y servicios",
+      "Cerca de Parque México"
+    ],
+    gallery: [oficinaDiagPat1, oficinaDiagPat2, oficinaDiagPat3, oficinaDiagPat4, oficinaDiagPat5, oficinaDiagPat6, oficinaDiagPat7, oficinaDiagPat8, oficinaDiagPat9, oficinaDiagPat10],
+    youtubeVideoId: undefined
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
