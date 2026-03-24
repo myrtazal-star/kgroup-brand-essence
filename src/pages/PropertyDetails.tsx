@@ -253,7 +253,7 @@ import oficinaTamaulipas6 from "@/assets/oficina-tamaulipas-6.jpg";
 import oficinaTamaulipas7 from "@/assets/oficina-tamaulipas-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
-const propertiesData = {
+const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string }> = {
   // Propiedades en Renta
   "r1": {
     id: "r1",
@@ -1077,7 +1077,8 @@ const propertiesData = {
       "Cerca de Parque México"
     ],
     gallery: [oficinaTamaulipas1, oficinaTamaulipas2, oficinaTamaulipas3, oficinaTamaulipas4, oficinaTamaulipas5, oficinaTamaulipas6, oficinaTamaulipas7],
-    youtubeVideoId: undefined
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-tamaulipas.mp4"
   },
   "s7": {
     id: "s7",
@@ -1396,24 +1397,35 @@ const PropertyDetails = () => {
               </div>
             </div>
 
-            {/* YouTube Video */}
-            {property.youtubeVideoId && (
+            {/* Video Tour */}
+            {(property.youtubeVideoId || property.videoUrl) && (
               <div className="bg-card border border-border rounded-xl p-4 sm:p-6">
                 <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <div className="w-1 h-5 bg-primary rounded-full" />
                   Video Tour
                 </h2>
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${property.youtubeVideoId}`}
-                    title="Video de la propiedad"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
+                  {property.youtubeVideoId ? (
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${property.youtubeVideoId}`}
+                      title="Video de la propiedad"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  ) : property.videoUrl ? (
+                    <video
+                      controls
+                      className="w-full h-full object-cover"
+                      preload="metadata"
+                    >
+                      <source src={property.videoUrl} type="video/mp4" />
+                      Tu navegador no soporta el reproductor de video.
+                    </video>
+                  ) : null}
                 </div>
               </div>
             )}
