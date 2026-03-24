@@ -1019,6 +1019,7 @@ const propertiesData = {
       "140 m² de superficie",
       "Piso 8",
       "5 privados",
+      "Sala de juntas",
       "Cocina equipada",
       "3 baños",
       "1 lugar de estacionamiento",
@@ -1033,7 +1034,7 @@ const propertiesData = {
       "Zona de restaurantes y servicios",
       "Cerca de Parque México"
     ],
-    gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4],
+    gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4, diagonalPatriotismo5, diagonalPatriotismo6, diagonalPatriotismo7],
     youtubeVideoId: undefined
   },
   "s7": {
