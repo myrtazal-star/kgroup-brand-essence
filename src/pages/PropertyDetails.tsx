@@ -1404,7 +1404,7 @@ const PropertyDetails = () => {
                   <div className="w-1 h-5 bg-primary rounded-full" />
                   Video Tour
                 </h2>
-                <div className="aspect-video overflow-hidden rounded-lg">
+                <div className={`overflow-hidden rounded-lg ${property.videoUrl && !property.youtubeVideoId ? 'aspect-[9/16] max-w-sm mx-auto' : 'aspect-video'}`}>
                   {property.youtubeVideoId ? (
                     <iframe
                       width="100%"
