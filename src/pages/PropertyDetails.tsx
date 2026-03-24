@@ -241,6 +241,9 @@ import diagonalPatriotismo1 from "@/assets/diagonal-patriotismo-1.jpg";
 import diagonalPatriotismo2 from "@/assets/diagonal-patriotismo-2.jpg";
 import diagonalPatriotismo3 from "@/assets/diagonal-patriotismo-3.jpg";
 import diagonalPatriotismo4 from "@/assets/diagonal-patriotismo-4.jpg";
+import diagonalPatriotismo5 from "@/assets/diagonal-patriotismo-5.jpg";
+import diagonalPatriotismo6 from "@/assets/diagonal-patriotismo-6.jpg";
+import diagonalPatriotismo7 from "@/assets/diagonal-patriotismo-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData = {
@@ -1016,6 +1019,7 @@ const propertiesData = {
       "140 m² de superficie",
       "Piso 8",
       "5 privados",
+      "Sala de juntas",
       "Cocina equipada",
       "3 baños",
       "1 lugar de estacionamiento",
@@ -1030,7 +1034,7 @@ const propertiesData = {
       "Zona de restaurantes y servicios",
       "Cerca de Parque México"
     ],
-    gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4],
+    gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4, diagonalPatriotismo5, diagonalPatriotismo6, diagonalPatriotismo7],
     youtubeVideoId: undefined
   },
   "s7": {
