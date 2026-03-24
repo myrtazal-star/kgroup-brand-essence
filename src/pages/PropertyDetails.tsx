@@ -1037,6 +1037,41 @@ const propertiesData = {
     gallery: [diagonalPatriotismo1, diagonalPatriotismo2, diagonalPatriotismo3, diagonalPatriotismo4, diagonalPatriotismo5, diagonalPatriotismo6, diagonalPatriotismo7],
     youtubeVideoId: undefined
   },
+  "r29": {
+    id: "r29",
+    title: "Oficina en Renta – Tamaulipas, Condesa",
+    location: "Tamaulipas, Condesa",
+    price: "$52,000 MXN",
+    priceType: "Renta mensual",
+    area: "180 m²",
+    bedrooms: 0,
+    bathrooms: 2,
+    parking: 2,
+    imageUrl: oficinaTamaulipas1,
+    featured: true,
+    description: "Oficina en renta ubicada en Tamaulipas, Condesa, piso 14 con vistas panorámicas espectaculares de la ciudad. Cuenta con 180 m² de superficie, cocina, baños para hombres y mujeres, y 2 lugares de estacionamiento.\n\nPrecio de renta: $52,000/mes + $7,500 de mantenimiento. Precio total: $59,500/mes.\n\nUbicación privilegiada en la Condesa con acceso a transporte, restaurantes y servicios. Ideal para empresas que buscan un espacio amplio y bien ubicado.",
+    features: [
+      "180 m² de superficie",
+      "Piso 14 con vistas panorámicas",
+      "Cocina",
+      "Baño para hombres y mujeres",
+      "2 lugares de estacionamiento",
+      "Renta: $52,000/mes",
+      "Mantenimiento: $7,500/mes",
+      "Precio total: $59,500/mes",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad 24/7",
+      "Elevador",
+      "Lobby con recepción",
+      "Acceso a transporte público",
+      "Zona de restaurantes y servicios",
+      "Cerca de Parque México"
+    ],
+    gallery: [oficinaTamaulipas1, oficinaTamaulipas2, oficinaTamaulipas3, oficinaTamaulipas4, oficinaTamaulipas5, oficinaTamaulipas6, oficinaTamaulipas7],
+    youtubeVideoId: undefined
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
