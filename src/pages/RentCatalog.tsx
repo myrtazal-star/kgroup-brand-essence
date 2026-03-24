@@ -164,7 +164,7 @@ const RentCatalog = () => {
       id: "r29",
       title: "Oficina en Renta – Tamaulipas, Condesa",
       location: "Condesa · Piso 14",
-      price: "$52,000/mes",
+      price: "$59,500/mes",
       area: "180 m²",
       bedrooms: 0,
       bathrooms: 2,
