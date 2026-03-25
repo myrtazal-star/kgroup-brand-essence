@@ -262,6 +262,14 @@ import oficinaDiagPat7 from "@/assets/oficina-diagonal-pat-7.jpg";
 import oficinaDiagPat8 from "@/assets/oficina-diagonal-pat-8.jpg";
 import oficinaDiagPat9 from "@/assets/oficina-diagonal-pat-9.jpg";
 import oficinaDiagPat10 from "@/assets/oficina-diagonal-pat-10.jpg";
+import oficinaAnzures1 from "@/assets/oficina-anzures-1.jpg";
+import oficinaAnzures2 from "@/assets/oficina-anzures-2.jpg";
+import oficinaAnzures3 from "@/assets/oficina-anzures-3.jpg";
+import oficinaAnzures4 from "@/assets/oficina-anzures-4.jpg";
+import oficinaAnzures5 from "@/assets/oficina-anzures-5.jpg";
+import oficinaAnzures6 from "@/assets/oficina-anzures-6.jpg";
+import oficinaAnzures7 from "@/assets/oficina-anzures-7.jpg";
+import oficinaAnzures8 from "@/assets/oficina-anzures-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string; lat?: number; lng?: number }> = {
@@ -1126,6 +1134,40 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-diagonal-pat.mp4"
   },
+  "r31": {
+    id: "r31",
+    title: "Oficina en Renta – Mariano Escobedo, Anzures",
+    location: "Mariano Escobedo, Anzures",
+    price: "$39,000",
+    priceType: "Renta mensual",
+    area: "200 m²",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 1,
+    imageUrl: oficinaAnzures1,
+    featured: true,
+    description: "Oficina en renta ubicada en Mariano Escobedo, colonia Anzures. Planta baja (Piso 1) con 200 m² de superficie.\n\nCuenta con recepción, 6 privados, cocineta, 3 baños y 1 lugar de estacionamiento. Espacio funcional y bien distribuido, ideal para despachos, consultorías o corporativos.\n\nExcelente ubicación con acceso a principales vialidades y servicios de la zona.",
+    features: [
+      "200 m² de superficie",
+      "Piso 1 (Planta baja)",
+      "Recepción",
+      "6 privados",
+      "Cocineta",
+      "3 baños",
+      "1 lugar de estacionamiento",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad",
+      "Acceso a transporte público",
+      "Cerca de Polanco y Reforma",
+      "Zona de restaurantes y servicios",
+      "Fácil acceso a Periférico y Circuito Interior"
+    ],
+    gallery: [oficinaAnzures1, oficinaAnzures2, oficinaAnzures3, oficinaAnzures4, oficinaAnzures5, oficinaAnzures6, oficinaAnzures7, oficinaAnzures8],
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-anzures.mp4"
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
@@ -1222,6 +1264,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r28": { lat: 19.4110, lng: -99.1770 },
   "r29": { lat: 19.4100, lng: -99.1720 },
   "r30": { lat: 19.4110, lng: -99.1770 },
+  "r31": { lat: 19.4370, lng: -99.1750 },
   "s4": { lat: 19.4350, lng: -99.1530 },
   "s6": { lat: 19.3960, lng: -99.2930 },
   "s7": { lat: 19.3130, lng: -99.1950 },
