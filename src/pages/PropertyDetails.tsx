@@ -1264,6 +1264,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r28": { lat: 19.4110, lng: -99.1770 },
   "r29": { lat: 19.4100, lng: -99.1720 },
   "r30": { lat: 19.4110, lng: -99.1770 },
+  "r31": { lat: 19.4370, lng: -99.1750 },
   "s4": { lat: 19.4350, lng: -99.1530 },
   "s6": { lat: 19.3960, lng: -99.2930 },
   "s7": { lat: 19.3130, lng: -99.1950 },
