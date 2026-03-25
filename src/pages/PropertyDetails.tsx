@@ -1126,6 +1126,40 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-diagonal-pat.mp4"
   },
+  "r31": {
+    id: "r31",
+    title: "Oficina en Renta – Mariano Escobedo, Anzures",
+    location: "Mariano Escobedo, Anzures",
+    price: "$39,000",
+    priceType: "Renta mensual",
+    area: "200 m²",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 1,
+    imageUrl: oficinaAnzures1,
+    featured: true,
+    description: "Oficina en renta ubicada en Mariano Escobedo, colonia Anzures. Planta baja (Piso 1) con 200 m² de superficie.\n\nCuenta con recepción, 6 privados, cocineta, 3 baños y 1 lugar de estacionamiento. Espacio funcional y bien distribuido, ideal para despachos, consultorías o corporativos.\n\nExcelente ubicación con acceso a principales vialidades y servicios de la zona.",
+    features: [
+      "200 m² de superficie",
+      "Piso 1 (Planta baja)",
+      "Recepción",
+      "6 privados",
+      "Cocineta",
+      "3 baños",
+      "1 lugar de estacionamiento",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad",
+      "Acceso a transporte público",
+      "Cerca de Polanco y Reforma",
+      "Zona de restaurantes y servicios",
+      "Fácil acceso a Periférico y Circuito Interior"
+    ],
+    gallery: [oficinaAnzures1, oficinaAnzures2, oficinaAnzures3, oficinaAnzures4, oficinaAnzures5, oficinaAnzures6, oficinaAnzures7, oficinaAnzures8],
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-anzures.mp4"
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
