@@ -20,6 +20,7 @@ import diagonalPatriotismo1 from "@/assets/diagonal-patriotismo-1.jpg";
 import oficinaTamaulipas1 from "@/assets/oficina-tamaulipas-1.jpg";
 import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
 import oficinaAnzures1 from "@/assets/oficina-anzures-1.jpg";
+import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -193,6 +194,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 3,
       imageUrl: oficinaAnzures1,
+      featured: true
+    },
+    {
+      id: "r32",
+      title: "Oficina en Renta – Mariano Escobedo, Anzures (P6)",
+      location: "Anzures · Piso 6",
+      price: "$45,000/mes",
+      area: "200 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaAnzures2_1,
       featured: true
     },
   ];

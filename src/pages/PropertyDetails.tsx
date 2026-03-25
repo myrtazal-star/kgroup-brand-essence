@@ -270,6 +270,13 @@ import oficinaAnzures5 from "@/assets/oficina-anzures-5.jpg";
 import oficinaAnzures6 from "@/assets/oficina-anzures-6.jpg";
 import oficinaAnzures7 from "@/assets/oficina-anzures-7.jpg";
 import oficinaAnzures8 from "@/assets/oficina-anzures-8.jpg";
+import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
+import oficinaAnzures2_2 from "@/assets/oficina-anzures2-2.jpg";
+import oficinaAnzures2_3 from "@/assets/oficina-anzures2-3.jpg";
+import oficinaAnzures2_4 from "@/assets/oficina-anzures2-4.jpg";
+import oficinaAnzures2_5 from "@/assets/oficina-anzures2-5.jpg";
+import oficinaAnzures2_6 from "@/assets/oficina-anzures2-6.jpg";
+import oficinaAnzures2_7 from "@/assets/oficina-anzures2-7.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string; lat?: number; lng?: number }> = {
@@ -1168,6 +1175,39 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-anzures.mp4"
   },
+  "r32": {
+    id: "r32",
+    title: "Oficina en Renta – Mariano Escobedo, Anzures (Piso 6)",
+    location: "Mariano Escobedo, Anzures",
+    price: "$45,000",
+    priceType: "Renta mensual (mantenimiento incluido)",
+    area: "200 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaAnzures2_1,
+    featured: true,
+    description: "Oficina en renta en Piso 6 sobre Mariano Escobedo, colonia Anzures. Cuenta con 200 m² de superficie, 3 privados, 1 baño y 1 lugar de estacionamiento. Precio de $45,000/mes con mantenimiento incluido.\n\nEspacio funcional y luminoso, ideal para despachos, consultorías o corporativos medianos. Excelente ubicación con acceso a principales vialidades y servicios de la zona.",
+    features: [
+      "200 m² de superficie",
+      "Piso 6",
+      "3 privados",
+      "1 baño",
+      "1 lugar de estacionamiento",
+      "Mantenimiento incluido",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Seguridad",
+      "Elevador",
+      "Acceso a transporte público",
+      "Cerca de Polanco y Reforma",
+      "Zona de restaurantes y servicios"
+    ],
+    gallery: [oficinaAnzures2_1, oficinaAnzures2_2, oficinaAnzures2_3, oficinaAnzures2_4, oficinaAnzures2_5, oficinaAnzures2_6, oficinaAnzures2_7],
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-anzures2.mp4"
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
@@ -1265,6 +1305,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r29": { lat: 19.4100, lng: -99.1720 },
   "r30": { lat: 19.4110, lng: -99.1770 },
   "r31": { lat: 19.4370, lng: -99.1750 },
+  "r32": { lat: 19.4375, lng: -99.1750 },
   "s4": { lat: 19.4350, lng: -99.1530 },
   "s6": { lat: 19.3960, lng: -99.2930 },
   "s7": { lat: 19.3130, lng: -99.1950 },
