@@ -27,4 +27,5 @@ s7,Oficina en Venta – Yama Pedregal,Pedregal,Oficina,Venta,"$5,500,000 MXN",73
 s8,Oficina en Venta – San Jerónimo,"San Jerónimo, a una cuadra de Periférico Sur",Oficina,Venta,"$6,500,000 MXN",128 m²,1,2,San Jerónimo,Piso 3,Sí
 r28,Oficina en Renta – Diagonal Patriotismo,"Diagonal Patriotismo 12, Condesa",Oficina,Renta,"$54,000/mes",140 m²,3,1,Condesa,Piso 8,Sí
 r29,Oficina en Renta – Tamaulipas Condesa,"Tamaulipas, Condesa",Oficina,Renta,"$52,000/mes + $7,500 mant.",180 m²,2,2,Condesa,Piso 14,Sí
-"Oficina en Renta – Diagonal Patriotismo P7, Condesa",Diagonal Patriotismo,Condesa,Oficina,Renta,"$85,000/mes (mant. incluido)",200 m²,0,2,1,Piso 7,Disponible
+"Oficina en Renta – Diagonal Patriotismo P7, Condesa",Diagonal Patriotismo,Condesa,Oficina,Renta,"$85,000/mes (mant. incluido)",288 m²,3,4,Condesa,Piso 7,Sí
+r31,Oficina en Renta – Mariano Escobedo Anzures,"Mariano Escobedo, Anzures",Oficina,Renta,"$39,000/mes",200 m²,3,1,Anzures,Piso 1,Sí

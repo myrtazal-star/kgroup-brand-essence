@@ -183,6 +183,17 @@ const RentCatalog = () => {
       imageUrl: oficinaDiagPat1,
       featured: true
     },
+    {
+      id: "r31",
+      title: "Oficina en Renta – Mariano Escobedo, Anzures",
+      location: "Anzures · Piso 1",
+      price: "$39,000/mes",
+      area: "200 m²",
+      bedrooms: 0,
+      bathrooms: 3,
+      imageUrl: oficinaAnzures1,
+      featured: true
+    },
   ];
 
   return (
