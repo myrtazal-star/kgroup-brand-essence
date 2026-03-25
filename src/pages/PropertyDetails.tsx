@@ -262,6 +262,14 @@ import oficinaDiagPat7 from "@/assets/oficina-diagonal-pat-7.jpg";
 import oficinaDiagPat8 from "@/assets/oficina-diagonal-pat-8.jpg";
 import oficinaDiagPat9 from "@/assets/oficina-diagonal-pat-9.jpg";
 import oficinaDiagPat10 from "@/assets/oficina-diagonal-pat-10.jpg";
+import oficinaAnzures1 from "@/assets/oficina-anzures-1.jpg";
+import oficinaAnzures2 from "@/assets/oficina-anzures-2.jpg";
+import oficinaAnzures3 from "@/assets/oficina-anzures-3.jpg";
+import oficinaAnzures4 from "@/assets/oficina-anzures-4.jpg";
+import oficinaAnzures5 from "@/assets/oficina-anzures-5.jpg";
+import oficinaAnzures6 from "@/assets/oficina-anzures-6.jpg";
+import oficinaAnzures7 from "@/assets/oficina-anzures-7.jpg";
+import oficinaAnzures8 from "@/assets/oficina-anzures-8.jpg";
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string; lat?: number; lng?: number }> = {
