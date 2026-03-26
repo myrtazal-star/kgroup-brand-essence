@@ -26,7 +26,7 @@ interface PropertyLocationMapProps {
 
 export const PropertyLocationMap = ({ lat, lng, title }: PropertyLocationMapProps) => {
   const { isLoaded } = useJsApiLoader({
-    id: "property-location-map",
+    id: "google-map-script",
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
   });
 
