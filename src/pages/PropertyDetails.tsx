@@ -1205,7 +1205,7 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
       "Cerca de Polanco y Reforma",
       "Zona de restaurantes y servicios"
     ],
-    gallery: [oficinaAnzures2_1, oficinaAnzures2_2, oficinaAnzures2_3, oficinaAnzures2_4, oficinaAnzures2_5, oficinaAnzures2_6, oficinaAnzures2_7, oficinaAnzures2_8],
+    gallery: [oficinaAnzures2_1, oficinaAnzures2_2, oficinaAnzures2_3],
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-anzures2.mp4"
   },
