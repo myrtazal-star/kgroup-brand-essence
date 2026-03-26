@@ -273,11 +273,8 @@ import oficinaAnzures8 from "@/assets/oficina-anzures-8.jpg";
 import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
 import oficinaAnzures2_2 from "@/assets/oficina-anzures2-2.jpg";
 import oficinaAnzures2_3 from "@/assets/oficina-anzures2-3.jpg";
-import oficinaAnzures2_4 from "@/assets/oficina-anzures2-4.jpg";
-import oficinaAnzures2_5 from "@/assets/oficina-anzures2-5.jpg";
-import oficinaAnzures2_6 from "@/assets/oficina-anzures2-6.jpg";
-import oficinaAnzures2_7 from "@/assets/oficina-anzures2-7.jpg";
-import oficinaAnzures2_8 from "@/assets/oficina-anzures2-8.jpg";
+
+
 
 // Property data - en una app real esto vendría de una base de datos
 const propertiesData: Record<string, { id: string; title: string; location: string; price: string; priceType: string; area: string; bedrooms: number; bathrooms: number; parking: number; imageUrl: string; featured: boolean; description: string; features: string[]; amenities: string[]; gallery: string[]; youtubeVideoId: string | undefined; videoUrl?: string; lat?: number; lng?: number }> = {
@@ -1205,7 +1202,7 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
       "Cerca de Polanco y Reforma",
       "Zona de restaurantes y servicios"
     ],
-    gallery: [oficinaAnzures2_1, oficinaAnzures2_2, oficinaAnzures2_3, oficinaAnzures2_4, oficinaAnzures2_5, oficinaAnzures2_6, oficinaAnzures2_7, oficinaAnzures2_8],
+    gallery: [oficinaAnzures2_1, oficinaAnzures2_2, oficinaAnzures2_3],
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-anzures2.mp4"
   },
