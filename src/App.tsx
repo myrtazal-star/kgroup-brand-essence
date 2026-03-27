@@ -16,6 +16,7 @@ import Nosotros from "./pages/Nosotros";
 import NaumaInterlomas from "./pages/NaumaInterlomas";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { AdvisorChat } from "./components/AdvisorChat";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/nauma-interlomas" element={<NaumaInterlomas />} />
+          <Route path="/privacidad" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -191,6 +191,9 @@ const Index = () => {
             </div>
           </div>
           <GoldDivider className="mb-6" />
+          <div className="flex justify-center gap-6 mb-4">
+            <Link to="/privacidad" className="text-xs text-muted-foreground/60 hover:text-muted-foreground transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>Aviso de Privacidad</Link>
+          </div>
           <p className="text-caption text-muted-foreground/60 text-center">
             © 2024 KGroup Inmobiliaria. Todos los derechos reservados.
           </p>
