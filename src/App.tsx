@@ -41,6 +41,7 @@ const App = () => (
           <Route path="/consultation" element={<ConsultationForm />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/nauma-interlomas" element={<NaumaInterlomas />} />
+          <Route path="/privacidad" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
