@@ -16,6 +16,7 @@ import Nosotros from "./pages/Nosotros";
 import NaumaInterlomas from "./pages/NaumaInterlomas";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { AdvisorChat } from "./components/AdvisorChat";
 
 const queryClient = new QueryClient();
