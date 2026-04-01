@@ -8,6 +8,7 @@ import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
 
 import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
 import oficinaSanjeronimo1 from "@/assets/oficina-sanjeronimo-1.jpg";
+import fabricaTlalnepantla1 from "@/assets/fabrica-tlalnepantla-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
