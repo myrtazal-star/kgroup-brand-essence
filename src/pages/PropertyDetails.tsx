@@ -273,6 +273,11 @@ import oficinaAnzures8 from "@/assets/oficina-anzures-8.jpg";
 import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
 import oficinaAnzures2_2 from "@/assets/oficina-anzures2-2.jpg";
 import oficinaAnzures2_3 from "@/assets/oficina-anzures2-3.jpg";
+import oficinaWorklab1 from "@/assets/oficina-worklab-condesa-1.jpg";
+import oficinaWorklab2 from "@/assets/oficina-worklab-condesa-2.jpg";
+import oficinaWorklab3 from "@/assets/oficina-worklab-condesa-3.jpg";
+import oficinaWorklab4 from "@/assets/oficina-worklab-condesa-4.jpg";
+import oficinaWorklab5 from "@/assets/oficina-worklab-condesa-5.jpg";
 
 
 
