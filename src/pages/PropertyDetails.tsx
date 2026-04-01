@@ -273,6 +273,11 @@ import oficinaAnzures8 from "@/assets/oficina-anzures-8.jpg";
 import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
 import oficinaAnzures2_2 from "@/assets/oficina-anzures2-2.jpg";
 import oficinaAnzures2_3 from "@/assets/oficina-anzures2-3.jpg";
+import oficinaWorklab1 from "@/assets/oficina-worklab-condesa-1.jpg";
+import oficinaWorklab2 from "@/assets/oficina-worklab-condesa-2.jpg";
+import oficinaWorklab3 from "@/assets/oficina-worklab-condesa-3.jpg";
+import oficinaWorklab4 from "@/assets/oficina-worklab-condesa-4.jpg";
+import oficinaWorklab5 from "@/assets/oficina-worklab-condesa-5.jpg";
 
 
 
@@ -1206,6 +1211,39 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-anzures2.mp4"
   },
+  "r33": {
+    id: "r33",
+    title: "Oficina en Renta – Work Lab Condesa",
+    location: "Insurgentes 427, Condesa",
+    price: "$50,000",
+    priceType: "Renta mensual",
+    area: "87 m²",
+    bedrooms: 0,
+    bathrooms: 0,
+    parking: 0,
+    imageUrl: oficinaWorklab1,
+    featured: true,
+    description: "Oficina 506 con acabados en Work Lab Condesa, sobre Insurgentes 427. Cuenta con 87 m² de superficie, espacio privado para cocineta, 2 privados y 2 privados con vista.\n\nEl edificio cuenta con amenidades premium: Gym, Salón para yoga, Vestidores, Rooftop y Salas de Juntas. Ideal para empresas que buscan un espacio moderno con servicios incluidos en una de las zonas más dinámicas de la ciudad.",
+    features: [
+      "87 m² de superficie",
+      "Oficina 506 con acabados",
+      "Espacio privado para cocineta",
+      "2 privados",
+      "2 privados con vista",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Gym",
+      "Salón para yoga",
+      "Vestidores",
+      "Rooftop",
+      "Salas de Juntas",
+      "Seguridad",
+      "Elevador"
+    ],
+    gallery: [oficinaWorklab1, oficinaWorklab2, oficinaWorklab3, oficinaWorklab4, oficinaWorklab5],
+    youtubeVideoId: undefined,
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",
@@ -1304,6 +1342,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r30": { lat: 19.4110, lng: -99.1770 },
   "r31": { lat: 19.4370, lng: -99.1750 },
   "r32": { lat: 19.4375, lng: -99.1750 },
+  "r33": { lat: 19.4130, lng: -99.1700 },
   "s4": { lat: 19.4350, lng: -99.1530 },
   "s6": { lat: 19.3960, lng: -99.2930 },
   "s7": { lat: 19.3130, lng: -99.1950 },

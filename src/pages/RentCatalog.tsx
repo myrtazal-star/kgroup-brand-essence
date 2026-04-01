@@ -21,6 +21,7 @@ import oficinaTamaulipas1 from "@/assets/oficina-tamaulipas-1.jpg";
 import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
 import oficinaAnzures1 from "@/assets/oficina-anzures-1.jpg";
 import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
+import oficinaWorklab1 from "@/assets/oficina-worklab-condesa-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -205,6 +206,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaAnzures2_1,
+      featured: true
+    },
+    {
+      id: "r33",
+      title: "Oficina en Renta – Work Lab Condesa",
+      location: "Condesa · Insurgentes 427",
+      price: "$50,000/mes",
+      area: "87 m²",
+      bedrooms: 0,
+      bathrooms: 0,
+      imageUrl: oficinaWorklab1,
       featured: true
     },
   ];
