@@ -8,6 +8,7 @@ import oficinaPininfarina1 from "@/assets/oficina-pininfarina-1.jpg";
 
 import oficinaYama1 from "@/assets/oficina-yama-1.jpg";
 import oficinaSanjeronimo1 from "@/assets/oficina-sanjeronimo-1.jpg";
+import fabricaTlalnepantla1 from "@/assets/fabrica-tlalnepantla-1.jpg";
 
 const SaleCatalog = () => {
   const saleProperties = [
@@ -64,6 +65,17 @@ const SaleCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaSanjeronimo1,
+      featured: true,
+    },
+    {
+      id: "s9",
+      title: "Fábrica de Pintura – Tlalnepantla",
+      location: "Tlalnepantla · Edo. de México",
+      price: "Consultar (Ref. $800 USD/m²)",
+      area: "21,800 m²",
+      bedrooms: 0,
+      bathrooms: 0,
+      imageUrl: fabricaTlalnepantla1,
       featured: true,
     },
   ];
