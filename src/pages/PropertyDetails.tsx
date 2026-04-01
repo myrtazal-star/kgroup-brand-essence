@@ -1426,6 +1426,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "s6": { lat: 19.3960, lng: -99.2930 },
   "s7": { lat: 19.3130, lng: -99.1950 },
   "s8": { lat: 19.4350, lng: -99.1530 },
+  "s9": { lat: 19.5370, lng: -99.1970 },
 };
 
 const PropertyDetails = () => {
