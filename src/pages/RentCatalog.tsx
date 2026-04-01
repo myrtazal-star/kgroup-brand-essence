@@ -208,6 +208,17 @@ const RentCatalog = () => {
       imageUrl: oficinaAnzures2_1,
       featured: true
     },
+    {
+      id: "r33",
+      title: "Oficina en Renta – Work Lab Condesa",
+      location: "Condesa · Insurgentes 427",
+      price: "$50,000/mes",
+      area: "87 m²",
+      bedrooms: 0,
+      bathrooms: 0,
+      imageUrl: oficinaWorklab1,
+      featured: true
+    },
   ];
 
   return (
