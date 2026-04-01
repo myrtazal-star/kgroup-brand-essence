@@ -220,6 +220,17 @@ const RentCatalog = () => {
       imageUrl: oficinaWorklab1,
       featured: true
     },
+    {
+      id: "r34",
+      title: "Oficina en Renta – Work Lab Condesa (Obra Gris)",
+      location: "Condesa · Insurgentes 427",
+      price: "$55,000/mes",
+      area: "87 m²",
+      bedrooms: 0,
+      bathrooms: 0,
+      imageUrl: oficinaWorklab2_1,
+      featured: true
+    },
   ];
 
   return (
