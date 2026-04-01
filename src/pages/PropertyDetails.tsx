@@ -1254,6 +1254,37 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     gallery: [oficinaWorklab1, oficinaWorklab2, oficinaWorklab3, oficinaWorklab4, oficinaWorklab5, oficinaWorklab6, oficinaWorklab7, oficinaWorklab8, oficinaWorklab9],
     youtubeVideoId: undefined,
   },
+  "r34": {
+    id: "r34",
+    title: "Oficina en Renta – Work Lab Condesa (Obra Gris)",
+    location: "Insurgentes 427, Condesa",
+    price: "$55,000",
+    priceType: "Renta mensual",
+    area: "87 m²",
+    bedrooms: 0,
+    bathrooms: 0,
+    parking: 2,
+    imageUrl: oficinaWorklab2_1,
+    featured: true,
+    description: "Oficina en obra gris en Work Lab Condesa, sobre Insurgentes 427. Cuenta con 87 m² de superficie y 2 cajones de estacionamiento. Espacio listo para adaptar a las necesidades de tu empresa.\n\nEl edificio cuenta con amenidades premium: Gym, Salón para yoga, Vestidores, Rooftop y Salas de Juntas. Ubicación privilegiada en la Condesa con excelente conectividad.",
+    features: [
+      "87 m² de superficie",
+      "Obra gris – listo para adaptar",
+      "2 cajones de estacionamiento",
+      "Disponibilidad inmediata"
+    ],
+    amenities: [
+      "Gym",
+      "Salón para yoga",
+      "Vestidores",
+      "Rooftop",
+      "Salas de Juntas",
+      "Seguridad",
+      "Elevador"
+    ],
+    gallery: [oficinaWorklab2_1, oficinaWorklab2_2, oficinaWorklab2_3, oficinaWorklab2_4, oficinaWorklab2_5, oficinaWorklab2_6],
+    youtubeVideoId: undefined,
+  },
   "s7": {
     id: "s7",
     title: "Oficina en Venta – Yama Pedregal",

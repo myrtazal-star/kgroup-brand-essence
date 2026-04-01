@@ -22,6 +22,7 @@ import oficinaDiagPat1 from "@/assets/oficina-diagonal-pat-1.jpg";
 import oficinaAnzures1 from "@/assets/oficina-anzures-1.jpg";
 import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
 import oficinaWorklab1 from "@/assets/oficina-worklab-condesa-1.jpg";
+import oficinaWorklab2_1 from "@/assets/oficina-worklab2-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
