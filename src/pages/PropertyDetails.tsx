@@ -1245,7 +1245,7 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
       "Seguridad",
       "Elevador"
     ],
-    gallery: [oficinaWorklab1, oficinaWorklab2, oficinaWorklab3, oficinaWorklab4, oficinaWorklab5],
+    gallery: [oficinaWorklab1, oficinaWorklab2, oficinaWorklab3, oficinaWorklab4, oficinaWorklab5, oficinaWorklab6, oficinaWorklab7, oficinaWorklab8, oficinaWorklab9],
     youtubeVideoId: undefined,
   },
   "s7": {
