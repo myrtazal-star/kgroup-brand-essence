@@ -1391,6 +1391,42 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     gallery: [oficinaSanjeronimo1, oficinaSanjeronimo2, oficinaSanjeronimo3, oficinaSanjeronimo4, oficinaSanjeronimo5, oficinaSanjeronimo6, oficinaSanjeronimo7, oficinaSanjeronimo8, oficinaSanjeronimo9, oficinaSanjeronimo10],
     youtubeVideoId: undefined
   },
+  "s9": {
+    id: "s9",
+    title: "Fábrica de Pintura en Venta – Tlalnepantla",
+    location: "Gustavo Baz y Presidente Juárez, Tlalnepantla",
+    price: "Consultar",
+    priceType: "USD $800/m² (Ref.)",
+    area: "21,800 m²",
+    bedrooms: 0,
+    bathrooms: 0,
+    parking: 0,
+    imageUrl: fabricaTlalnepantla1,
+    featured: true,
+    description: "Oportunidad única de adquisición: fábrica de pintura con terreno de 21,800 m² en Tlalnepantla, disponible como terreno o como planta operativa con maquinaria AAA.\n\nUbicada estratégicamente sobre Gustavo Baz y Presidente Juárez, con dos entradas independientes, esta propiedad industrial cuenta con infraestructura completa para operaciones de manufactura de gran escala.\n\nIncluye pozo propio, planta de bombeo, luz trifásica, zona de agitación de pintura, planta fórmula para carrocería y artículos de limpieza, laboratorios especializados, área de tanques y molinos de perla, planta de asfalto, sistema hidráulico automático y edificio con oficinas administrativas.\n\nSolo se vende completo. Precio de referencia: $800 USD por metro cuadrado. Precio final a negociar.",
+    features: [
+      "21,800 m² de terreno",
+      "Dos entradas (Gustavo Baz y Presidente Juárez)",
+      "Pozo propio",
+      "Planta de bombeo",
+      "Luz trifásica",
+      "Zona de agitación de pintura",
+      "Planta fórmula carrocería y artículos limpieza",
+      "Laboratorios",
+      "Área de tanques y molinos de perla",
+      "Planta de asfalto",
+      "Sistema hidráulico automático",
+      "Edificio con oficinas"
+    ],
+    amenities: [
+      "Maquinaria AAA incluida (opcional)",
+      "Infraestructura industrial completa",
+      "Acceso vehicular pesado",
+      "Solo se vende completo"
+    ],
+    gallery: [fabricaTlalnepantla1, fabricaTlalnepantla2, fabricaTlalnepantla3, fabricaTlalnepantla4, fabricaTlalnepantla5, fabricaTlalnepantla6, fabricaTlalnepantla7, fabricaTlalnepantla8, fabricaTlalnepantla9, fabricaTlalnepantla10],
+    youtubeVideoId: undefined
+  },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r1": { lat: 19.4180, lng: -99.1630 },
