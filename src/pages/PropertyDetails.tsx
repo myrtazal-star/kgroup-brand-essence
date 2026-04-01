@@ -292,6 +292,16 @@ import oficinaWorklab3_1 from "@/assets/oficina-worklab3-1.jpg";
 import oficinaWorklab3_2 from "@/assets/oficina-worklab3-2.jpg";
 import oficinaWorklab3_3 from "@/assets/oficina-worklab3-3.jpg";
 import oficinaWorklab3_4 from "@/assets/oficina-worklab3-4.jpg";
+import fabricaTlalnepantla1 from "@/assets/fabrica-tlalnepantla-1.jpg";
+import fabricaTlalnepantla2 from "@/assets/fabrica-tlalnepantla-2.jpg";
+import fabricaTlalnepantla3 from "@/assets/fabrica-tlalnepantla-3.jpg";
+import fabricaTlalnepantla4 from "@/assets/fabrica-tlalnepantla-4.jpg";
+import fabricaTlalnepantla5 from "@/assets/fabrica-tlalnepantla-5.jpg";
+import fabricaTlalnepantla6 from "@/assets/fabrica-tlalnepantla-6.jpg";
+import fabricaTlalnepantla7 from "@/assets/fabrica-tlalnepantla-7.jpg";
+import fabricaTlalnepantla8 from "@/assets/fabrica-tlalnepantla-8.jpg";
+import fabricaTlalnepantla9 from "@/assets/fabrica-tlalnepantla-9.jpg";
+import fabricaTlalnepantla10 from "@/assets/fabrica-tlalnepantla-10.jpg";
 
 
 
