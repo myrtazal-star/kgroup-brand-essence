@@ -278,6 +278,10 @@ import oficinaWorklab2 from "@/assets/oficina-worklab-condesa-2.jpg";
 import oficinaWorklab3 from "@/assets/oficina-worklab-condesa-3.jpg";
 import oficinaWorklab4 from "@/assets/oficina-worklab-condesa-4.jpg";
 import oficinaWorklab5 from "@/assets/oficina-worklab-condesa-5.jpg";
+import oficinaWorklab6 from "@/assets/oficina-worklab-condesa-6.jpg";
+import oficinaWorklab7 from "@/assets/oficina-worklab-condesa-7.jpg";
+import oficinaWorklab8 from "@/assets/oficina-worklab-condesa-8.jpg";
+import oficinaWorklab9 from "@/assets/oficina-worklab-condesa-9.jpg";
 
 
 
