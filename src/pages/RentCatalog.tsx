@@ -24,6 +24,7 @@ import oficinaAnzures2_1 from "@/assets/oficina-anzures2-1.jpg";
 import oficinaWorklab1 from "@/assets/oficina-worklab-condesa-1.jpg";
 import oficinaWorklab2_1 from "@/assets/oficina-worklab2-1.jpg";
 import oficinaWorklab3_1 from "@/assets/oficina-worklab3-1.jpg";
+import oficinaArquimedes1 from "@/assets/oficina-arquimedes-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -241,6 +242,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 0,
       imageUrl: oficinaWorklab3_1,
+      featured: true
+    },
+    {
+      id: "r36",
+      title: "Oficina en Renta – Plaza Arquímedes, Polanco",
+      location: "Polanco · Piso 2",
+      price: "$44,000/mes",
+      area: "93 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaArquimedes1,
       featured: true
     },
   ];
