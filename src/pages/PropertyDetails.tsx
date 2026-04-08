@@ -1446,6 +1446,38 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     gallery: [fabricaTlalnepantla1, fabricaTlalnepantla2, fabricaTlalnepantla3, fabricaTlalnepantla4, fabricaTlalnepantla5, fabricaTlalnepantla6, fabricaTlalnepantla7, fabricaTlalnepantla8, fabricaTlalnepantla9, fabricaTlalnepantla10],
     youtubeVideoId: undefined
   },
+  "r36": {
+    id: "r36",
+    title: "Oficina en Renta – Plaza Arquímedes, Polanco",
+    location: "Plaza Arquímedes, Polanco",
+    price: "$44,000",
+    priceType: "Renta mensual",
+    area: "93 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 0,
+    imageUrl: oficinaArquimedes1,
+    featured: true,
+    description: "Oficina en renta en Plaza Arquímedes, Polanco. Espacio de 93 m² con 2 espacios privados, ubicada en el Piso 2, oficina 101. Mantenimiento y agua incluidos en la renta. Estacionamiento disponible por separado. Requisitos: aval, mes de renta y depósito.",
+    features: [
+      "93 m² de superficie",
+      "2 espacios privados",
+      "Piso 2 – Oficina 101",
+      "Mantenimiento y agua incluidos",
+      "Estacionamiento aparte",
+      "Luz y aire acondicionado aparte",
+      "Aval / mes de renta / depósito"
+    ],
+    amenities: [
+      "Horario L-V: 8:00 – 20:00",
+      "Horario Sáb-Dom: 8:00 – 20:00",
+      "Estacionamiento: 7:00 – 22:00",
+      "Seguridad",
+      "Plaza comercial"
+    ],
+    gallery: [oficinaArquimedes1, oficinaArquimedes2, oficinaArquimedes3, oficinaArquimedes4, oficinaArquimedes5, oficinaArquimedes6, oficinaArquimedes7, oficinaArquimedes8, oficinaArquimedes9, oficinaArquimedes10],
+    youtubeVideoId: undefined
+  },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r1": { lat: 19.4180, lng: -99.1630 },
