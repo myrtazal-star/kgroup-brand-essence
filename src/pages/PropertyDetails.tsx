@@ -302,7 +302,16 @@ import fabricaTlalnepantla7 from "@/assets/fabrica-tlalnepantla-7.jpg";
 import fabricaTlalnepantla8 from "@/assets/fabrica-tlalnepantla-8.jpg";
 import fabricaTlalnepantla9 from "@/assets/fabrica-tlalnepantla-9.jpg";
 import fabricaTlalnepantla10 from "@/assets/fabrica-tlalnepantla-10.jpg";
-
+import oficinaArquimedes1 from "@/assets/oficina-arquimedes-1.jpg";
+import oficinaArquimedes2 from "@/assets/oficina-arquimedes-2.jpg";
+import oficinaArquimedes3 from "@/assets/oficina-arquimedes-3.jpg";
+import oficinaArquimedes4 from "@/assets/oficina-arquimedes-4.jpg";
+import oficinaArquimedes5 from "@/assets/oficina-arquimedes-5.jpg";
+import oficinaArquimedes6 from "@/assets/oficina-arquimedes-6.jpg";
+import oficinaArquimedes7 from "@/assets/oficina-arquimedes-7.jpg";
+import oficinaArquimedes8 from "@/assets/oficina-arquimedes-8.jpg";
+import oficinaArquimedes9 from "@/assets/oficina-arquimedes-9.jpg";
+import oficinaArquimedes10 from "@/assets/oficina-arquimedes-10.jpg";
 
 
 // Property data - en una app real esto vendría de una base de datos
@@ -1473,6 +1482,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "s7": { lat: 19.3130, lng: -99.1950 },
   "s8": { lat: 19.4350, lng: -99.1530 },
   "s9": { lat: 19.5370, lng: -99.1970 },
+  "r36": { lat: 19.4340, lng: -99.1980 },
 };
 
 const PropertyDetails = () => {
