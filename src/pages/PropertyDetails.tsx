@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { KGroupLogo } from "@/components/KGroupLogo";
 import { PropertyLocationMap } from "@/components/PropertyLocationMap";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import oficinaPn1 from "@/assets/oficina-pn-1.jpg";
 import oficinaPn2 from "@/assets/oficina-pn-2.jpg";
 import oficinaPn3 from "@/assets/oficina-pn-3.jpg";
@@ -1535,6 +1535,10 @@ const PropertyDetails = () => {
   const currentPropertyIndex = rentalPropertyIds.indexOf(id || "");
   const isRentalProperty = currentPropertyIndex !== -1;
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   if (!property) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -1647,7 +1651,7 @@ const PropertyDetails = () => {
         <Button 
           variant="ghost" 
           size="sm" 
-          onClick={() => navigate("/rent-catalog")} 
+          onClick={() => navigate(-1)} 
           className="mb-4 flex items-center gap-2 text-muted-foreground hover:text-foreground"
         >
           <ArrowLeft className="w-4 h-4" />
