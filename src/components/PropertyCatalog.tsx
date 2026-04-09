@@ -1,8 +1,8 @@
 import { PropertyCard } from "@/components/PropertyCard";
 import PropertyMap from "@/components/PropertyMap";
 import { Search, MapPin, LayoutGrid } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useState, useMemo } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { useState, useMemo, useEffect, useRef } from "react";
 
 interface Property {
   id: string;
@@ -24,11 +24,13 @@ interface PropertyCatalogProps {
 }
 
 export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyCatalogProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
   const [mapboxToken, setMapboxToken] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState("newest");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState(searchParams.get("q") || "");
+  const [sortBy, setSortBy] = useState(searchParams.get("sort") || "newest");
+  const initialPage = parseInt(searchParams.get("page") || "1", 10);
+  const [currentPage, setCurrentPage] = useState(isNaN(initialPage) ? 1 : initialPage);
   const itemsPerPage = 9;
 
   const filteredProperties = useMemo(() => {
@@ -63,8 +65,24 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProperties = filteredProperties.slice(startIndex, startIndex + itemsPerPage);
 
-  useMemo(() => {
+  const updateParams = (page: number, search?: string, sort?: string) => {
+    const params: Record<string, string> = {};
+    if (page > 1) params.page = String(page);
+    const s = search ?? searchTerm;
+    const so = sort ?? sortBy;
+    if (s) params.q = s;
+    if (so && so !== "newest") params.sort = so;
+    setSearchParams(params, { replace: true });
+  };
+
+  const isInitialMount = useRef(true);
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     setCurrentPage(1);
+    updateParams(1);
   }, [searchTerm, sortBy]);
 
   return (
@@ -164,7 +182,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           <button 
             className="px-4 py-2 text-sm font-light border border-border hover:border-foreground disabled:opacity-30 disabled:hover:border-border transition-colors"
             disabled={currentPage === 1}
-            onClick={() => setCurrentPage(currentPage - 1)}
+            onClick={() => { const p = currentPage - 1; setCurrentPage(p); updateParams(p); }}
           >
             Anterior
           </button>
@@ -177,7 +195,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
                   ? "bg-foreground text-background border-foreground" 
                   : "border-border hover:border-foreground"
               }`}
-              onClick={() => setCurrentPage(page)}
+              onClick={() => { setCurrentPage(page); updateParams(page); }}
             >
               {page}
             </button>
@@ -186,7 +204,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           <button 
             className="px-4 py-2 text-sm font-light border border-border hover:border-foreground disabled:opacity-30 disabled:hover:border-border transition-colors"
             disabled={currentPage === totalPages}
-            onClick={() => setCurrentPage(currentPage + 1)}
+            onClick={() => { const p = currentPage + 1; setCurrentPage(p); updateParams(p); }}
           >
             Siguiente
           </button>
