@@ -2,7 +2,7 @@ import { PropertyCard } from "@/components/PropertyCard";
 import PropertyMap from "@/components/PropertyMap";
 import { Search, MapPin, LayoutGrid } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 
 interface Property {
   id: string;
