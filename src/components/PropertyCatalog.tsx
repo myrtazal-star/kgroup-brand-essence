@@ -75,7 +75,12 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
     setSearchParams(params, { replace: true });
   };
 
-  useMemo(() => {
+  const isInitialMount = useRef(true);
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     setCurrentPage(1);
     updateParams(1);
   }, [searchTerm, sortBy]);
