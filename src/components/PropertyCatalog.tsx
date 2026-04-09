@@ -190,7 +190,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
                   ? "bg-foreground text-background border-foreground" 
                   : "border-border hover:border-foreground"
               }`}
-              onClick={() => setCurrentPage(page)}
+              onClick={() => { setCurrentPage(page); updateParams(page); }}}
             >
               {page}
             </button>
