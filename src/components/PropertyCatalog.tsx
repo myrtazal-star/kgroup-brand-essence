@@ -65,8 +65,19 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProperties = filteredProperties.slice(startIndex, startIndex + itemsPerPage);
 
+  const updateParams = (page: number, search?: string, sort?: string) => {
+    const params: Record<string, string> = {};
+    if (page > 1) params.page = String(page);
+    const s = search ?? searchTerm;
+    const so = sort ?? sortBy;
+    if (s) params.q = s;
+    if (so && so !== "newest") params.sort = so;
+    setSearchParams(params, { replace: true });
+  };
+
   useMemo(() => {
     setCurrentPage(1);
+    updateParams(1);
   }, [searchTerm, sortBy]);
 
   return (
