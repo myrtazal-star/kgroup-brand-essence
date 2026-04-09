@@ -177,7 +177,7 @@ export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyC
           <button 
             className="px-4 py-2 text-sm font-light border border-border hover:border-foreground disabled:opacity-30 disabled:hover:border-border transition-colors"
             disabled={currentPage === 1}
-            onClick={() => setCurrentPage(currentPage - 1)}
+            onClick={() => { const p = currentPage - 1; setCurrentPage(p); updateParams(p); }}
           >
             Anterior
           </button>
