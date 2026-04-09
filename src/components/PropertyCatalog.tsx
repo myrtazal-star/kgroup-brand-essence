@@ -24,11 +24,13 @@ interface PropertyCatalogProps {
 }
 
 export const PropertyCatalog = ({ title, subtitle, properties, type }: PropertyCatalogProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
   const [mapboxToken, setMapboxToken] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState("newest");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState(searchParams.get("q") || "");
+  const [sortBy, setSortBy] = useState(searchParams.get("sort") || "newest");
+  const initialPage = parseInt(searchParams.get("page") || "1", 10);
+  const [currentPage, setCurrentPage] = useState(isNaN(initialPage) ? 1 : initialPage);
   const itemsPerPage = 9;
 
   const filteredProperties = useMemo(() => {
