@@ -264,7 +264,7 @@ const RentCatalog = () => {
       area: "146 m²",
       bedrooms: 0,
       bathrooms: 3,
-      imageUrl: oficinaMoliere3_1,
+      imageUrl: oficinaMoliere3_3,
       featured: true
     },
   ];
