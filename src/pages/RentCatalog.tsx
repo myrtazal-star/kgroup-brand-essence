@@ -25,7 +25,7 @@ import oficinaWorklab1 from "@/assets/oficina-worklab-condesa-1.jpg";
 import oficinaWorklab2_1 from "@/assets/oficina-worklab2-1.jpg";
 import oficinaWorklab3_1 from "@/assets/oficina-worklab3-1.jpg";
 import oficinaArquimedes1 from "@/assets/oficina-arquimedes-1.jpg";
-import oficinaMoliere3_1 from "@/assets/oficina-moliere3-1.jpg";
+import oficinaMoliere3_3 from "@/assets/oficina-moliere3-3.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -264,7 +264,7 @@ const RentCatalog = () => {
       area: "146 m²",
       bedrooms: 0,
       bathrooms: 3,
-      imageUrl: oficinaMoliere3_1,
+      imageUrl: oficinaMoliere3_3,
       featured: true
     },
   ];
