@@ -312,6 +312,15 @@ import oficinaArquimedes7 from "@/assets/oficina-arquimedes-7.jpg";
 import oficinaArquimedes8 from "@/assets/oficina-arquimedes-8.jpg";
 import oficinaArquimedes9 from "@/assets/oficina-arquimedes-9.jpg";
 import oficinaArquimedes10 from "@/assets/oficina-arquimedes-10.jpg";
+import oficinaMoliere3_1 from "@/assets/oficina-moliere3-1.jpg";
+import oficinaMoliere3_2 from "@/assets/oficina-moliere3-2.jpg";
+import oficinaMoliere3_3 from "@/assets/oficina-moliere3-3.jpg";
+import oficinaMoliere3_4 from "@/assets/oficina-moliere3-4.jpg";
+import oficinaMoliere3_5 from "@/assets/oficina-moliere3-5.jpg";
+import oficinaMoliere3_6 from "@/assets/oficina-moliere3-6.jpg";
+import oficinaMoliere3_7 from "@/assets/oficina-moliere3-7.jpg";
+import oficinaMoliere3_8 from "@/assets/oficina-moliere3-8.jpg";
+import oficinaMoliere3_9 from "@/assets/oficina-moliere3-9.jpg";
 
 
 // Property data - en una app real esto vendría de una base de datos
@@ -1478,6 +1487,38 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     gallery: [oficinaArquimedes1, oficinaArquimedes2, oficinaArquimedes3, oficinaArquimedes4, oficinaArquimedes5, oficinaArquimedes6, oficinaArquimedes7, oficinaArquimedes8, oficinaArquimedes9, oficinaArquimedes10],
     youtubeVideoId: undefined
   },
+  "r37": {
+    id: "r37",
+    title: "Oficina en Renta – Moliere, Polanco",
+    location: "Moliere, Polanco",
+    price: "$32,000",
+    priceType: "Renta mensual",
+    area: "146 m²",
+    bedrooms: 0,
+    bathrooms: 3,
+    parking: 0,
+    imageUrl: oficinaMoliere3_1,
+    featured: true,
+    description: "Oficina en renta en Moliere, Polanco. Espacio de 146 m² en Piso 4 con sala de juntas, 2 privados, 3 baños, recepción, sala de espera y espacio amplio para trabajar. Excelente ubicación en una de las zonas más prestigiosas de la ciudad.",
+    features: [
+      "146 m² de superficie",
+      "Piso 4",
+      "Sala de juntas",
+      "2 privados",
+      "3 baños",
+      "Recepción",
+      "Sala de espera",
+      "Espacio amplio para trabajar"
+    ],
+    amenities: [
+      "Zona Polanco",
+      "Sobre Av. Moliere",
+      "Seguridad",
+      "Elevador"
+    ],
+    gallery: [oficinaMoliere3_1, oficinaMoliere3_2, oficinaMoliere3_3, oficinaMoliere3_4, oficinaMoliere3_5, oficinaMoliere3_6, oficinaMoliere3_7, oficinaMoliere3_8, oficinaMoliere3_9],
+    youtubeVideoId: undefined
+  },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r1": { lat: 19.4180, lng: -99.1630 },
@@ -1515,6 +1556,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "s8": { lat: 19.4350, lng: -99.1530 },
   "s9": { lat: 19.5370, lng: -99.1970 },
   "r36": { lat: 19.4340, lng: -99.1980 },
+  "r37": { lat: 19.4330, lng: -99.1990 },
 };
 
 const PropertyDetails = () => {

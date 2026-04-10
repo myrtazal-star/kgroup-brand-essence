@@ -255,6 +255,17 @@ const RentCatalog = () => {
       imageUrl: oficinaArquimedes1,
       featured: true
     },
+    {
+      id: "r37",
+      title: "Oficina en Renta – Moliere, Polanco",
+      location: "Polanco · Piso 4",
+      price: "$32,000/mes",
+      area: "146 m²",
+      bedrooms: 0,
+      bathrooms: 3,
+      imageUrl: oficinaMoliere3_1,
+      featured: true
+    },
   ];
 
   return (
