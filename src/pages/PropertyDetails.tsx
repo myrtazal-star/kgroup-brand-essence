@@ -1497,7 +1497,7 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     bedrooms: 0,
     bathrooms: 3,
     parking: 0,
-    imageUrl: oficinaMoliere3_1,
+    imageUrl: oficinaMoliere3_3,
     featured: true,
     description: "Oficina en renta en Moliere, Polanco. Espacio de 146 m² en Piso 4 con sala de juntas, 2 privados, 3 baños, recepción, sala de espera y espacio amplio para trabajar. Excelente ubicación en una de las zonas más prestigiosas de la ciudad.",
     features: [
@@ -1516,7 +1516,7 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
       "Seguridad",
       "Elevador"
     ],
-    gallery: [oficinaMoliere3_1, oficinaMoliere3_2, oficinaMoliere3_3, oficinaMoliere3_4, oficinaMoliere3_5, oficinaMoliere3_6, oficinaMoliere3_7, oficinaMoliere3_8, oficinaMoliere3_9],
+    gallery: [oficinaMoliere3_3, oficinaMoliere3_4, oficinaMoliere3_7, oficinaMoliere3_9, oficinaMoliere3_8, oficinaMoliere3_5, oficinaMoliere3_1, oficinaMoliere3_2, oficinaMoliere3_6],
     youtubeVideoId: undefined
   },
 };
