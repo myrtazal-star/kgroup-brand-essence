@@ -1517,7 +1517,8 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
       "Elevador"
     ],
     gallery: [oficinaMoliere3_3, oficinaMoliere3_4, oficinaMoliere3_7, oficinaMoliere3_9, oficinaMoliere3_8, oficinaMoliere3_5, oficinaMoliere3_1, oficinaMoliere3_2, oficinaMoliere3_6],
-    youtubeVideoId: undefined
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-moliere3.mp4"
   },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
