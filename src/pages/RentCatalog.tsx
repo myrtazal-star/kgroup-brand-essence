@@ -28,6 +28,7 @@ import oficinaArquimedes1 from "@/assets/oficina-arquimedes-1.jpg";
 import oficinaMoliere3_3 from "@/assets/oficina-moliere3-3.jpg";
 import oficinaMasaryk2_1 from "@/assets/oficina-masaryk2-1.jpg";
 import oficinaMasaryk3_1 from "@/assets/oficina-masaryk3-1.jpg";
+import oficinaMasaryk4_1 from "@/assets/oficina-masaryk4-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -289,6 +290,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaMasaryk3_1,
+      featured: true
+    },
+    {
+      id: "r40",
+      title: "Oficina en Renta – Masaryk, Polanco (Piso 7)",
+      location: "Polanco · Masaryk · Piso 7",
+      price: "$165,000/mes + IVA",
+      area: "300 m²",
+      bedrooms: 0,
+      bathrooms: 4,
+      imageUrl: oficinaMasaryk4_1,
       featured: true
     },
   ];
