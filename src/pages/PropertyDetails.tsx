@@ -321,6 +321,11 @@ import oficinaMoliere3_6 from "@/assets/oficina-moliere3-6.jpg";
 import oficinaMoliere3_7 from "@/assets/oficina-moliere3-7.jpg";
 import oficinaMoliere3_8 from "@/assets/oficina-moliere3-8.jpg";
 import oficinaMoliere3_9 from "@/assets/oficina-moliere3-9.jpg";
+import oficinaMasaryk2_1 from "@/assets/oficina-masaryk2-1.jpg";
+import oficinaMasaryk2_2 from "@/assets/oficina-masaryk2-2.jpg";
+import oficinaMasaryk2_3 from "@/assets/oficina-masaryk2-3.jpg";
+import oficinaMasaryk2_4 from "@/assets/oficina-masaryk2-4.jpg";
+import oficinaMasaryk2_5 from "@/assets/oficina-masaryk2-5.jpg";
 
 
 // Property data - en una app real esto vendría de una base de datos
@@ -1520,6 +1525,38 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-moliere3.mp4"
   },
+  "r38": {
+    id: "r38",
+    title: "Oficina en Renta – Masaryk, Polanco",
+    location: "Av. Presidente Masaryk, Polanco",
+    price: "$75,000 + IVA",
+    priceType: "Renta mensual",
+    area: "150 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaMasaryk2_1,
+    featured: true,
+    description: "Oficina en renta sobre Av. Presidente Masaryk, Polanco. Espacio de 150 m² en Piso 2 con 1 cajón de estacionamiento. Mantenimiento de $7,500 + IVA. El edificio cuenta con vigilancia las 24 horas. Ubicación premium en la avenida más exclusiva de Polanco.",
+    features: [
+      "150 m² de superficie",
+      "Piso 2",
+      "1 cajón de estacionamiento",
+      "Mantenimiento: $7,500 + IVA",
+      "Vigilancia 24 horas",
+      "1 baño"
+    ],
+    amenities: [
+      "Zona Polanco",
+      "Sobre Av. Masaryk",
+      "Vigilancia 24 horas",
+      "Estacionamiento",
+      "Elevador"
+    ],
+    gallery: [oficinaMasaryk2_1, oficinaMasaryk2_2, oficinaMasaryk2_3, oficinaMasaryk2_4, oficinaMasaryk2_5],
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-masaryk2.mp4"
+  },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r1": { lat: 19.4180, lng: -99.1630 },
@@ -1558,6 +1595,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "s9": { lat: 19.5370, lng: -99.1970 },
   "r36": { lat: 19.4340, lng: -99.1980 },
   "r37": { lat: 19.4330, lng: -99.1990 },
+  "r38": { lat: 19.4335, lng: -99.1940 },
 };
 
 const PropertyDetails = () => {
