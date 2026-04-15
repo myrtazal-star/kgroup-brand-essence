@@ -280,6 +280,17 @@ const RentCatalog = () => {
       imageUrl: oficinaMasaryk2_1,
       featured: true
     },
+    {
+      id: "r39",
+      title: "Oficina en Renta – Masaryk, Polanco (2)",
+      location: "Polanco · Masaryk · Piso 2",
+      price: "$75,000/mes + IVA",
+      area: "150 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaMasaryk3_1,
+      featured: true
+    },
   ];
 
   return (
