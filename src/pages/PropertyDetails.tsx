@@ -326,6 +326,13 @@ import oficinaMasaryk2_2 from "@/assets/oficina-masaryk2-2.jpg";
 import oficinaMasaryk2_3 from "@/assets/oficina-masaryk2-3.jpg";
 import oficinaMasaryk2_4 from "@/assets/oficina-masaryk2-4.jpg";
 import oficinaMasaryk2_5 from "@/assets/oficina-masaryk2-5.jpg";
+import oficinaMasaryk3_1 from "@/assets/oficina-masaryk3-1.jpg";
+import oficinaMasaryk3_2 from "@/assets/oficina-masaryk3-2.jpg";
+import oficinaMasaryk3_3 from "@/assets/oficina-masaryk3-3.jpg";
+import oficinaMasaryk3_4 from "@/assets/oficina-masaryk3-4.jpg";
+import oficinaMasaryk3_5 from "@/assets/oficina-masaryk3-5.jpg";
+import oficinaMasaryk3_6 from "@/assets/oficina-masaryk3-6.jpg";
+import oficinaMasaryk3_7 from "@/assets/oficina-masaryk3-7.jpg";
 
 
 // Property data - en una app real esto vendría de una base de datos
@@ -1557,6 +1564,38 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-masaryk2.mp4"
   },
+  "r39": {
+    id: "r39",
+    title: "Oficina en Renta – Masaryk, Polanco (2)",
+    location: "Av. Presidente Masaryk, Polanco",
+    price: "$75,000 + IVA",
+    priceType: "Renta mensual",
+    area: "150 m²",
+    bedrooms: 0,
+    bathrooms: 1,
+    parking: 1,
+    imageUrl: oficinaMasaryk3_1,
+    featured: true,
+    description: "Oficina en renta sobre Av. Presidente Masaryk, Polanco. Espacio de 150 m² en Piso 2 con 1 cajón de estacionamiento. Mantenimiento de $7,500 + IVA. El edificio cuenta con vigilancia las 24 horas. Ubicación premium en la avenida más exclusiva de Polanco.",
+    features: [
+      "150 m² de superficie",
+      "Piso 2",
+      "1 cajón de estacionamiento",
+      "Mantenimiento: $7,500 + IVA",
+      "Vigilancia 24 horas",
+      "1 baño"
+    ],
+    amenities: [
+      "Zona Polanco",
+      "Sobre Av. Masaryk",
+      "Vigilancia 24 horas",
+      "Estacionamiento",
+      "Elevador"
+    ],
+    gallery: [oficinaMasaryk3_1, oficinaMasaryk3_2, oficinaMasaryk3_3, oficinaMasaryk3_4, oficinaMasaryk3_5, oficinaMasaryk3_6, oficinaMasaryk3_7],
+    youtubeVideoId: undefined,
+    videoUrl: "/videos/oficina-masaryk3.mp4"
+  },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r1": { lat: 19.4180, lng: -99.1630 },
@@ -1596,6 +1635,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r36": { lat: 19.4340, lng: -99.1980 },
   "r37": { lat: 19.4330, lng: -99.1990 },
   "r38": { lat: 19.4335, lng: -99.1940 },
+  "r39": { lat: 19.4335, lng: -99.1942 },
 };
 
 const PropertyDetails = () => {

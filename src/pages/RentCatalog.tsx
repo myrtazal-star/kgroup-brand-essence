@@ -27,6 +27,7 @@ import oficinaWorklab3_1 from "@/assets/oficina-worklab3-1.jpg";
 import oficinaArquimedes1 from "@/assets/oficina-arquimedes-1.jpg";
 import oficinaMoliere3_3 from "@/assets/oficina-moliere3-3.jpg";
 import oficinaMasaryk2_1 from "@/assets/oficina-masaryk2-1.jpg";
+import oficinaMasaryk3_1 from "@/assets/oficina-masaryk3-1.jpg";
 
 const RentCatalog = () => {
   const rentalProperties = [
@@ -277,6 +278,17 @@ const RentCatalog = () => {
       bedrooms: 0,
       bathrooms: 1,
       imageUrl: oficinaMasaryk2_1,
+      featured: true
+    },
+    {
+      id: "r39",
+      title: "Oficina en Renta – Masaryk, Polanco (2)",
+      location: "Polanco · Masaryk · Piso 2",
+      price: "$75,000/mes + IVA",
+      area: "150 m²",
+      bedrooms: 0,
+      bathrooms: 1,
+      imageUrl: oficinaMasaryk3_1,
       featured: true
     },
   ];
