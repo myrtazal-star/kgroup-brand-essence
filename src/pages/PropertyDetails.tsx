@@ -321,6 +321,11 @@ import oficinaMoliere3_6 from "@/assets/oficina-moliere3-6.jpg";
 import oficinaMoliere3_7 from "@/assets/oficina-moliere3-7.jpg";
 import oficinaMoliere3_8 from "@/assets/oficina-moliere3-8.jpg";
 import oficinaMoliere3_9 from "@/assets/oficina-moliere3-9.jpg";
+import oficinaMasaryk2_1 from "@/assets/oficina-masaryk2-1.jpg";
+import oficinaMasaryk2_2 from "@/assets/oficina-masaryk2-2.jpg";
+import oficinaMasaryk2_3 from "@/assets/oficina-masaryk2-3.jpg";
+import oficinaMasaryk2_4 from "@/assets/oficina-masaryk2-4.jpg";
+import oficinaMasaryk2_5 from "@/assets/oficina-masaryk2-5.jpg";
 
 
 // Property data - en una app real esto vendría de una base de datos
@@ -1558,6 +1563,7 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "s9": { lat: 19.5370, lng: -99.1970 },
   "r36": { lat: 19.4340, lng: -99.1980 },
   "r37": { lat: 19.4330, lng: -99.1990 },
+  "r38": { lat: 19.4335, lng: -99.1940 },
 };
 
 const PropertyDetails = () => {
