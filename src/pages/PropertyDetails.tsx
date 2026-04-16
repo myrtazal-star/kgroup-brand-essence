@@ -333,15 +333,6 @@ import oficinaMasaryk3_4 from "@/assets/oficina-masaryk3-4.jpg";
 import oficinaMasaryk3_5 from "@/assets/oficina-masaryk3-5.jpg";
 import oficinaMasaryk3_6 from "@/assets/oficina-masaryk3-6.jpg";
 import oficinaMasaryk3_7 from "@/assets/oficina-masaryk3-7.jpg";
-import oficinaMasaryk4_1 from "@/assets/oficina-masaryk4-1.jpg";
-import oficinaMasaryk4_2 from "@/assets/oficina-masaryk4-2.jpg";
-import oficinaMasaryk4_3 from "@/assets/oficina-masaryk4-3.jpg";
-import oficinaMasaryk4_4 from "@/assets/oficina-masaryk4-4.jpg";
-import oficinaMasaryk4_5 from "@/assets/oficina-masaryk4-5.jpg";
-import oficinaMasaryk4_6 from "@/assets/oficina-masaryk4-6.jpg";
-import oficinaMasaryk4_7 from "@/assets/oficina-masaryk4-7.jpg";
-import oficinaMasaryk4_8 from "@/assets/oficina-masaryk4-8.jpg";
-import oficinaMasaryk4_9 from "@/assets/oficina-masaryk4-9.jpg";
 
 
 // Property data - en una app real esto vendría de una base de datos
@@ -1605,40 +1596,6 @@ const propertiesData: Record<string, { id: string; title: string; location: stri
     youtubeVideoId: undefined,
     videoUrl: "/videos/oficina-masaryk3.mp4"
   },
-  "r40": {
-    id: "r40",
-    title: "Oficina en Renta – Masaryk, Polanco (Piso 7)",
-    location: "Av. Presidente Masaryk, Polanco",
-    price: "$165,000 + IVA",
-    priceType: "Renta mensual",
-    area: "300 m²",
-    bedrooms: 0,
-    bathrooms: 4,
-    parking: 2,
-    imageUrl: oficinaMasaryk4_1,
-    featured: true,
-    description: "Oficina premium en renta sobre Av. Presidente Masaryk, Polanco. Espacio de 300 m² en Piso 7 con sala de recepción, 7 privados, cocina, baños privados y baños para hombres y mujeres. Incluye 2 cajones de estacionamiento. Ubicación inmejorable en la avenida más exclusiva de Polanco.",
-    features: [
-      "300 m² de superficie",
-      "Piso 7",
-      "7 privados",
-      "Sala de recepción",
-      "Cocina",
-      "Baños privados",
-      "Baños para hombres y mujeres",
-      "2 cajones de estacionamiento"
-    ],
-    amenities: [
-      "Zona Polanco",
-      "Sobre Av. Masaryk",
-      "Vigilancia 24 horas",
-      "Estacionamiento",
-      "Elevador"
-    ],
-    gallery: [oficinaMasaryk4_1, oficinaMasaryk4_2, oficinaMasaryk4_3, oficinaMasaryk4_4, oficinaMasaryk4_5, oficinaMasaryk4_6, oficinaMasaryk4_7, oficinaMasaryk4_8, oficinaMasaryk4_9],
-    youtubeVideoId: undefined,
-    videoUrl: "/videos/oficina-masaryk4.mp4"
-  },
 };
 const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r1": { lat: 19.4180, lng: -99.1630 },
@@ -1679,7 +1636,6 @@ const propertyCoords: Record<string, { lat: number; lng: number }> = {
   "r37": { lat: 19.4330, lng: -99.1990 },
   "r38": { lat: 19.4335, lng: -99.1940 },
   "r39": { lat: 19.4335, lng: -99.1942 },
-  "r40": { lat: 19.4335, lng: -99.1938 },
 };
 
 const PropertyDetails = () => {
