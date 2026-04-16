@@ -1660,6 +1660,26 @@ const PropertyDetails = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
+  // Keyboard navigation for gallery modal
+  useEffect(() => {
+    if (!isModalOpen || !property) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        const newIndex = currentImageIndex < property.gallery.length - 1 ? currentImageIndex + 1 : 0;
+        setCurrentImageIndex(newIndex);
+        setSelectedImage(property.gallery[newIndex]);
+      } else if (e.key === "ArrowLeft") {
+        const newIndex = currentImageIndex > 0 ? currentImageIndex - 1 : property.gallery.length - 1;
+        setCurrentImageIndex(newIndex);
+        setSelectedImage(property.gallery[newIndex]);
+      } else if (e.key === "Escape") {
+        setIsModalOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isModalOpen, currentImageIndex, property]);
+
   if (!property) {
     return <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -1708,6 +1728,8 @@ const PropertyDetails = () => {
               <img 
                 src={property.gallery[0]} 
                 alt={`${property.title} - imagen principal`} 
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -1732,6 +1754,8 @@ const PropertyDetails = () => {
                   <img 
                     src={image} 
                     alt={`${property.title} - imagen ${index + 2}`} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
